@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
+import Hero from "../components/hero/hero";
 
 export default function Layout() {
   return (
@@ -8,7 +9,9 @@ export default function Layout() {
       <div className="w-full flex flex-col items-center justify-center">
         <Navbar />
         <main>
-          <div className="p-4 lg:py-8 lg:pl-64 lg:pr-44 h-full "></div>
+          <div className="h-full px-60">
+         <Hero />
+          </div>
         </main>
         <Footer />
       </div>
