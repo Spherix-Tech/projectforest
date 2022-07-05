@@ -18,6 +18,7 @@ const Footer = () => {
           <h2 className='text-[35px] font-light'>PROJECT <br></br><span className='text-[48px] font-semibold'>FOREST</span></h2>
           </div>
           <Socials />
+          <h3>scdsdc</h3>
         </div>
         <div className="lg:w-2/4 flex-wrap hidden lg:flex flex-col items-start justify-center pl-36 cursor-pointer">
           <FooterLinks />
