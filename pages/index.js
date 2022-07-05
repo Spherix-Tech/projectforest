@@ -1,7 +1,8 @@
 import Head from "next/head";
-import Navbar from '../src/components/navbar/Navbar'
-import Hero from '../src/components/hero/Hero'
+import Navbar from "../src/components/navbar/Navbar";
+import Hero from "../src/components/hero/Hero";
 import Footer from "../src/components/footer/Footer";
+import HowItWorks from "../src/components/how-it-works/HowItWorks";
 
 export default function Home() {
   return (
@@ -12,13 +13,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-      <Navbar />
-      <div className="px-60">
-      <Hero />
-      </div>
-      <Footer />
+        <Navbar />
+        <div className="px-60">
+          <Hero />
+         
+        </div>
+        <div className="bg-primary px-60">
+       
+            <HowItWorks />
+          </div>
+        <Footer />
       </main>
-    
     </div>
   );
 }
