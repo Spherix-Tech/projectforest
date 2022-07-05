@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
+import Hero from "../components/hero/hero";
 
 
 export default function Layout() {
@@ -10,7 +11,6 @@ export default function Layout() {
         <Navbar />
         <main>
           <div className="p-4 lg:py-8 lg:pl-64 lg:pr-44 h-full ">
-         
           </div>
         </main>
         <Footer />
