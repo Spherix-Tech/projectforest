@@ -9,7 +9,6 @@ module.exports = {
     "./src/components/*.{html,js}",
     "./src/components/**/*.{html,js}",
     "./src/components/**/**/*.{html,js}",
-    "./src/layouts/**/*.{html,js}",
   ],
   theme: {
     extend: {   screens: {
