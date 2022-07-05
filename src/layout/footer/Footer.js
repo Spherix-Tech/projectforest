@@ -17,8 +17,7 @@ const Footer = () => {
               <span className="text-[48px] font-semibold">FOREST</span>
             </h2>
           </div>
-          <Socials />
-          <h3>scdsdc</h3>
+          <Socials /> zahid
         </div>
         <div className="lg:w-2/4 flex-wrap hidden lg:flex flex-col items-start justify-center cursor-pointer pl-6">
           <FooterLinks />
