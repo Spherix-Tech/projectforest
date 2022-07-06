@@ -23,7 +23,10 @@ const Hero = () => {
           </span>
         </p>
         <div className="flex flex-row pt-6">
-          <button className="btnPrimary w-60">Whitepaper</button>
+          <button className="btnPrimary w-60">
+            <a href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"
+                        target="_blank"
+                        rel="noreferrer">Whitepaper</a></button>
           <button className="btnSecondary w-60">Go To Marketplace</button>
         </div>
         <div>
