@@ -3,8 +3,7 @@ import Navbar from "../src/components/navbar/Navbar";
 import Hero from "../src/components/hero/Hero";
 import Footer from "../src/components/footer/Footer";
 import HowItWorks from "../src/components/how-it-works/HowItWorks";
-import background from "../public/assets/trees-bg.png";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
