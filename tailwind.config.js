@@ -23,7 +23,7 @@ module.exports = {
       textTitle: "#3A3A3C",
       textDescription: "#666666",
       backgroundColor: "#FCFCFC",
-      newsBgColor: "#C5F1F1",
+      mailBgColor: "#C5F1F1",
       footerBgColor: "#003434",
       borderColor: "#707070",
     },

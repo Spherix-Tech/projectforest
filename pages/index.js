@@ -3,6 +3,7 @@ import Navbar from "../src/components/navbar/Navbar";
 import Hero from "../src/components/hero/Hero";
 import Footer from "../src/components/footer/Footer";
 import HowItWorks from "../src/components/how-it-works/HowItWorks";
+import MailingList from "../src/components/mailing-list/MailingList";
 
 
 export default function Home() {
@@ -21,6 +22,9 @@ export default function Home() {
 
         <div className="bg-primary lg:px-60 px-6">
           <HowItWorks />
+        </div>
+        <div className="lg:px-60 px-6 bg-mailBgColor">
+          <MailingList />
         </div>
         <Footer />
       </main>
