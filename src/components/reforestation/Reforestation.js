@@ -6,7 +6,7 @@ const DataArr = getDataBySectionName("reforestation");
 
 const Reforestation = () => {
   return (
-    <div className=' text-textTitle bg-[#F0F0F0] py-16 lg:px-60 px-6 lg:px-60 px-6'>
+    <div className=' text-textTitle bg-[#F0F0F0] py-16 lg:px-60 px-6'>
        <h2 className='text-[40px] font-bold flex justify-center pb-10'>Reforestation: <span className='ml-2'>Need of the Hour</span></h2>
        <div className='flex w-full lg:flex-row flex-col  justify-center items-center lg:items-start'>
        {DataArr.map((e, i) => {
