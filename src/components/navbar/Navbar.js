@@ -11,7 +11,7 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div
-      className="w-full flex flex-row  justify-between items-center py-8 lg:px-60 px-8"
+      className="w-full flex flex-row  justify-between items-center py-8 lg:px-60 px-6"
     >
       <div className="flex flex-row gap-2 text-primary "   onClick={() => setToggleMenu(false)}>
         <Image alt="Project Forest Logo" src={logo} />
