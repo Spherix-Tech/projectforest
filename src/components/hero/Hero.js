@@ -9,7 +9,7 @@ import {
 
 const Hero = () => {
   return (
-    <div className="flex lg:flex-row flex-col justify-between py-8">
+    <div className="flex lg:flex-row flex-col justify-between py-8 lg:px-60 px-6">
       <div className=" text-textTitle lg:w-2/4 w-full flex gap-6 flex-col">
         <h2 className="text-[44px] font-bold">
           A Purpose Led Change <br></br> is coming to Web3

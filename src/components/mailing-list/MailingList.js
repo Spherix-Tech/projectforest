@@ -5,7 +5,7 @@ import arrow from "../../../public/assets/mail-list/arrow-icon.svg";
 
 const MailingList = () => {
   return (
-    <div className="w-full text-primary flex flex-row justify-between py-8">
+    <div className="w-full text-primary flex flex-row justify-between py-8 lg:px-60 px-6 bg-mailBgColor">
       <Image src={logo} alt="Project forest logo" />
       <div className="flex flex-col w-3/4">
         <h2 className=" font-semibold text-[34px] py-2 text-textTitle">

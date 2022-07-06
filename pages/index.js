@@ -4,7 +4,7 @@ import Hero from "../src/components/hero/Hero";
 import Footer from "../src/components/footer/Footer";
 import HowItWorks from "../src/components/how-it-works/HowItWorks";
 import MailingList from "../src/components/mailing-list/MailingList";
-
+import Reforestation from "../src/components/reforestation/Reforestation";
 
 export default function Home() {
   return (
@@ -16,16 +16,15 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
-        <div className="lg:px-60 px-6">
-          <Hero />
-        </div>
 
-        <div className="bg-primary lg:px-60 px-6">
-          <HowItWorks />
-        </div>
-        <div className="lg:px-60 px-6 bg-mailBgColor">
-          <MailingList />
-        </div>
+        <Hero />
+
+        <HowItWorks />
+
+        <Reforestation />
+
+        <MailingList />
+        
         <Footer />
       </main>
     </div>
