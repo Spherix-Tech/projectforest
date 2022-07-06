@@ -1,6 +1,5 @@
-import Image from "next/image";
 import React from "react";
-import tree from "../../../public/assets/hero/hero.png";
+import ImageComponent from '../shared/ImageComponent'
 import {
   DISCORD_LINK,
   TELEGRAM_LINK,
@@ -57,12 +56,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col">
-        <Image
-          src={tree}
-          alt="Project forest tree"
-          height={576}
-          width={576}
-        />
+       <ImageComponent src={"/assets/hero/hero-tree.png"} className="" />
       </div>
     </div>
   );
