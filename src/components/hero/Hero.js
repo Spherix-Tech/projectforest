@@ -9,8 +9,8 @@ import {
 
 const Hero = () => {
   return (
-    <div className="flex flex-row justify-between py-8">
-      <div className=" text-textTitle w-2/4 flex gap-6 flex-col">
+    <div className="flex lg:flex-row flex-col justify-between py-8">
+      <div className=" text-textTitle lg:w-2/4 w-full flex gap-6 flex-col">
         <h2 className="text-[44px] font-bold">
           A Purpose Led Change <br></br> is coming to Web3
         </h2>

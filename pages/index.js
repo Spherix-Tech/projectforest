@@ -20,7 +20,7 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div className="bg-primary">
+        <div className="bg-primary lg:px-60 px-6">
           <HowItWorks />
         </div>
         <Footer />
