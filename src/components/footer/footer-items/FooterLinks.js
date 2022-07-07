@@ -20,8 +20,8 @@ const FooterLinks = () => {
       </div>
 
       <div className=" w-2/4 flex flex-col items-end">
-        <a href="">
-          <h5>FAQ</h5>
+        <a href="#token">
+          <h5>Token</h5>
         </a>
         <a href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"
               target="_blank"
