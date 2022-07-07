@@ -31,7 +31,7 @@ export default function Home() {
 
 
         {/* NFT Slider Section */}
-        {/* <NFTSlider /> */}
+        <NFTSlider />
 
         {/* Token Section */}
         <Token />
