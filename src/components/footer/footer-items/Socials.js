@@ -9,7 +9,7 @@ const Socials = () => {
       {DataArr.map(({ icon, href, key }) => (
         <div key={key} className="mr-2">
           <a href={href} target="_blank" rel="noreferrer">
-            <img alt="ankots" src={icon} className=" h-9 lg:h-full" />
+            <img alt="ankots" src={icon} className="" />
           </a>
         </div>
       ))}

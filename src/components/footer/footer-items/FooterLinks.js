@@ -3,27 +3,29 @@ import Link from "next/link";
 
 const FooterLinks = () => {
   return (
-    <div className=" w-full flex flex-row leading-10 text-[#969696]">
-      <div className=" w-2/4 flex flex-col items-start">
-        <Link href="/home">
+    <div className=" w-full flex flex-row justify-end leading-10 text-[#969696]">
+      <div className=" w-2/4 flex flex-col items-end">
+        <a href="#home">
           <h5>Home</h5>
-        </Link>
-        <Link href="/nft">
+        </a>
+        <a href="#nft">
           <h5>NFT</h5>
-        </Link>
-        <Link href="/how-it-works">
+        </a>
+        <a href="#how-it-works">
           <h5>How It Works?</h5>
-        </Link>
-        <Link href="/roadmap">
+        </a>
+        <a href="#roadmap">
           <h5>Roadmap</h5>
-        </Link>
+        </a>
       </div>
 
-      <div className=" w-2/4 flex flex-col items-start">
-        <Link href="/faq">
+      <div className=" w-2/4 flex flex-col items-end">
+        <a href="">
           <h5>FAQ</h5>
-        </Link>
-        <a href="" target="_blank" rel="noreferrer">
+        </a>
+        <a href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer">
           <h5>Whitepaper</h5>
         </a>
         <h5>Marketplace</h5>
