@@ -16,7 +16,7 @@ export const getDataBySectionName = (sectionName) => {
       DataArr = getAllReforestationData();
     }
     else if (sectionName === "nft") {
-      DataArr = getAllNftData();
+      DataArr = getAllNftData(); 
     }
     else if (sectionName === "roadmap") {
       DataArr = getAllRoadmapData();

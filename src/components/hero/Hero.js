@@ -59,7 +59,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col">
-       <ImageComponent src={"/assets/hero/hero-tree.png"} className="" />
+       <ImageComponent src={"/assets/hero/main-plant.png"} className="" />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-const allData = [
+const allData = [ 
     {
       title: "PlantOne",
       imageName: "nft-1.png",

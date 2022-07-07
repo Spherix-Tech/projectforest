@@ -4,20 +4,20 @@ import { useKeenSlider } from "keen-slider/react";
 import ImageComponent from "../shared/ImageComponent";
 import { getDataBySectionName } from "../../services/dataService";
 
-const DataArr = getDataBySectionName("nft");
+const DataArr = getDataBySectionName("nft"); 
 
 export default function NFTSlider() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0); 
   const [loaded, setLoaded] = useState(false);
 
-  const [selectedNFTObj, setSelectedNFTObj] = useState({});
+  const [selectedNFTObj, setSelectedNFTObj] = useState(DataArr[0]); 
 
-  useEffect(() => {
-    setSelectedNFTObj(DataArr);
-  }, [DataArr]);
+//   useEffect(() => {
+//     setSelectedNFTObj(DataArr); 
+//   }, [DataArr]);
 
   const changeSelectedNft = (slideObj) => {
-    setSelectedNFTObj(slideObj);
+    setSelectedNFTObj(slideObj);  
   };
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
@@ -46,7 +46,7 @@ export default function NFTSlider() {
     breakpoints: {
       "(min-width: 1120px)": {
         slides: {
-          perView: 6,
+          perView: 5,
         },
       },
     },
@@ -68,7 +68,7 @@ export default function NFTSlider() {
       
           <h2 className=" text-textTitle font-bold text-[40px] pt-8 pb-4">NFT</h2>
        
-        <div className="flex w-full justify-end gap-2 my-2 ">
+        <div className="flex w-full justify-end gap-2 pb-4 ">
           <div>
             {loaded && instanceRef.current && (
               <>
@@ -102,11 +102,11 @@ export default function NFTSlider() {
 
       <div className="flex flex-row items-start w-full ">
         {/* Selected NFT */}
-        <div className="flex flex-col lg:w-[300px] w-2/4 mr-4 h-[400px]">
+        <div className="flex flex-col lg:w-[300px] w-2/4 mr-4 h-[380px]">
          
             
               <ImageComponent
-                src={`/assets/nft/${selectedNFTObj?.imageName}`}
+                src={`/assets/nft/${selectedNFTObj?.imageName}`} // if u know everything then just show the index here thats all
                 alt="NFT Project Forest"
                 className=" w-full h-full "
               />
@@ -124,12 +124,12 @@ export default function NFTSlider() {
                     key={i}
                     onClick={() => changeSelectedNft(slide)}
                     className={
-                      "keen-slider__slide pl-[1.4rem] cursor-pointer number-slide"
+                      "keen-slider__slide cursor-pointer number-slide pr-3"
                     }
                   >
                     <div
                       className={
-                        "flex flex-col justify-start items-center gap-2 rounded-lg "
+                        "flex flex-col justify-start items-center rounded-lg "
                       }
                     >
                       <ImageComponent

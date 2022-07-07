@@ -9,7 +9,7 @@ import ContentCard from "./ContentCard";
 const HowItWorks = () => {
   return (
     <div className="bg-primary lg:px-60 px-6">
-      <h2 className=" text-[44px] font-medium py-8">How it works</h2>
+      <h2 className=" text-[44px] font-medium py-8">How it works ?</h2>
       <div className="w-full flex flex-col">
         <div className="flex lg:flex-row flex-col-reverse justify-between">
           <Image
