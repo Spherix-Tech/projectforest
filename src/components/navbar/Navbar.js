@@ -15,10 +15,10 @@ const Navbar = () => {
         className="flex flex-row gap-2 text-primary items-center "
         onClick={() => setToggleMenu(false)}
       >
-        <ImageComponent alt="Project Forest Logo" src={"/assets/logo.png"} />
-        <h2 className="text-[33px]">
+        <ImageComponent alt="Project Forest Logo" src={"/assets/logo.png"} className="h-12 lg:h-full"/>
+        <h2 className="lg:text-[33px] text-[20px]">
           PROJECT <br></br>
-          <span className="text-[47px] font-semibold">FOREST</span>
+          <span className="lg:text-[47px] text-[28px] font-semibold">FOREST</span>
         </h2>
       </div>
 
@@ -52,14 +52,14 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="menu-container">
             <div className="w-full px-4">
+            <ImageComponent
+                alt="Project Forest Logo"
+                src={"/assets/logo.png"}
+              />
               <NavbarMenuItems
                 classname="w-full h-max flex-col flex items-start  text-left whitespace-nowrap"
                 items={DataArr}
                 onClick={() => setToggleMenu(false)}
-              />
-              <ImageComponent
-                alt="Project Forest Logo"
-                src={"/assets/logo.png"}
               />
             </div>
           </div>
