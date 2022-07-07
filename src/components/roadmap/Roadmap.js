@@ -6,7 +6,7 @@ const DataArr = getDataBySectionName("roadmap");
 
 const Roadmap = () => {
   return (
-    <div className=" text-textDescription lg:px-60 px-6 py-20">
+    <div className=" text-textDescription lg:px-60 px-6 py-20" id="roadmap">
       <h2 className=" text-textTitle text-[40px] font-bold">Road<span className="font-normal">map</span></h2>
       <div className="w-full relative flex justify-center">
       <ImageComponent src={"/assets/roadmap/roadmap.png"} className="mt-16"/>

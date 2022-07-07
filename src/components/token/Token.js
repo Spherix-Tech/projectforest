@@ -3,7 +3,7 @@ import ImageComponent from '../shared/ImageComponent'
 
 const Token = () => {
   return (
-    <div className="w-full text-textTitle lg:px-60 px-6 py-12">
+    <div className="w-full text-textTitle lg:px-60 px-6 py-12" id="token">
       <h2 className="text-[35px] font-bold">Making an impact that you can count</h2>
 <div className="flex lg:flex-row flex-col lg:justify-between items-center">
   <div className="flex flex-col lg:w-2/4 w-full py-6">
