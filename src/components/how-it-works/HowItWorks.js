@@ -9,7 +9,7 @@ import ContentCard from "./ContentCard";
 const HowItWorks = () => {
   return (
     <div className="bg-primary lg:px-60 px-6" id="how-it-works">
-      <h2 className=" text-[44px] font-medium py-8">How it works ?</h2>
+      <h2 className=" lg:text-[44px] text-[30px] font-bold py-8">How it works</h2>
       <div className="w-full flex flex-col">
         <div className="flex lg:flex-row flex-col-reverse justify-between">
           <Image
@@ -56,7 +56,7 @@ const HowItWorks = () => {
             description="Collect the oxygen that your plant generates in the form of O2 tokens regularly."
           />
         </div>
-        <div className="flex lg:flex-row flex-col justify-between ">
+        <div className="flex lg:flex-row flex-col justify-between pb-6 lg:pb-6 ">
           <ContentCard
            polygon= "polygon-4.svg"
             title="Upgrade"
@@ -67,7 +67,7 @@ const HowItWorks = () => {
             src={upgrade}
             alt="plant"
             width={"568px"}
-            height={"568px"}
+            height={"468px"}
             objectFit={"contain"}
           />
         </div>
