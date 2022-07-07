@@ -1,6 +1,6 @@
 @import "./tailwind/tailwind.css";
+@import "./fonts.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
 
 html,
 body {
@@ -15,7 +15,8 @@ body {
   width: 100vw;
   overflow: scroll;
   color: white;
-  
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -52,6 +53,10 @@ a {
     rgba(255, 255, 255, 0.1) 80.72%
   );
   backdrop-filter: blur(20px);
+}
+
+h2 {
+font-family: 'Montserrat', sans-serif ;
 }
 
 
