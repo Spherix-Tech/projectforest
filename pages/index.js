@@ -37,7 +37,7 @@ export default function Home() {
         <Token />
 
         {/* Roadmap Section */}
-        <Roadmap />
+        {/* <Roadmap /> */}
 
         {/* Reforestation Section */}
         <Reforestation />

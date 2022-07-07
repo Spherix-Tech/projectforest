@@ -8,7 +8,6 @@ const DataArr = getDataBySectionName("navbar");
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [active, setActive] = useState("");
   return (
     <div className="w-full flex flex-row  justify-between items-center py-8 lg:px-60 px-6">
       <div
