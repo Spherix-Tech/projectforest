@@ -1,32 +1,36 @@
 const allData = [ 
     {
       title: "PlantOne",
-      imageName: "nft-1.png",
+      imageName: "nft-main.png",
 
     },
     {
       title: "PlantTwo",
-      imageName: "nft-2.png",
+      imageName: "nft-1.png",
  
     },
     {
       title: "PlantThree",
-      imageName: "nft-3.png",
+      imageName: "nft-2.png",
     },
     {
       title: "PlantFour",
-      imageName: "nft-4.png",
+      imageName: "nft-3.png",
     },
   
     {
       title: "PlantFive",
-      imageName: "nft-5.png",
+      imageName: "nft-4.png",
     },
     {
       title: "PlantSix",
-      imageName: "nft-6.png",
+      imageName: "nft-5.png",
     },
     {
+        title: "PlantSeven",
+        imageName: "nft-6.png",
+      },
+      {
         title: "PlantSeven",
         imageName: "nft-7.png",
       },

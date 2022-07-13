@@ -102,7 +102,7 @@ export default function NFTSlider() {
 
       <div className="flex flex-row items-start w-full ">
         {/* Selected NFT */}
-        <div className="flex flex-col lg:w-[300px] w-2/4 mr-4 h-[380px]">
+        <div className="flex flex-col lg:w-[300px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[450px]">
          
             
               <ImageComponent
@@ -124,7 +124,7 @@ export default function NFTSlider() {
                     key={i}
                     onClick={() => changeSelectedNft(slide)}
                     className={
-                      "keen-slider__slide cursor-pointer number-slide pr-3"
+                      "keen-slider__slide cursor-pointer number-slide flex lg:justify-start justify-center pr-2"
                     }
                   >
                     <div

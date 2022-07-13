@@ -70,7 +70,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col ">
-        <ImageComponent src={"/assets/hero/main-nft.png"} className="lg:w-[700px] lg:h-[600px] h-[300px] w-[230px]" />
+        <ImageComponent src={"/assets/hero/main-nft.png"} className="lg:w-[700px] lg:h-[600px] h-[370px] w-[300px] -mt-10 -mb-4 lg:mt-0 lg:mb-0" />
       </div>
     </div>
   );
