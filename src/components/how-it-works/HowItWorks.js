@@ -6,7 +6,7 @@ const HowItWorks = () => {
 
   return (
     <div className="bg-primary lg:px-60 px-6 how-section" id="how-it-works">
-      <h2 className=" lg:text-[44px] text-[30px] font-bold py-8">How it works</h2>
+      <h3 className=" lg:text-[44px] text-[30px] font-semibold py-8 text-white">How it works</h3>
       <div className="w-full flex flex-col">
         <div className="flex lg:flex-row flex-col-reverse justify-between ">
           <div className="container-how">

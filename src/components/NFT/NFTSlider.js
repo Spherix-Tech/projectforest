@@ -66,7 +66,7 @@ export default function NFTSlider() {
     <div id="nft" className="lg:px-60 px-6">
    
       
-          <h2 className=" text-textTitle font-bold text-[40px] pt-8 pb-4">NFT</h2>
+          <h3 className=" text-textTitle font-bold text-[40px] pt-8 pb-4">NFT</h3>
        
         <div className="flex w-full justify-end gap-2 pb-4 ">
           <div>
