@@ -60,3 +60,17 @@ font-family: 'Montserrat', sans-serif ;
 }
 
 
+.container-how {
+height: auto;
+}
+
+.container-how > img {
+width: 100%;
+display: block;
+}
+
+.container-how:hover img{
+  transform: scale(1.1);
+  transition: ease-in-out;
+  transition-duration: 0.51s;
+}
