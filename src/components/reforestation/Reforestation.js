@@ -13,7 +13,7 @@ const Reforestation = () => {
           return (
             <div key={i} className="flex flex-col w-[400px] h-[360px]  lg:mx-4 lg:mb-0 mb-4 items-center bg-white p-4">
             <img src={e.image} className=""  />
-            <p className=' pt-4 text-center text-[#666] text-opacity-70 lg:text-base text-sm leading-5'>{e.text}</p>
+            <p className=' pt-4 text-center text-[#666] text-opacity-70 lg:text-[16px] text-sm'>{e.text}</p>
             </div>
           );
         })}

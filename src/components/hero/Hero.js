@@ -16,10 +16,10 @@ const Hero = () => {
         <h3
           className="lg:text-[42px] text-[30px] font-bold text-center lg:text-left leading-9 lg:leading-10 whitespace-nowrap"
         >
-          A Purpose Led Change <br></br> is coming to Web3
+          A Purpose Led Change <br></br> is Coming to Web3
         </h3>
 
-        <p className="leading-6 text-primary font-bold lg:text-left text-center lg:text-[16px] text-[14px] ">
+        <p className="leading-6 text-primary font-bold lg:text-left text-center lg:text-[16px] text-[14px] lg:w-[60%] ">
           Earn while making a greener impact on the planet.<br></br>
           <span className="text-textDescription font-normal ">
             Become part of Project Forest’s aim of planting 1,000,000 trees
@@ -27,7 +27,7 @@ const Hero = () => {
             produce.
           </span>
         </p>
-        <div className="flex flex-row pt-6">
+        <div className="flex flex-row pt-1 items-start">
           <button className="btnPrimary lg:w-60 w-52 ">
             <a
               href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"

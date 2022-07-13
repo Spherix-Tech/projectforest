@@ -26,7 +26,7 @@ const Navbar = () => {
         {DataArr.map((e, i) => {
           return (
             <a key={i} href={e.link} className="flex items-center flex-col mx-2 px-3 hover:text-primary text-sm">
-              <img src={e.icon_src} className="h-8 object-contain mb-1" />
+              <img src={e.icon_src} className="h-8 hover:h-9 object-contain mb-1 hover:transit" />
               <h5 className=" whitespace-nowrap">{e.name}</h5>
             </a>
           );

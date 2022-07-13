@@ -7,9 +7,9 @@ const MailingList = () => {
       <ImageComponent src={"/assets/mail-list/mail-list-logo.svg"} alt="Project forest logo" className="hidden lg:flex justify-center items-center lg:h-42 mr-6" />
       <div className="flex flex-col w-full">
         <h3 className=" text-[25px] font-semibold py-2 text-textTitle">
-          Take your First Step to a Greener Tomorrow
+          Take your first step to a greener tomorrow
         </h3>
-        <p className="text-[#1D3C34] text-sm pb-6">Join our Mailing List</p>
+        <p className="text-[#1D3C34] text-sm pb-6">Join our mailing list</p>
         <div className="flex lg:flex-row flex-col gap-4 space-between">
           <input
             type="text"
