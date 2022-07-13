@@ -74,3 +74,8 @@ display: block;
   transition: ease-in-out;
   transition-duration: 0.51s;
 }
+
+.icon-hover:hover {
+  transition: 0.7s;
+  transform: translateY(-10px);
+}
