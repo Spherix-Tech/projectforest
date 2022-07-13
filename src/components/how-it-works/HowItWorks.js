@@ -1,8 +1,4 @@
-import Image from "next/image";
 import React from "react";
-import nurture from "../../../public/assets/how-it-works/nurture.png";
-import earn from "../../../public/assets/how-it-works/earn.png";
-import upgrade from "../../../public/assets/how-it-works/upgrade.png";
 import ContentCard from "./ContentCard";
 import ImageComponent from "../shared/ImageComponent";
 

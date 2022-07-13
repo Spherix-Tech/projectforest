@@ -7,7 +7,7 @@ const ContentCard = ({ title, subtitle, description, polygon }) => {
       <div className="flex flex-row items-center gap-2">
         <img src={"/assets/how-it-works/" + polygon} className="h-9" />
 
-        <h2 className="lg:text-[35px] text-[25px] font-bold whitespace-nowrap">
+        <h2 className="lg:text-[35px] text-[25px] font-bold whitespace-nowrap text-white">
           {title} <span className="font-medium">{subtitle}</span>
         </h2>
       </div>
