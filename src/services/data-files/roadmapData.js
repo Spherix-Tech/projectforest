@@ -2,63 +2,82 @@ const allData = [
 
     {
         month: "JAN",
-        text: "Idea Generation / Conceptualization",
-        textPosition: "bottom-[25%] left-[5%]"
+        text: "- Idea generation",
+        image: "plant-jan",
+        bgColor: " bg-[#0B3636]"
     },
     {
         month: "FEB",
-        text: "Team Recruitment, Art & Design Style Planning",
-        textPosition: "bottom-[37%] left-[10%]"
+        text: "- Core team formation",
+        image: "plant-feb",
+        bgColor: " bg-[#0E3E3E]"
     },
     {
         month: "MAR",
-        text: "Game Mechanics Planning, Announcement of 1,000,000 Tree, Reforestation Target",
-        textPosition: "bottom-[55%] left-[15%]"
+        text: "- Technical planning",
+        image: "plant-mar",
+        bgColor: " bg-[#0F4343]"
     },
     {
         month: "APR",
-        text: "Planning of token ecosystem and economic model, Technical architecture planning",
-        textPosition: "top-[25%] left-[23%]"
+        text: "- Game planning",
+        image: "plant-apr",
+        bgColor: " bg-[#114A4A]"
     },
     {
         month: "MAY",
-        text: "Launch of Official Whitepaper v.1, Launch of Official Website",
-        textPosition: "top-[15%] left-[30%]"
+        text: "- Ecosystem planning",
+        image: "plant-may",
+        bgColor: " bg-[#125050]"
     },
     {
         month: "JUN",
-        text: "Partnership announcements with NGO and other green foundations, Development of LEAF and O2 Token Smart Contracts",
-        textPosition: "top-0 left-[35%]"
+        text: "- Strategic partnerships",
+        image: "plant-jun",
+        bgColor: " bg-[#176464]"
     },
     {
         month: "JUL",
-        text: "Development of Tree NFT Smart Contracts, Development of in-game ecosystem",
-        textPosition: "top-0 left-[50%]"
+        text: "- Website launch",
+        text2: "- White Paper launch ",
+        image: "plant-jul",
+        bgColor: " bg-[#1A7171]"
     },
     {
         month: "AUG",
-        text: "Launch of LEAF token, Initialization of smart contract testing environment",
-        textPosition: "top-[7%] right-[23%]"
+        text: "- 1,000,000 target announced",
+        image: "plant-aug",
+        bgColor: " bg-[#1C7B7B]"
     },
     {
         month: "SEP",
-        text: "Tree NFT reveal, Launch of NFT airdrop campaign",
-        textPosition: "right-[16%] bottom-[78%]"
+        text: "- Closed Beta ",
+        text2: "- NFT Airdrops",
+        image: "plant-sep",
+        bgColor: " bg-[#218E8E]"
     },
     {
         month: "OCT",
-        text: "Launch of Project Forest Open Beta, Initiating Community Tree-Planting Event",
-        textPosition: "right-[9%] bottom-[69%] "
+        text: "- Open Beta  ",
+        text2: "- Blind Box phase 1",
+        text3: "- IDO/DEX/SWAP",
+        text4: "- Establishment DAO",
+        image: "plant-oct",
+        bgColor: " bg-[#26A5A5]"
     },
     {
         month: "NOV",
-        text: "Official Launch of Project Forest app, Release of ‘Creatures of the Forest’ feature",
-        textPosition: "right-[2%] bottom-[285px]"
+        text: "- Official launch  ",
+        text2: "- Blind Box phase 2",
+        text3: "- Social Tree Feature",
+        image: "plant-nov",
+        bgColor: " bg-[#29B5B5]"
     },
     {
         month: "DEC",
-        text: "Achievement of 1,000,000 Tree Reforestation Target",
-        textPosition: "right-0 bottom-[52%]"
+        text: "- 1,000,000 target achieved",
+        image: "plant-dec",
+        bgColor: " bg-[#2DC6C6]"
     },
 
 ]

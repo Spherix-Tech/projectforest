@@ -106,7 +106,7 @@ export default function NFTSlider() {
          
             
               <ImageComponent
-                src={`/assets/nft/${selectedNFTObj?.imageName}`} // if u know everything then just show the index here thats all
+                src={`/assets/nft/${selectedNFTObj?.imageName}`}
                 alt="NFT Project Forest"
                 className=" w-full h-full "
               />
