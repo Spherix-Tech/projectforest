@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import plant from "../../../public/assets/how-it-works/plant.png";
 import nurture from "../../../public/assets/how-it-works/nurture.png";
 import earn from "../../../public/assets/how-it-works/earn.png";
 import upgrade from "../../../public/assets/how-it-works/upgrade.png";
 import ContentCard from "./ContentCard";
+import ImageComponent from "../shared/ImageComponent";
 
 const HowItWorks = () => {
   return (
@@ -12,12 +12,10 @@ const HowItWorks = () => {
       <h2 className=" lg:text-[44px] text-[30px] font-bold py-8">How it works</h2>
       <div className="w-full flex flex-col">
         <div className="flex lg:flex-row flex-col-reverse justify-between">
-          <Image
-            src={plant}
+          <ImageComponent
+            src={"/assets/how-it-works/plant.png"}
             alt="plant"
-            width={"236px"}
-            height={"280px"}
-            objectFit={"contain"}
+            className="w-[236px] h-[280px] object-contain "
           />
           <ContentCard
             polygon= "polygon-1.svg"
