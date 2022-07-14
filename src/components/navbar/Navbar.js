@@ -14,8 +14,8 @@ const Navbar = () => {
         className="flex flex-row gap-2 text-primary items-center "
         onClick={() => setToggleMenu(false)}
       >
-        <ImageComponent alt="Project Forest Logo" src={"/assets/logo.png"} className="h-12 lg:h-full"/>
-        <h2 className="lg:text-[33px] text-[20px] leading-10">
+        <ImageComponent alt="Project Forest Logo" src={"/assets/logo.png"} className="h-[55px] lg:h-full"/>
+        <h2 className="lg:text-[33px] text-[20px] lg:leading-10 leading-6">
           PROJECT <br></br>
           <span className="lg:text-[47px] text-[28px] font-semibold">FOREST</span>
         </h2>
