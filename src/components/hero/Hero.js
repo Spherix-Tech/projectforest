@@ -12,14 +12,14 @@ const Hero = () => {
       className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 lg:px-60 px-6 "
       id="home"
     >
-      <div className=" text-textTitle flex lg:gap-6 gap-4 flex-col lg:items-start items-center">
+      <div className=" lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col lg:items-start items-center">
         <h3
           className="lg:text-[42px] text-[30px] font-bold text-center lg:text-left leading-9 lg:leading-10 whitespace-nowrap"
         >
           A Purpose Led Change <br></br> is Coming to Web3
         </h3>
 
-        <p className="leading-6 text-primary font-bold lg:text-left text-center lg:text-[16px] text-[14px] lg:w-[60%] ">
+        <p className="leading-6 text-primary font-bold lg:text-left text-center lg:text-[16px] text-[14px] ">
           Earn while making a greener impact on the planet.<br></br>
           <span className="text-textDescription font-normal ">
             Become part of Project Forest’s aim of planting 1,000,000 trees
@@ -69,8 +69,8 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col w-[418px]">
-        <ImageComponent src={"/assets/hero/main-nft.png"} className=" w-full h-full" />
+      <div className="flex flex-col">
+        <ImageComponent src={"/assets/hero/main-nft.png"} className=" lg:w-[418px] w-[318] lg:h-[540px] h-[400px]" />
       </div>
     </div>
   );
