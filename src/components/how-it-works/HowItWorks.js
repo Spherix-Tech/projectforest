@@ -53,18 +53,18 @@ const HowItWorks = () => {
             description="Collect the oxygen that your plant generates in the form of O2 tokens regularly."
           />
         </div>
-        <div className="flex lg:flex-row flex-col justify-between pb-6 lg:pb-6">
+        <div className="flex lg:flex-row flex-col justify-between pb-6 lg:pb-20">
           <ContentCard
            polygon= "polygon-4.svg"
             title="Upgrade"
             subtitle="your tree NFT"
             description="Use the O2 token to purchase fertilizers that upgrade your existing tree or purchase new trees to create your own virtual NFT forest."
           />
-           <div className="container-how">
+           <div className="container-how flex flex-col justify-center items-center w-full">
           <ImageComponent
             src={"/assets/how-it-works/upgrade.png"}
             alt="plant"
-            className="lg:pr-10 lg:h-[350px] h-[250px] object-contain  mt-5 lg:mt-0"
+            className="lg:pl-32  lg:h-[350px] h-[250px] object-contain  mt-5 lg:mt-0"
           />
           </div>
         </div>
