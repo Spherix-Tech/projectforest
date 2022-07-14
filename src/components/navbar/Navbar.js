@@ -15,7 +15,7 @@ const Navbar = () => {
         onClick={() => setToggleMenu(false)}
       >
         <ImageComponent alt="Project Forest Logo" src={"/assets/logo.png"} className="h-12 lg:h-full"/>
-        <h2 className="lg:text-[33px] text-[20px]">
+        <h2 className="lg:text-[33px] text-[20px] leading-10">
           PROJECT <br></br>
           <span className="lg:text-[47px] text-[28px] font-semibold">FOREST</span>
         </h2>

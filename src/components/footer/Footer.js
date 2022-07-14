@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="lg:w-2/4 w-full flex flex-col items-center lg:items-start">
           <div className="flex flex-row gap-2 items-center">
             <ImageComponent alt="Project Forest Logo" src="/assets/footer/logo-footer.svg" className="h-16 lg:h-full"/>
-            <h2 className="lg:text-[35px] text-[24px] font-light">
+            <h2 className="lg:text-[35px] text-[24px] font-light text-white leading-9">
               PROJECT <br></br>
               <span className="lg:text-[48px] text-[33px] font-semibold">FOREST</span>
             </h2>
