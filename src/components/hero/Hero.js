@@ -9,7 +9,7 @@ import {
 const Hero = () => {
   return (
     <div
-      className="flex lg:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 lg:px-60 px-6 "
+      className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 lg:px-60 px-6 "
       id="home"
     >
       <div className=" text-textTitle flex lg:gap-6 gap-4 flex-col lg:items-start items-center">
@@ -69,8 +69,8 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col ">
-        <ImageComponent src={"/assets/hero/main-nft.png"} className="lg:w-[700px] lg:h-[600px] h-[370px] w-[300px] -mt-10 -mb-4 lg:mt-0 lg:mb-0" />
+      <div className="flex flex-col w-[418px]">
+        <ImageComponent src={"/assets/hero/main-nft.png"} className=" w-full h-full" />
       </div>
     </div>
   );
