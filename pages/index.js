@@ -12,7 +12,7 @@ import ImageComponent from "../src/components/shared/ImageComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
+// import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // gsap.registerPlugin(ScrollTrigger);
 import Scrollbar from "smooth-scrollbar";
@@ -50,14 +50,12 @@ export default function Home() {
       <main className="scrolling">
         <Navbar />
         <Scroll />
-        <div data-aos="fade-up">
-          {/* Hero Section */}
-          <Hero />
+        {/* Hero Section */}
+        <Hero />
 
-          {/* How It Works Section */}
-          <ImageComponent src={"/assets/trees-bg.png"} />
-          <HowItWorks />
-        </div>
+        {/* How It Works Section */}
+        <ImageComponent src={"/assets/trees-bg.png"} />
+        <HowItWorks />
 
         {/* NFT Slider Section */}
         <NFTSlider />
