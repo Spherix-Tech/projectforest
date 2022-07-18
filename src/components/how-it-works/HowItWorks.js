@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ContentCard from "./ContentCard";
 import ImageComponent from "../shared/ImageComponent";
+import {gsap} from "gsap/dist/gsap"
+
 
 const HowItWorks = () => {
 
+  const HowItWorksSection = useRef(0);
+
+  useEffect(() => {
+    gsap.from(HowItWorksSection.current, {
+      // opacity: 0,
+      ease: "power4.inOut",
+      duration: 1.2,
+    });
+  }, []);
+
   return (
-    <div className="bg-primary lg:px-60 px-6 how-section" id="how-it-works">
+    <div className="bg-primary lg:px-60 px-6 how-section" id="how-it-works" ref={HowItWorksSection}>
       <h3 className=" lg:text-[44px] text-[30px] font-semibold py-8 text-white">How it works</h3>
       <div className="w-full flex flex-col">
         <div className="flex lg:flex-row flex-col-reverse justify-between ">
