@@ -4,20 +4,20 @@ import { useKeenSlider } from "keen-slider/react";
 import ImageComponent from "../shared/ImageComponent";
 import { getDataBySectionName } from "../../services/dataService";
 
-const DataArr = getDataBySectionName("nft"); 
+const DataArr = getDataBySectionName("nft");
 
-export default function NFTSlider() {
-  const [currentSlide, setCurrentSlide] = useState(0); 
+export default function NFTSlider({ reference }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
-  const [selectedNFTObj, setSelectedNFTObj] = useState(DataArr[0]); 
+  const [selectedNFTObj, setSelectedNFTObj] = useState(DataArr[0]);
 
-//   useEffect(() => {
-//     setSelectedNFTObj(DataArr); 
-//   }, [DataArr]);
+  //   useEffect(() => {
+  //     setSelectedNFTObj(DataArr);
+  //   }, [DataArr]);
 
   const changeSelectedNft = (slideObj) => {
-    setSelectedNFTObj(slideObj);  
+    setSelectedNFTObj(slideObj);
   };
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
@@ -63,55 +63,48 @@ export default function NFTSlider() {
   });
 
   return (
-    <div id="nft" className="lg:px-60 px-6">
-   
-      
-          <h3 className=" text-textTitle font-bold text-[40px] pt-8 pb-4">NFT</h3>
-       
-        <div className="flex w-full justify-end gap-2 pb-4 ">
-          <div>
-            {loaded && instanceRef.current && (
-              <>
-                <Arrow
-                  onClick={(e) =>
-                    e.stopPropagation() || instanceRef.current?.next()
-                  }
-                  disabled={
-                    currentSlide ===
-                    instanceRef.current.track.details.slides.length - 1
-                  }
-                />
-              </>
-            )}
-          </div>
-          <div>
-            {loaded && instanceRef.current && (
-              <>
-                <Arrow
-                  left
-                  onClick={(e) =>
-                    e.stopPropagation() || instanceRef.current?.prev()
-                  }
-                  disabled={currentSlide === 0}
-                />
-              </>
-            )}
-          </div>
+    <div id="nft" className="lg:px-60 px-6 panel " ref={reference}>
+      <h3 className=" text-textTitle font-bold text-[40px] pt-8 pb-4">NFT</h3>
+
+      <div className="flex w-full justify-end gap-2 pb-4 ">
+        <div>
+          {loaded && instanceRef.current && (
+            <>
+              <Arrow
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.next()
+                }
+                disabled={
+                  currentSlide ===
+                  instanceRef.current.track.details.slides.length - 1
+                }
+              />
+            </>
+          )}
         </div>
-      
+        <div>
+          {loaded && instanceRef.current && (
+            <>
+              <Arrow
+                left
+                onClick={(e) =>
+                  e.stopPropagation() || instanceRef.current?.prev()
+                }
+                disabled={currentSlide === 0}
+              />
+            </>
+          )}
+        </div>
+      </div>
 
       <div className="flex flex-row items-start w-full ">
         {/* Selected NFT */}
         <div className="flex flex-col lg:w-[300px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[450px]">
-         
-            
-              <ImageComponent
-                src={`/assets/nft/${selectedNFTObj?.imageName}`}
-                alt="NFT Project Forest"
-                className=" w-full h-full "
-              />
-           
-        
+          <ImageComponent
+            src={`/assets/nft/${selectedNFTObj?.imageName}`}
+            alt="NFT Project Forest"
+            className=" w-full h-full "
+          />
         </div>
 
         <div className="lg:w-[70%] w-2/4 max-w-sm lg:max-w-4xl flex flex-col h-full text-textTitle">
@@ -165,7 +158,6 @@ export default function NFTSlider() {
   );
 }
 function Arrow(props) {
- 
   return (
     <div
       className="w-7 flex flex-col items-center justify-center"

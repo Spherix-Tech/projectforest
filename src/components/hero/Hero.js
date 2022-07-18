@@ -6,16 +6,15 @@ import {
   TWITTER_LINK,
 } from "../../utilities/constants";
 
-const Hero = () => {
+const Hero = ({ reference }) => {
   return (
     <div
-      className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 lg:px-60 px-6 "
+      className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 lg:px-60 px-6 panel"
       id="home"
+      ref={reference}
     >
       <div className=" lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col lg:items-start items-center">
-        <h3
-          className="lg:text-[42px] text-[30px] font-bold text-center lg:text-left leading-9 lg:leading-10 whitespace-nowrap"
-        >
+        <h3 className="lg:text-[42px] text-[30px] font-bold text-center lg:text-left leading-9 lg:leading-10 whitespace-nowrap">
           A Purpose Led Change <br></br> is Coming to Web3
         </h3>
 
@@ -70,7 +69,10 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col">
-        <ImageComponent src={"/assets/hero/main-nft.png"} className=" lg:w-[418px] w-[318] lg:h-[540px] h-[400px]" />
+        <ImageComponent
+          src={"/assets/hero/main-nft.png"}
+          className=" lg:w-[418px] w-[318] lg:h-[540px] h-[400px]"
+        />
       </div>
     </div>
   );
