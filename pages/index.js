@@ -11,12 +11,35 @@ import Token from "../src/components/token/Token";
 import ImageComponent from "../src/components/shared/ImageComponent";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
+import Scrollbar from "smooth-scrollbar";
 
 export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
+  //  ScrollTrigger.scrollerProxy("body", {
+  //    scrollTop(value) {
+  //      if (arguments.length) {
+  //        bodyScrollBar.scrollTop = value;
+  //      }
+  //      return bodyScrollBar.scrollTop;
+  //    }
+  //  })
+
+  var options = {
+    damping: 0.07,
+  };
+  const Scroll = () => {
+    useEffect(() => {
+      Scrollbar.init(document.body, options);
+    }, []);
+    return null;
+  };
   return (
     <div>
       <Head>
@@ -26,12 +49,12 @@ export default function Home() {
       </Head>
       <main className="scrolling">
         <Navbar />
-
-        {/* Hero Section */}
-        <Hero />
-
-        {/* How It Works Section */}
+        <Scroll />
         <div data-aos="fade-up">
+          {/* Hero Section */}
+          <Hero />
+
+          {/* How It Works Section */}
           <ImageComponent src={"/assets/trees-bg.png"} />
           <HowItWorks />
         </div>
