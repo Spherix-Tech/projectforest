@@ -33,12 +33,12 @@ export default function Home() {
 
 
     gsap.fromTo(
-      ".how-section",
+      ".anime-section",
       {
         opacity: 0,
         y: "200",
         scrollTrigger: {
-          trigger: ".how-section",
+          trigger: ".anime-section",
           start: "top 50%",
           end: "bottom 80%",
           toggleActions: "restart complete reverse reset",
@@ -47,10 +47,10 @@ export default function Home() {
       {
         duration: 3,
         opacity: 1,
-        y: "-200",
+        y: "0",
         ease: "ease-in",
         scrollTrigger: {
-          trigger: ".how-section",
+          trigger: ".anime-section",
           pin: true, // pin the trigger element while active
           start: "top 80%", // when the top of the trigger hits the top of the viewport
           end: "+=500", // end after scrolling 500px beyond the start
@@ -76,6 +76,7 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
+        <div className="anime-section"> 
         {/* How It Works Section */}
         <HowItWorks />
 
@@ -93,7 +94,7 @@ export default function Home() {
 
         {/* Newsletter Section */}
         <MailingList />
-
+        </div>
         <Footer />
       </main>
     </div>

@@ -8,7 +8,7 @@ const HowItWorks = ({reference}) => {
 
   return (
     <div className="how-section" id="how-it-works" ref={reference}>
-       <ImageComponent src={"/assets/trees-bg.png"} />
+       <ImageComponent src={"/assets/trees-bg.png"} className="-mb-2" />
     <div
       className=" bg-primary lg:px-60 px-6 ">
       <h3 className=" lg:text-[44px] text-[30px] font-semibold py-8 text-white how-it">
