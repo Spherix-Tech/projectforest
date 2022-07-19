@@ -17,7 +17,7 @@ import { gsap, TimelineLite, Power3 } from "gsap";
 
 export default function Home() {
   var options = {
-    damping: 0.07,
+    damping: 0.09,
   };
   const Scroll = () => {
     useEffect(() => {
@@ -47,7 +47,7 @@ export default function Home() {
       {
         duration: 3,
         opacity: 1,
-        y: "0",
+        y: "-0",
         ease: "ease-in",
         scrollTrigger: {
           trigger: ".anime-section",
@@ -58,7 +58,24 @@ export default function Home() {
         },
       }
     );
+
+    // gsap.to(
+    //   ".footer-section",
+    //   {
+    //     opacity: 1,
+    //     y: "1000",
+    //     scrollTrigger: {
+    //       trigger: ".footer-section",
+    //       start: "top 50%",
+    //       end: "bottom 80%",
+    //       toggleActions: "restart complete reverse reset",
+    //     },
+    //   }
+    //   );
   }, []);
+
+
+
 
   return (
     <div>
@@ -94,8 +111,8 @@ export default function Home() {
 
         {/* Newsletter Section */}
         <MailingList />
-        </div>
         <Footer />
+        </div>
       </main>
     </div>
   );

@@ -6,7 +6,7 @@ import ImageComponent from '../shared/ImageComponent'
 
 const Footer = () => {
   return (
-    <div className="w-full h-unset z-10 flex flex-col bg-footerBgColor py-10 lg:px-36 px-6">
+    <div className="w-full h-unset z-10 flex flex-col bg-footerBgColor py-10 lg:px-36 px-6 footer-section">
       <div className="w-full lg:pb-8 pb-0 m-auto flex flex-row ">
         <div className="lg:w-2/4 w-full flex flex-col items-center lg:items-start">
           <div className="flex flex-row gap-2 items-center">
