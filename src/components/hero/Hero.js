@@ -9,16 +9,16 @@ import {
 const Hero = ({ reference }) => {
   return (
     <div
-      className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 lg:px-60 px-6 panel"
+      className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 lg:px-60 px-6"
       id="home"
       ref={reference}
     >
-      <div className=" lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col lg:items-start items-center">
-        <h3 className="lg:text-[42px] text-[30px] font-bold text-center lg:text-left leading-9 lg:leading-10 whitespace-nowrap">
+      <div className=" lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col navscreen:items-start items-center">
+        <h3 className="navscreen:text-[42px] text-[30px] font-bold text-center navscreen:text-left leading-9 navscreen:leading-10 navscreen:whitespace-nowrap">
           A Purpose Led Change <br></br> is Coming to Web3
         </h3>
 
-        <p className="leading-6 text-primary font-bold lg:text-left text-center lg:text-[16px] text-[14px] ">
+        <p className="leading-6 text-primary font-bold navscreen:text-left text-center navscreen:text-[16px] text-[14px] px-6 navscreen:px-0 ">
           Earn while making a greener impact on the planet.<br></br>
           <span className="text-textDescription font-normal ">
             Become part of Project Forest’s aim of planting 1,000,000 trees
@@ -26,8 +26,8 @@ const Hero = ({ reference }) => {
             produce.
           </span>
         </p>
-        <div className="flex flex-row pt-1 items-start">
-          <button className="btnPrimary lg:w-60 w-52 ">
+        <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
+          <button className="btnPrimary lg:w-60 w-44 mr-0">
             <a
               href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"
               target="_blank"
@@ -36,12 +36,12 @@ const Hero = ({ reference }) => {
               Whitepaper
             </a>
           </button>
-          <button className="btnSecondary lg:w-60 w-52">
+          <button className="btnSecondary lg:w-60 w-44 mr-0">
             Go To Marketplace
           </button>
         </div>
 
-        <div className=" w-3/4 flex flex-row justify-center ">
+        <div className="w-full flex flex-row justify-center ">
           <a
             className=" flex flex-row items-center justify-center"
             href={TELEGRAM_LINK}
