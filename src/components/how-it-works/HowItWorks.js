@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ContentCard from "./ContentCard";
 import ImageComponent from "../shared/ImageComponent";
 
@@ -7,11 +7,11 @@ const HowItWorks = ({reference}) => {
 
 
   return (
+    <div className="how-section" id="how-it-works" ref={reference}>
+       <ImageComponent src={"/assets/trees-bg.png"} />
     <div
-      className="bg-primary lg:px-60 px-6 how-section"
-      id="how-it-works" ref={reference} 
-    >
-      <h3 className=" lg:text-[44px] text-[30px] font-semibold py-8 text-white">
+      className=" bg-primary lg:px-60 px-6 ">
+      <h3 className=" lg:text-[44px] text-[30px] font-semibold py-8 text-white how-it">
         How it works
       </h3>
       <div className="w-full flex flex-col">
@@ -76,6 +76,7 @@ const HowItWorks = ({reference}) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
