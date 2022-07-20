@@ -97,7 +97,7 @@ export default function NFTSlider({ reference }) {
         </div>
       </div>
 
-      <div className="flex flex-row items-start w-full ">
+      <div className="flex flex-row items-start justify-between w-full ">
         {/* Selected NFT */}
         <div className="flex flex-col lg:w-[300px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[450px]">
           <ImageComponent
@@ -109,7 +109,7 @@ export default function NFTSlider({ reference }) {
 
         <div className="lg:w-[70%] w-2/4 max-w-sm lg:max-w-4xl flex flex-col h-full text-textTitle">
           {/* NFT Slider */}
-          <div ref={sliderRef} className="keen-slider w-full flex ">
+          <div ref={sliderRef} className="keen-slider w-full bg-red-500 flex ">
             {DataArr &&
               DataArr.map((slide, i) => {
                 return (
