@@ -3,14 +3,14 @@ import ContentCard from "./ContentCard";
 import ImageComponent from "../shared/ImageComponent";
 
 
-const HowItWorks = ({reference}) => {
+const HowItWorks = () => {
 
 
   return (
-    <div className="how-section" id="how-it-works" ref={reference}>
+    <div className="how-section" id="how-it-works">
        <ImageComponent src={"/assets/trees-bg.png"} className="-mb-2" />
     <div
-      className=" bg-primary lg:px-60 px-6 ">
+      className=" bg-primary lg:px-60 px-6 " id="how-it">
       <h3 className=" lg:text-[44px] text-[30px] font-semibold py-8 text-white how-it">
         How it works
       </h3>

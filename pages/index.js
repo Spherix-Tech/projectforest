@@ -9,10 +9,10 @@ import NFTSlider from "../src/components/NFT/NFTSlider";
 import Roadmap from "../src/components/roadmap/Roadmap";
 import Token from "../src/components/token/Token";
 import Aos from "aos";
-import "aos/dist/aos.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Scrollbar from "smooth-scrollbar";
-
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import {ScrollToPlugin} from "gsap/dist/ScrollToPlugin";
 import { gsap, TimelineLite, Power3 } from "gsap";
 
 export default function Home() {
@@ -26,52 +26,34 @@ export default function Home() {
     return null;
   };
 
-  let t1 = new TimelineLite({ delay: 0.3 });
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
 
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
 
+    gsap.fromTo("#home", {opacity: 0}, {opacity: 1, duration: 1});
     gsap.fromTo(
-      ".anime-section",
+      ".how-section",
       {
         opacity: 0,
-        y: "200",
-        scrollTrigger: {
-          trigger: ".anime-section",
-          start: "top 50%",
-          end: "bottom 80%",
-          toggleActions: "restart complete reverse reset",
-        },
+        y: 200
       },
       {
-        duration: 3,
         opacity: 1,
-        y: "-0",
-        ease: "ease-in",
-        scrollTrigger: {
-          trigger: ".anime-section",
-          pin: true, // pin the trigger element while active
-          start: "top 80%", // when the top of the trigger hits the top of the viewport
-          end: "+=500", // end after scrolling 500px beyond the start
-          toggleActions: "restart complete reverse reset",
-        },
-      }
+        duration: 3,
+        ease: Power3.easeInOut,
+        y: 0
+        // scrollTrigger: {
+        //   trigger: "#how-it",
+        //   start: "top top",
+        //   end: "bottom center",
+        //   scrub: true,
+        // }
+      } ///TODO fix scrollTrigger to trigger based on ID or ClassName
+     
     );
-
-    // gsap.to(
-    //   ".footer-section",
-    //   {
-    //     opacity: 1,
-    //     y: "1000",
-    //     scrollTrigger: {
-    //       trigger: ".footer-section",
-    //       start: "top 50%",
-    //       end: "bottom 80%",
-    //       toggleActions: "restart complete reverse reset",
-    //     },
-    //   }
-    //   );
   }, []);
 
 
@@ -93,7 +75,7 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
-        <div className="anime-section"> 
+        {/* <div className="anime-section">  */}
         {/* How It Works Section */}
         <HowItWorks />
 
@@ -112,7 +94,7 @@ export default function Home() {
         {/* Newsletter Section */}
         <MailingList />
         <Footer />
-        </div>
+        {/* </div> */}
       </main>
     </div>
   );
