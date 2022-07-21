@@ -109,7 +109,7 @@ export default function NFTSlider({ reference }) {
 
         <div className="lg:w-[70%] w-2/4 max-w-sm lg:max-w-4xl flex flex-col h-full text-textTitle">
           {/* NFT Slider */}
-          <div ref={sliderRef} className="keen-slider w-full bg-red-500 flex ">
+          <div ref={sliderRef} className="keen-slider w-full flex ">
             {DataArr &&
               DataArr.map((slide, i) => {
                 return (

@@ -16,15 +16,15 @@ import {ScrollToPlugin} from "gsap/dist/ScrollToPlugin";
 import { gsap, TimelineLite, Power3 } from "gsap";
 
 export default function Home() {
-  var options = {
-    damping: 0.09,
-  };
-  const Scroll = () => {
-    useEffect(() => {
-      Scrollbar.init(document.body, options);
-    }, []);
-    return null;
-  };
+  // var options = {
+  //   damping: 0.09,
+  // };
+  // const Scroll = () => {
+  //   useEffect(() => {
+  //     Scrollbar.init(document.body, options);
+  //   }, []);
+  //   return null;
+  // };
 
 
   useEffect(() => {
@@ -70,7 +70,7 @@ export default function Home() {
         <Navbar />
 
         {/* Smooth Scroll for the page */}
-        <Scroll />
+        {/* <Scroll /> */}
 
         {/* Hero Section */}
         <Hero />
