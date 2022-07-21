@@ -59,12 +59,12 @@ export default function Home() {
       {
         opacity: 0,
         y: 400,
-        scrollTrigger: {
-          trigger: "#how-section",
-          start: "top top",
-          end: "bottom center",
-          scrub: true,
-        }
+        // scrollTrigger: {
+        //   trigger: "#how-section",
+        //   start: "top top",
+        //   end: "bottom center",
+        //   scrub: true,
+        // }
       },
       {
         opacity: 1,
