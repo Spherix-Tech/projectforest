@@ -7,7 +7,7 @@ const HowItWorks = () => {
 
 
   return (
-    <div className="how-section" id="how-it-works">
+    <div className="how-section" id="how-it-works" >
        <ImageComponent src={"/assets/trees-bg.png"} className="-mb-2" />
     <div
       className=" bg-primary lg:px-60 px-6 " id="how-it">
