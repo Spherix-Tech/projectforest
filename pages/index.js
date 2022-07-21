@@ -11,7 +11,7 @@ import Token from "../src/components/token/Token";
 import Aos from "aos";
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
+// import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import {ScrollToPlugin} from "gsap/dist/ScrollToPlugin";
 import { gsap, TimelineLite, Power3 } from "gsap";
 
@@ -29,13 +29,14 @@ export default function Home() {
     gsap.registerPlugin(ScrollToPlugin);
 
 
-    let smoother = ScrollSmoother.create({
-      wrapper: '#smooth-wrapper',
-      content: '#smooth-content',
-      smooth: 2,
-      smoothTouch: 0.1,
+    // let smoother = ScrollSmoother.create({
+    //   wrapper: '#smooth-wrapper',
+    //   content: '#smooth-content',
+    //   smooth: 2,
+    //   smoothTouch: 0.1,
       
-    });
+    // });
+    
 
     gsap.fromTo("#home", {opacity: 0}, {opacity: 1, duration: 1});
     gsap.fromTo(
