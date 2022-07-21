@@ -25,7 +25,7 @@ export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
 
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
 
 
