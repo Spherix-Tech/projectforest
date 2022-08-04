@@ -1,20 +1,20 @@
 import Head from "next/head";
-import Navbar from "../src/components/navbar/Navbar";
-import Hero from "../src/components/hero/Hero";
-import Footer from "../src/components/footer/Footer";
-import HowItWorks from "../src/components/how-it-works/HowItWorks";
-import MailingList from "../src/components/mailing-list/MailingList";
-import Reforestation from "../src/components/reforestation/Reforestation";
-import NFTSlider from "../src/components/NFT/NFTSlider";
-import Roadmap from "../src/components/roadmap/Roadmap";
-import Token from "../src/components/token/Token";
+import Navbar from "../../src/components/navbar/Navbar";
+import Hero from "../../src/components/hero/Hero";
+import Footer from "../../src/components/footer/Footer";
+import HowItWorks from "../../src/components/how-it-works/HowItWorks";
+import MailingList from "../../src/components/mailing-list/MailingList";
+import Reforestation from "../../src/components/reforestation/Reforestation";
+import NFTSlider from "../../src/components/NFT/NFTSlider";
+import Roadmap from "../../src/components/roadmap/Roadmap";
+import Token from "../../src/components/token/Token";
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
 
-export default function Home() {
+export default function NFTs() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
@@ -40,7 +40,7 @@ export default function Home() {
         ease: Power3.easeInOut,
         y: 0,
         // scrollTrigger: {
-        //   trigger: "#how-section",
+        //   trigger: "#how-it",
         //   start: "top top",
         //   end: "bottom center",
         //   scrub: true,

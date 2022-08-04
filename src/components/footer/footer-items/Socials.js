@@ -1,5 +1,6 @@
 import React from "react";
-import {getDataBySectionName} from '../../../services/dataService'
+import { getDataBySectionName } from "../../../services/dataService";
+import ImageComponent from "../../shared/ImageComponent";
 
 const DataArr = getDataBySectionName("socials");
 
@@ -9,7 +10,7 @@ const Socials = () => {
       {DataArr.map(({ icon, href }, i) => (
         <div key={i} className="mr-2">
           <a href={href} target="_blank" rel="noreferrer">
-            <img alt="ankots" src={icon} className="" />
+            <ImageComponent alt="ankots" src={icon} className="" />
           </a>
         </div>
       ))}

@@ -47,7 +47,10 @@ const Hero = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={"/assets/hero/telegram.svg"} className="mx-[8px]" />
+            <ImageComponent
+              src={"/assets/hero/telegram.svg"}
+              className="mx-[8px]"
+            />
           </a>
           <a
             className=" flex items-center justify-center"
@@ -55,7 +58,10 @@ const Hero = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={"/assets/hero/discord.svg"} className="mx-[8px]" />
+            <ImageComponent
+              src={"/assets/hero/discord.svg"}
+              className="mx-[8px]"
+            />
           </a>
           <a
             className=" flex flex-row items-center justify-center"
@@ -63,7 +69,10 @@ const Hero = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={"/assets/hero/twitter.svg"} className="mx-[8px]" />
+            <ImageComponent
+              src={"/assets/hero/twitter.svg"}
+              className="mx-[8px]"
+            />
           </a>
         </div>
       </div>

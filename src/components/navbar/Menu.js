@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import ImageComponent from "../shared/ImageComponent";
 
 export const NavbarMenuItems = ({
   classname = "flex-row flex justify-end",
@@ -19,7 +20,7 @@ export const NavbarMenuItems = ({
             className="w-full flex flex-row justify-between py-2 items-center"
           >
             <h5 className=" text-textTitle">{e.name}</h5>
-            <img src={e.icon_src} />
+            <ImageComponent src={e.icon_src} />
           </a>
         );
       })}
