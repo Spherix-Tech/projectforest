@@ -16,6 +16,31 @@
     }
     .no-scrollbar::-webkit-scrollbar {
         display: none;
-      }
+    }
+    div#smooth-content{
+        @apply overflow-x-hidden
+    }
+
+    .main-tree-background {
+        @apply bg-[#CEFEFF];
+    }
+    .pink-tree-background {
+        @apply bg-[#FEF4FF];
+    }
+    .green-tree-background {
+        @apply bg-[#E6FFF0];
+    }
+    .red-tree-background {
+        @apply bg-[#FDE8F3];
+    }
+    .green-big-tree-background {
+        @apply bg-[#F1FCDF];
+    }
+    .red-mushroom-tree-background {
+        @apply bg-[#F8EFDC];
+    }
+    .red-big-tree-background {
+        @apply bg-[#F7DFD4];
+    }
 
 };

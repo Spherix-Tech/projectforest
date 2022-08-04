@@ -1,39 +1,40 @@
-const allData = [ 
-    {
-      title: "PlantOne",
-      imageName: "nft-main.png",
+const allData = [
+  {
+    title: "PlantOne",
+    imageName: "nft-main.png",
+    bgGradientColorClass: "main-tree-background",
+  },
+  {
+    title: "PlantTwo",
+    imageName: "pink-tree-nft.png",
+    bgGradientColorClass: "pink-tree-background",
+  },
+  {
+    title: "PlantThree",
+    imageName: "green-tree-nft.png",
+    bgGradientColorClass: "green-tree-background",
+  },
 
-    },
-    {
-      title: "PlantTwo",
-      imageName: "nft-1.png",
- 
-    },
-    {
-      title: "PlantThree",
-      imageName: "nft-2.png",
-    },
-    {
-      title: "PlantFour",
-      imageName: "nft-3.png",
-    },
-  
-    {
-      title: "PlantFive",
-      imageName: "nft-4.png",
-    },
-    {
-      title: "PlantSix",
-      imageName: "nft-5.png",
-    },
-    {
-        title: "PlantSeven",
-        imageName: "nft-6.png",
-      },
-      {
-        title: "PlantSeven",
-        imageName: "nft-7.png",
-      },
-  ];
-  
-  export const getAllNftData = () => allData;
+  {
+    title: "PlantFive",
+    imageName: "red-tree-nft.png",
+    bgGradientColorClass: "red-tree-background",
+  },
+  {
+    title: "PlantSix",
+    imageName: "green-big-tree-nft.png",
+    bgGradientColorClass: "green-big-tree-background",
+  },
+  {
+    title: "PlantSeven",
+    imageName: "red-mushroom-tree-nft.png",
+    bgGradientColorClass: "red-mushroom-tree-background",
+  },
+  {
+    title: "PlantSeven",
+    imageName: "red-big-tree-nft.png",
+    bgGradientColorClass: "red-big-tree-background",
+  },
+];
+
+export const getAllNftData = () => allData;
