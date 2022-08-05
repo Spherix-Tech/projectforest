@@ -48,7 +48,7 @@ const HowItWorks = () => {
                   <div
                     key={index}
                     className={
-                      "flex justify-between gap-[2rem] items-center " +
+                      "flex justify-start gap-[2rem] items-center " +
                       (index == 0 || index == howItWorksItemsList.length - 1
                         ? ""
                         : "my-8")
