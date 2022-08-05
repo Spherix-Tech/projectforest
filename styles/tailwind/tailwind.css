@@ -5,10 +5,10 @@
 @layer base{
 
     .btnPrimary{
-        @apply text-[#434343] bg-primary border-[1px] border-primary lg:max-w-2xl hover:bg-[#ACADAD] hover:text-primary  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
+        @apply text-[#434343] bg-primary border-[1px] border-primary lg:max-w-2xl hover:bg-[#ACADAD] hover:text-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
     }
     .btnSecondary{
-        @apply text-[#336470] border-[1px] border-borderColor lg:max-w-2xl hover:bg-[#ACADAD]  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
+        @apply text-primaryBlue border-[1px] border-borderColor lg:max-w-2xl hover:bg-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
     }
 
     .section-title{
@@ -50,6 +50,12 @@
     }
     .banana-tree-background {
         @apply bg-[#F1FCDF];
+    }
+    .section-spacing{
+        @apply px-6 lg:px-[12rem]; 
+    }
+    .activeCard{
+        @apply bg-[#E4E7C7] p-4 rounded-[25px]
     }
     .nav-hero-section-bg{
         width: 100%;

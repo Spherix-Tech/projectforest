@@ -9,9 +9,9 @@ const DataArr = getDataBySectionName("navbar");
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <div className="w-full flex flex-row  justify-between items-center py-8 lg:px-60 px-6">
+    <div className="w-full flex flex-row  justify-between items-center py-8 section-spacing">
       <div
-        className="flex flex-row gap-2 text-primary items-center "
+        className="flex flex-row gap-2 text-primaryBlue items-center "
         onClick={() => setToggleMenu(false)}
       >
         <ImageComponent

@@ -68,7 +68,7 @@ export default function NFTSlider({ reference }) {
   });
 
   return (
-    <div id="nft" className="lg:px-60 px-6 panel " ref={reference}>
+    <div id="nft" className="section-spacing panel " ref={reference}>
       <h3 className=" text-textTitle font-bold text-[40px] pt-8 pb-4">NFT</h3>
 
       <div className="flex w-full justify-end gap-2 pb-4 ">
@@ -128,10 +128,10 @@ export default function NFTSlider({ reference }) {
                     }
                   >
                     <div
-                      className={`${slide?.bgGradientColorClass} flex flex-col justify-center items-center rounded-2xl w-full`}
+                      className={`${slide?.bgGradientColorClass} flex h-[8rem] w-[8rem] md:h-[9rem] md:w-[10rem] flex-col justify-center items-center rounded-2xl`}
                     >
                       <ImageComponent
-                        className="h-[6rem] w-[6rem] md:h-[8rem] md:w-[7rem]"
+                        className="h-[6rem] w-[6rem] md:h-[7rem] md:w-[6rem]"
                         alt="project forest"
                         src={`/assets/nft/${slide.imageName}`}
                       />
@@ -143,7 +143,7 @@ export default function NFTSlider({ reference }) {
           {/* NFT Slider ends */}
           <h3 className=" lg:text-[40px] text-xl md:text-3xl font-semibold lg:pt-8 lg:pb-2 pb-0 pt-2">
             Purchase your first NFT
-            <span className="text-[#19B7B7]"> Plant </span>
+            <span className="text-[#19B7B7]"> Tree </span>
           </h3>
 
           <p className="lg:text-[16px] text-xs lg:w-[90%] md:w-full w-full leading-4 sm:leading-5 py-1 sm:py-4 text-textDescription">
@@ -153,8 +153,8 @@ export default function NFTSlider({ reference }) {
             resistance, terrain suitability and more.
           </p>
           <a>
-            <button className=" btnPrimary w-44 h-10 flex flex-col items-center text-xs">
-              Go To Marketplace
+            <button className="disabled cursor-default btnPrimary w-44 h-10 flex flex-col items-center text-xs">
+              Mint Now
             </button>
           </a>
         </div>

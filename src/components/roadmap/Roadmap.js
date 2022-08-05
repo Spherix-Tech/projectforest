@@ -12,8 +12,11 @@ const DataArr = getDataBySectionName("roadmap");
 
 const Roadmap = () => {
   return (
-    <div className=" text-textDescription py-10 bg-[#F2F2F2] panel" id="roadmap">
-      <h3 className=" text-textTitle text-[40px] font-bold lg:px-60 px-6">
+    <div
+      className=" text-textDescription py-10 bg-[#F2F2F2] panel"
+      id="roadmap"
+    >
+      <h3 className=" text-textTitle text-[40px] font-bold section-spacing">
         Roadmap
       </h3>
 

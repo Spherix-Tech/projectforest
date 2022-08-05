@@ -2,14 +2,14 @@ import React from "react";
 import ImageComponent from "../shared/ImageComponent";
 import {
   DISCORD_LINK,
-  TELEGRAM_LINK,
+  MEDIUM_LINK,
   TWITTER_LINK,
 } from "../../utilities/constants";
 
 const Hero = () => {
   return (
     <div
-      className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 lg:px-60 px-6 hero-sec"
+      className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 section-spacing hero-sec"
       id="home"
     >
       <div className=" lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col navscreen:items-start items-center">
@@ -26,34 +26,34 @@ const Hero = () => {
           </span>
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
-          <button className="btnPrimary lg:w-60 w-44 mr-0">
+          <button className="disabled btnPrimary lg:w-60 w-44 mr-0">
             <a
               href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
-              Whitepaper
+              Litepaper
             </a>
           </button>
-          <button className="btnSecondary lg:w-60 w-44 mr-0">
-            Go To Marketplace
+          <button className="disbaled cursor-default btnSecondary lg:w-60 w-44 mr-0">
+            Mint Now
           </button>
         </div>
 
-        <div className="w-full flex flex-row justify-center ">
+        <div className="w-full flex flex-row justify-center 2xl:-ml-[6.5rem] ">
           <a
             className=" flex flex-row items-center justify-center"
-            href={TELEGRAM_LINK}
+            href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
           >
             <ImageComponent
-              src={"/assets/hero/telegram.svg"}
+              src={"/assets/hero/twitter.svg"}
               className="mx-[8px]"
             />
           </a>
           <a
-            className=" flex items-center justify-center"
+            className=" flex flex-row items-center justify-center"
             href={DISCORD_LINK}
             target="_blank"
             rel="noreferrer"
@@ -64,13 +64,13 @@ const Hero = () => {
             />
           </a>
           <a
-            className=" flex flex-row items-center justify-center"
-            href={TWITTER_LINK}
+            className=" flex items-center justify-center"
+            href={MEDIUM_LINK}
             target="_blank"
             rel="noreferrer"
           >
             <ImageComponent
-              src={"/assets/hero/twitter.svg"}
+              src={"/assets/hero/medium.svg"}
               className="mx-[8px]"
             />
           </a>

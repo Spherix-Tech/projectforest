@@ -7,7 +7,7 @@ const DataArr = getDataBySectionName("reforestation");
 
 const Reforestation = () => {
   return (
-    <div className=" text-textTitle bg-[#F5F5F5] lg:py-16 py-10 lg:px-60 px-6 panel">
+    <div className=" text-textTitle bg-[#F5F5F5] lg:py-16 py-10 section-spacing panel">
       <div className="flex flex-col justify-start items-start pb-10">
         <div className="text-[30px] lg:text-[40px] font-bold">
           Reforestation
