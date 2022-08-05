@@ -26,7 +26,7 @@ const MailingList = () => {
             className="py-3 px-4 w-full placeholder:text-sm outline-none rounded-md"
           ></input>
         </div>
-        <div className="flex flex-row items-center justify-between pt-6">
+        <div className="flex flex-row items-center justify-between pt-6 gap-2">
           <p className="w-3/4 text-sm lg:text-[16px]">
             Get our emails to stay in the know on what’s happening in the field
             and ways you can get involved.
