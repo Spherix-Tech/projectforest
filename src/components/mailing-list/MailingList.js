@@ -31,7 +31,7 @@ const MailingList = () => {
             Get our emails to stay in the know on what’s happening in the field
             and ways you can get involved.
           </p>
-          <button className="flex flex-row justify-end items-center font-bold text-lg w-1/4">
+          <button className="flex flex-row justify-end items-center font-bold text-lg">
             SUBMIT
             <ImageComponent
               src={"/assets/mail-list/arrow-icon.svg"}
