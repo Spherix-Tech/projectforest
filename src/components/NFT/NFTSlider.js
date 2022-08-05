@@ -105,16 +105,16 @@ export default function NFTSlider({ reference }) {
       <div className="flex flex-row items-start justify-between w-full ">
         {/* Selected NFT */}
         <div
-          className={`${selectedNFTObj?.bgGradientColorClass} flex flex-col justify-center items-center rounded-2xl lg:w-[380px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[400px]`}
+          className={`${selectedNFTObj?.bgGradientColorClass} flex flex-col justify-center items-center rounded-2xl lg:w-[400px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[400px]`}
         >
           <ImageComponent
             src={`/assets/nft/${selectedNFTObj?.imageName}`}
             alt="NFT Project Forest"
-            className=" w-[16rem] h-[16rem] md:w-[18rem] md:h-[18rem] "
+            className=" w-[16rem] h-[16rem] md:w-[19rem] md:h-[17rem] "
           />
         </div>
 
-        <div className="w-2/4 md:w-[60%] lg:w-[55%] xl:w-[75%] max-w-sm md:max-w-[35rem] lg:max-w-[40rem] xl:max-w-[70rem] flex flex-col h-full text-textTitle">
+        <div className="w-2/4 md:w-[60%] lg:w-[55%] xl:w-[70%] max-w-sm md:max-w-[35rem] lg:max-w-[40rem] xl:max-w-[70rem] flex flex-col h-full text-textTitle">
           {/* NFT Slider */}
           <div ref={sliderRef} className="keen-slider w-full flex ">
             {DataArr &&

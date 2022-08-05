@@ -7,7 +7,7 @@ const MailingList = () => {
       <ImageComponent
         src={"/assets/logo.png"}
         alt="Project forest logo"
-        className="hidden lg:flex justify-center items-center lg:h-[250px] mr-6"
+        className="hidden lg:flex justify-center items-center lg:h-[230px] mr-6"
       />
       <div className="flex flex-col w-full">
         <h3 className=" text-[25px] font-semibold py-2 text-textTitle">

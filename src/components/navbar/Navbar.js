@@ -19,9 +19,9 @@ const Navbar = () => {
           src={"/assets/logo.png"}
           className="h-[66px] lg:h-[100px]"
         />
-        <h2 className="lg:text-[33px] text-[20px] lg:leading-10 leading-6">
+        <h2 className="lg:text-[26px] text-[18px] lg:leading-[2rem] leading-6">
           PROJECT <br></br>
-          <span className="lg:text-[47px] text-[28px] font-semibold">
+          <span className="lg:text-[37px] text-[25px] font-semibold">
             FOREST
           </span>
         </h2>

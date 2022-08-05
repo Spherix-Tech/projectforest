@@ -55,7 +55,7 @@ const HowItWorks = () => {
                     }
                   >
                     {/* Numbring circle */}
-                    <div className="min-w-[35px] h-[35px] rounded-full font-bold border-2 border-[#1D3C34] flex justify-center items-center bg-[#1D3C34]">
+                    <div className="min-w-[35px] text-white h-[35px] rounded-full font-bold border-2 border-[#1D3C34] flex justify-center items-center bg-[#1D3C34]">
                       {index + 1}
                     </div>
                     {/* Details Card */}
