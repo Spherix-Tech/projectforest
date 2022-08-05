@@ -105,12 +105,12 @@ export default function NFTSlider({ reference }) {
       <div className="flex flex-row items-start justify-between w-full ">
         {/* Selected NFT */}
         <div
-          className={`${selectedNFTObj?.bgGradientColorClass} flex flex-col rounded-2xl lg:w-[380px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[400px]`}
+          className={`${selectedNFTObj?.bgGradientColorClass} flex flex-col justify-center items-center rounded-2xl lg:w-[380px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[400px]`}
         >
           <ImageComponent
             src={`/assets/nft/${selectedNFTObj?.imageName}`}
             alt="NFT Project Forest"
-            className=" w-full h-full "
+            className=" w-[16rem] h-[16rem] md:w-[18rem] md:h-[18rem] "
           />
         </div>
 
@@ -128,10 +128,10 @@ export default function NFTSlider({ reference }) {
                     }
                   >
                     <div
-                      className={`${slide?.bgGradientColorClass} flex flex-col justify-start items-center rounded-2xl w-full`}
+                      className={`${slide?.bgGradientColorClass} flex flex-col justify-center items-center rounded-2xl w-full`}
                     >
                       <ImageComponent
-                        className="h-[140px]"
+                        className="h-[6rem] w-[6rem] md:h-[8rem] md:w-[7rem]"
                         alt="project forest"
                         src={`/assets/nft/${slide.imageName}`}
                       />

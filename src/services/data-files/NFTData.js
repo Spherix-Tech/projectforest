@@ -14,7 +14,16 @@ const allData = [
     imageName: "green-tree-nft.png",
     bgGradientColorClass: "green-tree-background",
   },
-
+  {
+    title: "PlantFour",
+    imageName: "fire-tree-nft.png",
+    bgGradientColorClass: "fire-tree-background",
+  },
+  {
+    title: "PlantFour",
+    imageName: "banana-tree-nft.png",
+    bgGradientColorClass: "banana-tree-background",
+  },
   {
     title: "PlantFive",
     imageName: "red-tree-nft.png",
@@ -32,8 +41,8 @@ const allData = [
   },
   {
     title: "PlantSeven",
-    imageName: "red-big-tree-nft.png",
-    bgGradientColorClass: "red-big-tree-background",
+    imageName: "pink-mushroom-tree-nft.png",
+    bgGradientColorClass: "pink-mushroom-tree-background",
   },
 ];
 

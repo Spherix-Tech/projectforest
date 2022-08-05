@@ -17,7 +17,7 @@ const Hero = () => {
           A Purpose Led Change <br></br> is Coming to Web3
         </h3>
 
-        <p className="leading-6 text-primary font-bold navscreen:text-left text-center navscreen:text-[16px] text-[14px] px-6 navscreen:px-0 ">
+        <p className="leading-6 text-primaryBlue font-bold navscreen:text-left text-center navscreen:text-[16px] text-[14px] px-6 navscreen:px-0 ">
           Earn while making a greener impact on the planet.<br></br>
           <span className="text-textDescription font-normal ">
             Become part of Project Forest’s aim of planting 1,000,000 trees

@@ -5,10 +5,10 @@
 @layer base{
 
     .btnPrimary{
-        @apply text-white bg-primary border-[1px] border-primary lg:max-w-2xl hover:bg-[#ACADAD] hover:text-primary  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
+        @apply text-[#434343] bg-primary border-[1px] border-primary lg:max-w-2xl hover:bg-[#ACADAD] hover:text-primary  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
     }
     .btnSecondary{
-        @apply text-primary border-[1px] border-borderColor lg:max-w-2xl hover:bg-[#ACADAD]  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
+        @apply text-[#336470] border-[1px] border-borderColor lg:max-w-2xl hover:bg-[#ACADAD]  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
     }
 
     .section-title{
@@ -39,8 +39,44 @@
     .red-mushroom-tree-background {
         @apply bg-[#F8EFDC];
     }
+    .pink-mushroom-tree-background {
+        @apply bg-[#FEF4FF];
+    }
     .red-big-tree-background {
         @apply bg-[#F7DFD4];
+    }
+    .fire-tree-background {
+        @apply bg-[#F7DFD4];
+    }
+    .banana-tree-background {
+        @apply bg-[#F1FCDF];
+    }
+    .nav-hero-section-bg{
+        width: 100%;
+        position: relative;
+        background-image: url("/assets/bg/nav-hero-section-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .nft-impact-section-bg{
+        width: 100%;
+        position: relative;
+        background-image: url("/assets/bg/nft-impact-section-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .how-section-bg{
+        width: 100%;
+        position: relative;
+        background-image: url("/assets/bg/intro-grow-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #roadmap{
+        @apply bg-[#FFFFFF];
     }
 
 };
