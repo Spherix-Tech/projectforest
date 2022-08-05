@@ -20,7 +20,7 @@ const Reforestation = () => {
             <div
               key={i}
               className={
-                "flex flex-1 relative flex-col w-full sm:max-w-[650px] h-[15rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[25rem] gap-1 md:gap-2 lg:mb-0 mb-4 items-center bg-white p-4 pb-6 md:p-8 lg:p-4 " +
+                "flex flex-1 relative flex-col w-full sm:max-w-[650px] h-[15rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[26rem] gap-1 md:gap-2 lg:mb-0 mb-4 items-center bg-white p-4 pb-6 md:p-8 lg:p-4 " +
                 (i == DataArr.length ? "lg:mr-0" : "lg:mr-4")
               }
             >
@@ -34,7 +34,7 @@ const Reforestation = () => {
                 {e.text}
               </div>
               <Link href={e.learnMoreLink}>
-                <div className="cursor-pointer inline-flex absolute flex-row justify-end bottom-[3%] right-[3.5%] w-full items-center gap-2 text-xs text-end underline text-[#8DABFD]">
+                <div className="cursor-pointer inline-flex absolute flex-row justify-end bottom-[3%] 2xl:bottom-[2%] right-[3.5%] w-full items-center gap-2 text-xs text-end underline text-[#8DABFD]">
                   <div>Learn more</div>
                   <div>
                     <ImageComponent
