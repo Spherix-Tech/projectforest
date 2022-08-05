@@ -1,16 +1,26 @@
 const allData = [
-    {
-        image: "/assets/reforestation/ref-1.png",
-        text: "Excessive emissions of greenhouse gases in the atmosphere is the root cause for global warming."
-    },
-    {
-        image: "/assets/reforestation/ref-2.png",
-        text: "Trees and Forests significantly offset this by trapping and converting the carbon dioxide in the atmosphere into oxygen and cleaning the surrounding air."
-    },
-    {
-        image: "/assets/reforestation/ref-3.png",
-        text: "Planting trees and large scale reforestation initiatives  are one of the key ways that the effects of global warming can be slowed or even reversed."
-    }
-]
+  {
+    image: "/assets/reforestation/ref-1.png",
+    headingText:
+      "Global Warming, the Biggest Threat to Humanity in the 21st Century",
+    text: "Earth’s first global climate record dates back to approximately 140 years ago……",
+    learnMoreLink:
+      "https://medium.com/project-forest/global-warming-the-biggest-threat-to-humanity-in-the-21st-century-47046f8feab8",
+  },
+  {
+    image: "/assets/reforestation/ref-2.png",
+    headingText: "What Causes Global Warming?",
+    text: "When greenhouse gases get accumulated in the air, heat and radiation get trapped in the atmosphere.",
+    learnMoreLink:
+      "https://medium.com/project-forest/what-causes-global-warming-37df084c78fa",
+  },
+  {
+    image: "/assets/reforestation/ref-3.png",
+    headingText: "What Can We Do To Help Save Earth?",
+    text: "Earth’s first global climate record dates back to approximately 140 years ago……",
+    learnMoreLink:
+      "https://medium.com/project-forest/what-can-we-do-to-help-save-earth-b4b6f1026907",
+  },
+];
 
 export const getAllReforestationData = () => allData;

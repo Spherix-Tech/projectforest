@@ -8,61 +8,66 @@ import Reforestation from "../src/components/reforestation/Reforestation";
 import NFTSlider from "../src/components/NFT/NFTSlider";
 import Roadmap from "../src/components/roadmap/Roadmap";
 import Token from "../src/components/token/Token";
-import Aos from "aos";
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
-import {ScrollToPlugin} from "gsap/dist/ScrollToPlugin";
-import { gsap, TimelineLite, Power3 } from "gsap";
-
-
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import { gsap, Power3 } from "gsap";
+import ImageComponent from "../src/components/shared/ImageComponent";
 
 export default function Home() {
-
- 
-
-
   useEffect(() => {
-
-
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
-
 
     // let smoother = ScrollSmoother.create({
     //   wrapper: '#smooth-wrapper',
     //   content: '#smooth-content',
     //   smooth: 2,
     //   smoothTouch: 0.1,
-      
-    // });
-    
 
-    gsap.fromTo("#home", {opacity: 0}, {opacity: 1, duration: 1});
+    // });
+
+    gsap.fromTo("#home", { opacity: 0 }, { opacity: 1, duration: 1 });
     gsap.fromTo(
-      ".how-section",
+      ".how-section-trees",
       {
         opacity: 0,
-        y: 500
+        y: 500,
       },
       {
         opacity: 1,
         duration: 3,
         ease: Power3.easeInOut,
-        y: 0
+        y: 0,
         // scrollTrigger: {
-        //   trigger: "#how-it",
+        //   trigger: "#how-section",
         //   start: "top top",
         //   end: "bottom center",
         //   scrub: true,
         // }
       }
-     
+    );
+    gsap.fromTo(
+      ".how-section",
+      {
+        opacity: 0,
+        y: 500,
+      },
+      {
+        opacity: 1,
+        duration: 3,
+        ease: Power3.easeInOut,
+        y: 0,
+        // scrollTrigger: {
+        //   trigger: "#how-section",
+        //   start: "top top",
+        //   end: "bottom center",
+        //   scrub: true,
+        // }
+      }
     );
   }, []);
-
-
-
 
   return (
     <div>
@@ -72,35 +77,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
-        <div  id="smooth-wrapper">
+        <div id="smooth-wrapper">
           <div id="smooth-content">
-        <Navbar />
+            <div className="nav-hero-section-bg">
+              <Navbar />
 
-        {/* Hero Section */}
-        <Hero />
+              {/* Hero Section */}
+              <Hero />
 
-        {/* How It Works Section */}
-  
-        <HowItWorks/>
- 
+              {/* How It Works Section */}
+              <ImageComponent
+                src={"/assets/trees-bg.png"}
+                className="how-section-trees -mb-2"
+              />
+            </div>
+            <HowItWorks />
 
-        {/* NFT Slider Section */}
-        <NFTSlider />
+            {/* NFT Slider Section */}
+            <div className="nft-impact-section-bg">
+              <NFTSlider />
 
-        {/* Token Section */}
-        <Token />
+              {/* Token Section */}
+              <Token />
+            </div>
 
-        {/* Roadmap Section */}
-        <Roadmap />
+            {/* Roadmap Section */}
+            <Roadmap />
 
-        {/* Reforestation Section */}
-        <Reforestation />
+            {/* Reforestation Section */}
+            <Reforestation />
 
-        {/* Newsletter Section */}
-        <MailingList />
-        <Footer />
-        </div>
+            {/* Newsletter Section */}
+            <MailingList />
+            <Footer />
+          </div>
         </div>
       </main>
     </div>

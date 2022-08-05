@@ -1,17 +1,31 @@
+import { useState, useEffect } from "react";
 
-import React from "react";
-
-const ContentCard = ({ title, subtitle, description, polygon }) => {
+const ContentCard = ({ item, isActiveCard, onItemSelection }) => {
+  const [selectedStatus, setSelectedStatus] = useState(isActiveCard);
+  const selectCardItem = (cardItem) => {
+    onItemSelection(cardItem);
+    setSelectedStatus(!isActiveCard);
+  };
+  useEffect(() => {
+    setSelectedStatus(isActiveCard);
+  }, [isActiveCard]);
   return (
-    <div className="flex flex-col justify-center lg:w-2/4 w-full pt-6 lg:pt-0">
-      <div className="flex flex-row items-center gap-2">
-        <img src={"/assets/how-it-works/" + polygon} className="h-9" />
-
-        <h2 className="lg:text-[35px] text-[25px] font-bold whitespace-nowrap text-white">
-          {title} <span className="font-medium">{subtitle}</span>
-        </h2>
+    <div
+      className={
+        "flex cursor-pointer flex-col justify-start items-start text-textTitle " +
+        (selectedStatus ? " activeCard" : "")
+      }
+      onClick={() => selectCardItem(item)}
+    >
+      <div>
+        <h1 className="font-bold text-[14px] lg:text-[20px] ">
+          {item.boldTitle}
+          <span className="text-[14px] lg:text-[19px] font-light">
+            {item.normalTitle}
+          </span>
+        </h1>
       </div>
-      <p className="text-sm py-4 text-[#ACACAC] lg:w-3/4 w-full px-12 lg:px-0">{description}</p>
+      <div className="font-light text-[14px] pt-2">{item.description}</div>
     </div>
   );
 };

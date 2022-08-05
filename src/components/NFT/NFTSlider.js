@@ -21,39 +21,44 @@ export default function NFTSlider({ reference }) {
   };
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
-    mode: "free",
     rtl: true,
     dragSpeed: 0.5,
+    renderMode: "precision",
+    rubberband: false,
+    mode: "free-snap",
     initial: 0,
     range: {
       min: 0,
-      max: 6,
+      max: 12,
     },
     breakpoints: {
-      "(min-width: 0px) and (max-width: 680px)": {
+      "(min-width: 0px) and (max-width: 440px)": {
         slides: {
           perView: 1,
         },
       },
-    },
-    breakpoints: {
+      "(min-width: 441px) and (max-width: 680px)": {
+        slides: {
+          perView: 2,
+        },
+      },
       "(min-width: 681px) and (max-width: 1119px)": {
         slides: {
           perView: 3,
         },
       },
-    },
-    breakpoints: {
-      "(min-width: 1120px)": {
+      "(min-width: 1120px) and (max-width: 1300px)": {
         slides: {
-          perView: 5,
+          perView: 4,
+        },
+      },
+      "(min-width: 1301px)": {
+        slides: {
+          perView: 6,
         },
       },
     },
 
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
-    },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
@@ -63,7 +68,7 @@ export default function NFTSlider({ reference }) {
   });
 
   return (
-    <div id="nft" className="lg:px-60 px-6 panel " ref={reference}>
+    <div id="nft" className="section-spacing panel " ref={reference}>
       <h3 className=" text-textTitle font-bold text-[40px] pt-8 pb-4">NFT</h3>
 
       <div className="flex w-full justify-end gap-2 pb-4 ">
@@ -99,15 +104,17 @@ export default function NFTSlider({ reference }) {
 
       <div className="flex flex-row items-start justify-between w-full ">
         {/* Selected NFT */}
-        <div className="flex flex-col lg:w-[300px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[450px]">
+        <div
+          className={`${selectedNFTObj?.bgGradientColorClass} flex flex-col justify-center items-center rounded-2xl lg:w-[400px] w-2/4 mr-4 -mt-2 lg:h-[390px] h-[400px]`}
+        >
           <ImageComponent
             src={`/assets/nft/${selectedNFTObj?.imageName}`}
             alt="NFT Project Forest"
-            className=" w-full h-full "
+            className=" w-[16rem] h-[16rem] md:w-[19rem] md:h-[17rem] "
           />
         </div>
 
-        <div className="lg:w-[70%] w-2/4 max-w-sm lg:max-w-4xl flex flex-col h-full text-textTitle">
+        <div className="w-2/4 md:w-[60%] lg:w-[55%] xl:w-[70%] max-w-sm md:max-w-[35rem] lg:max-w-[40rem] xl:max-w-[70rem] flex flex-col h-full text-textTitle">
           {/* NFT Slider */}
           <div ref={sliderRef} className="keen-slider w-full flex ">
             {DataArr &&
@@ -121,12 +128,10 @@ export default function NFTSlider({ reference }) {
                     }
                   >
                     <div
-                      className={
-                        "flex flex-col justify-start items-center rounded-lg "
-                      }
+                      className={`${slide?.bgGradientColorClass} flex h-[8rem] w-[8rem] md:h-[9rem] md:w-[10rem] flex-col justify-center items-center rounded-2xl`}
                     >
                       <ImageComponent
-                        className="h-[140px]"
+                        className="h-[6rem] w-[6rem] md:h-[7rem] md:w-[6rem]"
                         alt="project forest"
                         src={`/assets/nft/${slide.imageName}`}
                       />
@@ -136,20 +141,20 @@ export default function NFTSlider({ reference }) {
               })}
           </div>
           {/* NFT Slider ends */}
-          <h3 className=" lg:text-[40px] text-3xl font-semibold lg:pt-8 lg:pb-2 pb-0 pt-2">
+          <h3 className=" lg:text-[40px] text-xl md:text-3xl font-semibold lg:pt-8 lg:pb-2 pb-0 pt-2">
             Purchase your first NFT
-            <span className="text-[#19B7B7]"> Plant </span>
+            <span className="text-[#19B7B7]"> Tree </span>
           </h3>
 
-          <p className="lg:text-[16px] text-xs lg:w-[90%] md:w-full w-full leading-5 py-4 text-textDescription">
+          <p className="lg:text-[16px] text-xs lg:w-[90%] md:w-full w-full leading-4 sm:leading-5 py-1 sm:py-4 text-textDescription">
             Make the first step in building your NFT Forest. Choose from a
             distinct collection of unique plant species, each with their own
             characteristics such as O2 production, water intake, climate
             resistance, terrain suitability and more.
           </p>
           <a>
-            <button className=" btnPrimary w-44 h-10 flex flex-col items-center text-xs">
-              Go To Marketplace
+            <button className="disabled cursor-default btnPrimary w-44 h-10 flex flex-col items-center text-xs">
+              Mint Now
             </button>
           </a>
         </div>

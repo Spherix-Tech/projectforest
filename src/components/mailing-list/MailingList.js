@@ -3,8 +3,12 @@ import ImageComponent from "../shared/ImageComponent";
 
 const MailingList = () => {
   return (
-    <div className="w-full text-primary flex lg:flex-row flex-col justify-between py-8 bg-mailBgColor lg:px-60 px-6 mailing-section">
-      <ImageComponent src={"/assets/mail-list/mail-list-logo.svg"} alt="Project forest logo" className="hidden lg:flex justify-center items-center lg:h-42 mr-6" />
+    <div className="w-full text-primaryBlue flex lg:flex-row flex-col justify-between items-center py-8 bg-mailBgColor section-spacing mailing-section">
+      <ImageComponent
+        src={"/assets/logo.png"}
+        alt="Project forest logo"
+        className="hidden lg:flex justify-center items-center lg:h-[230px] mr-6"
+      />
       <div className="flex flex-col w-full">
         <h3 className=" text-[25px] font-semibold py-2 text-textTitle">
           Take your first step to a greener tomorrow
@@ -29,7 +33,11 @@ const MailingList = () => {
           </p>
           <button className="flex flex-row justify-end items-center font-bold text-lg w-1/4">
             SUBMIT
-            <ImageComponent src={"/assets/mail-list/arrow-icon.svg"} alt="Project forest logo" className="h-8 ml-2" />
+            <ImageComponent
+              src={"/assets/mail-list/arrow-icon.svg"}
+              alt="Project forest logo"
+              className="h-8 ml-2"
+            />
           </button>
         </div>
       </div>

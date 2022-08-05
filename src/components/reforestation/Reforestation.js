@@ -1,25 +1,56 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 import { getDataBySectionName } from "../../services/dataService";
+import ImageComponent from "../shared/ImageComponent";
 
 const DataArr = getDataBySectionName("reforestation");
 
 const Reforestation = () => {
   return (
-    <div className=' text-textTitle bg-[#F0F0F0] lg:py-16 py-10 lg:px-60 px-6 panel'>
-       <h3 className='lg:text-[40px] text-[30px] font-bold flex lg:justify-center justify-start pb-10 '>Reforestation: <br className='lg:hidden'></br>Need of the Hour</h3>
-       <div className='flex w-full lg:flex-row flex-col  justify-center items-center lg:items-start'>
-       {DataArr.map((e, i) => {
+    <div className=" text-textTitle bg-[#F5F5F5] lg:py-16 py-10 section-spacing panel">
+      <div className="flex flex-col justify-start items-start pb-10">
+        <div className="text-[30px] lg:text-[40px] font-bold">
+          Reforestation
+        </div>
+        <div className="text-[15px] lg:text-[20px] ">Need of the Hour</div>
+      </div>
+      <div className="flex w-full lg:flex-row flex-col justify-between items-center lg:items-start">
+        {DataArr.map((e, i) => {
           return (
-            <div key={i} className="flex flex-col w-[400px] h-[360px]  lg:mx-4 lg:mb-0 mb-4 items-center bg-white p-4">
-            <img src={e.image} className=""  />
-            <p className=' pt-4 text-center text-[#666] text-opacity-70 lg:text-[16px] text-sm'>{e.text}</p>
+            <div
+              key={i}
+              className={
+                "flex flex-1 relative flex-col w-full sm:max-w-[650px] h-[15rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[25rem] gap-1 md:gap-2 lg:mb-0 mb-4 items-center bg-white p-4 pb-6 md:p-8 lg:p-4 " +
+                (i == DataArr.length ? "lg:mr-0" : "lg:mr-4")
+              }
+            >
+              <div className="w-full">
+                <ImageComponent src={e.image} className="w-full" />
+              </div>
+              <div className="text-black font-bold text-[15px] text-start pt-2 w-full md:text-[17px]">
+                {e.headingText}
+              </div>
+              <div className="text-[#666666] w-full text-start font-light text-[13px] text-opacity-70">
+                {e.text}
+              </div>
+              <Link href={e.learnMoreLink}>
+                <div className="cursor-pointer inline-flex absolute flex-row justify-end bottom-[3%] right-[3.5%] w-full items-center gap-2 text-xs text-end underline text-[#8DABFD]">
+                  <div>Learn more</div>
+                  <div>
+                    <ImageComponent
+                      src="/assets/learn-more-icon.png"
+                      alt="Learn More"
+                      className="w-[13px]"
+                    />
+                  </div>
+                </div>
+              </Link>
             </div>
           );
         })}
-       </div>
-        
-        </div>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Reforestation
+export default Reforestation;

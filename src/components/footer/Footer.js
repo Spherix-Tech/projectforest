@@ -1,8 +1,7 @@
 import React from "react";
 import FooterLinks from "./footer-items/FooterLinks";
 import Socials from "./footer-items/Socials";
-import ImageComponent from '../shared/ImageComponent'
-
+import ImageComponent from "../shared/ImageComponent";
 
 const Footer = () => {
   return (
@@ -10,20 +9,25 @@ const Footer = () => {
       <div className="w-full lg:pb-8 pb-0 m-auto flex flex-row ">
         <div className="lg:w-2/4 w-full flex flex-col items-center lg:items-start">
           <div className="flex flex-row gap-2 items-center">
-            <ImageComponent alt="Project Forest Logo" src="/assets/footer/logo-footer.svg" className="h-16 lg:h-full"/>
+            <ImageComponent
+              alt="Project Forest Logo"
+              src="/assets/logo.png"
+              className="h-[80px] lg:h-[100px]"
+            />
             <h2 className="lg:text-[35px] text-[24px] font-light text-white lg:leading-9 leading-7">
               PROJECT <br></br>
-              <span className="lg:text-[48px] text-[33px] font-semibold">FOREST</span>
+              <span className="lg:text-[48px] text-[33px] font-semibold">
+                FOREST
+              </span>
             </h2>
           </div>
           <div className="flex flex-col items-center">
-          <Socials /> 
+            <Socials />
           </div>
         </div>
         <div className="lg:w-2/4 hidden lg:flex flex-col  cursor-pointer pl-6">
           <FooterLinks />
         </div>
-      
       </div>
       <div className="w-full pt-6 flex flex-col items-center justify-center">
         <h5 className=" font-light cursor-pointer lg:text-lg text-sm text-white text-opacity-60">
