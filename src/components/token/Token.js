@@ -7,11 +7,11 @@ const Token = () => {
       className="w-full text-textTitle section-spacing py-12 panel"
       id="token"
     >
-      <h3 className="lg:text-[35px] text-[30px] md:w-[50%] font-bold">
+      <h3 className="lg:text-[35px] text-[30px] w-full lg:w-[55%] 2xl:w-[55%] font-bold">
         Making an impact that you can count
       </h3>
       <div className="flex lg:flex-row flex-col-reverse gap-0 md:gap-[4rem] lg:justify-between items-center">
-        <div className="flex flex-col md:w-[50%] w-full py-6">
+        <div className="flex flex-col w-full lg:w-[55%] 2xl:w-[55%] py-6">
           <h3 className=" text-[#6FDE49] font-bold py-1 text-[20px]">
             Primary Token: LEAF
           </h3>
@@ -39,7 +39,7 @@ const Token = () => {
           <ImageComponent
             src="/assets/token/token.png"
             alt="Project Forest Token"
-            className="w-[22rem] md:w-[28rem] lg:w-[30rem]"
+            className="w-[18rem] md:w-[25rem] lg:w-[30rem]"
           />
         </div>
       </div>

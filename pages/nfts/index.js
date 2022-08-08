@@ -66,7 +66,7 @@ export default function NFTs() {
 
             {/* How It Works Section */}
 
-            <HowItWorks />
+            {/* <HowItWorks /> */}
 
             {/* NFT Slider Section */}
             <NFTSlider />

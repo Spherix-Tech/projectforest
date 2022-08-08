@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
           <button className="disabled btnPrimary lg:w-60 w-44 mr-0">
             <a
-              href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"
+              href="https://project-forest.gitbook.io/litepaper"
               target="_blank"
               rel="noreferrer"
             >

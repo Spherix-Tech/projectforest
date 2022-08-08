@@ -1,18 +1,18 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useMemo } from "react";
 import ContentCard from "./ContentCard";
 import ImageComponent from "../shared/ImageComponent";
-import { getHowItWorksData } from "../../services/data-files/howItWorksData";
-const howItWorksItemsList = getHowItWorksData();
 
-const HowItWorks = () => {
+const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
+  console.log(haveRoundedPoints);
   const [selectedItemObj, setSelectedItemObj] = useState(
     howItWorksItemsList[0]
   );
   const changeSelectedItem = (selectedItem) => {
-    console.log(selectedItem);
     setSelectedItemObj(selectedItem);
   };
-  console.log("selectedItemObj", selectedItemObj);
+  const memoisedSelectedItemObj = useMemo(() => {
+    return selectedItemObj;
+  }, [selectedItemObj]);
   return (
     <div className="how-section" id="how-it-works">
       <div
@@ -20,7 +20,7 @@ const HowItWorks = () => {
         id="how-it"
       >
         <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-[1rem] md:gap-[8rem]">
-          <div className="flex-1">
+          <div className="xl:flex-1">
             <div className="flex flex-col justify-start items-center">
               <div className="w-full text-start">
                 <p className=" text-textTitle text-[14px] lg:text-[28px] font-normal">
@@ -34,36 +34,57 @@ const HowItWorks = () => {
               {/* Three images */}
               <div>
                 <ImageComponent
-                  src={"/assets/how-it-works/" + selectedItemObj.imageName}
+                  src={
+                    "/assets/how-it-works/" + memoisedSelectedItemObj?.imageName
+                  }
                   alt="Grow to earn"
                   className="w-[260px] lg:w-[360px] lg:h-[500px]"
                 />
               </div>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="w-full xl:flex-1 relative">
+            <div className="absolute left-4 h-[94%] mt-[2.8rem]">
+              {haveRoundedPoints ? (
+                <ImageComponent
+                  src={"/assets/how-it-works/rounded-dashed-img.svg"}
+                  className="hidden lg:block h-[inherit]"
+                />
+              ) : (
+                <ImageComponent
+                  src={"/assets/how-it-works/straight-dashed-img.svg"}
+                  className="h-[inherit]"
+                />
+              )}
+              <ImageComponent
+                src={"/assets/how-it-works/straight-dashed-img.svg"}
+                className="block lg:hidden h-[inherit]"
+              />
+            </div>
             {howItWorksItemsList &&
-              howItWorksItemsList.map((item, index) => {
+              howItWorksItemsList?.map((item, index) => {
                 return (
                   <div
                     key={index}
                     className={
-                      "flex justify-start gap-[2rem] items-center " +
+                      "flex justify-start gap-[2rem] items-center h-auto sm:h-[80px] " +
+                      (haveRoundedPoints ? item.roundedMarginClasses : "") +
                       (index == 0 || index == howItWorksItemsList.length - 1
                         ? ""
-                        : "my-8")
+                        : " my-8 ")
                     }
                   >
                     {/* Numbring circle */}
-                    <div className="min-w-[35px] text-white h-[35px] rounded-full font-bold border-2 border-[#1D3C34] flex justify-center items-center bg-[#1D3C34]">
-                      {index + 1}
+                    <div className="min-w-[35px] text-white h-[35px] rounded-full font-bold border-2 z-10 border-[#1D3C34] flex justify-center items-center bg-[#1D3C34]">
+                      <div className="mt-[10%]">{index + 1}</div>
                     </div>
                     {/* Details Card */}
                     <div>
                       <ContentCard
                         item={item}
                         isActiveCard={
-                          selectedItemObj.normalTitle == item.normalTitle
+                          memoisedSelectedItemObj?.normalTitle ==
+                          item.normalTitle
                             ? true
                             : false
                         }

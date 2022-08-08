@@ -55,7 +55,7 @@
         @apply px-6 lg:px-[12rem]; 
     }
     .activeCard{
-        @apply bg-[#E4E7C7] p-4 rounded-[25px]
+        @apply bg-[#E4E7C7] p-4 rounded-[15px]
     }
     .nav-hero-section-bg{
         width: 100%;
