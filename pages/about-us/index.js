@@ -66,7 +66,7 @@ export default function AboutUs() {
 
             {/* How It Works Section */}
 
-            <HowItWorks />
+            {/* <HowItWorks /> */}
 
             {/* NFT Slider Section */}
             <NFTSlider />
