@@ -86,7 +86,11 @@ export default function Home() {
           name="description"
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
-        <meta property="og:image" content="/assets/meta-image" key="ogimage" />
+        <meta
+          property="og:image"
+          content="/assets/meta-image.jpg"
+          key="ogimage"
+        />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://projectforest.io/" />
@@ -98,7 +102,6 @@ export default function Home() {
           property="og:description"
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
-        <meta property="og:image" content="" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://projectforest.io/" />
@@ -110,7 +113,7 @@ export default function Home() {
           property="twitter:description"
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
-        <meta property="twitter:image" content="" />
+        <meta property="twitter:image" content="/assets/meta-image.jpg" />
       </Head>
       <main>
         <div id="smooth-wrapper">
