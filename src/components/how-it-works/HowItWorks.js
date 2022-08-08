@@ -38,12 +38,17 @@ const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
                     "/assets/how-it-works/" + memoisedSelectedItemObj?.imageName
                   }
                   alt="Grow to earn"
-                  className="w-[260px] lg:w-[360px] lg:h-[500px]"
+                  className={
+                    "w-[260px] lg:h-[500px] " +
+                    (memoisedSelectedItemObj.normalTitle == "a Virtual Forest"
+                      ? " lg:w-[430px] "
+                      : " lg:w-[360px]")
+                  }
                 />
               </div>
             </div>
           </div>
-          <div className="w-full xl:flex-1 relative">
+          <div className="w-full xl:flex-1 relative overflow-y-scroll md:overflow-hidden max-h-[350px] md:max-h-[none]">
             <div className="absolute left-4 h-[94%] mt-[2.8rem]">
               {haveRoundedPoints ? (
                 <ImageComponent
