@@ -22,10 +22,12 @@ const FooterLinks = () => {
         <a href="#token">
           <h5>Token</h5>
         </a>
-        <a href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"
-              target="_blank"
-              rel="noreferrer">
-          <h5>Whitepaper</h5>
+        <a
+          href="https://docs.google.com/document/d/1HTvGjbKl1Jd9OtIDGWLd-O7_5knuWz0A3VMTKLxTEJ8/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h5>Litepaper</h5>
         </a>
         <h5>Marketplace</h5>
       </div>

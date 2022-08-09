@@ -28,22 +28,22 @@ const allData = [
 
   {
     name: "HOME",
-    link: "#home",
+    link: "/",
     icon_src: "/assets/navbar/home.svg",
   },
   {
-    name: "HOW IT WORKS",
+    name: "Grow to Earn",
     link: "#how-it-works",
     icon_src: "/assets/navbar/how-it-works.svg",
   },
   {
-    name: "NFT",
+    name: "NFTs",
     link: "#nft",
     icon_src: "/assets/navbar/nft.svg",
   },
   {
-    name: "TOKEN",
-    link: "#token",
+    name: "FAQs",
+    link: "/faq",
     icon_src: "/assets/navbar/token.svg",
   },
   {

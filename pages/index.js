@@ -16,6 +16,7 @@ import { gsap, Power3 } from "gsap";
 import ImageComponent from "../src/components/shared/ImageComponent";
 import { getHowItWorksData } from "../src/services/data-files/howItWorksData";
 import { getDataBySectionName } from "../src/services/dataService";
+import Partners from "../src/components/partners/Partners";
 const howItWorksItemsList = getHowItWorksData("homepage");
 const DataArr = getDataBySectionName("nft");
 
@@ -90,7 +91,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/assets/meta-image.jpg"
+          content="/assets/meta-image.png"
           key="ogimage"
         />
 
@@ -115,7 +116,7 @@ export default function Home() {
           property="twitter:description"
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
-        <meta property="twitter:image" content="/assets/meta-image.jpg" />
+        <meta property="twitter:image" content="/assets/meta-image.png" />
       </Head>
       <main>
         <div id="smooth-wrapper">
@@ -150,6 +151,8 @@ export default function Home() {
 
             {/* Reforestation Section */}
             <Reforestation />
+
+            <Partners />
 
             {/* Newsletter Section */}
             <MailingList />

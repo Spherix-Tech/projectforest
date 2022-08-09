@@ -22,11 +22,9 @@ const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
           <div className="xl:flex-1">
             <div className="flex flex-col justify-start items-center">
               <div className="w-full text-start">
-                <p className=" text-textTitle text-[14px] lg:text-[28px] font-normal">
-                  Introducing
-                </p>
+                <p className="section-sub-title">Introducing</p>
                 <br />
-                <h1 className=" text-textTitle text-[26px] lg:text-[56px] font-bold">
+                <h1 className="section-title section-title-spacing">
                   GROW-to-EARN
                 </h1>
               </div>

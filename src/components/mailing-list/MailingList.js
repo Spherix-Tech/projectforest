@@ -3,7 +3,7 @@ import ImageComponent from "../shared/ImageComponent";
 
 const MailingList = () => {
   return (
-    <div className="w-full text-primaryBlue flex lg:flex-row flex-col justify-between items-center py-8 bg-mailBgColor section-spacing mailing-section">
+    <div className="w-full text-primaryBlue flex lg:flex-row flex-col justify-between items-center bg-mailBgColor section-spacing ">
       <ImageComponent
         src={"/assets/logo.png"}
         alt="Project forest logo"

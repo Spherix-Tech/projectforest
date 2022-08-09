@@ -73,35 +73,41 @@ export default function NFTSlider({ reference, DataArr }) {
   return (
     <div id="nft" className="section-spacing panel " ref={reference}>
       <div className="hidden md:block">
-        <h3 className=" text-textTitle font-bold text-[30px] pt-8 pb-4">NFT</h3>
-        <div className="flex w-full justify-end gap-2 pb-4 ">
+        <div className="flex justify-between items-center section-title-spacing">
           <div>
-            {loaded && instanceRef.current && (
-              <>
-                <Arrow
-                  onClick={(e) =>
-                    e.stopPropagation() || instanceRef.current?.next()
-                  }
-                  disabled={
-                    currentSlide ===
-                    instanceRef.current.track.details.slides.length - 1
-                  }
-                />
-              </>
-            )}
+            <h3 className="section-title">NFT</h3>
           </div>
           <div>
-            {loaded && instanceRef.current && (
-              <>
-                <Arrow
-                  left
-                  onClick={(e) =>
-                    e.stopPropagation() || instanceRef.current?.prev()
-                  }
-                  disabled={currentSlide === 0}
-                />
-              </>
-            )}
+            <div className="flex w-full justify-end gap-2">
+              <div>
+                {loaded && instanceRef.current && (
+                  <>
+                    <Arrow
+                      onClick={(e) =>
+                        e.stopPropagation() || instanceRef.current?.next()
+                      }
+                      disabled={
+                        currentSlide ===
+                        instanceRef.current.track.details.slides.length - 1
+                      }
+                    />
+                  </>
+                )}
+              </div>
+              <div>
+                {loaded && instanceRef.current && (
+                  <>
+                    <Arrow
+                      left
+                      onClick={(e) =>
+                        e.stopPropagation() || instanceRef.current?.prev()
+                      }
+                      disabled={currentSlide === 0}
+                    />
+                  </>
+                )}
+              </div>
+            </div>
           </div>
         </div>
 
