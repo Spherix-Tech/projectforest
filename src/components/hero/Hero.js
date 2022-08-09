@@ -79,7 +79,7 @@ const Hero = () => {
       <div className="flex flex-col">
         <ImageComponent
           src={"/assets/hero/main-nft.png"}
-          className=" lg:w-[418px] w-[318] lg:h-[540px] h-[400px]"
+          className=" lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]"
         />
       </div>
     </div>

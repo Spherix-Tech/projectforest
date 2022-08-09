@@ -37,7 +37,7 @@ const Roadmap = () => {
             return (
               <div key={i} className="w-full flex flex-row justify-between">
                 <div
-                  className={`${e.bgColor} flex flex-col items-center justify-center text-white py-2 w-1/4 min-h-[70px]`}
+                  className={`${e.bgColor} flex flex-col items-center justify-center text-white py-2 min-w-[5.5rem] xs:min-w-[7.5rem] min-h-[70px]`}
                 >
                   <h3 className="text-base font-semibold">{e.month}</h3>
                   <p className="text-[13px] font-light">2022</p>
