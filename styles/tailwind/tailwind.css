@@ -60,7 +60,7 @@
     .nav-hero-section-bg{
         width: 100%;
         position: relative;
-        background-image: url("/assets/bg/nav-hero-section-bg.png");
+        background-image: url("/assets/bg/nav-hero-section-bg.webp");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -68,7 +68,7 @@
     .nft-impact-section-bg{
         width: 100%;
         position: relative;
-        background-image: url("/assets/bg/nft-impact-section-bg.png");
+        background-image: url("/assets/bg/nft-impact-section-bg.webp");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -76,7 +76,7 @@
     .how-section-bg{
         width: 100%;
         position: relative;
-        background-image: url("/assets/bg/intro-grow-bg.png");
+        background-image: url("/assets/bg/intro-grow-bg.webp");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

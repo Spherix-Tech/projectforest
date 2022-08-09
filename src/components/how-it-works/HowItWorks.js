@@ -3,7 +3,6 @@ import ContentCard from "./ContentCard";
 import ImageComponent from "../shared/ImageComponent";
 
 const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
-  console.log(haveRoundedPoints);
   const [selectedItemObj, setSelectedItemObj] = useState(
     howItWorksItemsList[0]
   );
