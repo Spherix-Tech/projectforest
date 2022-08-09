@@ -15,7 +15,9 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
 import ImageComponent from "../src/components/shared/ImageComponent";
 import { getHowItWorksData } from "../src/services/data-files/howItWorksData";
+import { getDataBySectionName } from "../src/services/dataService";
 const howItWorksItemsList = getHowItWorksData("homepage");
+const DataArr = getDataBySectionName("nft");
 
 export default function Home() {
   useEffect(() => {
@@ -137,7 +139,7 @@ export default function Home() {
 
             {/* NFT Slider Section */}
             <div className="nft-impact-section-bg">
-              <NFTSlider />
+              <NFTSlider DataArr={DataArr} />
 
               {/* Token Section */}
               <Token />

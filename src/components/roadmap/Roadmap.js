@@ -44,7 +44,7 @@ const Roadmap = () => {
                 </div>
 
                 <ImageComponent
-                  src={`/assets/roadmap/${e.image}.png`}
+                  src={`/assets/roadmap/${e.image}.svg`}
                   alt="Project forest roadmap"
                   className="object-contain py-4"
                 />
