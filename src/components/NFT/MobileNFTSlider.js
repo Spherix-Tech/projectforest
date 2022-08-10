@@ -55,11 +55,9 @@ export default function MobileNFTSlider({ DataArr }) {
 
   return (
     <div id="gaming" className="w-full">
-      <div className="flex justify-between items-center">
+      <div className="flex section-title-spacing justify-between items-center">
         <div>
-          <h3 className="text-textTitle font-bold text-[40px] pt-8 pb-4">
-            NFT
-          </h3>
+          <h3 className="section-title">NFT</h3>
         </div>
         <div className=" inline-flex gap-2">
           <div>
@@ -136,7 +134,7 @@ export default function MobileNFTSlider({ DataArr }) {
               <ImageComponent
                 src={`/assets/nft/${selectedNFTObj?.imageName}`}
                 alt="NFT Ankot"
-                className={" w-full h-[11rem] "}
+                className={" w-[9rem] h-[11rem] "}
               />
             </div>
           </div>

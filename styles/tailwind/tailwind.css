@@ -11,8 +11,17 @@
         @apply text-primaryBlue border-[1px] border-borderColor lg:max-w-2xl hover:bg-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
     }
 
+    .section-spacing{
+        @apply py-[2rem] md:py-[3rem] px-[2rem] lg:px-[12rem];
+    }
+    .section-title-spacing{
+        @apply pb-[2rem] md:pb-[3rem] ;
+    }
     .section-title{
-        @apply text-lg lg:text-2xl font-medium text-start text-white active:scale-90 transition-all duration-75 ease-out;
+        @apply font-bold text-start text-textTitle text-[30px] lg:text-[40px];
+    }
+    .section-sub-title{
+        @apply font-normal text-start text-textTitle text-[18px] lg:text-[28px];
     }
     .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -20,7 +29,14 @@
     div#smooth-content{
         @apply overflow-x-hidden
     }
-
+    .full-page-bg-img{
+        background-image: url("/assets/bg/full-page-bg-img.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        position: relative;
+    }
     .main-tree-background {
         @apply bg-[#CEFEFF];
     }
@@ -50,9 +66,6 @@
     }
     .banana-tree-background {
         @apply bg-[#F1FCDF];
-    }
-    .section-spacing{
-        @apply px-6 lg:px-[12rem]; 
     }
     .activeCard{
         @apply bg-[#E4E7C7] p-4 rounded-[15px]

@@ -13,6 +13,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
+import { getDataBySectionName } from "../../src/services/dataService";
+const DataArr = getDataBySectionName("nft");
 
 export default function FAQ() {
   useEffect(() => {
@@ -59,30 +61,15 @@ export default function FAQ() {
       <main>
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <Navbar />
+            <div className="full-page-bg-img">
+              <Navbar />
 
-            {/* Hero Section */}
-            <Hero />
+              {/* NFT Slider Section */}
+              <NFTSlider DataArr={DataArr} />
 
-            {/* How It Works Section */}
-
-            {/* <HowItWorks /> */}
-
-            {/* NFT Slider Section */}
-            <NFTSlider />
-
-            {/* Token Section */}
-            <Token />
-
-            {/* Roadmap Section */}
-            <Roadmap />
-
-            {/* Reforestation Section */}
-            <Reforestation />
-
-            {/* Newsletter Section */}
-            <MailingList />
-            <Footer />
+              {/* Newsletter Section */}
+              <Footer />
+            </div>
           </div>
         </div>
       </main>

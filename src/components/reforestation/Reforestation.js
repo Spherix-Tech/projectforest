@@ -7,12 +7,10 @@ const DataArr = getDataBySectionName("reforestation");
 
 const Reforestation = () => {
   return (
-    <div className=" text-textTitle bg-[#F5F5F5] lg:py-16 py-10 section-spacing panel">
-      <div className="flex flex-col justify-start items-start pb-10">
-        <div className="text-[30px] lg:text-[40px] font-bold">
-          Reforestation
-        </div>
-        <div className="text-[15px] lg:text-[20px] ">Need of the Hour</div>
+    <div className=" text-textTitle bg-[#F5F5F5] section-spacing panel">
+      <div className="flex flex-col section-title-spacing justify-start items-start">
+        <div className="section-title">Reforestation</div>
+        <div className="section-sub-title">Need of the Hour</div>
       </div>
       <div className="flex w-full lg:flex-row flex-col justify-between items-center lg:items-start">
         {DataArr.map((e, i) => {

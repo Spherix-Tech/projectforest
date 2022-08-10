@@ -3,6 +3,7 @@ import { RiMenuFill, RiCloseLine } from "react-icons/ri";
 import { getDataBySectionName } from "../../services/dataService";
 import { NavbarMenuItems } from "./Menu";
 import ImageComponent from "../shared/ImageComponent";
+import Link from "next/link";
 
 const DataArr = getDataBySectionName("navbar");
 
@@ -10,22 +11,24 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div className="w-full flex flex-row  justify-between items-center py-8 section-spacing">
-      <div
-        className="flex flex-row gap-2 text-primaryBlue items-center "
-        onClick={() => setToggleMenu(false)}
-      >
-        <ImageComponent
-          alt="Project Forest Logo"
-          src={"/assets/logo.png"}
-          className="h-[66px] lg:h-[100px]"
-        />
-        <h2 className="lg:text-[26px] text-[18px] lg:leading-[2rem] leading-6">
-          PROJECT <br></br>
-          <span className="lg:text-[37px] text-[25px] font-semibold">
-            FOREST
-          </span>
-        </h2>
-      </div>
+      <Link href="/">
+        <div
+          className="cursor-pointer flex flex-row gap-2 text-primaryBlue items-center "
+          onClick={() => setToggleMenu(false)}
+        >
+          <ImageComponent
+            alt="Project Forest Logo"
+            src={"/assets/logo.png"}
+            className="h-[66px] lg:h-[100px]"
+          />
+          <h2 className="lg:text-[26px] text-[18px] lg:leading-[2rem] leading-6">
+            PROJECT <br></br>
+            <span className="lg:text-[37px] text-[25px] font-semibold">
+              FOREST
+            </span>
+          </h2>
+        </div>
+      </Link>
 
       {/* Desktop/ Laptop Nav Items */}
       <div className="navscreen:flex flex-row text-textTitle font-semibold hidden ">
