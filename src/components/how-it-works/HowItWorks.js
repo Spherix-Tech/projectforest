@@ -55,7 +55,7 @@ const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
                 </div>
               </div>
             </div>
-            <div className="w-full xl:flex-1 relative overflow-y-scroll md:overflow-hidden max-h-[350px] md:max-h-[none] pt-[1rem]">
+            <div className="w-full xl:flex-1 relative overflow-y-scroll md:overflow-hidden max-h-[350px] md:max-h-[none] py-[1rem]">
               {/* <div className="absolute left-4 h-[124%] xs:h-[118%]  md:h-[94%!important] mt-[2.8rem]"> */}
               <div className="absolute left-4 h-[538px] xs:h-[475px] sm:h-[460px!important]  md:h-[92%!important] mt-[2.8rem]">
                 {haveRoundedPoints ? (
