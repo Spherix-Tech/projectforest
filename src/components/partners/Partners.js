@@ -11,7 +11,7 @@ function Partners() {
         <div>
           <h2 className="section-title section-title-spacing">Partners</h2>
         </div>
-        <div className="grid grid-cols-2 w-full items-center place-items-center lg:place-items-start lg:grid-cols-4 gap-[3rem] lg:gap-[4rem]">
+        <div className="grid grid-cols-2 w-full items-center place-items-start lg:grid-cols-4 gap-[1.8rem] lg:gap-[4rem]">
           {partnersData &&
             partnersData.map((partnerObj) => {
               return (
