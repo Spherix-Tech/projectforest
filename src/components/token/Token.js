@@ -7,7 +7,7 @@ const Token = () => {
       className="w-full text-textTitle section-spacing py-12 panel"
       id="token"
     >
-      <h3 className="lg:text-[35px] text-[30px] w-full lg:w-[55%] 2xl:w-[55%] font-bold">
+      <h3 className="section-title w-full lg:w-[55%] 2xl:w-[55%]">
         Making an impact that you can count
       </h3>
       <div className="flex lg:flex-row flex-col-reverse gap-0 md:gap-[4rem] lg:justify-between items-center">
