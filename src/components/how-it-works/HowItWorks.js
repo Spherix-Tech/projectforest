@@ -55,9 +55,9 @@ const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
                 </div>
               </div>
             </div>
-            <div className="w-full xl:flex-1 relative overflow-y-scroll md:overflow-hidden max-h-[350px] md:max-h-[none] py-[1rem]">
+            <div className="w-full xl:flex-1 relative overflow-y-scroll md:overflow-hidden max-h-[350px] md:max-h-[none] md:py-[2rem] xl:py-[1rem]">
               {/* <div className="absolute left-4 h-[124%] xs:h-[118%]  md:h-[94%!important] mt-[2.8rem]"> */}
-              <div className="absolute left-4 h-[538px] xs:h-[475px] sm:h-[460px!important]  md:h-[92%!important] mt-[2.8rem]">
+              <div className="absolute left-4 h-[538px] xs:h-[475px] sm:h-[460px!important]  md:h-[90%!important] xl:h-[92%!important] mt-[2.8rem]">
                 {haveRoundedPoints ? (
                   <ImageComponent
                     src={"/assets/how-it-works/rounded-dashed-img.svg"}
@@ -80,7 +80,7 @@ const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
                     <div
                       key={index}
                       className={
-                        "flex justify-start gap-[1.5rem] sm:gap-[2rem] items-center h-auto sm:h-[80px] " +
+                        "flex justify-start gap-[1.5rem] sm:gap-[2rem] items-center h-auto sm:h-[80px] md:h-[95px] " +
                         (haveRoundedPoints ? item.roundedMarginClasses : "") +
                         (index == 0 || index == howItWorksItemsList.length - 1
                           ? ""
