@@ -64,13 +64,6 @@ export default function Gameplay() {
             {/* Hero Section */}
             <Hero />
 
-            {/* How It Works Section */}
-
-            {/* <HowItWorks /> */}
-
-            {/* NFT Slider Section */}
-            <NFTSlider />
-
             {/* Token Section */}
             <Token />
 
