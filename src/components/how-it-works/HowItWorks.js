@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
-import ContentCard from "./ContentCard";
 import ImageComponent from "../shared/ImageComponent";
+import ContentCard from "./ContentCard";
 import MobileHowItWorks from "./MobileHowItWorks";
 
 const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {

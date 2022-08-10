@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ImageComponent from "../Shared/ImageComponent";
+import ImageComponent from "../shared/ImageComponent";
 
 const MobileContentCard = ({
   boldTitle,
