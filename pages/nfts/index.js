@@ -13,6 +13,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
+import { getDataBySectionName } from "../../src/services/dataService";
+const DataArr = getDataBySectionName("nft");
 
 export default function NFTs() {
   useEffect(() => {
@@ -69,10 +71,12 @@ export default function NFTs() {
             {/* <HowItWorks /> */}
 
             {/* NFT Slider Section */}
-            <NFTSlider />
+            <div className="nft-impact-section-bg">
+              <NFTSlider DataArr={DataArr} />
 
-            {/* Token Section */}
-            <Token />
+              {/* Token Section */}
+              <Token />
+            </div>
 
             {/* Roadmap Section */}
             <Roadmap />
