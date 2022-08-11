@@ -32,8 +32,8 @@ const allData = [
     icon_src: "/assets/navbar/home.svg",
   },
   {
-    name: "Grow to Earn",
-    link: "#how-it-works",
+    name: "Gameplay",
+    link: "/gameplay",
     icon_src: "/assets/navbar/how-it-works.svg",
   },
   {
