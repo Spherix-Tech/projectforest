@@ -45,7 +45,7 @@ const Navbar = () => {
                   className="h-8 icon-hover object-contain mb-1 "
                 />
               </div>
-              <h5 className=" whitespace-nowrap">{e.name}</h5>
+              <h5 className=" whitespace-nowrap uppercase">{e.name}</h5>
             </a>
           );
         })}
@@ -75,7 +75,7 @@ const Navbar = () => {
                 src={"/assets/logo.png"}
               />
               <NavbarMenuItems
-                classname="w-full h-max flex-col flex items-start  text-left whitespace-nowrap"
+                classname="w-full h-max flex-col flex items-start text-left whitespace-nowrap"
                 items={DataArr}
                 onClick={() => setToggleMenu(false)}
               />

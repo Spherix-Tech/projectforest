@@ -3,7 +3,7 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import ImageComponent from "../shared/ImageComponent";
 
-export default function MobileNFTSlider({ DataArr }) {
+export default function MobileNFTSlider({ DataArr, hideTitle = false }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
@@ -56,9 +56,7 @@ export default function MobileNFTSlider({ DataArr }) {
   return (
     <div id="gaming" className="w-full">
       <div className="flex section-title-spacing justify-between items-center">
-        <div>
-          <h3 className="section-title">NFT</h3>
-        </div>
+        <div>{!hideTitle && <h3 className="section-title">NFT</h3>}</div>
         <div className=" inline-flex gap-2">
           <div>
             {loaded && instanceRef.current && (
