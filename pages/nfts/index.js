@@ -14,6 +14,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
 import { getDataBySectionName } from "../../src/services/dataService";
+import PageGradientTitle from "../../src/components/shared/PageGradientTitle";
 const DataArr = getDataBySectionName("nft");
 
 export default function NFTs() {
@@ -61,32 +62,56 @@ export default function NFTs() {
       <main>
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <Navbar />
+            <div className="full-page-bg-img">
+              <Navbar />
+              <div className="section-spacing pb-0 mb-[2rem] md:mb-0">
+                <PageGradientTitle
+                  title={"Sustainability Starts Here"}
+                  className="uppercase"
+                />
+                {/* <p className="page-description mt-4">
+                  Take the First Step Towards a Greener Tomorrow <br /> Get your
+                  green thumb
+                </p> */}
+              </div>
+              <NFTSlider className="pt-0" hideTitle={true} DataArr={DataArr} />
 
-            {/* Hero Section */}
-            <Hero />
+              <div className="section-spacing relative">
+                <PageGradientTitle
+                  title="Virtual Tree Attributes"
+                  className="uppercase"
+                />
+                <p className="page-description mt-4">
+                  Each of Project Forest’s virtual NFT trees have a unique set
+                  of attributes that impact gameplay. These set of attributes
+                  are made of distinct factors including O2 Production, Water
+                  Absorption, Climate Resistance, Terrain Sustainability, Seed
+                  Generation and Growth Rate. Each Virtual Tree also belongs to
+                  a specific class of Tree Species that determine the
+                  composition of its attributes.
+                  <br />
+                </p>
+                <p className="page-description mt-4 opacity-[0.2]">
+                  Particular attention and effort has been maintained to ensure
+                  that all of the virtual NFT trees are designed in a manner
+                  that closely resembles the natural physical and ecological
+                  characteristics of the tree species that they have been
+                  inspired from.
+                </p>
+                <br />
+                <p className="page-description mt-4 opacity-[0.06]">
+                  Proceeds from the sales of the virtual tree NFTs are donated
+                  to our growing network of international NGOs involved in
+                  carrying out sustainable activities and reforestation efforts
+                  in regions across the world.
+                </p>
+                <p className="coming-soon-text m-auto text-center w-full my-8">
+                  Coming Soon
+                </p>
+              </div>
 
-            {/* How It Works Section */}
-
-            {/* <HowItWorks /> */}
-
-            {/* NFT Slider Section */}
-            <div className="nft-impact-section-bg">
-              <NFTSlider DataArr={DataArr} />
-
-              {/* Token Section */}
-              <Token />
+              <Footer />
             </div>
-
-            {/* Roadmap Section */}
-            <Roadmap />
-
-            {/* Reforestation Section */}
-            <Reforestation />
-
-            {/* Newsletter Section */}
-            <MailingList />
-            <Footer />
           </div>
         </div>
       </main>

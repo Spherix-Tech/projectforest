@@ -38,7 +38,7 @@ const allData = [
   },
   {
     name: "NFTs",
-    link: "#nft",
+    link: "/nfts",
     icon_src: "/assets/navbar/nft.svg",
   },
   {

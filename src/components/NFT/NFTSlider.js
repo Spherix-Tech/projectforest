@@ -4,7 +4,12 @@ import { useKeenSlider } from "keen-slider/react";
 import ImageComponent from "../shared/ImageComponent";
 import MobileNFTSlider from "./MobileNFTSlider";
 
-export default function NFTSlider({ reference, DataArr }) {
+export default function NFTSlider({
+  reference,
+  DataArr,
+  hideTitle = false,
+  className = "",
+}) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
@@ -71,12 +76,14 @@ export default function NFTSlider({ reference, DataArr }) {
   });
 
   return (
-    <div id="nft" className="section-spacing panel " ref={reference}>
+    <div
+      id="nft"
+      className={"section-spacing panel " + className}
+      ref={reference}
+    >
       <div className="hidden md:block">
         <div className="flex justify-between items-center section-title-spacing">
-          <div>
-            <h3 className="section-title">NFT</h3>
-          </div>
+          <div>{!hideTitle && <h3 className="section-title">NFT</h3>}</div>
           <div>
             <div className="flex w-full justify-end gap-2">
               <div>
@@ -170,7 +177,7 @@ export default function NFTSlider({ reference, DataArr }) {
         </div>
       </div>
       <div className="block md:hidden">
-        <MobileNFTSlider DataArr={DataArr} />
+        <MobileNFTSlider hideTitle={hideTitle} DataArr={DataArr} />
       </div>
     </div>
   );

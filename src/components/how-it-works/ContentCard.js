@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
 
-const ContentCard = ({ item, isActiveCard, onItemSelection }) => {
+const ContentCard = ({
+  item,
+  isActiveCard,
+  onItemSelection,
+  clickable = true,
+}) => {
   const [selectedStatus, setSelectedStatus] = useState(isActiveCard);
   const selectCardItem = (cardItem) => {
+    if (!clickable) {
+      return;
+    }
     onItemSelection(cardItem);
     setSelectedStatus(!isActiveCard);
   };
@@ -12,8 +20,9 @@ const ContentCard = ({ item, isActiveCard, onItemSelection }) => {
   return (
     <div
       className={
-        "flex cursor-pointer flex-col justify-start items-start text-textTitle " +
-        (selectedStatus ? " activeCard" : "")
+        "flex  flex-col justify-start items-start text-textTitle " +
+        (selectedStatus ? " activeCard" : "") +
+        (clickable ? " cursor-pointer" : " cursor-default")
       }
       onClick={() => selectCardItem(item)}
     >
