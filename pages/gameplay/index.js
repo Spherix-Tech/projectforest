@@ -162,7 +162,7 @@ export default function Gameplay() {
                   className="uppercase my-[2rem] lg:mb-[5rem]"
                 />
 
-                <div className="flex justify-center items-center flex-col md:flex-row gap-[4rem] md:gap-[10rem]">
+                <div className="flex justify-center items-center flex-col md:flex-row gap-[2rem] lg:gap-[10rem]">
                   <div>
                     <div className="flex flex-col justify-center items-center">
                       <div className="text-[#666666] font-normal pb-4 text-[20px]">
