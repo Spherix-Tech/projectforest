@@ -21,58 +21,58 @@ const howItWorksItemsList = getHowItWorksData("homepage");
 const DataArr = getDataBySectionName("nft");
 
 export default function Home() {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrollToPlugin);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   gsap.registerPlugin(ScrollToPlugin);
 
-    // let smoother = ScrollSmoother.create({
-    //   wrapper: '#smooth-wrapper',
-    //   content: '#smooth-content',
-    //   smooth: 2,
-    //   smoothTouch: 0.1,
+  //   // let smoother = ScrollSmoother.create({
+  //   //   wrapper: '#smooth-wrapper',
+  //   //   content: '#smooth-content',
+  //   //   smooth: 2,
+  //   //   smoothTouch: 0.1,
 
-    // });
+  //   // });
 
-    gsap.fromTo("#home", { opacity: 0 }, { opacity: 1, duration: 1 });
-    gsap.fromTo(
-      ".how-section-trees",
-      {
-        opacity: 0,
-        y: 500,
-      },
-      {
-        opacity: 1,
-        duration: 3,
-        ease: Power3.easeInOut,
-        y: 0,
-        // scrollTrigger: {
-        //   trigger: "#how-section",
-        //   start: "top top",
-        //   end: "bottom center",
-        //   scrub: true,
-        // }
-      }
-    );
-    gsap.fromTo(
-      ".how-section",
-      {
-        opacity: 0,
-        y: 500,
-      },
-      {
-        opacity: 1,
-        duration: 3,
-        ease: Power3.easeInOut,
-        y: 0,
-        // scrollTrigger: {
-        //   trigger: "#how-section",
-        //   start: "top top",
-        //   end: "bottom center",
-        //   scrub: true,
-        // }
-      }
-    );
-  }, []);
+  //   gsap.fromTo("#home", { opacity: 0 }, { opacity: 1, duration: 1 });
+  //   gsap.fromTo(
+  //     ".how-section-trees",
+  //     {
+  //       opacity: 0,
+  //       y: 500,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       duration: 3,
+  //       ease: Power3.easeInOut,
+  //       y: 0,
+  //       // scrollTrigger: {
+  //       //   trigger: "#how-section",
+  //       //   start: "top top",
+  //       //   end: "bottom center",
+  //       //   scrub: true,
+  //       // }
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     ".how-section",
+  //     {
+  //       opacity: 0,
+  //       y: 500,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       duration: 3,
+  //       ease: Power3.easeInOut,
+  //       y: 0,
+  //       // scrollTrigger: {
+  //       //   trigger: "#how-section",
+  //       //   start: "top top",
+  //       //   end: "bottom center",
+  //       //   scrub: true,
+  //       // }
+  //     }
+  //   );
+  // }, []);
   return (
     <div>
       <Head>

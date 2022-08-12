@@ -10,7 +10,7 @@ const allData = [
   {
     image: "/assets/reforestation/ref-2.png",
     headingText: "What Causes Global Warming?",
-    text: "When greenhouse gases get accumulated in the air, heat and radiation get trapped in the atmosphere.",
+    text: "When greenhouse gases get accumulated in the air, heat and radiation……",
     learnMoreLink:
       "https://medium.com/project-forest/what-causes-global-warming-37df084c78fa",
   },
