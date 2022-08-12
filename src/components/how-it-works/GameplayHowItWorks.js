@@ -25,7 +25,7 @@ const GameplayHowItWorks = ({ howItWorksItemsList }) => {
               {/* Three images */}
               <div>
                 <ImageComponent
-                  src={"/assets/how-it-works/gameplay-combined-img.png"}
+                  src={"/assets/how-it-works/gameplay-combined-img.webp"}
                   alt="Grow to earn"
                   className="max-h-[450px] md:max-h-[700px]"
                 />
