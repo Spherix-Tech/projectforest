@@ -64,6 +64,7 @@ const MobileContentCard = ({
                 src={"/assets/how-it-works/" + imageName}
                 alt="Grow to earn"
                 className={"w-[260px] lg:h-[500px]"}
+                loading={"eager"}
               />
             </div>
           </div>

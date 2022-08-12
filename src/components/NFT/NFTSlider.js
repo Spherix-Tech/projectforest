@@ -169,7 +169,7 @@ export default function NFTSlider({
               resistance, terrain suitability and more.
             </p>
             <a>
-              <button className="disabled cursor-default btnPrimary w-44 h-10 flex flex-col items-center text-xs">
+              <button className="disabled btnPrimary lg:w-60 w-44">
                 Mint Now
               </button>
             </a>
