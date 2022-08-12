@@ -5,6 +5,7 @@ const FAQAccordion = ({ question, answer }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
+    
     <div className="w-full py-1 border-b-[1px] border-dashed border-b-[#666] border-opacity-50">
       <div
         className={
@@ -15,10 +16,10 @@ const FAQAccordion = ({ question, answer }) => {
         <div className="flex flex-row gap-3 items-center">
           <ImageComponent
             src="/assets/dot-icon.png"
-            alt="Ankots of misteria"
+            alt="Project Forest"
             className="h-2"
           />
-          <h2 className=" text-[15px] lg:text-[18px] text-[#B9B9B9]">
+          <h2 className=" text-[15px] lg:text-[18px] text-textTitle">
             {question}
           </h2>
         </div>
@@ -26,7 +27,7 @@ const FAQAccordion = ({ question, answer }) => {
       </div>
       {isActive && (
         <div className=" flex flex-row justify-between py-4">
-          <div className=" pl-4 pr-8 text-xs text-[#959595]">{answer}</div>
+          <div className=" pl-4 pr-8 text-xs text-textTitle">{answer}</div>
         </div>
       )}
     </div>

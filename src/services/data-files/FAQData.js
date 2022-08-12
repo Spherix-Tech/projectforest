@@ -1,6 +1,7 @@
 const allFAQData = [
   {
-    basics: [
+    title: "Basics",
+    description: [
       {
         question: "What is Project Forest?",
         answer:
@@ -24,7 +25,8 @@ const allFAQData = [
     ],
   },
   {
-    environment: [
+    title: "Environment",
+    description: [
       {
         question: "How much does Project Forest contribute to the environment?",
         answer:
@@ -38,7 +40,8 @@ const allFAQData = [
     ],
   },
   {
-    economics: [
+    title: "Economics",
+    description: [
       {
         question: "What are the tokens used in the game?",
         answer:
@@ -77,7 +80,8 @@ const allFAQData = [
     ],
   },
   {
-    community: [
+    title: "Community",
+    description: [
       {
         question:
           "I have some suggestions in mind. Will they be taken into consideration?",

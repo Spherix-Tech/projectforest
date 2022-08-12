@@ -55,7 +55,7 @@ export default function FAQ() {
       <main>
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <div className="full-page-bg-img">
+            <div className="faq-full-page-bg-img">
               <Navbar />
 
              <FAQPage />

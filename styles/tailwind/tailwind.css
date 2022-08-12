@@ -37,6 +37,14 @@
         width: 100%;
         position: relative;
     }
+    .faq-full-page-bg-img{
+        background-image: url("/assets/bg/faq-full-page.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        position: relative;
+    }
     .main-tree-background {
         @apply bg-[#CEFEFF];
     }
