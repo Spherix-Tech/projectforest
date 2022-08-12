@@ -7,8 +7,8 @@ function EachPartner({ imageName }) {
       src={"/assets/partners/" + imageName}
       className={
         imageName == "future-trees.png"
-          ? " w-[10rem] h-[3.5rem] md:h-[4.5rem] md:w-[13rem]"
-          : " w-[14rem] h-[2.7rem] md:w-[18rem]"
+          ? " w-[9.3rem] h-[3.5rem] md:h-[4.5rem] md:w-[13rem]"
+          : " w-[14rem] h-[2.3rem] md:w-[18rem]"
       }
     />
   );

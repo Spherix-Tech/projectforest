@@ -9,12 +9,16 @@ const DataArr = getDataBySectionName("navbar");
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const onToggleChange = (status) => {
+    setToggleMenu(status);
+    document.body.style.overflow = status ? "hidden" : "auto";
+  };
   return (
     <div className="w-full flex flex-row  justify-between items-center py-8 section-spacing">
       <Link href="/">
         <div
           className="cursor-pointer flex flex-row gap-2 text-primaryBlue items-center "
-          onClick={() => setToggleMenu(false)}
+          onClick={() => onToggleChange(false)}
         >
           <ImageComponent
             alt="Project Forest Logo"
@@ -57,13 +61,13 @@ const Navbar = () => {
           <RiCloseLine
             color="#3A3A3C"
             size={30}
-            onClick={() => setToggleMenu(false)}
+            onClick={() => onToggleChange(false)}
           />
         ) : (
           <RiMenuFill
             color="#3A3A3C"
             size={30}
-            onClick={() => setToggleMenu(true)}
+            onClick={() => onToggleChange(true)}
           />
         )}
         {toggleMenu && (
@@ -77,7 +81,7 @@ const Navbar = () => {
               <NavbarMenuItems
                 classname="w-full h-max flex-col flex items-start text-left whitespace-nowrap"
                 items={DataArr}
-                onClick={() => setToggleMenu(false)}
+                onClick={() => onToggleChange(false)}
               />
             </div>
           </div>
