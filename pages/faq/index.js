@@ -1,19 +1,13 @@
 import Head from "next/head";
 import Navbar from "../../src/components/navbar/Navbar";
-import Hero from "../../src/components/hero/Hero";
 import Footer from "../../src/components/footer/Footer";
-import HowItWorks from "../../src/components/how-it-works/HowItWorks";
-import MailingList from "../../src/components/mailing-list/MailingList";
-import Reforestation from "../../src/components/reforestation/Reforestation";
-import NFTSlider from "../../src/components/NFT/NFTSlider";
-import Roadmap from "../../src/components/roadmap/Roadmap";
-import Token from "../../src/components/token/Token";
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
 import { getDataBySectionName } from "../../src/services/dataService";
+import FAQPage from "../../src/components/faq/FAQ";
 const DataArr = getDataBySectionName("nft");
 
 export default function FAQ() {
@@ -64,8 +58,8 @@ export default function FAQ() {
             <div className="full-page-bg-img">
               <Navbar />
 
-              {/* NFT Slider Section */}
-              <NFTSlider DataArr={DataArr} />
+             <FAQPage />
+           
 
               {/* Newsletter Section */}
               <Footer />
