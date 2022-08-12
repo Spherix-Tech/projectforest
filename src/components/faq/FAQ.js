@@ -26,16 +26,17 @@ const FAQ = () => {
         </div>
         {/* FAQ section starts */}
         <div className=" w-full flex flex-col">
-          {faqData.map(({ title, description, question, answer }, key) => (
+          {faqData.map(({ title, description }, key) => (
             <div key={key}>
-            
-            <div className="py-8">
-              <PageGradientTitle
+              <div className="py-8">
+                <PageGradientTitle
                   title={title}
                   className="text-semibold text-[28px]"
                 />
-</div>
-              <FAQAccordion key={key} question={question} answer={answer} />
+              </div>
+              {description.map(({ question, answer }, key) => (
+                <FAQAccordion key={key} question={question} answer={answer} />
+              ))}
             </div>
           ))}
         </div>

@@ -19,15 +19,17 @@ const FAQAccordion = ({ question, answer }) => {
             alt="Project Forest"
             className="h-2"
           />
-          <h2 className=" text-[15px] lg:text-[18px] text-textTitle">
-            {question}
+         
+          <h2 className=" text-[15px] lg:text-[18px] text-textTitle font-medium">
+          {question}
           </h2>
+        
         </div>
         <p className=" text-textTitle text-[25px]">{isActive ? "-" : "+"}</p>
       </div>
       {isActive && (
         <div className=" flex flex-row justify-between py-4">
-          <div className=" pl-4 pr-8 text-xs text-textTitle">{answer}</div>
+          <div className=" pl-4 pr-8 lg:text-sm text-xs text-textTitle">{answer}</div>
         </div>
       )}
     </div>
