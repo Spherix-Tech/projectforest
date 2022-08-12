@@ -27,7 +27,7 @@ const MailingList = () => {
           ></input>
         </div>
         <div className="flex flex-row items-center justify-between pt-6 gap-2">
-          <p className="w-[70%] text-sm lg:text-[16px]">
+          <p className="w-[60%] text-sm lg:text-[16px]">
             Get our emails to stay in the know on what’s happening in the field
             and ways you can get involved.
           </p>

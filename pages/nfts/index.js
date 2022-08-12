@@ -98,15 +98,15 @@ export default function NFTs() {
                   characteristics of the tree species that they have been
                   inspired from.
                 </p>
-                <br />
+                {/* <br /> */}
+                <p className="coming-soon-text m-auto text-center w-full -mt-[4rem] sm:mt-0">
+                  Coming Soon
+                </p>
                 <p className="page-description mt-4 opacity-[0.06]">
                   Proceeds from the sales of the virtual tree NFTs are donated
                   to our growing network of international NGOs involved in
                   carrying out sustainable activities and reforestation efforts
                   in regions across the world.
-                </p>
-                <p className="coming-soon-text m-auto text-center w-full my-8">
-                  Coming Soon
                 </p>
               </div>
 

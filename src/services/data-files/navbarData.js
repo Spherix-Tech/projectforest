@@ -47,8 +47,8 @@ const allData = [
     icon_src: "/assets/navbar/token.svg",
   },
   {
-    name: "ROADMAP",
-    link: "#roadmap",
+    name: "About Us",
+    link: "/about-us",
     icon_src: "/assets/navbar/roadmap.svg",
   },
 
