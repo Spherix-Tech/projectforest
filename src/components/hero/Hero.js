@@ -26,16 +26,14 @@ const Hero = () => {
           </span>
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
-          <button className="disabled btnPrimary lg:w-60 w-44 mr-0">
-            <a
-              href="https://project-forest.gitbook.io/litepaper"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Litepaper
-            </a>
-          </button>
-          <button className="disbaled cursor-default btnSecondary lg:w-60 w-44 mr-0">
+          <a
+            href="https://project-forest.gitbook.io/litepaper"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="btnPrimary lg:w-60 w-44 mr-0">Litepaper</button>
+          </a>
+          <button className="disabled cursor-default btnSecondary lg:w-60 w-44 mr-0">
             Mint Now
           </button>
         </div>
@@ -78,7 +76,7 @@ const Hero = () => {
       </div>
       <div className="flex flex-col">
         <ImageComponent
-          src={"/assets/hero/main-nft.png"}
+          src={"/assets/hero/main-nft.webp"}
           className=" lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]"
         />
       </div>

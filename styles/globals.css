@@ -79,3 +79,20 @@ display: block;
   transition: 0.7s;
   transform: translateY(-10px);
 }
+button.disabled{
+  cursor: default;
+}
+.disabled.btnPrimary:active{
+  transform: none !important;
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transition: none !important;
+  cursor: default;
+}
+.disabled.btnSecondary:active{
+  transform: none !important;
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transition: none !important;
+  cursor: default;
+}
