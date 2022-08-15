@@ -6,6 +6,8 @@ import PageGradientTitle from "../shared/PageGradientTitle";
 
 const FAQ = () => {
   const [faqData] = useState(getAllFAQData());
+  const [query, setQuery] = useState("");
+
   return (
     <div className="section-spacing">
       <div className="flex justify-start items-center flex-col gap-6">
@@ -22,26 +24,37 @@ const FAQ = () => {
             type="text"
             placeholder="Ask a question...."
             className="lg:py-3 py-2 px-6 lg:w-2/4 w-[90%] outline-none rounded-xl bg-[#DED897] bg-opacity-20 placeholder:font-light placeholder:text-white"
+            onChange={(e) => setQuery(e.target.value)}
           />
         </div>
-        {/* FAQ section starts */}
+        {/* FAQ content section starts */}
         <div className=" w-full flex flex-col">
           {faqData.map(({ title, description }, key) => (
             <div key={key}>
-              <div  className="pt-14">
+                
+              <div className="pt-14">
                 <PageGradientTitle
                   title={title}
                   className="text-semibold text-[28px]"
                 />
               </div>
-              {description.map(({ question, answer }, key) => (
-                <FAQAccordion key={key} question={question} answer={answer} />
-              ))}
+
+              {description
+                .filter((description) => {
+                  if (
+                    description.answer.toLowerCase().includes(query) ||
+                    description.question.toLowerCase().includes(query)
+                  ) {
+                    return description;
+                  }
+                })
+                .map(({ question, answer }, key) => (
+                  <FAQAccordion key={key} question={question} answer={answer} />
+                ))}
             </div>
           ))}
         </div>
-
-        {/* FAQ section ends */}
+        {/* FAQ content section ends */}
       </div>
     </div>
   );
