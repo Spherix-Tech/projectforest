@@ -31,9 +31,9 @@ const Hero = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button className="btnPrimary lg:w-60 w-44 mr-0">Litepaper</button>
+            <button className="btnPrimary lg:w-60 w-40 mr-0">Litepaper</button>
           </a>
-          <button className="disabled cursor-default btnSecondary lg:w-60 w-44 mr-0">
+          <button className="disabled cursor-default btnSecondary lg:w-60 w-40 mr-0">
             Mint Now
           </button>
         </div>

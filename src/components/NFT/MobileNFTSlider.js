@@ -104,7 +104,7 @@ export default function MobileNFTSlider({ DataArr, hideTitle = false }) {
                   }
                 >
                   <div
-                    className={`${slide?.bgGradientColorClass} flex flex-col justify-center h-[100px] items-center gap-2 rounded-2xl `}
+                    className={`${slide?.bgGradientColorClass} flex flex-col justify-center h-[110px] items-center gap-2 rounded-2xl `}
                   >
                     <ImageComponent
                       className="h-[80px]"

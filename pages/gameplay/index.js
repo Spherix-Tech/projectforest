@@ -193,7 +193,7 @@ export default function Gameplay() {
                   <div>
                     <div className="flex flex-col justify-center items-center">
                       <div className="text-[#666666] font-bold pb-4 text-[20px]">
-                        Produce O2 Token
+                        Produce Leaf Token
                       </div>
                     </div>
                     <div>
