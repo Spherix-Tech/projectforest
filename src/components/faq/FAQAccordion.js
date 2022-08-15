@@ -6,7 +6,7 @@ const FAQAccordion = ({ question, answer }) => {
 
   return (
     
-    <div className="w-full py-1 border-b-[1px] border-dashed border-b-[#666] border-opacity-50">
+    <div className="pt-2 w-full border-b-[1px] border-dashed border-b-[#666] border-opacity-50">
       <div
         className={
           "flex flex-row w-full cursor-pointer justify-between bg-opacity-40 p-4 pl-0"
