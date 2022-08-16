@@ -1,7 +1,7 @@
 const allFAQData = [
   {
     title: "Basics",
-    description: [
+    description: [ 
       {
         question: "What is Project Forest?",
         answer:
