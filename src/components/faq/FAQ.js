@@ -6,31 +6,29 @@ import PageGradientTitle from "../shared/PageGradientTitle";
 const FAQ = () => {
   const [faqData] = useState(getAllFAQData());
   const [data, setFilterData] = useState(faqData);
-  const [query, setQuery] = useState("");
 
   function filterData(query) {
     console.log(faqData);
     let data = [];
-    
+
     for (let i = 0; i < faqData.length; i++) {
-        let desc = []
+      let desc = [];
       for (let j = 0; j < faqData[i].description.length; j++) {
         if (
           faqData[i].description[j].answer.toLowerCase().includes(query) ||
           faqData[i].description[j].question.toLowerCase().includes(query)
         ) {
-    
           let _dict = {};
           _dict["question"] = faqData[i].description[j].question;
           _dict["answer"] = faqData[i].description[j].answer;
-        
-          desc.push(_dict); 
+
+          desc.push(_dict);
         }
       }
 
-      if(desc.length != 0){
-        data.push({"title": faqData[i].title, "description": desc})
-      }     
+      if (desc.length != 0) {
+        data.push({ title: faqData[i].title, description: desc });
+      }
     }
     setFilterData(data);
     return data;
