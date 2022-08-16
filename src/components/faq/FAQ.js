@@ -1,12 +1,40 @@
 import React, { useState } from "react";
-import ImageComponent from "../shared/ImageComponent";
 import FAQAccordion from "./FAQAccordion";
 import { getAllFAQData } from "../../services/data-files/FAQData";
 import PageGradientTitle from "../shared/PageGradientTitle";
 
 const FAQ = () => {
   const [faqData] = useState(getAllFAQData());
+  const [data, setFilterData] = useState(faqData);
   const [query, setQuery] = useState("");
+
+  function filterData(query) {
+    console.log(faqData);
+    let data = [];
+    
+    for (let i = 0; i < faqData.length; i++) {
+        let desc = []
+      for (let j = 0; j < faqData[i].description.length; j++) {
+        if (
+          faqData[i].description[j].answer.toLowerCase().includes(query) ||
+          faqData[i].description[j].question.toLowerCase().includes(query)
+        ) {
+    
+          let _dict = {};
+          _dict["question"] = faqData[i].description[j].question;
+          _dict["answer"] = faqData[i].description[j].answer;
+        
+          desc.push(_dict); 
+        }
+      }
+
+      if(desc.length != 0){
+        data.push({"title": faqData[i].title, "description": desc})
+      }     
+    }
+    setFilterData(data);
+    return data;
+  }
 
   return (
     <div className="section-spacing">
@@ -24,14 +52,15 @@ const FAQ = () => {
             type="text"
             placeholder="Ask a question...."
             className="lg:py-3 py-2 px-6 lg:w-2/4 w-[90%] outline-none rounded-xl bg-[#DED897] bg-opacity-20 placeholder:font-light placeholder:text-white"
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => filterData(e.target.value)}
           />
         </div>
         {/* FAQ content section starts */}
         <div className=" w-full flex flex-col">
-          {faqData.map(({ title, description }, key) => (
+          {data.map(({ title, description }, key) => (
             <div key={key}>
-                
+              <h2></h2>
+
               <div className="pt-14">
                 <PageGradientTitle
                   title={title}
@@ -39,18 +68,9 @@ const FAQ = () => {
                 />
               </div>
 
-              {description
-                .filter((description) => {
-                  if (
-                    description.answer.toLowerCase().includes(query) ||
-                    description.question.toLowerCase().includes(query)
-                  ) {
-                    return description;
-                  }
-                })
-                .map(({ question, answer }, key) => (
-                  <FAQAccordion key={key} question={question} answer={answer} />
-                ))}
+              {description.map(({ question, answer }, key) => (
+                <FAQAccordion key={key} question={question} answer={answer} />
+              ))}
             </div>
           ))}
         </div>
