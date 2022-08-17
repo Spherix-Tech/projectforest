@@ -49,7 +49,7 @@ const FAQ = () => {
           <input
             type="text"
             placeholder="Ask a question...."
-            className="lg:py-3 py-2 px-6 lg:w-2/4 w-[90%] outline-none rounded-xl bg-[#DED897] bg-opacity-20 placeholder:font-light placeholder:text-white"
+            className="lg:py-3 py-2 px-6 lg:w-2/4 w-[90%] outline-none rounded-xl bg-[#DED897] bg-opacity-20 text-white placeholder:font-light placeholder:text-white"
             onChange={(e) => filterData(e.target.value)}
           />
         </div>
