@@ -15,6 +15,8 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
 import { getDataBySectionName } from "../../src/services/dataService";
 import PageGradientTitle from "../../src/components/shared/PageGradientTitle";
+import ImageComponent from "../../src/components/shared/ImageComponent";
+import NFTPageDottedImageBox from "../../src/components/shared/NFTPageDottedImageBox";
 const DataArr = getDataBySectionName("nft");
 
 export default function NFTs() {
@@ -76,38 +78,50 @@ export default function NFTs() {
               </div>
               <NFTSlider className="pt-0" hideTitle={true} DataArr={DataArr} />
 
-              <div className="section-spacing relative">
+              <div className="section-spacing">
                 <PageGradientTitle
-                  title="Virtual Tree Attributes"
+                  title="Tree NFTs — A Closer Look"
                   className="uppercase"
                 />
-                <p className="page-description mt-4">
-                  Each of Project Forest’s virtual NFT trees have a unique set
-                  of attributes that impact gameplay. These set of attributes
-                  are made of distinct factors including O2 Production, Water
-                  Absorption, Climate Resistance, Terrain Sustainability, Seed
-                  Generation and Growth Rate. Each Virtual Tree also belongs to
-                  a specific class of Tree Species that determine the
-                  composition of its attributes.
-                  <br />
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Trees are the main NFTs in Project Forest and are required to
+                  enter into the Project Forest grow-to-earn app. These trees
+                  when first planted are mere seeds that can be cultivated and
+                  grown by daily nurturing, watering and nourishing using
+                  fertilizers. In order to get their hands on a Project Forest
+                  tree NFT, players must participate during the official
+                  genesis airdrop event before the launch of the public beta.
+                  Later, players can participate in the blind box sales or
+                  purchase them through the secondary marketplace.
                 </p>
-                <p className="page-description mt-4 opacity-[0.2]">
-                  Particular attention and effort has been maintained to ensure
-                  that all of the virtual NFT trees are designed in a manner
-                  that closely resembles the natural physical and ecological
-                  characteristics of the tree species that they have been
-                  inspired from.
+                <ImageComponent
+                  className="w-full"
+                  src="assets/nft/nft-tree-banner.svg"
+                />
+              </div>
+
+              <div className="section-spacing">
+                <PageGradientTitle title="Appearance" className="uppercase" />
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Tree NFTs in Project Forest are differentiated to the extent
+                  that no two Tree NFTs are alike. The appearance of Tree NFTs
+                  helps physically distinguish them from other NFTs and makes
+                  for a diverse and beautiful NFT Forest that the player owns
+                  and cultivates.
                 </p>
-                {/* <br /> */}
-                <p className="coming-soon-text m-auto text-center w-full -mt-[4rem] sm:mt-0">
-                  Coming Soon
+                <p className="page-description my-[1rem] md:my-[2rem] text-[13px] font-semibold md:text-[16px]">
+                  Each Tree NFT is made up of 5 distinct parts that make up its
+                  appearance. These include:
                 </p>
-                <p className="page-description mt-4 opacity-[0.06]">
-                  Proceeds from the sales of the virtual tree NFTs are donated
-                  to our growing network of international NGOs involved in
-                  carrying out sustainable activities and reforestation efforts
-                  in regions across the world.
-                </p>
+              </div>
+
+              {/* Slider Row */}
+
+              {/* Slider sub images row */}
+              <div className="flex justify-start items-center ">
+                <NFTPageDottedImageBox
+                  src={"assets/nft/tree-parts-slider/sub-slider-tree-part.svg"}
+                />
               </div>
 
               <Footer />
