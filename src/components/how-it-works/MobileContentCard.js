@@ -53,22 +53,28 @@ const MobileContentCard = ({
           />
         </div>
       </div>
-      {isActive && (
-        <div className=" flex flex-row justify-between pt-4">
-          <div className="px-4 py-2 w-full">
-            <p className="text-textTitle pb-2 font-medium text-sm">
-              {description}
-            </p>
-            <div className="flex justify-center items-center">
-              <ImageComponent
-                src={"/assets/how-it-works/" + imageName}
-                alt="Grow to earn"
-                className={"w-[260px] lg:h-[500px]"}
-              />
-            </div>
+      {/* {isActive && ( */}
+      <div
+        className={
+          "flex flex-row justify-between pt-4 " +
+          (isActive ? " block" : " hidden")
+        }
+      >
+        <div className="px-4 py-2 w-full">
+          <p className="text-textTitle pb-2 font-medium text-sm">
+            {description}
+          </p>
+          <div className="flex justify-center items-center">
+            <ImageComponent
+              src={"/assets/how-it-works/" + imageName}
+              alt="Grow to earn"
+              className={"w-[260px] lg:h-[500px]"}
+              loading={"eager"}
+            />
           </div>
         </div>
-      )}
+      </div>
+      {/* )} */}
     </div>
   );
 };

@@ -69,37 +69,47 @@ export default function Gameplay() {
               <Navbar />
               <div className="section-spacing">
                 {/* Start Head section */}
-                <div className="flex flex-col md:flex-row justify-between items-center">
+                <div className="block md:hidden">
+                  <PageGradientTitle
+                    title={"Grow-to-Earn"}
+                    className="uppercase"
+                  />
+                </div>
+                <div className="flex flex-col-reverse md:flex-row justify-between items-center">
                   <div>
                     <PageGradientTitle
                       title={"Grow-to-Earn"}
-                      className="uppercase"
+                      className="hidden md:block uppercase"
                     />
-                    <p className="page-description mt-4 text-center md:text-left w-full md:w-[75%] 2xl:w-[50%]">
-                      Project Forest is the first NFT project to introduce the
-                      concept of Grow-to-Earn (G2E). As you nurture your virtual
-                      tree, it grows in levels, it naturally produces more
-                      oxygen and subsequently yields greater O2 tokens for you
-                      to earn. After it reaches a certain level, you can earn
-                      special LEAF tokens that are highly valuable and can be
-                      used to purchase other NFT trees.
-                      <br />
-                    </p>
+                    <div className="">
+                      <p className="page-description text-center md:text-left w-full md:w-[75%] 2xl:w-[50%]">
+                        Project Forest is the first NFT project to introduce the
+                        concept of Grow-to-Earn (G2E). As you nurture your
+                        virtual tree, it grows in levels, it naturally produces
+                        more oxygen and subsequently yields greater O2 tokens
+                        for you to earn. After it reaches a certain level, you
+                        can earn special LEAF tokens that are highly valuable
+                        and can be used to purchase other NFT trees.
+                        <br />
+                      </p>
+                    </div>
                   </div>
 
-                  <div>
+                  <div className="my-[2rem] md:py-0">
                     <ImageComponent
                       src={"assets/gameplay-mobiles.webp"}
                       alt="Gameplay"
-                      className="min-w-[320px] h-[300px] sm:h-auto sm:min-w-[440px] md:min-w-[430px] lg:min-w-[470px] 2xl:min-w-[520px]"
+                      className="min-w-[310px] h-[300px] sm:h-auto sm:min-w-[440px] md:min-w-[430px] lg:min-w-[470px] 2xl:min-w-[520px]"
                     />
                   </div>
                 </div>
                 {/* End Head Section */}
-                <PageGradientTitle
-                  title={"How it works"}
-                  className="uppercase"
-                />
+                <div className="my-[2rem] md:py-0">
+                  <PageGradientTitle
+                    title={"How it works"}
+                    className="uppercase"
+                  />
+                </div>
 
                 <GameplayHowItWorks howItWorksItemsList={howItWorksItemsList} />
                 {/* Token Rewards Section */}
@@ -115,7 +125,7 @@ export default function Gameplay() {
                     <GameplayImageCard
                       src={"assets/gameplay/oxygen-img.svg"}
                       fullHeightImage={false}
-                      containerClassName="w-[325px] h-[300px] md:w-[400px] md:h-[375px]"
+                      containerClassName="w-[280px] h-[255px] md:w-[375px] md:h-[350px] xl:w-[400px] xl:h-[375px]"
                     />
                   </div>
                   <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
@@ -152,15 +162,16 @@ export default function Gameplay() {
                     <GameplayImageCard
                       src={"assets/gameplay/leaf-img.svg"}
                       fullHeightImage={false}
-                      containerClassName="w-[325px] h-[300px] md:w-[400px] md:h-[375px]"
+                      containerClassName="w-[280px] h-[255px] md:w-[375px] md:h-[350px] xl:w-[400px] xl:h-[375px]"
                     />
                   </div>
                 </div>
-
-                <PageGradientTitle
-                  title={"Token PRODUCTION"}
-                  className="uppercase my-[2rem] lg:mb-[5rem]"
-                />
+                <div className="my-[2rem] md:py-0">
+                  <PageGradientTitle
+                    title={"Token PRODUCTION"}
+                    className="uppercase my-[2rem] lg:mb-[5rem]"
+                  />
+                </div>
 
                 <div className="flex justify-center items-center flex-col md:flex-row gap-[2rem] lg:gap-[10rem]">
                   <div>
@@ -182,7 +193,7 @@ export default function Gameplay() {
                   <div>
                     <div className="flex flex-col justify-center items-center">
                       <div className="text-[#666666] font-bold pb-4 text-[20px]">
-                        Produce O2 Token
+                        Produce Leaf Token
                       </div>
                     </div>
                     <div>
