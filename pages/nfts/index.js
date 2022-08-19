@@ -19,13 +19,21 @@ import ImageComponent from "../../src/components/shared/ImageComponent";
 import NFTPageDottedImageBox from "../../src/components/shared/NFTPageDottedImageBox";
 import { getAllAttributesData } from "../../src/services/data-files/AttributesData";
 import {getAttributesSetData} from "../../src/services/data-files/AttributesData"
-
+import { getAllTreePartsSliderData } from "../../src/services/data-files/TreePartsSliderData";
 const DataArr = getDataBySectionName("nft");
+const partsSliderData = getAllTreePartsSliderData();
 
 export default function NFTs() {
   const [attributesData] = useState(getAllAttributesData);
   const [attributesSetData] = useState(getAttributesSetData);
-
+  const [partsSliderSelectedIndex, setPartsSliderSelectedIndex] = useState(0);
+  const changeSlide = (currentIndex, movementDirection) => {
+    let newIndex =
+      movementDirection == "left" ? currentIndex - 1 : currentIndex + 1;
+    if (newIndex >= 0 && newIndex <= partsSliderData.length - 1) {
+      setPartsSliderSelectedIndex(newIndex);
+    }
+  };
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
@@ -119,15 +127,52 @@ export default function NFTs() {
                   Each Tree NFT is made up of 5 distinct parts that make up its
                   appearance. These include:
                 </p>
-              </div>
-
-              {/* Slider Row */}
-
-              {/* Slider sub images row */}
-              <div className="flex justify-start items-center ">
-                <NFTPageDottedImageBox
-                  src={"assets/nft/tree-parts-slider/sub-slider-tree-part.svg"}
-                />
+                {/* Slider Row */}
+                {partsSliderData.map((item, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className={
+                        index == partsSliderSelectedIndex ? " block" : "hidden"
+                      }
+                    >
+                      <div className="flex justify-center items-center mt-[2rem] lg:mt-[3rem] relative">
+                        <div className="absolute left-1">
+                          <p></p>
+                          <ImageComponent
+                            className="w-[35px] cursor-pointer"
+                            src="assets/nft/slider-left-arrow.svg"
+                            onClick={() => changeSlide(index, "left")}
+                          />
+                        </div>
+                        <ImageComponent
+                          className="h-[500px]"
+                          src={`assets/nft/tree-parts-slider/${item.sliderImageName}`}
+                        />
+                        <div className="absolute right-1">
+                          <ImageComponent
+                            className="w-[35px] cursor-pointer"
+                            src="assets/nft/slider-right-arrow.svg"
+                            onClick={() => changeSlide(index, "right")}
+                          />
+                        </div>
+                      </div>
+                      <div className="flex justify-between flex-wrap md:flex-nowrap xl:flex-wrap  items-center mt-[2rem] lg:mt-[3rem]">
+                        {/* Slider sub images row */}
+                        {item.sliderPartsArray.map((subItem, ind) => {
+                          return (
+                            <div key={ind}>
+                              <NFTPageDottedImageBox
+                                title={subItem.title}
+                                src={`assets/nft/tree-parts-slider/${subItem.partImageName}`}
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className="section-spacing">
