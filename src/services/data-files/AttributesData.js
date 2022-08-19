@@ -66,4 +66,30 @@ const allAttributesData = [
   
   export const getAllAttributesData = () => allAttributesData;
 
+
+  const attributeSetData = [
+    {
+      image: "yield.svg",
+      name: "Yield"
+    },
+    {
+      image: "tree-age.svg",
+      name: "Max Age"
+    },
+    {
+      image: "fertilizer.svg",
+      name: "Fertilizer Absorption Rate"
+    },
+    {
+      image: "drought.svg",
+      name: "Drought Tolerance"
+    },
+    {
+      image: "grade.svg",
+      name: "Grade"
+    }
+  ]
+
+  export const getAttributesSetData = () => attributeSetData;
+
   

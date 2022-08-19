@@ -8,7 +8,7 @@ import Reforestation from "../../src/components/reforestation/Reforestation";
 import NFTSlider from "../../src/components/NFT/NFTSlider";
 import Roadmap from "../../src/components/roadmap/Roadmap";
 import Token from "../../src/components/token/Token";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
@@ -17,9 +17,15 @@ import { getDataBySectionName } from "../../src/services/dataService";
 import PageGradientTitle from "../../src/components/shared/PageGradientTitle";
 import ImageComponent from "../../src/components/shared/ImageComponent";
 import NFTPageDottedImageBox from "../../src/components/shared/NFTPageDottedImageBox";
+import { getAllAttributesData } from "../../src/services/data-files/AttributesData";
+import {getAttributesSetData} from "../../src/services/data-files/AttributesData"
+
 const DataArr = getDataBySectionName("nft");
 
 export default function NFTs() {
+  const [attributesData] = useState(getAllAttributesData);
+  const [attributesSetData] = useState(getAttributesSetData);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
@@ -122,6 +128,110 @@ export default function NFTs() {
                 <NFTPageDottedImageBox
                   src={"assets/nft/tree-parts-slider/sub-slider-tree-part.svg"}
                 />
+              </div>
+
+              <div className="section-spacing">
+                <PageGradientTitle
+                  title="Attributes And Quality"
+                  className="uppercase"
+                />
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Other factors such as Attributes and Quality further
+                  differentiate Tree NFTs by defining their characteristics
+                  within the Project Forest ecosystem. Each Tree NFT has 5 sets
+                  of attributes. These are, namely:
+                </p>
+                <div className="flex flex-col attrscreen:flex-row gap-2 justify-between ">
+                {attributesSetData.map((e, i) => {
+                        return (
+                          <div key={i} className=" text-[#797979] flex flex-col items-center justify-center ">
+                           <div className="flex flex-col items-center justify-center  rounded-xl w-[200px] h-[200px] border-2 border-dotted border-borderColor border-opacity-20 ">
+                            <ImageComponent src={
+                                  "assets/nft/attributes-table/" + e.image
+                                }
+                                className=" h-36"
+                                alt={e.name} />
+                                </div>
+                                 <p className="pt-4 pb-6">{e.name}</p>
+                           
+                            </div>
+                           
+                          );
+                        })}
+                        </div>
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Attributes significantly impact the longterm production
+                  capabilities of the Tree NFTs. Tree NFTs of better quality
+                  have stronger attribute specifications, and therefore provide
+                  a more sustainable yield over time. The table below showcases
+                  the attribute bonuses for each quality tier.
+                </p>
+                {/* Attributes Table Starts */}
+
+                <div className="w-full rounded-xl border-2 border-dotted  border-borderColor border-opacity-20 my-10 overflow-x-scroll no-scrollbar ">
+                  <table className="w-full min-w-[1100px]">
+                    <thead className="">
+                      <tr className="flex flex-row items-center w-full">
+                        <th className=" w-[20%] attributes-header ">
+                          Property Value
+                        </th>
+                        <th className=" w-[16%] gap-2 attributes-header">
+                          Common
+                        </th>
+                        <th className="w-[16%] gap-2 attributes-header">
+                          Uncommon
+                        </th>
+                        <th className="w-[16%] gap-2 attributes-header">
+                          Rare
+                        </th>
+                        <th className="w-[16%] gap-2 attributes-header">
+                          Epic
+                        </th>
+                        <th className=" w-[16%] gap-2 attributes-header border-r-0">
+                          Legend
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {attributesData.map((e, i) => {
+                        return (
+                          <tr
+                            className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-xs md:text-sm text-[#797979]"
+                            key={i}
+                          >
+                            <td className=" w-[20%] flex flex-col md:flex-row  justify-center md:justify-start items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 px-3 md:px-6 h-[90px]">
+                              <ImageComponent
+                                src={
+                                  "assets/nft/attributes-table/" + e.valueImage
+                                }
+                                className="h-12"
+                                alt={e.value}
+                              />
+
+                              {e.value}
+                            </td>
+                            <td className=" w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px] ">
+                              <p>{e.common}</p>
+                            </td>
+                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]  ">
+                              <p>{e.uncommon}</p>
+                            </td>
+                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]">
+                              <p>{e.rare}</p>
+                            </td>
+                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]">
+                              <p>{e.epic}</p>
+                            </td>
+                            <td className="w-[16%] flex justify-center items-center border-dashed border-borderColor border-opacity-20 h-[90px]">
+                              <p>{e.legend}</p>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+                {/* Attributes Table Ends */}
               </div>
 
               <Footer />

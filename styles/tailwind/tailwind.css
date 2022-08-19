@@ -11,6 +11,10 @@
         @apply text-primaryBlue border-[1px] border-borderColor lg:max-w-2xl hover:bg-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
     }
 
+    .attributes-header{
+        @apply md:h-[120px] h-[90px] py-4 border-r-[1px] border-dashed border-borderColor border-opacity-20 flex flex-col justify-center items-center font-semibold text-[#434343] md:text-lg text-base ;
+    }
+
     .section-spacing{
         @apply py-[2rem] md:py-[3rem] px-[2rem] lg:px-[8rem] xl:px-[10rem];
     }
@@ -122,5 +126,8 @@
     .coming-soon-text{
         @apply font-extrabold uppercase text-[#3A3A3C] text-center text-[30px] md:text-[45px];
     }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
 
 };
