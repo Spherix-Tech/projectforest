@@ -26,6 +26,7 @@ module.exports = {
         primary: "#C3CA84",
         primaryBlue: "#055555",
         textTitle: "#1D3C34",
+        labelTextColor: "#434343",
         textDescription: "#666666",
         backgroundColor: "#FCFCFC",
         mailBgColor: "#C5F1F1",
