@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import ImageComponent from "../shared/ImageComponent";
 
-const FAQAccordion = ({ question, answer }) => {
+const FAQAccordion = ({ question, answer, id }) => {
   const [isActive, setIsActive] = useState(false);
+
+  // const toggle = id => {
+  //   if(isActive === id) {
+  //     return setIsActive(null);
+  //   }
+  //   setIsActive(id)
+  // }
 
   return (
     
@@ -11,7 +18,7 @@ const FAQAccordion = ({ question, answer }) => {
         className={
           "flex flex-row w-full cursor-pointer justify-between bg-opacity-40 p-4 pl-0"
         }
-        onClick={() => setIsActive(!isActive)}
+        onClick={() => setIsActive(!isActive) }
       >
         <div className="flex flex-row gap-3 items-center">
           <ImageComponent
@@ -27,7 +34,7 @@ const FAQAccordion = ({ question, answer }) => {
         </div>
         <p className=" text-textTitle text-[25px]">{isActive ? "-" : "+"}</p>
       </div>
-      {isActive && (
+      {isActive && ( 
         <div className=" flex flex-row justify-between py-4">
           <div className=" pl-4 pr-8 lg:text-sm text-xs text-textTitle">{answer}</div>
         </div>
