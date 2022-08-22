@@ -26,12 +26,10 @@ const Hero = () => {
           </span>
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
-          <a
-            href="https://project-forest.gitbook.io/litepaper"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="btnPrimary lg:w-60 w-40 mr-0">Litepaper</button>
+          <a target="_blank" rel="noreferrer">
+            <button className="disabled btnPrimary lg:w-60 w-40 mr-0">
+              Litepaper
+            </button>
           </a>
           <button className="disabled cursor-default btnSecondary lg:w-60 w-40 mr-0">
             Mint Now

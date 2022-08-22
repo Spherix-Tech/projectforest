@@ -132,7 +132,7 @@ export default function MobileNFTSlider({ DataArr, hideTitle = false }) {
               <ImageComponent
                 src={`/assets/nft/${selectedNFTObj?.imageName}`}
                 alt="NFT Ankot"
-                className={" w-[9rem] h-[11rem] "}
+                className={" h-[11rem] "}
               />
             </div>
           </div>

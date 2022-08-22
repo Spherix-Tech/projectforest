@@ -126,7 +126,7 @@ export default function NFTSlider({
             <ImageComponent
               src={`/assets/nft/${selectedNFTObj?.imageName}`}
               alt="NFT Project Forest"
-              className=" w-[15rem] h-[16rem] "
+              className="h-[20rem] "
             />
           </div>
 
