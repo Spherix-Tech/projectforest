@@ -11,8 +11,8 @@ const RegionsTable = () => {
     <table className="w-full ">
       <thead className="">
         <tr className="flex flex-row items-center w-full">
-          <th className=" w-[16%] attributes-header ">
-            Continent
+          <th className=" w-[15%] attributes-header ">
+            Region
           </th>
           <th className=" w-[14%] gap-2 attributes-header">
             Tree 1
@@ -20,16 +20,16 @@ const RegionsTable = () => {
           <th className="w-[14%] gap-2 attributes-header">
             Tree 2
           </th>
-          <th className="w-[14%] gap-2 attributes-header">
+          <th className="w-[13%] gap-2 attributes-header">
             Tree 3
           </th>
           <th className="w-[14%] gap-2 attributes-header">
             Tree 4
           </th>
-          <th className=" w-[14%] gap-2 attributes-header">
+          <th className=" w-[15%] gap-2 attributes-header">
             Tree 5
           </th>
-          <th className=" w-[14%] gap-2 attributes-header border-r-0">
+          <th className=" w-[15%] gap-2 attributes-header border-r-0">
             Tree 6
           </th>
         </tr>
@@ -38,33 +38,34 @@ const RegionsTable = () => {
         {regionsData.map((e, i) => {
           return (
             <tr
-              className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-[9px] md:text-sm text-[#797979] text-center 
+              className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-[7px] md:text-sm text-[#797979] text-center 
               "
               key={i}
             >
-              <td className=" w-[16%] flex flex-col justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 px-3 md:px-6 md:h-[90px] h-[47px]">
+              <td className=" w-[15%] flex flex-col regions-table border-r-[1px] px-2">
                 <ImageComponent
                   src={"assets/nft/regions/" + e.image}
                   className="md:h-16 h-8 object-contain"
                   alt={e.value}
                 />
+                <p className='py-1'>{e.continent}</p>
               </td>
-              <td className=" w-[14%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2 ">
+              <td className=" w-[14%] regions-table border-r-[1px] ">
                 <p>{e.tree1}</p>
               </td>
-              <td className="w-[14%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2  ">
+              <td className="w-[14%] regions-table border-r-[1px]">
                 <p>{e.tree2}</p>
               </td>
-              <td className="w-[14%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2">
+              <td className="w-[13%] regions-table border-r-[1px]">
                 <p>{e.tree3}</p>
               </td>
-              <td className="w-[14%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2">
+              <td className="w-[14%] regions-table border-r-[1px]">
                 <p>{e.tree4}</p>
               </td>
-              <td className="w-[14%] flex justify-center items-center border-r-[1px]  border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2">
+              <td className="w-[15%] regions-table border-r-[1px]">
                 <p>{e.tree5}</p>
               </td>
-              <td className="w-[14%] flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2">
+              <td className="w-[15%] regions-table break-all">
                 <p>{e.tree6}</p>
               </td>
             </tr>

@@ -16,13 +16,13 @@ const AttributesTable = () => {
           <th className=" w-[16%] gap-2 attributes-header">
             Common
           </th>
-          <th className="w-[16%] gap-2 attributes-header">
+          <th className="w-[18%] gap-2 attributes-header">
             Uncommon
           </th>
-          <th className="w-[16%] gap-2 attributes-header">
+          <th className="w-[15%] gap-2 attributes-header">
             Rare
           </th>
-          <th className="w-[16%] gap-2 attributes-header">
+          <th className="w-[15%] gap-2 attributes-header">
             Epic
           </th>
           <th className=" w-[16%] gap-2 attributes-header border-r-0">
@@ -34,10 +34,10 @@ const AttributesTable = () => {
         {attributesData.map((e, i) => {
           return (
             <tr
-              className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-[9px] md:text-sm text-[#797979]"
+              className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-[8px] md:text-sm text-[#797979]"
               key={i}
             >
-              <td className=" w-[20%] flex flex-row justify-start items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:px-6 md:h-[90px] h-[50px] ">
+              <td className=" w-[20%] flex flex-col md:flex-row justify-start items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:px-6 md:h-[90px] h-[50px] ">
                 <ImageComponent
                   src={
                     "assets/nft/attributes-table/" + e.valueImage
@@ -45,18 +45,18 @@ const AttributesTable = () => {
                   className="md:h-12 h-7"
                   alt={e.value}
                 />
-                {e.value}
+              <p className='text-center'>{e.value}</p>  
               </td>
               <td className=" w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px] ">
                 <p>{e.common}</p>
               </td>
-              <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]  ">
+              <td className="w-[18%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]  ">
                 <p>{e.uncommon}</p>
               </td>
-              <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]">
+              <td className="w-[15%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]">
                 <p>{e.rare}</p>
               </td>
-              <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]">
+              <td className="w-[15%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]">
                 <p>{e.epic}</p>
               </td>
               <td className="w-[16%] flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px]">

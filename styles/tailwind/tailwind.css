@@ -12,7 +12,7 @@
     }
 
     .attributes-header{
-        @apply md:h-[120px] h-[50px] py-4 border-r-[1px] border-dashed border-borderColor border-opacity-20 flex flex-col justify-center items-center font-semibold text-[#434343] md:text-lg text-[9px] ;
+        @apply md:h-[120px] h-[50px] py-4 border-r-[1px] border-dashed border-borderColor border-opacity-20 flex flex-col justify-center items-center font-semibold text-[#434343] md:text-lg text-[8px] ;
     }
 
     .section-spacing{
@@ -34,6 +34,7 @@
         @apply overflow-x-hidden
     }
     .full-page-bg-img{
+        
         background-image: url("/assets/bg/full-page-bg-img.svg");
         background-position: center;
         background-repeat: no-repeat;
@@ -129,5 +130,11 @@
     .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
+    .regions-table{
+        @apply flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[100px] h-[50px] px-1;
+    }
+    .trials{
+        overflow-wrap: normal;
+    }
 
 };

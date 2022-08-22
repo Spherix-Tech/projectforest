@@ -194,7 +194,7 @@ export default function NFTs() {
                             alt={e.name}
                           />
                         </div>
-                        <p className="pt-2 pb-2 text-[9px] md:text-base text-center leading-3">
+                        <p className="pt-2 pb-2 text-[9px] md:text-base text-center leading-3 font-semibold">
                           {e.name}
                         </p>
                       </div>
