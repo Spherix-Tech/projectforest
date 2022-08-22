@@ -1,14 +1,8 @@
 import Head from "next/head";
 import Navbar from "../../src/components/navbar/Navbar";
-import Hero from "../../src/components/hero/Hero";
 import Footer from "../../src/components/footer/Footer";
-import HowItWorks from "../../src/components/how-it-works/HowItWorks";
-import MailingList from "../../src/components/mailing-list/MailingList";
-import Reforestation from "../../src/components/reforestation/Reforestation";
 import NFTSlider from "../../src/components/NFT/NFTSlider";
-import Roadmap from "../../src/components/roadmap/Roadmap";
-import Token from "../../src/components/token/Token";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
@@ -16,24 +10,17 @@ import { gsap, Power3 } from "gsap";
 import { getDataBySectionName } from "../../src/services/dataService";
 import PageGradientTitle from "../../src/components/shared/PageGradientTitle";
 import ImageComponent from "../../src/components/shared/ImageComponent";
-import NFTPageDottedImageBox from "../../src/components/shared/NFTPageDottedImageBox";
-import { getAllAttributesData } from "../../src/services/data-files/AttributesData";
-import {getAttributesSetData} from "../../src/services/data-files/AttributesData"
-import { getAllTreePartsSliderData } from "../../src/services/data-files/TreePartsSliderData";
+import {
+  getAllAttributesData,
+  getAttributesSetData,
+} from "../../src/services/data-files/AttributesData";
+import TreePartsSlider from "../../src/components/tree-parts-slider/TreePartsSlider";
 const DataArr = getDataBySectionName("nft");
-const partsSliderData = getAllTreePartsSliderData();
 
 export default function NFTs() {
   const [attributesData] = useState(getAllAttributesData);
   const [attributesSetData] = useState(getAttributesSetData);
-  const [partsSliderSelectedIndex, setPartsSliderSelectedIndex] = useState(0);
-  const changeSlide = (currentIndex, movementDirection) => {
-    let newIndex =
-      movementDirection == "left" ? currentIndex - 1 : currentIndex + 1;
-    if (newIndex >= 0 && newIndex <= partsSliderData.length - 1) {
-      setPartsSliderSelectedIndex(newIndex);
-    }
-  };
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
@@ -128,51 +115,7 @@ export default function NFTs() {
                   appearance. These include:
                 </p>
                 {/* Slider Row */}
-                {partsSliderData.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className={
-                        index == partsSliderSelectedIndex ? " block" : "hidden"
-                      }
-                    >
-                      <div className="flex justify-center items-center mt-[2rem] lg:mt-[3rem] relative">
-                        <div className="absolute left-1">
-                          <p></p>
-                          <ImageComponent
-                            className="w-[35px] cursor-pointer"
-                            src="assets/nft/slider-left-arrow.svg"
-                            onClick={() => changeSlide(index, "left")}
-                          />
-                        </div>
-                        <ImageComponent
-                          className="h-[500px]"
-                          src={`assets/nft/tree-parts-slider/${item.sliderImageName}`}
-                        />
-                        <div className="absolute right-1">
-                          <ImageComponent
-                            className="w-[35px] cursor-pointer"
-                            src="assets/nft/slider-right-arrow.svg"
-                            onClick={() => changeSlide(index, "right")}
-                          />
-                        </div>
-                      </div>
-                      <div className="flex justify-between flex-wrap md:flex-nowrap xl:flex-wrap  items-center mt-[2rem] lg:mt-[3rem]">
-                        {/* Slider sub images row */}
-                        {item.sliderPartsArray.map((subItem, ind) => {
-                          return (
-                            <div key={ind}>
-                              <NFTPageDottedImageBox
-                                title={subItem.title}
-                                src={`assets/nft/tree-parts-slider/${subItem.partImageName}`}
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  );
-                })}
+                <TreePartsSlider />
               </div>
 
               <div className="section-spacing">
@@ -187,23 +130,24 @@ export default function NFTs() {
                   of attributes. These are, namely:
                 </p>
                 <div className="flex flex-col attrscreen:flex-row gap-2 justify-between ">
-                {attributesSetData.map((e, i) => {
-                        return (
-                          <div key={i} className=" text-[#797979] flex flex-col items-center justify-center ">
-                           <div className="flex flex-col items-center justify-center  rounded-xl w-[200px] h-[200px] border-2 border-dotted border-borderColor border-opacity-20 ">
-                            <ImageComponent src={
-                                  "assets/nft/attributes-table/" + e.image
-                                }
-                                className=" h-36"
-                                alt={e.name} />
-                                </div>
-                                 <p className="pt-4 pb-6">{e.name}</p>
-                           
-                            </div>
-                           
-                          );
-                        })}
+                  {attributesSetData.map((e, i) => {
+                    return (
+                      <div
+                        key={i}
+                        className=" text-[#797979] flex flex-col items-center justify-center "
+                      >
+                        <div className="flex flex-col items-center justify-center  rounded-xl w-[200px] h-[200px] border-2 border-dotted border-borderColor border-opacity-20 ">
+                          <ImageComponent
+                            src={"assets/nft/attributes-table/" + e.image}
+                            className=" h-36"
+                            alt={e.name}
+                          />
                         </div>
+                        <p className="pt-4 pb-6">{e.name}</p>
+                      </div>
+                    );
+                  })}
+                </div>
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Attributes significantly impact the longterm production
                   capabilities of the Tree NFTs. Tree NFTs of better quality
