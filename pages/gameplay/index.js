@@ -177,7 +177,7 @@ export default function Gameplay() {
                   <div>
                     <div className="flex flex-col justify-center items-center">
                       <div className="text-[#666666] font-bold pb-4 text-[20px]">
-                        Produce O2 Token
+                        Normal Mode
                       </div>
                     </div>
                     <div>
@@ -185,7 +185,7 @@ export default function Gameplay() {
                         src={"assets/gameplay/oxygen-tree-img.svg"}
                         fullHeightImage={true}
                         containerClassName="w-[300px] h-[360px] md:w-[330px] md:h-[395px]"
-                        levelValue={"Lvl 01 — Lvl 19"}
+                        levelValue={"Produce 02 Token"}
                       />
                     </div>
                   </div>
@@ -193,7 +193,7 @@ export default function Gameplay() {
                   <div>
                     <div className="flex flex-col justify-center items-center">
                       <div className="text-[#666666] font-bold pb-4 text-[20px]">
-                        Produce Leaf Token
+                        Special Events
                       </div>
                     </div>
                     <div>
@@ -201,7 +201,7 @@ export default function Gameplay() {
                         src={"assets/gameplay/leaf-tree-img.svg"}
                         fullHeightImage={true}
                         containerClassName="w-[300px] h-[360px] md:w-[330px] md:h-[395px]"
-                        levelValue={"Lvl 20 — Lvl 30"}
+                        levelValue={"Produce LEAF Token"}
                       />
                     </div>
                   </div>

@@ -20,9 +20,11 @@ const Hero = () => {
         <p className="leading-6 text-primaryBlue font-bold navscreen:text-left text-center navscreen:text-[16px] text-[14px] px-6 navscreen:px-0 ">
           Earn while making a greener impact on the planet.<br></br>
           <span className="text-textDescription font-normal ">
-            Become part of Project Forest’s aim of planting 1,000,000 trees
-            across the world and be rewarded daily for the oxygen your plants
-            produce.
+            Project Forest is a collection of sustainability focused NFTs that
+            let you make a positive impact on the environment through a unique
+            Grow-to-Earn experience. Each time an NFT is minted on Project
+            Forest, a portion of the proceeds are donated to NGOs to fund
+            reforestation measures across the world.
           </span>
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
