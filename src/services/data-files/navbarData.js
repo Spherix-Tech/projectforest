@@ -34,7 +34,7 @@ const allData = [
   {
     name: "Gameplay",
     link: "/gameplay",
-    icon_src: "/assets/navbar/how-it-works.svg",
+    icon_src: "/assets/navbar/token.svg",
   },
   {
     name: "NFTs",
@@ -44,12 +44,12 @@ const allData = [
   {
     name: "FAQs",
     link: "/faq",
-    icon_src: "/assets/navbar/token.svg",
+    icon_src: "/assets/navbar/how-it-works.svg",
   },
   {
     name: "About Us",
     link: "/about-us",
-    icon_src: "/assets/navbar/roadmap.svg",
+    icon_src: "/assets/navbar/about-us.svg",
   },
 
   // {

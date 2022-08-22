@@ -34,6 +34,12 @@ const FAQ = () => {
     return data;
   }
 
+  const [selectedItem, setSelectedItem] = useState(1)
+
+  const handleClick = id => {
+    setSelectedItem(id)
+  }
+
   return (
     <div className="section-spacing">
       <div className="flex justify-start items-center flex-col gap-6">
@@ -66,8 +72,10 @@ const FAQ = () => {
                 />
               </div>
 
-              {description.map(({ question, answer }, key) => (
-                <FAQAccordion key={key} question={question} answer={answer} />
+              {description.map(({ question, answer, id }) => (
+              //  <div onClick={handleClick} >
+                <FAQAccordion key={id} id={id} question={question} answer={answer} />
+          //  </div>
               ))}
             </div>
           ))}

@@ -13,18 +13,19 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        navscreen: "1272px",
-        xs: "480px",
+        xs: { min: "480px", max: "639px" },
         sm: "640px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
+        navscreen: "1272px",
       },
       colors: {
         primary: "#C3CA84",
         primaryBlue: "#055555",
         textTitle: "#1D3C34",
+        labelTextColor: "#434343",
         textDescription: "#666666",
         backgroundColor: "#FCFCFC",
         mailBgColor: "#C5F1F1",

@@ -104,7 +104,7 @@ export default function MobileNFTSlider({ DataArr, hideTitle = false }) {
                   }
                 >
                   <div
-                    className={`${slide?.bgGradientColorClass} flex flex-col justify-center h-[100px] items-center gap-2 rounded-2xl `}
+                    className={`${slide?.bgGradientColorClass} flex flex-col justify-center h-[110px] items-center gap-2 rounded-2xl `}
                   >
                     <ImageComponent
                       className="h-[80px]"
@@ -132,7 +132,7 @@ export default function MobileNFTSlider({ DataArr, hideTitle = false }) {
               <ImageComponent
                 src={`/assets/nft/${selectedNFTObj?.imageName}`}
                 alt="NFT Ankot"
-                className={" w-[9rem] h-[11rem] "}
+                className={" h-[11rem] "}
               />
             </div>
           </div>

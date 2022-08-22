@@ -46,7 +46,7 @@ const Roadmap = () => {
                   className="object-contain py-4"
                 />
 
-                <div className="flex flex-col w-2/4 justify-center text-[12px] text-textDescription text-opacity-70 leading-4">
+                <div className="flex flex-col w-2/4 justify-center text-[12px] text-textDescription text-opacity-70 leading-4 pl-2">
                   <p>{e.text}</p>
                   <p>{e.text2}</p>
                   <p>{e.text3}</p>

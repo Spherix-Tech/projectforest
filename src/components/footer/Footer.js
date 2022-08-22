@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
       <div className="w-full pt-6 flex flex-col items-center justify-center">
         <h5 className=" font-light cursor-pointer lg:text-lg text-sm text-white text-opacity-60">
-          All Rights Reserved 2021. By Project Forest
+          All Rights Reserved 2022. By Project Forest
         </h5>
       </div>
     </div>

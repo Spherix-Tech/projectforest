@@ -1,23 +1,30 @@
 import Head from "next/head";
 import Navbar from "../../src/components/navbar/Navbar";
-import Hero from "../../src/components/hero/Hero";
 import Footer from "../../src/components/footer/Footer";
-import HowItWorks from "../../src/components/how-it-works/HowItWorks";
-import MailingList from "../../src/components/mailing-list/MailingList";
-import Reforestation from "../../src/components/reforestation/Reforestation";
 import NFTSlider from "../../src/components/NFT/NFTSlider";
-import Roadmap from "../../src/components/roadmap/Roadmap";
-import Token from "../../src/components/token/Token";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
 import { getDataBySectionName } from "../../src/services/dataService";
+import { getAllRegionsData } from "../../src/services/data-files/RegionsData";
 import PageGradientTitle from "../../src/components/shared/PageGradientTitle";
+import ImageComponent from "../../src/components/shared/ImageComponent";
+import {
+  getAllAttributesData,
+  getAttributesSetData,
+} from "../../src/services/data-files/AttributesData";
+import TreePartsSlider from "../../src/components/tree-parts-slider/TreePartsSlider";
+import AttributesTable from "../../src/components/NFT/tables/AttributesTable";
+import RegionsTable from "../../src/components/NFT/tables/RegionsTable";
 const DataArr = getDataBySectionName("nft");
+const regionsData = getAllRegionsData();
 
 export default function NFTs() {
+  const [attributesData] = useState(getAllAttributesData);
+  const [attributesSetData] = useState(getAttributesSetData);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
@@ -76,39 +83,110 @@ export default function NFTs() {
               </div>
               <NFTSlider className="pt-0" hideTitle={true} DataArr={DataArr} />
 
-              <div className="section-spacing relative">
+              <div className="section-spacing">
                 <PageGradientTitle
-                  title="Virtual Tree Attributes"
+                  title="Tree NFTs — A Closer Look"
                   className="uppercase"
                 />
-                <p className="page-description mt-4">
-                  Each of Project Forest’s virtual NFT trees have a unique set
-                  of attributes that impact gameplay. These set of attributes
-                  are made of distinct factors including O2 Production, Water
-                  Absorption, Climate Resistance, Terrain Sustainability, Seed
-                  Generation and Growth Rate. Each Virtual Tree also belongs to
-                  a specific class of Tree Species that determine the
-                  composition of its attributes.
-                  <br />
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Trees are the main NFTs in Project Forest and are required to
+                  enter into the Project Forest grow-to-earn app. These trees
+                  when first planted are mere seeds that can be cultivated and
+                  grown by daily nurturing, watering and nourishing using
+                  fertilizers. In order to get their hands on a Project Forest
+                  tree NFT, players must participate during the official
+                  genesis airdrop event before the launch of the public beta.
+                  Later, players can participate in the blind box sales or
+                  purchase them through the secondary marketplace.
                 </p>
-                <p className="page-description mt-4 opacity-[0.2]">
-                  Particular attention and effort has been maintained to ensure
-                  that all of the virtual NFT trees are designed in a manner
-                  that closely resembles the natural physical and ecological
-                  characteristics of the tree species that they have been
-                  inspired from.
-                </p>
-                {/* <br /> */}
-                <p className="coming-soon-text m-auto text-center w-full -mt-[4rem] sm:mt-0">
-                  Coming Soon
-                </p>
-                <p className="page-description mt-4 opacity-[0.06]">
-                  Proceeds from the sales of the virtual tree NFTs are donated
-                  to our growing network of international NGOs involved in
-                  carrying out sustainable activities and reforestation efforts
-                  in regions across the world.
-                </p>
+                <ImageComponent
+                  className="w-full rounded-xl"
+                  src="assets/nft/nft-tree-banner.svg"
+                />
               </div>
+
+              <div className="section-spacing">
+                <PageGradientTitle title="Appearance" className="uppercase" />
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Tree NFTs in Project Forest are differentiated to the extent
+                  that no two Tree NFTs are alike. The appearance of Tree NFTs
+                  helps physically distinguish them from other NFTs and makes
+                  for a diverse and beautiful NFT Forest that the player owns
+                  and cultivates.
+                </p>
+                <p className="page-description my-[1rem] md:my-[2rem] text-[13px] font-semibold md:text-[16px]">
+                  Each Tree NFT is made up of 5 distinct parts that make up its
+                  appearance. These include:
+                </p>
+                {/* Slider Row */}
+                <TreePartsSlider />
+              </div>
+              {/* Attributes and Quality Section Starts */}
+              <div className="section-spacing">
+                <PageGradientTitle
+                  title="Attributes And Quality"
+                  className="uppercase"
+                />
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Other factors such as Attributes and Quality further
+                  differentiate Tree NFTs by defining their characteristics
+                  within the Project Forest ecosystem. Each Tree NFT has 5 sets
+                  of attributes. These are, namely:
+                </p>
+                <div className="flex flex-row gap-2 ">
+                  {attributesSetData.map((e, i) => {
+                    return (
+                      <div
+                        key={i}
+                        className="text-[#797979] w-1/5 flex flex-col items-center "
+                      >
+                        <div className="rounded-xl border-2 border-dotted border-borderColor border-opacity-20 ">
+                          <ImageComponent
+                            src={"assets/nft/attributes-table/" + e.image}
+                            className="md:h-44 lg:h-52"
+                            alt={e.name}
+                          />
+                        </div>
+                        <p className="pt-2 pb-2 text-[9px] md:text-base text-center leading-3 font-bold">
+                          {e.name}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+                <p className="page-description md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Attributes significantly impact the longterm production
+                  capabilities of the Tree NFTs. Tree NFTs of better quality
+                  have stronger attribute specifications, and therefore provide
+                  a more sustainable yield over time. The table below showcases
+                  the attribute bonuses for each quality tier.
+                </p>
+                <AttributesTable />
+              </div>
+              {/* Regions Section Starts */}
+              <div className="section-spacing pt-0">
+                <PageGradientTitle title="Regions" className="uppercase" />
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  Tree NFTs are further segmented into continents based on their
+                  most common geographical locations. There are 5 unique
+                  continents that these Tree NFTs can belong to, including
+                  Africa, Asia, Europe, America and Oceania. At the time of
+                  launch, each continent will be home to 6 unique species of
+                  tree NFTs, this number will increase as new species are
+                  discovered when the Project’s reforestation milestones are
+                  met.
+                </p>
+                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                  As trees are a product of their geographical environment, and
+                  each continent has a distinct set of physical and
+                  environmental attributes such as climate, temperature,
+                  latitudes and longitudes; therefore, each continent will be
+                  home to trees with distinct attributes and characteristics.
+                  This is outlined in the table below:
+                </p>
+                <RegionsTable />
+              </div>
+              {/* Regions Section Ends */}
 
               <Footer />
             </div>
