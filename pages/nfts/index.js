@@ -147,26 +147,24 @@ export default function NFTs() {
                             alt={e.name}
                           />
                         </div>
-                        <p className="pt-2 pb-2 text-[9px] md:text-base text-center leading-3 font-semibold">
+                        <p className="pt-2 pb-2 text-[9px] md:text-base text-center leading-3 font-bold">
                           {e.name}
                         </p>
                       </div>
                     );
                   })}
                 </div>
-                <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
+                <p className="page-description md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Attributes significantly impact the longterm production
                   capabilities of the Tree NFTs. Tree NFTs of better quality
                   have stronger attribute specifications, and therefore provide
                   a more sustainable yield over time. The table below showcases
                   the attribute bonuses for each quality tier.
                 </p>
-                {/* Attributes Table Starts */}
                 <AttributesTable />
               </div>
-              {/* Attributes and Quality Section Ends */}
               {/* Regions Section Starts */}
-              <div className="section-spacing">
+              <div className="section-spacing pt-0">
                 <PageGradientTitle title="Regions" className="uppercase" />
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Tree NFTs are further segmented into continents based on their
@@ -186,7 +184,6 @@ export default function NFTs() {
                   home to trees with distinct attributes and characteristics.
                   This is outlined in the table below:
                 </p>
-                {/* Table Starts */}
                 <RegionsTable />
               </div>
               {/* Regions Section Ends */}

@@ -130,10 +130,7 @@
         display: none;
       }
     .regions-table{
-        @apply flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[100px] h-[50px] px-1;
-    }
-    .trials{
-        overflow-wrap: normal;
+        @apply flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[115px] h-[60px] px-1 py-1;
     }
 
 };
