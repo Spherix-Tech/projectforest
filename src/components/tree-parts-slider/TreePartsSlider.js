@@ -25,7 +25,12 @@ function TreePartsSlider() {
               <div className="absolute left-1">
                 <p></p>
                 <ImageComponent
-                  className="w-[35px] cursor-pointer"
+                  className={
+                    "w-[35px]  " +
+                    (partsSliderSelectedIndex == 0
+                      ? " opacity-[50%]"
+                      : " cursor-pointer ")
+                  }
                   src="assets/nft/slider-left-arrow.svg"
                   onClick={() => changeSlide(index, "left")}
                 />
@@ -36,7 +41,12 @@ function TreePartsSlider() {
               />
               <div className="absolute right-1">
                 <ImageComponent
-                  className="w-[35px] cursor-pointer"
+                  className={
+                    "w-[35px] " +
+                    (partsSliderSelectedIndex == partsSliderData.length - 1
+                      ? " opacity-[50%]"
+                      : " cursor-pointer")
+                  }
                   src="assets/nft/slider-right-arrow.svg"
                   onClick={() => changeSlide(index, "right")}
                 />

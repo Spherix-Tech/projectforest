@@ -98,7 +98,7 @@ export default function NFTs() {
                   purchase them through the secondary marketplace.
                 </p>
                 <ImageComponent
-                  className="w-full"
+                  className="w-full rounded-xl"
                   src="assets/nft/nft-tree-banner.svg"
                 />
               </div>

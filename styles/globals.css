@@ -43,16 +43,17 @@ a {
   position: absolute;
   width: 80%;
   height: 100vh;
-  top: 10px;
+  top: 0px;
   right: 25%;
   padding: 2rem;
-  border-radius: 0px 15px 15px 0px;
+  /* border-radius: 0px 15px 15px 0px;
   background: linear-gradient(
     122.73deg,
     rgba(254, 254, 254, 0.4) 13.02%,
     rgba(255, 255, 255, 0.1) 80.72%
   );
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); */
+  background: #E8F1D9;
 }
 
 h2 {
