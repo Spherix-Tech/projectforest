@@ -2,6 +2,7 @@ const allRegionsData = [
     {
         continent: "Africa",
         value: "Strong Drought Tolerance",
+        image: "africa.svg",
         tree1: "Baobab",
         tree2: "Spathodea",
         tree3: "Dracaena",
@@ -13,6 +14,7 @@ const allRegionsData = [
     {
         continent: "Asia",
         value: "High Production",
+        image: "asia.svg",
         tree1: "Linden",
         tree2: "Pine Tree",
         tree3: "Laurel",
@@ -24,6 +26,7 @@ const allRegionsData = [
     {
         continent: "Europe",
         value: "Trees Are Old",
+        image: "europe.svg",
         tree1: "Quercus Robur",
         tree2: "White Birch",
         tree3: "Olea Europaea",
@@ -35,6 +38,7 @@ const allRegionsData = [
     {
         continent: "America",
         value: "High Grade",
+        image: "america.svg",
         tree1: "Oak",
         tree2: "Maple",
         tree3: "Ceibo",
@@ -46,6 +50,7 @@ const allRegionsData = [
     {
         continent: "Oceania",
         value: "Upgrade Fast",
+        image: "oceania.svg",
         tree1: "Eucalypt",
         tree2: "silver fern",
         tree3: "ceibo",

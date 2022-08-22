@@ -13,14 +13,13 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xs: "480px",
+        xs: { min: "480px", max: "639px" },
         sm: "640px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
         navscreen: "1272px",
-        attrscreen: "1360px"
       },
       colors: {
         primary: "#C3CA84",

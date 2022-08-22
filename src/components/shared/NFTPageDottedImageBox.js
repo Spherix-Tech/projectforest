@@ -5,7 +5,7 @@ function NFTPageDottedImageBox({ src, alt, title, className = "", onClick }) {
       <div
         className={
           className +
-          " flex justify-center items-center p-[0.5rem] sm:p-[1rem] rounded-[20px] border-dashed border border-[#70707082] w-[110px] h-[110px] xs:w-[120px] xs:h-[120px] md:w-[130px] md:h-[130px] lg:w-[160px] lg:h-[160px] xl:w-[200px] xl:h-[200px] 2xl:w-[250px] 2xl:h-[250px]"
+          " flex justify-center items-center p-[0.5rem] sm:p-[1rem] rounded-[20px] border-dashed border border-[#70707082] w-[105px] h-[105px] xs:w-[115px] xs:h-[115px] md:w-[130px] md:h-[130px] lg:w-[160px] lg:h-[160px] xl:w-[200px] xl:h-[200px] 2xl:w-[250px] 2xl:h-[250px]"
         }
       >
         <div className="h-full">
