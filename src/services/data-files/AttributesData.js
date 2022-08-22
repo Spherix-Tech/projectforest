@@ -1,6 +1,6 @@
 const allAttributesData = [
   {
-      value: "Yield (level 1)",
+      value: "Yield",
       valueImage: "yield.svg",
       common: "3-8",
       uncommon: "3-9",
@@ -9,8 +9,8 @@ const allAttributesData = [
       legend: "5-12"
   },
   {
-    value: "Yield (Full Grade)",
-    valueImage: "yield.svg",
+    value: "Yield",
+    valueImage: "yield-full-grade.svg",
     common: "124-263",
     uncommon: "136-289",
     rare: "149-316",
@@ -27,7 +27,7 @@ const allAttributesData = [
     legend: "80-120"
   },
   {
-    value: "Drought Tolerance (Level 1)",
+    value: "Drought Tolerance",
     valueImage: "drought.svg",
     common: "6-17",
     rare: "7-19",
@@ -36,8 +36,8 @@ const allAttributesData = [
     legend: "9-26"
   },
   {
-    value: "Drought Tolerance (Full Grade)",
-    valueImage: "drought.svg",
+    value: "Drought Tolerance",
+    valueImage: "drought-full-grade.svg",
     common: "41-127",
     uncommon: "45-140",
     rare: "49-152",
@@ -54,7 +54,7 @@ const allAttributesData = [
     legend: "30-35"
   },
   {
-    value: "Fertilizer Absorption Rate",
+    value: "Fertilizer Absorption",
     valueImage: "fertilizer.svg",
     common: "0.8-1.2",
     uncommon: "0.8-1.2",
@@ -78,7 +78,7 @@ const allAttributesData = [
     },
     {
       image: "fertilizer.svg",
-      name: "Fertilizer Absorption Rate"
+      name: "Fertilizer Absorption"
     },
     {
       image: "drought.svg",
