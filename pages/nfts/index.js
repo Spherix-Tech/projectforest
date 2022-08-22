@@ -19,13 +19,15 @@ import ImageComponent from "../../src/components/shared/ImageComponent";
 import NFTPageDottedImageBox from "../../src/components/shared/NFTPageDottedImageBox";
 import { getAllAttributesData } from "../../src/services/data-files/AttributesData";
 import {getAttributesSetData} from "../../src/services/data-files/AttributesData"
+import {getAllRegionsData} from "../../src/services/data-files/RegionsData"
 import { getAllTreePartsSliderData } from "../../src/services/data-files/TreePartsSliderData";
 const DataArr = getDataBySectionName("nft");
 const partsSliderData = getAllTreePartsSliderData();
+const attributesData = getAllAttributesData();
+const attributesSetData = getAttributesSetData();
+const regionsData = getAllRegionsData();
 
 export default function NFTs() {
-  const [attributesData] = useState(getAllAttributesData);
-  const [attributesSetData] = useState(getAttributesSetData);
   const [partsSliderSelectedIndex, setPartsSliderSelectedIndex] = useState(0);
   const changeSlide = (currentIndex, movementDirection) => {
     let newIndex =
@@ -186,21 +188,21 @@ export default function NFTs() {
                   within the Project Forest ecosystem. Each Tree NFT has 5 sets
                   of attributes. These are, namely:
                 </p>
-                <div className="flex flex-col attrscreen:flex-row gap-2 justify-between ">
+                <div className="flex flex-row gap-2 ">
                   {attributesSetData.map((e, i) => {
                     return (
                       <div
                         key={i}
-                        className=" text-[#797979] flex flex-col items-center justify-center "
+                        className="text-[#797979] w-1/5 flex flex-col items-center "
                       >
-                        <div className="flex flex-col items-center justify-center  rounded-xl w-[200px] h-[200px] border-2 border-dotted border-borderColor border-opacity-20 ">
+                        <div className="rounded-xl border-2 border-dotted border-borderColor border-opacity-20 ">
                           <ImageComponent
                             src={"assets/nft/attributes-table/" + e.image}
-                            className=" h-36"
+                            className="md:h-44 lg:h-52"
                             alt={e.name}
                           />
                         </div>
-                        <p className="pt-4 pb-6">{e.name}</p>
+                        <p className="pt-2 pb-2 text-[9px] md:text-base text-center leading-3">{e.name}</p>
                       </div>
                     );
                   })}
@@ -214,8 +216,8 @@ export default function NFTs() {
                 </p>
                 {/* Attributes Table Starts */}
 
-                <div className="w-full rounded-xl border-2 border-dotted  border-borderColor border-opacity-20 my-10 overflow-x-scroll no-scrollbar ">
-                  <table className="w-full min-w-[1100px]">
+                <div className="w-full rounded-xl border-2 border-dotted  border-borderColor border-opacity-20 my-10">
+                  <table className="w-full">
                     <thead className="">
                       <tr className="flex flex-row items-center w-full">
                         <th className=" w-[20%] attributes-header ">
@@ -242,32 +244,32 @@ export default function NFTs() {
                       {attributesData.map((e, i) => {
                         return (
                           <tr
-                            className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-xs md:text-sm text-[#797979]"
+                            className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-[9px] md:text-sm text-[#797979]"
                             key={i}
                           >
-                            <td className=" w-[20%] flex flex-col md:flex-row  justify-center md:justify-start items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 px-3 md:px-6 h-[90px]">
+                            <td className=" w-[20%] flex flex-row justify-start items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:px-6 md:h-[90px] h-[50px] ">
                               <ImageComponent
                                 src={
                                   "assets/nft/attributes-table/" + e.valueImage
                                 }
-                                className="h-12"
+                                className="md:h-12 h-7"
                                 alt={e.value}
                               />
                               {e.value}
                             </td>
-                            <td className=" w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px] ">
+                            <td className=" w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px] ">
                               <p>{e.common}</p>
                             </td>
-                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]  ">
+                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]  ">
                               <p>{e.uncommon}</p>
                             </td>
-                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]">
+                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]">
                               <p>{e.rare}</p>
                             </td>
-                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]">
+                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]">
                               <p>{e.epic}</p>
                             </td>
-                            <td className="w-[16%] flex justify-center items-center border-dashed border-borderColor border-opacity-20 h-[90px]">
+                            <td className="w-[16%] flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px]">
                               <p>{e.legend}</p>
                             </td>
                           </tr>
@@ -301,29 +303,29 @@ export default function NFTs() {
                   This is outlined in the table below:
                 </p>
                 {/* Table Starts */}
-                <div className="w-full rounded-xl border-2 border-dotted  border-borderColor border-opacity-20 my-10 overflow-x-scroll no-scrollbar ">
-                  <table className="w-full min-w-[1100px]">
+                <div className="w-full rounded-xl border-2 border-dotted  border-borderColor border-opacity-20 my-10 ">
+                  <table className="w-full ">
                     <thead className="">
                       <tr className="flex flex-row items-center w-full">
-                        <th className=" w-[10%] attributes-header ">
+                        <th className=" w-[16%] attributes-header ">
                           Continent
                         </th>
-                        <th className=" w-[15%] gap-2 attributes-header">
+                        <th className=" w-[14%] gap-2 attributes-header">
                           Tree 1
                         </th>
-                        <th className="w-[15%] gap-2 attributes-header">
+                        <th className="w-[14%] gap-2 attributes-header">
                           Tree 2
                         </th>
-                        <th className="w-[15%] gap-2 attributes-header">
+                        <th className="w-[14%] gap-2 attributes-header">
                           Tree 3
                         </th>
-                        <th className="w-[15%] gap-2 attributes-header">
+                        <th className="w-[14%] gap-2 attributes-header">
                           Tree 4
                         </th>
-                        <th className=" w-[15%] gap-2 attributes-header">
+                        <th className=" w-[14%] gap-2 attributes-header">
                           Tree 5
                         </th>
-                        <th className=" w-[15%] gap-2 attributes-header border-r-0">
+                        <th className=" w-[14%] gap-2 attributes-header border-r-0">
                           Tree 6
                         </th>
                       </tr>
@@ -332,33 +334,37 @@ export default function NFTs() {
                       {regionsData.map((e, i) => {
                         return (
                           <tr
-                            className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-xs md:text-sm text-[#797979]"
+                            className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-[9px] md:text-sm text-[#797979] text-center 
+                            "
                             key={i}
                           >
-                            <td className=" w-[20%] flex flex-col md:flex-row  justify-center md:justify-start items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 px-3 md:px-6 h-[90px]">
+                            <td className=" w-[16%] flex flex-col justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 px-3 md:px-6 md:h-[90px] h-[47px]">
                               <ImageComponent
                                 src={
-                                  "assets/nft/attributes-table/" + e.valueImage
+                                  "assets/nft/regions/" + e.image
                                 }
-                                className="h-12"
+                                className="md:h-16 h-8 object-contain"
                                 alt={e.value}
                               />
-                              {e.value}
+                          
                             </td>
-                            <td className=" w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px] ">
-                              <p>{e.common}</p>
+                            <td className=" w-[14%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2 ">
+                              <p>{e.tree1}</p>
                             </td>
-                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]  ">
-                              <p>{e.uncommon}</p>
+                            <td className="w-[14%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2  ">
+                              <p>{e.tree2}</p>
                             </td>
-                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]">
-                              <p>{e.rare}</p>
+                            <td className="w-[14%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2">
+                              <p>{e.tree3}</p>
                             </td>
-                            <td className="w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 h-[90px]">
-                              <p>{e.epic}</p>
+                            <td className="w-[14%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2">
+                              <p>{e.tree4}</p>
                             </td>
-                            <td className="w-[16%] flex justify-center items-center border-dashed border-borderColor border-opacity-20 h-[90px]">
-                              <p>{e.legend}</p>
+                            <td className="w-[14%] flex justify-center items-center border-r-[1px]  border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2">
+                              <p>{e.tree5}</p>
+                            </td>
+                            <td className="w-[14%] flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px] break-all px-2">
+                              <p>{e.tree6}</p>
                             </td>
                           </tr>
                         );

@@ -20,7 +20,6 @@ module.exports = {
         xl: "1280px",
         "2xl": "1536px",
         navscreen: "1272px",
-        attrscreen: "1360px"
       },
       colors: {
         primary: "#C3CA84",
