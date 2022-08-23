@@ -90,7 +90,7 @@ export default function Gameplay() {
 
         <meta
           property="twitter:image"
-          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.png?v1"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://projectforest.io/" />
@@ -101,10 +101,6 @@ export default function Gameplay() {
         <meta
           property="twitter:description"
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
-        />
-        <meta
-          property="twitter:image"
-          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
         />
       </Head>
       <main>
