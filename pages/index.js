@@ -120,6 +120,10 @@ export default function Home() {
           property="twitter:image"
           content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
         />
+        <meta
+          property="twitter:card"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
+        />
 
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJKS1PTP6Y"></script>
         <script>

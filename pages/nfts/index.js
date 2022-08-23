@@ -106,6 +106,10 @@ export default function NFTs() {
           property="twitter:image"
           content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
         />
+        <meta
+          property="twitter:card"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
+        />
       </Head>
       <main>
         <div id="smooth-wrapper">
