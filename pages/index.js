@@ -91,7 +91,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/assets/meta-image.png"
+          content="/assets/meta-image.webp"
           key="ogimage"
         />
 
@@ -116,7 +116,7 @@ export default function Home() {
           property="twitter:description"
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
-        <meta property="twitter:image" content="/assets/meta-image.png" />
+        <meta property="twitter:image" content="/assets/meta-image.webp" />
 
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJKS1PTP6Y"></script>
         <script>
