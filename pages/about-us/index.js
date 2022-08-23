@@ -68,7 +68,7 @@ export default function AboutUs() {
         />
         <meta
           property="og:image"
-          content="/assets/meta-image.webp"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
           key="ogimage"
         />
 
@@ -93,7 +93,10 @@ export default function AboutUs() {
           property="twitter:description"
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
-        <meta property="twitter:image" content="/assets/meta-image.webp" />
+        <meta
+          property="twitter:image"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
+        />
       </Head>
       <main>
         <div id="smooth-wrapper">
