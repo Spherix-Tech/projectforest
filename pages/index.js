@@ -106,6 +106,10 @@ export default function Home() {
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
 
+        <meta
+          property="twitter:image"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://projectforest.io/" />
         <meta
@@ -115,14 +119,6 @@ export default function Home() {
         <meta
           property="twitter:description"
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
-        />
-        <meta
-          property="twitter:image"
-          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
-        />
-        <meta
-          property="twitter:card"
-          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
         />
 
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJKS1PTP6Y"></script>
