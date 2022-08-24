@@ -15,7 +15,7 @@ const howItWorksHomepageData = [
     roundedMarginClasses: " ml-0 lg:ml-[3rem] 2xl:ml-[7%] ",
   },
   {
-    boldTitle: "Nature ",
+    boldTitle: "Nurture ",
     normalTitle: "It Daily",
     imageName: "watering-img.webp",
     description:
