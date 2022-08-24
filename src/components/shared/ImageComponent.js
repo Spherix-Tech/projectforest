@@ -37,7 +37,7 @@ function ImageComponent({
   return showBubbles ? (
     <div className='relative'>
       <img
-        className='w-7 h-7 absolute top-2.5 right-1/3 sm:right-52 sm:-top-9 xs:right-24 xs:top-0 opacity-0 z-20'
+        className='w-7 h-7 absolute -top-2 right-1/3 sm:right-52 sm:-top-9 xs:right-24 xs:top-12 opacity-0 z-20'
         src='/assets/hero/leaf.svg'
         id='bubble2'
         alt='right-1'
