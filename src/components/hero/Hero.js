@@ -74,10 +74,10 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className='flex flex-col'>
+      <div className='flex flex-col cursor-pointer'>
         <ImageComponent
           src={'/assets/hero/main-nft.webp'}
-          className=' lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]'
+          className=' lg:w-[418px] lg:h-[540px] h-[380px] w-[310px] '
           showBubbles
         />
       </div>
