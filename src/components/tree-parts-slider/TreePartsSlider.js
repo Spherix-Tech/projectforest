@@ -29,7 +29,7 @@ function TreePartsSlider() {
             <div className="flex justify-center items-center mt-[2rem] lg:mt-[3rem] relative">
               <div className="absolute left-1">
                 <ImageComponent
-                  className={"w-[35px]  cursor-pointer"}
+                  className="w-[35px] cursor-pointer"
                   src="assets/nft/slider-left-arrow.svg"
                   onClick={() => changeSlide(index, "left")}
                 />
@@ -40,7 +40,7 @@ function TreePartsSlider() {
               />
               <div className="absolute right-1">
                 <ImageComponent
-                  className={"w-[35px] "}
+                  className="w-[35px] cursor-pointer"
                   src="assets/nft/slider-right-arrow.svg"
                   onClick={() => changeSlide(index, "right")}
                 />
