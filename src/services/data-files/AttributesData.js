@@ -4,7 +4,7 @@ const allAttributesData = [
       valueImage: "yield.svg",
       common: "3-8",
       uncommon: "3-9",
-      rare: "3-9 4-10",
+      rare: "4-10",
       epic: "4-11",
       legend: "5-12"
   },
@@ -30,8 +30,8 @@ const allAttributesData = [
     value: "Drought Tolerance",
     valueImage: "drought.svg",
     common: "6-17",
-    rare: "7-19",
-    uncommon: "7-20",
+    rare: "7-20",
+    uncommon: "7-19",
     epic: "8-22",
     legend: "9-26"
   },
