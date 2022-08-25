@@ -53,7 +53,7 @@ const allRegionsData = [
         image: "oceania.png",
         tree1: "Eucalypt",
         tree2: "Silver Fern",
-        tree3: "Ceibo",
+        tree3: "Sponge Tree",
         tree4: "Melaleuca",
         tree5: "Honeysuckle",
         tree6: "Silver Birch",
@@ -63,3 +63,4 @@ const allRegionsData = [
 ]
 
 export const getAllRegionsData = () => allRegionsData;
+
