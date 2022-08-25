@@ -36,21 +36,23 @@ const Navbar = () => {
 
       {/* Desktop/ Laptop Nav Items */}
       <div className="navscreen:flex flex-row text-textTitle font-semibold hidden ">
-        {DataArr.map((e, i) => {
+        {DataArr.map((element, i) => {
           return (
-            <a
-              key={i}
-              href={e.link}
-              className="flex items-center flex-col mx-2 px-3 hover:text-primary text-sm"
-            >
-              <div className="h-[50px] flex items-end w-[45px] justify-center">
-                <ImageComponent
-                  src={e.icon_src}
-                  className="h-8 icon-hover object-contain mb-1 "
-                />
+            <Link key={i} href={element.link}>
+              <div className="flex items-center flex-col mx-2 px-3 hover:text-primary text-sm justify-start cursor-pointer">
+                <div className="h-[50px] flex items-end w-[45px] justify-center">
+                  <ImageComponent
+                    src={element.icon_src}
+                    className="h-8 icon-hover object-contain mb-1 "
+                  />
+                </div>
+                <div>
+                  <h5 className=" whitespace-nowrap uppercase">
+                    {element.name}
+                  </h5>
+                </div>
               </div>
-              <h5 className=" whitespace-nowrap uppercase">{e.name}</h5>
-            </a>
+            </Link>
           );
         })}
       </div>
