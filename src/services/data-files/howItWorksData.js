@@ -12,7 +12,7 @@ const howItWorksHomepageData = [
     imageName: "seeds-only-img.webp",
     description:
       "Once purchased, your Virtual NFT Tree can be planted as a seed within the Project Forest mobile application in your very own garden.",
-    roundedMarginClasses: " ml-0 lg:ml-[3rem] 2xl:ml-[7%] ",
+    roundedMarginClasses: " ml-0 lg:ml-[3.3rem] 2xl:ml-[7.5%] ",
   },
   {
     boldTitle: "Nurture ",
@@ -20,7 +20,7 @@ const howItWorksHomepageData = [
     imageName: "watering-img.webp",
     description:
       "Use in-game consumables such as Water and Fertilisers to nurture your plants, leveling them up and preventing them from wilting.",
-    roundedMarginClasses: " ml-0 lg:ml-[4.2rem] ",
+    roundedMarginClasses: " ml-0 lg:ml-[4.8rem] ",
   },
   {
     boldTitle: "Earn ",
@@ -28,7 +28,7 @@ const howItWorksHomepageData = [
     imageName: "watered-plant-img.webp",
     description:
       "A healthy and well-watered plant grants you daily rewards in the form of O2 and LEAF tokens.",
-    roundedMarginClasses: " ml-0 lg:ml-[4.2rem] ",
+    roundedMarginClasses: " ml-0 lg:ml-[4.6rem] ",
   },
   {
     boldTitle: "Participate ",
@@ -36,7 +36,7 @@ const howItWorksHomepageData = [
     imageName: "ready-plant-img.webp",
     description:
       "Use your Tree NFTs to participate in events or test their resistance against climate conditions that let you earn greater rewards.",
-    roundedMarginClasses: " ml-0 lg:ml-[2.8rem] ",
+    roundedMarginClasses: " ml-0 lg:ml-[3rem] ",
   },
   {
     boldTitle: "Build ",
