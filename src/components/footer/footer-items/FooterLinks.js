@@ -26,7 +26,7 @@ const FooterLinks = () => {
         <a
           href={LITEPAPER_LINK}
           target="_blank"
-          className="cursor-default"
+          className="cursor-pointer"
           rel="noreferrer"
         >
           <h5>Litepaper</h5>

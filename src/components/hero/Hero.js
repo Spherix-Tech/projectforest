@@ -29,7 +29,12 @@ const Hero = () => {
           </span>
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
-          <a href={LITEPAPER_LINK} target="_blank" rel="noreferrer">
+          <a
+            href={LITEPAPER_LINK}
+            target="_blank"
+            className="cursor-pointer"
+            rel="noreferrer"
+          >
             <button className="disabled btnPrimary lg:w-60 w-40 mr-0">
               Litepaper
             </button>
