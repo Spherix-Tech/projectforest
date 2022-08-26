@@ -28,8 +28,8 @@ function SignupComponent() {
   });
   return (
     <div className="w-[65%]">
-      <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
-        <div className="font-semibold text-[12px] md:text-[17px]">
+      <div className="flex flex-col justify-center items-center lg:gap-[1.5rem]">
+        <div className="font-semibold pt-2 text-[12px] md:text-[17px]">
           Registration
         </div>
         <div className="w-full text-[9px] md:text-[14px]">
@@ -55,7 +55,7 @@ function SignupComponent() {
                       type="email"
                       placeholder="Enter Email"
                       name="email"
-                      className="p-4 text-xs w-full rounded-lg"
+                      className="md:p-4 p-2 text-xs w-full rounded-lg"
                     />
                   </div>
                   <ErrorMessage name="email" component="div" />
@@ -64,7 +64,7 @@ function SignupComponent() {
                       type="password"
                       placeholder="Enter Password"
                       name="password"
-                      className="p-4 text-xs w-full rounded-lg"
+                      className="md:p-4 p-2 text-xs w-full rounded-lg"
                     />
                   </div>
                   <ErrorMessage name="password" component="div" />
@@ -77,11 +77,11 @@ function SignupComponent() {
                         type="text"
                         placeholder="Enter Verification Code"
                         name="verificationCode"
-                        className="p-4 text-xs w-full rounded-lg"
+                        className="md:p-4 p-2 text-xs w-full rounded-lg"
                       />
                     </div>
                     <div className="w-[20%]">
-                      <button className="btnPrimary flex items-center justify-center rounded-[8px] h-[30px] md:h-[48px] text-[0.6rem] md:text-[0.8rem]">
+                      <button className="btnPrimary flex items-center justify-center w-full rounded-[8px] h-[30px] md:h-[48px] text-[0.6rem] md:text-[0.8rem]">
                         Resend
                       </button>
                     </div>
