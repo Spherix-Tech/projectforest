@@ -15,7 +15,7 @@ const Hero = () => {
     >
       <div className=" lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col navscreen:items-start items-center">
         <h3 className="navscreen:text-[42px] text-[30px] font-bold text-center navscreen:text-left leading-9 navscreen:leading-10 navscreen:whitespace-nowrap">
-          A Purpose Led Change <br></br> is Coming to Web3
+          A Purpose-Led Change <br></br> is Coming to Web3
         </h3>
 
         <p className="leading-6 text-primaryBlue font-bold navscreen:text-left text-center navscreen:text-[16px] text-[14px] px-6 navscreen:px-0 ">
