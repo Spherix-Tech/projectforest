@@ -21,7 +21,7 @@ function SignupComponent() {
     }),
   });
   return (
-    <div className="w-[65%]">
+    <div className="w-[70%]">
       <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
         <div className="font-semibold text-[12px] md:text-[17px]">
           Registration
@@ -55,7 +55,7 @@ function SignupComponent() {
                       />
                     </div>
                     <ErrorMessage name="email" component="div" />
-                    <div className="flex my-6">
+                    <div className="flex my-4">
                       <Field
                         type="password"
                         placeholder="Enter Password"
@@ -86,7 +86,7 @@ function SignupComponent() {
                   </div>
                 )}
 
-                <div className="my-[0.7rem] md:my-[1rem] w-full">
+                <div className=" my-4 md:my-[1rem] w-full">
                   <button
                     type="submit"
                     className={
