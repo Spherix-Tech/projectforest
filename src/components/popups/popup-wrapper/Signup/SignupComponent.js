@@ -77,7 +77,7 @@ function SignupComponent() {
                         />
                       </div>
                       <div className="w-[20%]">
-                        <button className="btnPrimary flex items-center justify-center rounded-[8px] h-[30px] md:h-[48px] text-[0.6rem] md:text-[0.8rem]">
+                        <button className="btnPrimary flex items-center justify-center rounded-[10px] w-full h-[45px] md:h-[52px] text-[10px] md:text-[1rem]">
                           Resend
                         </button>
                       </div>
