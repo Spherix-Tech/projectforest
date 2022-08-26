@@ -1,10 +1,10 @@
 import Head from "next/head";
-import SignupComponent from "../../src/components/auth-components/signup/SignupComponent";
-import Footer from "../../src/components/footer/Footer";
-import Navbar from "../../src/components/navbar/Navbar";
-import AuthCard from "../../src/components/shared/AuthCard";
+import WalletList from "../../../src/components/auth-components/wallet-connectivity/WalletList";
+import Footer from "../../../src/components/footer/Footer";
+import Navbar from "../../../src/components/navbar/Navbar";
+import AuthCard from "../../../src/components/shared/AuthCard";
 
-export default function Signup() {
+export default function Wallet() {
   return (
     <div>
       <Head>
@@ -62,7 +62,7 @@ export default function Signup() {
 
             <div className="section-spacing">
               <div className="flex justify-center items-center">
-                <AuthCard component={<SignupComponent />} />
+                <AuthCard component={<WalletList />} />
               </div>
             </div>
 
