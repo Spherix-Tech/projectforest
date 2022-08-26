@@ -1,7 +1,7 @@
 import Head from "next/head";
+import SignupComponent from "../../src/components/auth-components/signup/SignupComponent";
 import Footer from "../../src/components/footer/Footer";
 import Navbar from "../../src/components/navbar/Navbar";
-import SignupComponent from "../../src/components/popups/popup-wrapper/Signup/SignupComponent";
 import AuthCard from "../../src/components/shared/AuthCard";
 
 export default function Login() {
