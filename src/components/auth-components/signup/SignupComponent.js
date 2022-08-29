@@ -85,6 +85,8 @@ function SignupComponent() {
                     <ErrorMessage name="verificationCode" component="div" />
                   </div>
                 )}
+                
+
 
                 <div className=" my-4 md:my-[1rem] w-full">
                   <button
