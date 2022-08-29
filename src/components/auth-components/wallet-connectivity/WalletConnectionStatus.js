@@ -7,7 +7,7 @@ function WalletConnectionStatus() {
       <div className="font-semibold text-[18px] lg:text-[24px] text-center pb-5">
         Connect Wallet
       </div>
-      <div className="bg-white bg-opacity-70 flex flex-col items-center rounded-xl md:h-[300px] ">
+      <div className="bg-white bg-opacity-60 flex flex-col items-center rounded-xl md:h-[300px] ">
         <div className="py-8 flex flex-col justify-center gap-2">
         <ImageComponent 
          src="/assets/wallet/metamask.svg"
