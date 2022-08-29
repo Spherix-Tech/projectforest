@@ -2,6 +2,7 @@ import React from "react";
 import ImageComponent from "../shared/ImageComponent";
 import {
   DISCORD_LINK,
+  LITEPAPER_LINK,
   MEDIUM_LINK,
   TWITTER_LINK,
 } from "../../utilities/constants";
@@ -14,21 +15,26 @@ const Hero = () => {
     >
       <div className=" lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col navscreen:items-start items-center">
         <h3 className="navscreen:text-[42px] text-[30px] font-bold text-center navscreen:text-left leading-9 navscreen:leading-10 navscreen:whitespace-nowrap">
-          A Purpose Led Change <br></br> is Coming to Web3
+          A Purpose-Led Change <br></br> is Coming to Web3
         </h3>
 
         <p className="leading-6 text-primaryBlue font-bold navscreen:text-left text-center navscreen:text-[16px] text-[14px] px-6 navscreen:px-0 ">
           Earn while making a greener impact on the planet.<br></br>
           <span className="text-textDescription font-normal ">
-            Project Forest is a collection of sustainability focused NFTs that
+            Project Forest is a collection of sustainability-focused NFTs that
             let you make a positive impact on the environment through a unique
-            Grow-to-Earn experience. Each time an NFT is minted on Project
+            Grow-to-Earn experience. Each time an NFT is minted in Project
             Forest, a portion of the proceeds are donated to NGOs to fund
             reforestation measures across the world.
           </span>
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
-          <a target="_blank" rel="noreferrer">
+          <a
+            href={LITEPAPER_LINK}
+            target="_blank"
+            className="cursor-pointer"
+            rel="noreferrer"
+          >
             <button className="disabled btnPrimary lg:w-60 w-40 mr-0">
               Litepaper
             </button>

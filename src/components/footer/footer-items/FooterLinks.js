@@ -1,4 +1,5 @@
 import React from "react";
+import { LITEPAPER_LINK } from "../../../utilities/constants";
 
 const FooterLinks = () => {
   return (
@@ -22,7 +23,12 @@ const FooterLinks = () => {
         <a href="#token">
           <h5>Token</h5>
         </a>
-        <a target="_blank" className="cursor-default" rel="noreferrer">
+        <a
+          href={LITEPAPER_LINK}
+          target="_blank"
+          className="cursor-pointer"
+          rel="noreferrer"
+        >
           <h5>Litepaper</h5>
         </a>
         <h5>Marketplace</h5>
