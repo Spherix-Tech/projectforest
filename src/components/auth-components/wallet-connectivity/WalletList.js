@@ -6,8 +6,8 @@ const walletData = getAllWalletListData();
 
 function WalletList({ setValue }) {
   return (
-    <div className='flex flex-col items-center w-full min-h-[350px] md:min-h-[400px] '>
-      <div className='font-semibold text-[14px] lg:text-[24px] text-center lg:leading-8 leading-5 md:pb-6 pb-3 px-6'>
+    <div className='flex flex-col items-center w-full '>
+      <div className='font-semibold text-[14px] md:text-[18px] text-center md:leading-5 leading-5 md:pb-6 pb-3 pt-3'>
         Connect with one of our available wallet Providers or create a new one.
       </div>
       <div className=' bg-white bg-opacity-70 rounded-2xl cursor-pointer w-[100%]'>
@@ -15,7 +15,7 @@ function WalletList({ setValue }) {
           return (
             <div
               key={i}
-              className='flex flex-row items-center md:py-4 py-3 px-8 border-b-2'
+              className='flex flex-row items-center md:py-3 lg:py-4 py-3 px-8 border-b-2'
               onClick={() => setValue(e)}
             >
               <ImageComponent

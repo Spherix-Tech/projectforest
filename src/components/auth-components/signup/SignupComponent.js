@@ -43,7 +43,7 @@ function SignupComponent() {
   // OTP confirmation section
   let nextStep = (
     <>
-      <div className='font-semibold text-[12px] md:text-[17px] text-center'>
+      <div className='font-semibold text-[12px] md:text-[17px] text-center pb-8'>
         Registration
       </div>
       <div>
@@ -140,7 +140,7 @@ function SignupComponent() {
               <Form>
                 {!values.otpSent ? (
                   <>
-                    <div className='font-semibold text-[12px] md:text-[17px] text-center'>
+                    <div className='font-semibold text-[12px] md:text-[18px] text-center pb-8'>
                       Registration
                     </div>
                     <div>
