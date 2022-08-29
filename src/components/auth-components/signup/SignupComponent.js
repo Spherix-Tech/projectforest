@@ -6,8 +6,11 @@ import { useRouter } from 'next/router';
 import ImageComponent from '../../shared/ImageComponent';
 import WalletList from '../wallet-connectivity/WalletList';
 import WalletConnectionStatus from '../wallet-connectivity/WalletConnectionStatus';
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import Link from "next/link";
 
 function SignupComponent() {
+  const router = useRouter();
   let validationSchema = Yup.object({
     otpSent: Yup.boolean(),
     email: Yup.string().when('otpSent', {
@@ -134,6 +137,9 @@ function SignupComponent() {
                 setShowSuccess(true);
               console.log(values);
               values.otpSent = true;
+              if (values.verificationCode && values.verificationCode !== "") {
+                router.push("/signup/wallet");
+              }
             }}
           >
             {({ values, isSubmitting }) => (
