@@ -1,7 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import Link from "next/link";
 import * as Yup from "yup";
-
+import { useRouter } from "next/router";
 function SignupComponent() {
+  const router = useRouter();
   let validationSchema = Yup.object({
     otpSent: Yup.boolean(),
     email: Yup.string().when("otpSent", {
@@ -40,6 +42,9 @@ function SignupComponent() {
               // if API response if true then
               console.log(values);
               values.otpSent = true;
+              if (values.verificationCode && values.verificationCode !== "") {
+                router.push("/signup/wallet");
+              }
             }}
           >
             {({ values, isSubmitting }) => (

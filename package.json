@@ -24,7 +24,8 @@
     "react-responsive": "^9.0.0-beta.10",
     "react-toastify": "^9.0.5",
     "smooth-scrollbar": "^8.7.4",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
