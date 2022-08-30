@@ -49,10 +49,10 @@ function WalletList({ setValue }) {
 
   return (
     <div className="flex flex-col items-center w-full ">
-      <div className="font-semibold text-[14px] md:text-[18px] text-center md:leading-5 leading-5 md:pb-6 pb-3 pt-3">
+      <div className="font-semibold text-[14px] md:text-[18px] text-center md:leading-5 leading-5 md:pb-6 pb-3 pt-3 px-4">
         Connect with one of our available wallet Providers or create a new one.
       </div>
-      <div className=" bg-white bg-opacity-70 rounded-2xl cursor-pointer w-[100%]">
+      <div className=" bg-white bg-opacity-70 rounded-2xl cursor-pointer w-[70%]">
         {walletData.map((e, i) => {
           return (
             <div
