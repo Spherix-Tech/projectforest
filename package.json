@@ -15,8 +15,10 @@
     "gsap": "^3.10.4",
     "gsap-trial": "^3.10.4",
     "keen-slider": "^6.7.0",
+    "lodash": "^4.17.21",
     "next": "12.2.0",
     "nookies": "^2.5.2",
+    "nprogress": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
@@ -24,8 +26,7 @@
     "react-responsive": "^9.0.0-beta.10",
     "react-toastify": "^9.0.5",
     "smooth-scrollbar": "^8.7.4",
-    "yup": "^0.32.11",
-    "lodash": "^4.17.21"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

@@ -1,6 +1,33 @@
+import { useState, useCallback } from "react";
 import Link from "next/link";
+import { STATUS_CONNECTED } from "../../../utilities/constants";
+import { useWallet } from "../../../hooks/useWallet";
+const addressWallet = "";
 
 function LoginComponent() {
+  const [error, setError] = useState("");
+  const {
+    account,
+    connect,
+    connectionStatus,
+    signMessage,
+    error: errorWallet,
+  } = useWallet(addressWallet);
+
+  const connectWallet = useCallback(async () => {
+    setError("");
+    try {
+      if (connectionStatus !== STATUS_CONNECTED) {
+        const accountInfo = await connect();
+        console.log(accountInfo);
+        if (!accountInfo) throw Error("can't connect please try again");
+      }
+    } catch (err) {
+      setError(err.message);
+      console.warn(err.message);
+    }
+  }, [connect, connectionStatus]);
+
   return (
     <div>
       <div className="absolute top-[2.25rem] right-[2.5rem] text-[12px] md:text-[15px]">
@@ -22,7 +49,10 @@ function LoginComponent() {
           Welcome Back You’ve been Missed!{" "}
         </div>
         <div className="my-[0.7rem] md:my-[1rem]">
-          <button className="btnPrimary flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]">
+          <button
+            onClick={connectWallet}
+            className="btnPrimary flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
+          >
             Login with Metamask
           </button>
         </div>
