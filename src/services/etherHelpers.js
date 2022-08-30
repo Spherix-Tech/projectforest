@@ -1,11 +1,12 @@
-import { utils, ethers } from 'ethers';
+import { utils, ethers } from "ethers";
 
-export const parseBalance = (balance) => parseFloat(utils.formatEther(balance)).toFixed(3);
+export const parseBalance = (balance) =>
+  parseFloat(utils.formatEther(balance)).toFixed(3);
 
 export const getEthereum = async () => {
   const { ethereum } = window;
   const metamaskIsInstalled = ethereum && ethereum?.isMetaMask;
-  if (!metamaskIsInstalled) throw new Error('Please install Metamask');
+  if (!metamaskIsInstalled) throw new Error("Please install Metamask");
   return ethereum;
 };
 
@@ -16,7 +17,7 @@ export const getProvider = async () => {
     return provider;
   } catch (error) {
     console.log(error.message);
-    throw Error('Wallet error please try again.');
+    throw Error(error.message);
   }
 };
 
@@ -27,20 +28,20 @@ export const isMetaMaskConnected = async () => {
     return accounts.length > 0;
   } catch (error) {
     console.log(error.message);
-    throw Error('Wallet error please try again.');
+    throw Error(error.message);
   }
 };
 
 export const getSigner = async () => {
   const provider = await getProvider();
   const metaMaskConnected = await isMetaMaskConnected();
-  if (!metaMaskConnected) throw new Error('Please login to Metamask');
+  if (!metaMaskConnected) throw new Error("Please login to Metamask");
   try {
     const signer = provider.getSigner();
     return signer;
   } catch (error) {
     console.log(error.message);
-    throw Error('Wallet error please try again.');
+    throw Error(error.message);
   }
 };
 
@@ -51,7 +52,7 @@ export const getNetwork = async () => {
     return network;
   } catch (error) {
     console.log(error.message);
-    throw Error('Wallet error please try again.');
+    throw Error(error.message);
   }
 };
 
@@ -64,7 +65,7 @@ export const getBalance = async () => {
     return balanceParsed;
   } catch (error) {
     console.log(error.message);
-    throw Error('Wallet error please try again.');
+    throw Error(error.message);
   }
 };
 
@@ -84,19 +85,19 @@ export const getWalletInfo = async () => {
     return { address, balance, network };
   } catch (error) {
     console.log(error.message);
-    throw Error('Wallet error please try again.');
+    throw Error(error.message);
   }
 };
 
 export const connectWallet = async () => {
   const ethereum = await getEthereum();
   try {
-    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    if (!accounts[0]) throw new Error('error please try again');
+    const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+    if (!accounts[0]) throw new Error("error please try again");
     return accounts;
   } catch (error) {
     console.log(error.message);
-    throw Error('Wallet error please try again.');
+    throw Error(error.message);
   }
 };
 
@@ -107,13 +108,13 @@ export const signMessage = async (message) => {
     return signature;
   } catch (error) {
     console.log(error.message);
-    throw Error('Wallet error please try again.');
+    throw Error(error.message);
   }
 };
 
 export const onChainChanged = (callback) => {
   if (window?.ethereum) {
-    window.ethereum.on('chainChanged', callback);
+    window.ethereum.on("chainChanged", callback);
     return true;
   }
   return false;
@@ -121,7 +122,7 @@ export const onChainChanged = (callback) => {
 
 export const onAccountsChanged = (callback) => {
   if (window?.ethereum) {
-    window.ethereum.on('accountsChanged', callback);
+    window.ethereum.on("accountsChanged", callback);
     return true;
   }
   return false;
@@ -129,7 +130,7 @@ export const onAccountsChanged = (callback) => {
 
 export const onDisconnect = (callback) => {
   if (window?.ethereum) {
-    window.ethereum.on('disconnect', callback);
+    window.ethereum.on("disconnect", callback);
     return true;
   }
   return false;
@@ -137,7 +138,7 @@ export const onDisconnect = (callback) => {
 
 export const offChainChanged = (callback) => {
   if (window?.ethereum) {
-    window.ethereum.removeListener('chainChanged', callback);
+    window.ethereum.removeListener("chainChanged", callback);
     return true;
   }
   return false;
@@ -145,7 +146,7 @@ export const offChainChanged = (callback) => {
 
 export const offAccountsChanged = (callback) => {
   if (window?.ethereum) {
-    window.ethereum.removeListener('accountsChanged', callback);
+    window.ethereum.removeListener("accountsChanged", callback);
     return true;
   }
   return false;
@@ -153,7 +154,7 @@ export const offAccountsChanged = (callback) => {
 
 export const offDisconnect = (callback) => {
   if (window?.ethereum) {
-    window.ethereum.removeListener('disconnect', callback);
+    window.ethereum.removeListener("disconnect", callback);
     return true;
   }
   return false;
