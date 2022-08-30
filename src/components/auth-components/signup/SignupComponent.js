@@ -1,32 +1,34 @@
-import { useState } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import { useRouter } from "next/router";
+import { useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import { useRouter } from 'next/router';
 
-import ImageComponent from "../../shared/ImageComponent";
-import WalletList from "../wallet-connectivity/WalletList";
-import WalletConnectionStatus from "../wallet-connectivity/WalletConnectionStatus";
+import ImageComponent from '../../shared/ImageComponent';
+import WalletList from '../wallet-connectivity/WalletList';
+import WalletConnectionStatus from '../wallet-connectivity/WalletConnectionStatus';
+import StatusCard from '../../shared/StatusCard';
 
 function SignupComponent() {
-  const router = useRouter();
   let validationSchema = Yup.object({
     otpSent: Yup.boolean(),
-    email: Yup.string().when("otpSent", {
+    email: Yup.string().when('otpSent', {
       is: false,
-      then: Yup.string().email().required("Email is required"),
+      then: Yup.string().email().required('Email is required'),
       otherwise: Yup.string(),
     }),
-    password: Yup.string("").when("otpSent", {
+    password: Yup.string('').when('otpSent', {
       is: false,
-      then: Yup.string().required("Password is required"),
+      then: Yup.string().required('Password is required'),
       otherwise: Yup.string(),
     }),
-    verificationCode: Yup.string("").when("otpSent", {
+    verificationCode: Yup.string('').when('otpSent', {
       is: true,
-      then: Yup.string().required("verificationCode is required"),
+      then: Yup.string().required('verificationCode is required'),
       otherwise: Yup.string(),
     }),
   });
+
+  const router = useRouter();
 
   // Display wallet list card if true
   const [showWallets, setShowWallets] = useState(false);
@@ -42,26 +44,26 @@ function SignupComponent() {
   // OTP confirmation section
   let nextStep = (
     <>
-      <div className="font-semibold text-[12px] md:text-[17px] text-center pb-8">
+      <div className='font-semibold text-[12px] md:text-[17px] text-center'>
         Registration
       </div>
       <div>
-        <div className="flex my-6 justify-between items-center">
-          <div className="w-[77%]">
+        <div className='flex my-6 justify-between items-center'>
+          <div className='w-[77%]'>
             <Field
-              type="text"
-              placeholder="Enter Verification Code"
-              name="verificationCode"
-              className="p-4 text-xs w-full rounded-lg"
+              type='text'
+              placeholder='Enter Verification Code'
+              name='verificationCode'
+              className='p-4 text-xs w-full rounded-lg'
             />
           </div>
-          <div className="w-[20%]">
-            <button className="btnPrimary flex items-center justify-center rounded-[10px] w-full h-[45px] md:h-[47px] text-[10px] md:text-[10px] lg:text-[12px]">
+          <div className='w-[20%]'>
+            <button className='btnPrimary flex items-center justify-center rounded-[10px] w-full h-[45px] md:h-[47px] text-[10px] md:text-[10px] lg:text-[12px]'>
               Resend
             </button>
           </div>
         </div>
-        <ErrorMessage name="verificationCode" component="div" />
+        <ErrorMessage name='verificationCode' component='div' />
       </div>
     </>
   );
@@ -80,44 +82,17 @@ function SignupComponent() {
 
   // Shows Registration Successfull Card when showWallet & walletConnected & showSuccess is true
   if (showWallets && walletConnected && showSuccess)
-    nextStep = (
-      <div className="md:min-h-[400px] w-[100%]">
-        <div className="bg-white bg-opacity-60 flex flex-col items-center rounded-xl md:h-[300px] ">
-          <div className="flex flex-col justify-center w-full h-full items-center gap-2 pt-4">
-            {success ? (
-              <ImageComponent
-                src="/assets/wallet/confirm-icon.svg"
-                className="h-10 mb-3"
-                alt="confirm icon"
-              />
-            ) : (
-              <ImageComponent
-                src="/assets/wallet/fail-icon.svg"
-                className="h-10 mb-3"
-                alt="fail icon"
-              />
-            )}
-            {success ? (
-              <p className="md:text-lg pb-8 md:pb-0">
-                Registration Successfully
-              </p>
-            ) : (
-              <p className="md:text-lg pb-8 md:pb-0">Registration Failed</p>
-            )}
-          </div>
-        </div>
-      </div>
-    );
+    nextStep = <StatusCard success={success} />;
 
   return (
-    <div className="w-[70%]">
-      <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
-        <div className="w-full text-[9px] md:text-[14px]">
+    <div className='w-[70%]'>
+      <div className='flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]'>
+        <div className='w-full text-[9px] md:text-[14px]'>
           <Formik
             initialValues={{
-              email: "",
-              password: "",
-              verificationCode: "",
+              email: '',
+              password: '',
+              verificationCode: '',
               otpSent: false,
             }}
             validationSchema={validationSchema}
@@ -133,59 +108,56 @@ function SignupComponent() {
                 setShowSuccess(true);
               console.log(values);
               values.otpSent = true;
-              if (values.verificationCode && values.verificationCode !== "") {
-                router.push("/signup/wallet");
-              }
             }}
           >
             {({ values, isSubmitting }) => (
               <Form>
                 {!values.otpSent ? (
                   <>
-                    <div className="font-semibold text-[12px] md:text-[18px] text-center pb-8">
+                    <div className='font-semibold text-[12px] md:text-[17px] text-center'>
                       Registration
                     </div>
                     <div>
-                      <div className="flex my-4">
+                      <div className='flex my-4'>
                         <Field
-                          type="email"
-                          placeholder="Enter Email"
-                          name="email"
-                          className="p-4 text-xs w-full rounded-lg"
+                          type='email'
+                          placeholder='Enter Email'
+                          name='email'
+                          className='p-4 text-xs w-full rounded-lg'
                         />
                       </div>
-                      <ErrorMessage name="email" component="div" />
-                      <div className="flex my-4">
+                      <ErrorMessage name='email' component='div' />
+                      <div className='flex my-4'>
                         <Field
-                          type="password"
-                          placeholder="Enter Password"
-                          name="password"
-                          className="p-4 text-xs w-full rounded-lg"
+                          type='password'
+                          placeholder='Enter Password'
+                          name='password'
+                          className='p-4 text-xs w-full rounded-lg'
                         />
                       </div>
-                      <ErrorMessage name="password" component="div" />
+                      <ErrorMessage name='password' component='div' />
                     </div>
                   </>
                 ) : (
                   // This part is shown after otp is sent
                   nextStep
                 )}
-                <div className=" my-4 md:my-[1rem] w-full">
+                <div className=' my-4 md:my-[1rem] w-full'>
                   {showWallets && walletConnected && showSuccess ? (
                     <button
                       className={
-                        "btnPrimary  w-full flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] text-[0.8rem] md:text-[1rem] "
+                        'btnPrimary  w-full flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] text-[0.8rem] md:text-[1rem] '
                       }
-                      onClick={() => router.push("/")}
+                      onClick={() => router.push('/')}
                     >
                       Back To Home
                     </button>
                   ) : (
                     <button
-                      type="submit"
+                      type='submit'
                       className={
-                        "btnPrimary  w-full flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] text-[0.8rem] md:text-[1rem] " +
-                        (isSubmitting ? "disabled" : "")
+                        'btnPrimary  w-full flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] text-[0.8rem] md:text-[1rem] ' +
+                        (isSubmitting ? 'disabled' : '')
                       }
                       disabled={isSubmitting}
                     >
