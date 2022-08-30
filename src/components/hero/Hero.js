@@ -1,25 +1,25 @@
-import React from "react";
-import ImageComponent from "../shared/ImageComponent";
+import React from 'react';
+import ImageComponent from '../shared/ImageComponent';
 import {
   DISCORD_LINK,
   MEDIUM_LINK,
   TWITTER_LINK,
-} from "../../utilities/constants";
+} from '../../utilities/constants';
 
 const Hero = () => {
   return (
     <div
-      className="flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 section-spacing hero-sec"
-      id="home"
+      className='flex navscreen:flex-row flex-col-reverse justify-between items-center lg:py-8 py-4 section-spacing hero-sec'
+      id='home'
     >
-      <div className=" lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col navscreen:items-start items-center">
-        <h3 className="navscreen:text-[42px] text-[30px] font-bold text-center navscreen:text-left leading-9 navscreen:leading-10 navscreen:whitespace-nowrap">
+      <div className=' lg:w-2/4 text-textTitle flex lg:gap-6 gap-4 flex-col navscreen:items-start items-center'>
+        <h3 className='navscreen:text-[42px] text-[30px] font-bold text-center navscreen:text-left leading-9 navscreen:leading-10 navscreen:whitespace-nowrap'>
           A Purpose Led Change <br></br> is Coming to Web3
         </h3>
 
-        <p className="leading-6 text-primaryBlue font-bold navscreen:text-left text-center navscreen:text-[16px] text-[14px] px-6 navscreen:px-0 ">
+        <p className='leading-6 text-primaryBlue font-bold navscreen:text-left text-center navscreen:text-[16px] text-[14px] px-6 navscreen:px-0 '>
           Earn while making a greener impact on the planet.<br></br>
-          <span className="text-textDescription font-normal ">
+          <span className='text-textDescription font-normal '>
             Project Forest is a collection of sustainability focused NFTs that
             let you make a positive impact on the environment through a unique
             Grow-to-Earn experience. Each time an NFT is minted on Project
@@ -27,57 +27,58 @@ const Hero = () => {
             reforestation measures across the world.
           </span>
         </p>
-        <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
-          <a target="_blank" rel="noreferrer">
-            <button className="disabled btnPrimary lg:w-60 w-40 mr-0">
+        <div className='flex flex-row pt-1 navscreen:items-start gap-4 '>
+          <a target='_blank' rel='noreferrer'>
+            <button className='disabled btnPrimary lg:w-60 w-40 mr-0'>
               Litepaper
             </button>
           </a>
-          <button className="disabled cursor-default btnSecondary lg:w-60 w-40 mr-0">
+          <button className='disabled cursor-default btnSecondary lg:w-60 w-40 mr-0'>
             Mint Now
           </button>
         </div>
 
-        <div className="w-full flex flex-row justify-center 2xl:-ml-[6.5rem] ">
+        <div className='w-full flex flex-row justify-center 2xl:-ml-[6.5rem] '>
           <a
-            className=" flex flex-row items-center justify-center"
+            className=' flex flex-row items-center justify-center'
             href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
           >
             <ImageComponent
-              src={"/assets/hero/twitter.svg"}
-              className="mx-[8px]"
+              src={'/assets/hero/twitter.svg'}
+              className='mx-[8px]'
             />
           </a>
           <a
-            className=" flex flex-row items-center justify-center"
+            className=' flex flex-row items-center justify-center'
             href={DISCORD_LINK}
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
           >
             <ImageComponent
-              src={"/assets/hero/discord.svg"}
-              className="mx-[8px]"
+              src={'/assets/hero/discord.svg'}
+              className='mx-[8px]'
             />
           </a>
           <a
-            className=" flex items-center justify-center"
+            className=' flex items-center justify-center'
             href={MEDIUM_LINK}
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
           >
             <ImageComponent
-              src={"/assets/hero/medium.svg"}
-              className="mx-[8px]"
+              src={'/assets/hero/medium.svg'}
+              className='mx-[8px]'
             />
           </a>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className='flex flex-col'>
         <ImageComponent
-          src={"/assets/hero/main-nft.webp"}
-          className=" lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]"
+          src={'/assets/hero/main-nft.webp'}
+          className=' lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]'
+          showBubbles
         />
       </div>
     </div>
