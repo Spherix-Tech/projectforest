@@ -19,7 +19,6 @@ function TreePartsSlider() {
   };
   return (
     <div>
-      <p>BB {partsSliderSelectedIndex}</p>
       {partsSliderData.map((item, index) => {
         return (
           <div
