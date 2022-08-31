@@ -38,7 +38,7 @@
         background-position: center;
         background-repeat: no-repeat; */
         position: relative;
-        @apply bg-gradient-to-b from-[#D1F0F6] to-[#F3F1CB]
+        @apply bg-gradient-to-b from-[#D1F0F6] to-[#F3F1CB];
     }
     .faq-full-page-bg-img{
         background-image: url("/assets/bg/faq-full-page.svg");
@@ -81,13 +81,23 @@
     .activeCard{
         @apply bg-[#E4E7C7] p-4 rounded-[15px]
     }
+    .auth-card{
+        @apply bg-gradient-to-b from-[#D4F0F2] to-[#E8F1D8] p-1 rounded-[2rem] border border-[#e7f1d89a];
+    }
+    .custom-shadow{
+        box-shadow: 0px 0px 5px -1px #9799949a;
+    }
+    .left-side-container{
+
+    }
     .nav-hero-section-bg{
-        width: 100%;
         position: relative;
+        /* width: 100%;
         background-image: url("/assets/bg/nav-hero-section-bg.webp");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
+        @apply bg-gradient-to-b from-[#D1F0F6] to-[#F3F1CB];
     }
     .nft-impact-section-bg{
         width: 100%;

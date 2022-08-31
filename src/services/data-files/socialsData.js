@@ -6,15 +6,15 @@ import {
 
 const allData = [
   {
-    icon: "assets/footer/discord.svg",
+    icon: "/assets/footer/discord.svg",
     href: DISCORD_LINK,
   },
   {
-    icon: "assets/footer/twitter.svg",
+    icon: "/assets/footer/twitter.svg",
     href: TWITTER_LINK,
   },
   {
-    icon: "assets/footer/medium.svg",
+    icon: "/assets/footer/medium.svg",
     href: MEDIUM_LINK,
   },
   // {

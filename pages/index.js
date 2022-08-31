@@ -8,11 +8,6 @@ import Reforestation from "../src/components/reforestation/Reforestation";
 import NFTSlider from "../src/components/NFT/NFTSlider";
 import Roadmap from "../src/components/roadmap/Roadmap";
 import Token from "../src/components/token/Token";
-import React, { useEffect } from "react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-// import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
-import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { gsap, Power3 } from "gsap";
 import ImageComponent from "../src/components/shared/ImageComponent";
 import { getHowItWorksData } from "../src/services/data-files/howItWorksData";
 import { getDataBySectionName } from "../src/services/dataService";
@@ -91,7 +86,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.png"
           key="ogimage"
         />
 
@@ -108,7 +103,7 @@ export default function Home() {
 
         <meta
           property="twitter:image"
-          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.png?v1"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://projectforest.io/" />

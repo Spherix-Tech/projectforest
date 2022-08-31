@@ -51,6 +51,11 @@ const allData = [
     link: "/about-us",
     icon_src: "/assets/navbar/about-us.svg",
   },
+  // {
+  //   name: "Login",
+  //   link: "/login",
+  //   icon_src: "/assets/navbar/about-us.svg",
+  // },
 
   // {
   //   name: "ROADMAP",

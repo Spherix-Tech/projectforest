@@ -35,9 +35,7 @@ const Hero = () => {
             className="cursor-pointer"
             rel="noreferrer"
           >
-            <button className="disabled btnPrimary lg:w-60 w-40 mr-0">
-              Litepaper
-            </button>
+            <button className="btnPrimary lg:w-60 w-40 mr-0">Litepaper</button>
           </a>
           <button className="disabled cursor-default btnSecondary lg:w-60 w-40 mr-0">
             Mint Now
@@ -84,6 +82,7 @@ const Hero = () => {
         <ImageComponent
           src={"/assets/hero/main-nft.webp"}
           className=" lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]"
+          showBubbles
         />
       </div>
     </div>

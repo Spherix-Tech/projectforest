@@ -80,7 +80,7 @@ export default function FAQ() {
 
         <meta
           property="twitter:image"
-          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.webp"
+          content="https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/project-forest-meta-image.png?v1"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://projectforest.io/" />
