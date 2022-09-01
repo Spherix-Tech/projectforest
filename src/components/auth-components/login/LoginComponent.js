@@ -52,7 +52,7 @@ export const LoginComponent = (props) => {
         type: "error",
         message: errorMessage,
         imageName: "error-mark.svg",
-        link: "/signup/wallet",
+        link: "/login",
       });
       setLoading(false);
     }
