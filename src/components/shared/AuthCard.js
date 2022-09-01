@@ -1,5 +1,4 @@
 import ImageComponent from "./ImageComponent";
-
 function AuthCard({ component }) {
   return (
     <div className="flex justify-center items-center auth-card relative ">
