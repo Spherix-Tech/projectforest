@@ -15,11 +15,11 @@ export default function Wallet() {
         <title>Signup | Project Forest</title>
         <meta
           name="title"
-          content="Sustainability Focused Grow to Earn NFTs | Project Forest"
+          content="Sustainability-Focused Grow to Earn NFTs | Project Forest"
         />
         <meta
           name="description"
-          content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
+          content="Project Forest is a collection of sustainability-focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
         <meta
           property="og:image"
@@ -31,11 +31,11 @@ export default function Wallet() {
         <meta property="og:url" content="https://projectforest.io/" />
         <meta
           property="og:title"
-          content="Sustainability Focused Grow to Earn NFTs | Project Forest"
+          content="Sustainability-Focused Grow to Earn NFTs | Project Forest"
         />
         <meta
           property="og:description"
-          content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
+          content="Project Forest is a collection of sustainability-focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
 
         <meta
@@ -46,11 +46,11 @@ export default function Wallet() {
         <meta property="twitter:url" content="https://projectforest.io/" />
         <meta
           property="twitter:title"
-          content="Sustainability Focused Grow to Earn NFTs | Project Forest"
+          content="Sustainability-Focused Grow to Earn NFTs | Project Forest"
         />
         <meta
           property="twitter:description"
-          content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
+          content="Project Forest is a collection of sustainability-focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
       </Head>
       <main>

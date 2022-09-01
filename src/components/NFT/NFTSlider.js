@@ -163,7 +163,7 @@ export default function NFTSlider({
             </h3>
 
             <p className="lg:text-[16px] text-xs lg:w-[90%] md:w-full w-full leading-4 sm:leading-5 py-1 sm:py-4 lg:py-[0.5rem] xl:py-4 text-textDescription">
-              Make the first step in building your NFT Forest. Choose from a
+              Make the first step in building your Forest NFT. Choose from a
               distinct collection of unique plant species, each with their own
               characteristics such as O2 production, water intake, climate
               resistance, terrain suitability and more.

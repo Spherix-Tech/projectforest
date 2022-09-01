@@ -31,7 +31,7 @@ const Reforestation = () => {
               <div className="text-[#666666] w-full text-start font-light text-[13px] text-opacity-70">
                 {e.text}
               </div>
-              <Link href={e.learnMoreLink}>
+              <a href={e.learnMoreLink}  target="_blank" rel="noreferrer">
                 <div className="cursor-pointer inline-flex absolute flex-row justify-end bottom-[3%] 2xl:bottom-[2%] right-[3.5%] w-full items-center gap-2 text-xs text-end underline text-[#8DABFD]">
                   <div>Learn more</div>
                   <div>
@@ -42,7 +42,7 @@ const Reforestation = () => {
                     />
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
           );
         })}

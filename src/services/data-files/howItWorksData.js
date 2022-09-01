@@ -4,23 +4,23 @@ const howItWorksHomepageData = [
     normalTitle: "a Virtual Tree",
     imageName: "intro-main-img.webp",
     description:
-      "Purchase or Redeem your Virtual NFT Trees from Project Forest. Each tree has a unique set of attributes and belongs to a distinct species class.",
+      "Purchase or redeem your virtual Tree NFT from Project Forest. Each tree has a unique set of attributes and belongs to a distinct class of species.",
   },
   {
     boldTitle: "Plant ",
     normalTitle: "Your Seed",
     imageName: "seeds-only-img.webp",
     description:
-      "Once purchased, your Virtual NFT Tree can be planted as a seed within the Project Forest mobile application in your very own garden.",
-    roundedMarginClasses: " ml-0 lg:ml-[3rem] 2xl:ml-[7%] ",
+      "Once purchased, your Virtual Tree NFT can be planted as a seed within the Project Forest mobile application in your very own garden.",
+    roundedMarginClasses: " ml-0 lg:ml-[3.3rem] 2xl:ml-[7.5%] ",
   },
   {
-    boldTitle: "Nature ",
+    boldTitle: "Nurture ",
     normalTitle: "It Daily",
     imageName: "watering-img.webp",
     description:
-      "Use in-game consumables such as Water and Fertilisers to nurture your plants, leveling them up and preventing them from wilting.",
-    roundedMarginClasses: " ml-0 lg:ml-[4.2rem] ",
+      "Use in-game consumables such as water and fertilizers to nurture your plants, leveling them up and preventing them from wilting.",
+    roundedMarginClasses: " ml-0 lg:ml-[4.8rem] ",
   },
   {
     boldTitle: "Earn ",
@@ -28,7 +28,7 @@ const howItWorksHomepageData = [
     imageName: "watered-plant-img.webp",
     description:
       "A healthy and well-watered plant grants you daily rewards in the form of O2 and LEAF tokens.",
-    roundedMarginClasses: " ml-0 lg:ml-[4.2rem] ",
+    roundedMarginClasses: " ml-0 lg:ml-[4.6rem] ",
   },
   {
     boldTitle: "Participate ",
@@ -36,14 +36,14 @@ const howItWorksHomepageData = [
     imageName: "ready-plant-img.webp",
     description:
       "Use your Tree NFTs to participate in events or test their resistance against climate conditions that let you earn greater rewards.",
-    roundedMarginClasses: " ml-0 lg:ml-[2.8rem] ",
+    roundedMarginClasses: " ml-0 lg:ml-[3rem] ",
   },
   {
     boldTitle: "Build ",
     normalTitle: "a Virtual Forest",
     imageName: "rewards-plant-img.webp",
     description:
-      "Use your token earnings to mint and plant more trees to create your own NFT forest and ecosystem. The more trees you have in your forest, the more you earn.",
+      "Use your token earnings to mint and plant more trees to create your own Forest NFT and ecosystem. The more trees you have in your forest, the more you earn.",
   },
 ];
 const howItWorksOtherPageData = [
@@ -52,21 +52,21 @@ const howItWorksOtherPageData = [
     normalTitle: "a Virtual Tree",
     imageName: "intro-main-img.webp",
     description:
-      "Purchase or Redeem your Virtual NFT Trees from Project Forest. Each tree has a unique set of attributes and belongs to a distinct species class.",
+      "Purchase or redeem your virtual Tree NFT from Project Forest. Each tree has a unique set of attributes and belongs to a distinct class of species.",
   },
   {
     boldTitle: "Plant ",
     normalTitle: "Your Seed",
     imageName: "seeds-only-img.webp",
     description:
-      "Once purchased, your Virtual NFT Tree can be planted as a seed within the Project Forest mobile application in your very own garden.",
+      "Once purchased, your Virtual Tree NFT can be planted as a seed within the Project Forest mobile application in your very own garden.",
   },
   {
     boldTitle: "Nature ",
     normalTitle: "It Daily",
     imageName: "watering-img.webp",
     description:
-      "Use in-game consumables such as Water and Fertilisers to nurture your plants, leveling them up and preventing them from wilting.",
+      "Use in-game consumables such as water and fertilizers to nurture your plants, leveling them up and preventing them from wilting.",
   },
   {
     boldTitle: "Earn ",
@@ -87,7 +87,7 @@ const howItWorksOtherPageData = [
     normalTitle: "a Virtual Forest",
     imageName: "rewards-plant-img.webp",
     description:
-      "Use your token earnings to mint and plant more trees to create your own NFT forest and ecosystem. The more trees you have in your forest, the more you earn.",
+      "Use your token earnings to mint and plant more trees to create your own Forest NFT and ecosystem. The more trees you have in your forest, the more you earn.",
   },
 ];
 
