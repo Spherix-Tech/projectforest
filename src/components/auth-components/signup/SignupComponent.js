@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/router";
+import IsLoadingHOC from "../../shared/IsLoadingHOC";
+import { UserContext } from "../../../context/userContext";
 
-function SignupComponent() {
+export const SignupComponent = (props) => {
+  const { setLoading } = props;
   const router = useRouter();
+  const userContaxt = useContext(UserContext);
 
   let validationSchema = Yup.object({
     otpSent: Yup.boolean(),
@@ -19,7 +24,7 @@ function SignupComponent() {
     }),
     verificationCode: Yup.string("").when("otpSent", {
       is: true,
-      then: Yup.string().required("verificationCode is required"),
+      then: Yup.string().required("Verification Code is required"),
       otherwise: Yup.string(),
     }),
   });
@@ -40,12 +45,24 @@ function SignupComponent() {
               setSubmitting(false);
               // if API response if true then
               // When True showWallet is set to True and WalletList card is shown
+              setLoading(true);
+              setTimeout(() => {
+                setLoading(false);
+              }, 1500);
+              console.log(values);
               if (values.otpSent && values.otpSent !== "") {
+                userContaxt.dispatch({
+                  type: "OTP_VERIFIED",
+                  payload: { isOTPVerified: true },
+                });
                 router.push("/signup/wallet");
               } else {
+                userContaxt.dispatch({
+                  type: "REGISTER_SUCCESS",
+                  payload: { values },
+                });
                 values.otpSent = true;
               }
-              console.log(values);
             }}
           >
             {({ values, isSubmitting }) => (
@@ -99,8 +116,8 @@ function SignupComponent() {
       </div>
     </div>
   );
-}
-export default SignupComponent;
+};
+export default IsLoadingHOC(SignupComponent, "Registratring, please wait");
 
 export const ResedOTP = () => {
   return (

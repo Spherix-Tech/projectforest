@@ -1,16 +1,14 @@
 import React from "react";
 import ImageComponent from "../shared/ImageComponent";
-import gsap from "gsap";
 
-
-const hoverAnimation = () => {
-  const t1 = gsap.timeline({ defaults: { ease: 'power1.out' } });
-  t1.to('#animate-image', { rotateZ: 5, duration: 0.1 });
-  t1.to('#animate-image', { rotateZ: -5, duration: 0.1 });
-  t1.to('#animate-image', { rotateZ: 5, duration: 0.1 });
-  t1.to('#animate-image', { rotateZ: -5, duration: 0.1 });
-  t1.to('#animate-image', { rotateZ: 0, duration: 0.1 });
-};
+// const hoverAnimation = () => {
+//   const t1 = gsap.timeline({ defaults: { ease: 'power1.out' } });
+//   t1.to('#animate-image', { rotateZ: 5, duration: 0.1 });
+//   t1.to('#animate-image', { rotateZ: -5, duration: 0.1 });
+//   t1.to('#animate-image', { rotateZ: 5, duration: 0.1 });
+//   t1.to('#animate-image', { rotateZ: -5, duration: 0.1 });
+//   t1.to('#animate-image', { rotateZ: 0, duration: 0.1 });
+// };
 
 const Token = () => {
   return (
@@ -46,12 +44,11 @@ const Token = () => {
             help to grow and upgrade the level of their Tree NFTs.
           </p>
         </div>
-        <div className=" mt-10 lg:mt-0" onMouseOver={hoverAnimation} id="animate-image">
+        <div className=" mt-10 lg:mt-0">
           <ImageComponent
             src="/assets/token/token.png"
             alt="Project Forest Token"
             className="w-[18rem] md:w-[25rem] lg:w-[30rem]"
-            
           />
         </div>
       </div>

@@ -5,6 +5,8 @@ export const TELEGRAM_LINK = "/";
 export const REDDIT_LINK = "/";
 export const INSTAGRAM_LINK = "/";
 export const DISCORD_LINK = "https://discord.gg/sJqHJuau";
+export const LITEPAPER_LINK =
+  "https://project-forest-dev.gitbook.io/project-forest-litepaper";
 
 // WALLET STATUS
 export const STATUS_UNKNOWN = "STATUS_UNKNOWN";
