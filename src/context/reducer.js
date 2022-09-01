@@ -10,7 +10,6 @@ export const initialState = {
 };
 
 export const AuthReducer = (state = initialState, action) => {
-  console.log("REDUCER", action);
   switch (action.type) {
     case "REQUEST_REGISTER" || "REQUEST_LOGIN" || "REQUEST_VERIFY_OTP":
       return {
@@ -18,7 +17,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: true,
       };
     case "REGISTER_SUCCESS":
-      console.log(action);
       return {
         ...state,
         ...user,
@@ -26,7 +24,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "OTP_VERIFIED":
-      console.log(action);
       return {
         ...state,
         ...user,
@@ -34,7 +31,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "WALLET_CONNECTED":
-      console.log(action);
       return {
         ...state,
         ...user,
@@ -42,7 +38,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "LOGIN_SUCCESS":
-      console.log(action.payload);
       setAuthInfo(action.payload);
       return {
         ...state,

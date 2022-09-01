@@ -14,7 +14,6 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
   const [user, dispatch] = useReducer(AuthReducer, initialState);
-  console.log("USER", user);
   return (
     <div>
       <UserContext.Provider value={{ user: user, dispatch: dispatch }}>

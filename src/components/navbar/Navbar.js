@@ -10,7 +10,6 @@ const Navbar = () => {
   const [DataArr, setDataArr] = useState(getDataBySectionName("navbar"));
   const [toggleMenu, setToggleMenu] = useState(false);
   const userContaxt = useContext(UserContext);
-  console.log(userContaxt);
 
   const onToggleChange = (status) => {
     setToggleMenu(status);
@@ -23,7 +22,6 @@ const Navbar = () => {
   };
   useEffect(() => {
     const user = userContaxt.user;
-    console.log("AHO", user);
     //@TODO change .user.user to state.user
     if (
       user.user &&
@@ -31,10 +29,6 @@ const Navbar = () => {
       // user.user.email &&
       user.user.walletId
     ) {
-      console.log(
-        "THISSS",
-        DataArr.filter((obj) => obj.name !== "Login")
-      );
       setDataArr(DataArr.filter((obj) => obj.name !== "Login"));
     }
   }, [userContaxt.user]);

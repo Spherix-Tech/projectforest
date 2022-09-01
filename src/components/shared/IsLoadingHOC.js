@@ -6,7 +6,6 @@ export const IsLoadingHOC = (WrappedComponent, loadingMessage) => {
     const setLoadingState = (isComponentLoading) => {
       setLoading(isComponentLoading);
     };
-    console.log("isLoading", isLoading);
     return (
       <>
         {isLoading && <LoaderAnimation message={loadingMessage} />}

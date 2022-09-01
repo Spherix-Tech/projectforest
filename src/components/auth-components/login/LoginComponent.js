@@ -30,7 +30,6 @@ export const LoginComponent = (props) => {
     try {
       if (connectionStatus !== STATUS_CONNECTED) {
         const accountInfo = await connect();
-        console.log(accountInfo);
         if (!accountInfo) throw Error("can't connect please try again");
         userContaxt.dispatch({
           type: "WALLET_CONNECTED",

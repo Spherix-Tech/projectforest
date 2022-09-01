@@ -49,7 +49,6 @@ export const SignupComponent = (props) => {
               setTimeout(() => {
                 setLoading(false);
               }, 1500);
-              console.log(values);
               if (values.otpSent && values.otpSent !== "") {
                 userContaxt.dispatch({
                   type: "OTP_VERIFIED",

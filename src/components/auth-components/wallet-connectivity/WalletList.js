@@ -27,19 +27,15 @@ export const WalletList = (props) => {
   const changeWalletSelection = (walletDetails) => {
     if (!walletDetails.enabled) return;
     setSelectedWallet(walletDetails.name);
-    console.log(selectedWalletName, walletDetails.name);
   };
 
   const linkWalletHandler = useCallback(async () => {
-    console.log(selectedWalletName);
-
     setLoading(true);
     // if (!selectedWalletName) return;
     try {
       let address = account?.address;
       if (connectionStatus !== STATUS_CONNECTED) {
         const accountInfo = await connect();
-        console.log("accountInfo", accountInfo);
         if (!accountInfo) throw Error("Connection failed please try again");
         address = accountInfo?.address;
       }
