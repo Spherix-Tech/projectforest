@@ -1,18 +1,37 @@
-import React, { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { RiMenuFill, RiCloseLine } from "react-icons/ri";
 import { getDataBySectionName } from "../../services/dataService";
 import { NavbarMenuItems } from "./Menu";
 import ImageComponent from "../shared/ImageComponent";
 import Link from "next/link";
-
-const DataArr = getDataBySectionName("navbar");
+import { UserContext } from "../../context/userContext";
 
 const Navbar = () => {
+  const [DataArr, setDataArr] = useState(getDataBySectionName("navbar"));
   const [toggleMenu, setToggleMenu] = useState(false);
+  const userContaxt = useContext(UserContext);
+
   const onToggleChange = (status) => {
     setToggleMenu(status);
     document.body.style.overflow = status ? "hidden" : "auto";
   };
+
+  const parseUserAuthStateMenu = (menuItem) => {
+    if (menuItem.name == "Login") {
+    }
+  };
+  useEffect(() => {
+    const user = userContaxt.user;
+    //@TODO change .user.user to state.user
+    if (
+      user.user &&
+      // user.user.isOTPVerified &&
+      // user.user.email &&
+      user.user.walletId
+    ) {
+      setDataArr(DataArr.filter((obj) => obj.name !== "Login"));
+    }
+  }, [userContaxt.user]);
   return (
     <div className="w-full flex flex-row  justify-between items-center py-8 section-spacing">
       <Link href="/">

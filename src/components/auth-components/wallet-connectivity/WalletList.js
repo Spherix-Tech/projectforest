@@ -1,15 +1,18 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useContext } from "react";
 import { getAllWalletListData } from "../../../services/data-files/WalletListData";
 import { STATUS_CONNECTED } from "../../../utilities/constants";
 import { connect, useWallet } from "../../../hooks/useWallet";
 import ImageComponent from "../../shared/ImageComponent";
 import StatusCard from "../../shared/StatusCard";
 import { getErrorMessage } from "../../../utilities/helpers";
+import IsLoadingHOC from "../../shared/IsLoadingHOC";
+import { UserContext } from "../../../context/userContext";
 
 const walletData = getAllWalletListData();
 const addressWallet = "";
-function WalletList() {
-  const [loading, setLoading] = useState(false);
+export const WalletList = (props) => {
+  const { setLoading } = props;
+  const userContaxt = useContext(UserContext);
   const [selectedWalletName, setSelectedWallet] = useState(null);
   const [walletConnectionResponseObj, setWalletConnectionResponseObj] =
     useState(null);
@@ -24,34 +27,34 @@ function WalletList() {
   const changeWalletSelection = (walletDetails) => {
     if (!walletDetails.enabled) return;
     setSelectedWallet(walletDetails.name);
-    console.log(selectedWalletName, walletDetails.name);
   };
 
   const linkWalletHandler = useCallback(async () => {
-    console.log(selectedWalletName);
-    // if (!selectedWalletName) return;
     setLoading(true);
+    // if (!selectedWalletName) return;
     try {
       let address = account?.address;
       if (connectionStatus !== STATUS_CONNECTED) {
         const accountInfo = await connect();
-        console.log("accountInfo", accountInfo);
-        if (!accountInfo) throw Error("Can't connect please try again");
+        if (!accountInfo) throw Error("Connection failed please try again");
         address = accountInfo?.address;
       }
+      userContaxt.dispatch({
+        type: "WALLET_CONNECTED",
+        payload: { walletId: address },
+      });
       setWalletConnectionResponseObj({
         type: "success",
         message: "Wallet Connected Successfully",
         imageName: "success-mark.svg",
         link: "/",
       });
+      setLoading(false);
       // const nonceData = await getNonceApiCall({ address });
       // const signature = await signMessage(nonceData.data.nonce);
       // await linkMetamaskApiCall({ sign: signature, address });
       // dispatch(updateAddress({ address }));
-      setLoading(false);
     } catch (err) {
-      console.log(err);
       const errorMessage = getErrorMessage(err);
       setWalletConnectionResponseObj({
         type: "error",
@@ -143,6 +146,6 @@ function WalletList() {
       )}
     </div>
   );
-}
+};
 
-export default WalletList;
+export default IsLoadingHOC(WalletList, "Connecting with wallet");
