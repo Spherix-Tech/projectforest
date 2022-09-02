@@ -1,13 +1,6 @@
 import Head from "next/head";
 import Navbar from "../../src/components/navbar/Navbar";
-import Hero from "../../src/components/hero/Hero";
 import Footer from "../../src/components/footer/Footer";
-import HowItWorks from "../../src/components/how-it-works/HowItWorks";
-import MailingList from "../../src/components/mailing-list/MailingList";
-import Reforestation from "../../src/components/reforestation/Reforestation";
-import NFTSlider from "../../src/components/NFT/NFTSlider";
-import Roadmap from "../../src/components/roadmap/Roadmap";
-import Token from "../../src/components/token/Token";
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
@@ -126,11 +119,11 @@ export default function Gameplay() {
                       <p className="page-description text-center md:text-left w-full md:w-[75%] 2xl:w-[50%]">
                         Project Forest is the first NFT project to introduce the
                         concept of GROW-to-EARN (G2E). As you nurture your
-                        virtual tree, it grows in levels, it naturally produces
-                        more oxygen and subsequently yields greater O2 tokens
-                        for you to earn. After it reaches a certain level, you
-                        can earn special LEAF tokens that are highly valuable
-                        and can be used to purchase other trees NFT.
+                        virtual tree, it grows in levels and naturally produces
+                        more oxygen, subsequently yielding greater O2 tokens for
+                        you to earn. After it reaches a certain level, you can
+                        earn special LEAF tokens that are highly valuable and
+                        can be used to purchase other Tree NFTs.
                         <br />
                       </p>
                     </div>
@@ -175,11 +168,11 @@ export default function Gameplay() {
                     </div>
                     <div className="page-description text-center md:text-start my-[1rem]">
                       O2 (Oxygen) is the secondary token of the Project Forest
-                      ecosystem and acts as the utility token in its
-                      environment. Trees NFT and bigger Forests generate O2 on a
-                      regular basis as long as they are watered. Players can
-                      spend O2 to purchase consumables that help to grow and
-                      upgrade the level of their Tree NFTs.
+                      ecosystem and acts as the utility token for the project.
+                      Tree NFTs and bigger forests generate O2 on a regular
+                      basis as long as they are watered. Players can spend O2 to
+                      purchase consumables that help to grow and upgrade the
+                      level of their Tree NFTs.
                     </div>
                   </div>
                 </div>
@@ -193,10 +186,10 @@ export default function Gameplay() {
                       LEAF is the primary token of the Project Forest ecosystem
                       and shall also act as the governance token for the
                       project. Participants and players of Project Forest will
-                      be able to earn LEAF through their Tree NFT once it
-                      fulfills certain level conditions and through other in-app
-                      events and scenarios. Players can spend the LEAF token to
-                      mint new Tree NFTs and create a virtual Forest.
+                      be able to earn LEAF through their Tree NFT once they
+                      fulfill certain level conditions and through other in-app
+                      events and scenarios. Players can spend their LEAF token
+                      to mint new Tree NFTs and create a virtual Forest.
                     </div>
                   </div>
                   <div className="flex-1 flex justify-end">
@@ -226,7 +219,7 @@ export default function Gameplay() {
                         src={"assets/gameplay/oxygen-tree-img.svg"}
                         fullHeightImage={true}
                         containerClassName="w-[300px] h-[360px] md:w-[330px] md:h-[395px]"
-                        levelValue={"Produce 02 Token"}
+                        levelValue={"Produce O2 Token"}
                       />
                     </div>
                   </div>

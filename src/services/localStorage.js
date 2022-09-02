@@ -7,7 +7,6 @@ const removeCookies = (key) => {
 
 const getCookies = (key) => {
   const cookie = nookies.get();
-  console.log("cook", cookie);
   return cookie[key];
 };
 const setCookies = (key, value) => {
@@ -23,7 +22,6 @@ export const setAuthInfo = (value) => {
 };
 
 export const getAuthInfoObj = () => {
-  console.log(getCookies(LOCAL_STORAGE_AUTH_INFO));
   return getCookies(LOCAL_STORAGE_AUTH_INFO);
 };
 

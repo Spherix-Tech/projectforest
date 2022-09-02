@@ -43,7 +43,7 @@ const howItWorksHomepageData = [
     normalTitle: "a Virtual Forest",
     imageName: "rewards-plant-img.webp",
     description:
-      "Use your token earnings to mint and plant more trees to create your own forest NFT and ecosystem. The more trees you have in your forest, the more you earn.",
+      "Use your token earnings to mint and plant more trees to create your own NFT forest and ecosystem. The more trees you have in your forest, the more you earn.",
   },
 ];
 const howItWorksOtherPageData = [
@@ -66,7 +66,7 @@ const howItWorksOtherPageData = [
     normalTitle: "It Daily",
     imageName: "watering-img.webp",
     description:
-      "Use in-game consumables such as water and fertilizers to nurture your plants, leveling them up and preventing them from wilting.",
+      "Use in-app consumables such as water and fertilizers to nurture your plants, leveling them up and preventing them from wilting.",
   },
   {
     boldTitle: "Earn ",
@@ -87,7 +87,7 @@ const howItWorksOtherPageData = [
     normalTitle: "a Virtual Forest",
     imageName: "rewards-plant-img.webp",
     description:
-      "Use your token earnings to mint and plant more trees to create your own forest NFT and ecosystem. The more trees you have in your forest, the more you earn.",
+      "Use your token earnings to mint and plant more trees to create your own NFT forest and ecosystem. The more trees you have in your forest, the more you earn.",
   },
 ];
 

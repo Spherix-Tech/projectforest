@@ -158,12 +158,12 @@ export default function NFTSlider({
             </div>
             {/* NFT Slider ends */}
             <h3 className=" lg:text-[40px] text-xl md:text-3xl font-semibold pt-2 lg:pb-[0.5rem] lg:pt-[0.5rem] xl:pt-8 xl:pb-2 pb-0">
-              Purchase your first NFT
-              <span className="text-[#19B7B7]"> Tree </span>
+              Purchase your first Tree
+              <span className="text-[#19B7B7]"> NFT </span>
             </h3>
 
             <p className="lg:text-[16px] text-xs lg:w-[90%] md:w-full w-full leading-4 sm:leading-5 py-1 sm:py-4 lg:py-[0.5rem] xl:py-4 text-textDescription">
-              Take the first step in building your forest NFT. Choose from a
+              Take the first step in building your NFT forest. Choose from a
               distinct collection of unique plant species, each with their own
               characteristics such as O2 production, water intake, climate
               resistance, terrain suitability and more.
