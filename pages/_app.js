@@ -6,7 +6,6 @@ import "../styles/globals.css";
 import ReactGA from "react-ga";
 ReactGA.initialize("G-XJKS1PTP6Y");
 if (typeof window !== "undefined") {
-  console.log(window.location.pathname + window.location.search);
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
 import { useReducer } from "react";

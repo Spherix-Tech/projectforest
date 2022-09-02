@@ -11,7 +11,7 @@ const howItWorksHomepageData = [
     normalTitle: "Your Seed",
     imageName: "seeds-only-img.webp",
     description:
-      "Once purchased, your Virtual Tree NFT can be planted as a seed within the Project Forest mobile application in your very own garden.",
+      "Once purchased, your virtual Tree NFT can be planted as a seed within the Project Forest mobile application in your very own garden.",
     roundedMarginClasses: " ml-0 lg:ml-[3.3rem] 2xl:ml-[7.5%] ",
   },
   {
@@ -19,7 +19,7 @@ const howItWorksHomepageData = [
     normalTitle: "It Daily",
     imageName: "watering-img.webp",
     description:
-      "Use in-game consumables such as water and fertilizers to nurture your plants, leveling them up and preventing them from wilting.",
+      "Use in-app consumables such as water and fertilizers to nurture your plants, leveling them up and preventing them from wilting.",
     roundedMarginClasses: " ml-0 lg:ml-[4.8rem] ",
   },
   {
@@ -43,7 +43,7 @@ const howItWorksHomepageData = [
     normalTitle: "a Virtual Forest",
     imageName: "rewards-plant-img.webp",
     description:
-      "Use your token earnings to mint and plant more trees to create your own Forest NFT and ecosystem. The more trees you have in your forest, the more you earn.",
+      "Use your token earnings to mint and plant more trees to create your own NFT forest and ecosystem. The more trees you have in your forest, the more you earn.",
   },
 ];
 const howItWorksOtherPageData = [
@@ -59,14 +59,14 @@ const howItWorksOtherPageData = [
     normalTitle: "Your Seed",
     imageName: "seeds-only-img.webp",
     description:
-      "Once purchased, your Virtual Tree NFT can be planted as a seed within the Project Forest mobile application in your very own garden.",
+      "Once purchased, your virtual Tree NFT can be planted as a seed within the Project Forest mobile application in your very own garden.",
   },
   {
     boldTitle: "Nature ",
     normalTitle: "It Daily",
     imageName: "watering-img.webp",
     description:
-      "Use in-game consumables such as water and fertilizers to nurture your plants, leveling them up and preventing them from wilting.",
+      "Use in-app consumables such as water and fertilizers to nurture your plants, leveling them up and preventing them from wilting.",
   },
   {
     boldTitle: "Earn ",
@@ -87,7 +87,7 @@ const howItWorksOtherPageData = [
     normalTitle: "a Virtual Forest",
     imageName: "rewards-plant-img.webp",
     description:
-      "Use your token earnings to mint and plant more trees to create your own Forest NFT and ecosystem. The more trees you have in your forest, the more you earn.",
+      "Use your token earnings to mint and plant more trees to create your own NFT forest and ecosystem. The more trees you have in your forest, the more you earn.",
   },
 ];
 
