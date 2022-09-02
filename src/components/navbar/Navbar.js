@@ -16,22 +16,18 @@ const Navbar = () => {
     document.body.style.overflow = status ? "hidden" : "auto";
   };
 
-  const parseUserAuthStateMenu = (menuItem) => {
-    if (menuItem.name == "Login") {
-    }
-  };
-  useEffect(() => {
-    const user = userContaxt.user;
-    //@TODO change .user.user to state.user
-    if (
-      user.user &&
-      // user.user.isOTPVerified &&
-      // user.user.email &&
-      user.user.walletId
-    ) {
-      setDataArr(DataArr.filter((obj) => obj.name !== "Login"));
-    }
-  }, [userContaxt.user]);
+  // useEffect(() => {
+  //   const user = userContaxt.user;
+  //   //@TODO change .user.user to state.user
+  //   if (
+  //     user.user &&
+  //     // user.user.isOTPVerified &&
+  //     // user.user.email &&
+  //     user.user.walletId
+  //   ) {
+  //     setDataArr(DataArr.filter((obj) => obj.name !== "Login"));
+  //   }
+  // }, [userContaxt.user]);
   return (
     <div className="w-full flex flex-row  justify-between items-center py-8 section-spacing">
       <Link href="/">
