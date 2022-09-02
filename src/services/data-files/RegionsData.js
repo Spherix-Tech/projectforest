@@ -63,3 +63,4 @@ const allRegionsData = [
 ]
 
 export const getAllRegionsData = () => allRegionsData;
+

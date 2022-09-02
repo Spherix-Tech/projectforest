@@ -13,13 +13,13 @@ const allData = [
   },
   {
     month: "MAR",
-    text: "- Technical planning",
+    text: "- Planning of technical architecture",
     image: "plant-mar",
     bgColor: " bg-[#9AA250]",
   },
   {
     month: "APR",
-    text: "- Game planning",
+    text: "- Planning of game mechanics",
     image: "plant-apr",
     bgColor: " bg-[#9FA758]",
   },

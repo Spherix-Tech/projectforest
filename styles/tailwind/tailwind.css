@@ -142,5 +142,8 @@
     .regions-table{
         @apply flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[115px] h-[60px] px-1 py-1;
     }
+    .loader{
+        @apply w-full h-full fixed top-0 left-0 flex justify-center items-center overflow-hidden z-100;
+    }
 
 };

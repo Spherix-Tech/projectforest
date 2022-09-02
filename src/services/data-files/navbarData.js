@@ -54,7 +54,7 @@ const allData = [
   {
     name: "Login",
     link: "/login",
-    icon_src: "/assets/navbar/about-us.svg",
+    icon_src: "/assets/navbar/token.svg",
   },
 
   // {

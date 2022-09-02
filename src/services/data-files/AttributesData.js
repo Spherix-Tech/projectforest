@@ -91,5 +91,3 @@ const allAttributesData = [
   ]
 
   export const getAttributesSetData = () => attributeSetData;
-
-  
