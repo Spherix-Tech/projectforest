@@ -131,7 +131,7 @@ export default function NFTs() {
                 />
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Trees are the main NFTs in Project Forest and are required to
-                  enter into the Project Forest Grow-to-Earn app. These trees
+                  enter into the Project Forest GROW-to-EARN app. These trees
                   When first planted, these trees are mere seeds that can be
                   cultivated and grown by daily nurturing, watering and
                   nourishing using fertilizers. In order to get their hands on a
@@ -152,7 +152,7 @@ export default function NFTs() {
                   Tree NFTs in Project Forest are differentiated to the extent
                   that no two Tree NFTs are alike. The appearance of Tree NFTs
                   helps physically distinguish them from other NFTs and makes
-                  for a diverse and beautiful Forest NFT that the player owns
+                  for a diverse and beautiful forest NFT that the player owns
                   and cultivates.
                 </p>
                 <p className="page-description my-[1rem] md:my-[2rem] text-[13px] font-semibold md:text-[16px]">

@@ -1,12 +1,12 @@
 const allFAQData = [
   {
     title: "Basics",
-    description: [ 
+    description: [
       {
         id: 1,
         question: "What is Project Forest?",
         answer:
-          "Project Forest is a unique, sustainability-focused, Grow-to-Earn NFT project that aims at enabling its users to make a positive impact on the environment by growing and interacting with tree NFTs through a simplified mobile gaming experience. Project Forest aspires to be the next-generation Grow2Earn project that introduces the concept of Green-Fi to the Web3 space.",
+          "Project Forest is a unique, sustainability-focused, GROW-to-EARN NFT project that aims at enabling its users to make a positive impact on the environment by growing and interacting with tree NFTs through a simplified mobile gaming experience. Project Forest aspires to be the next-generation Grow2Earn project that introduces the concept of Green-Fi to the Web3 space.",
       },
       {
         id: 2,
@@ -35,7 +35,7 @@ const allFAQData = [
         id: 5,
         question: "How much does Project Forest contribute to the environment?",
         answer:
-          "Project Forest is a unique, sustainability-focused, Grow-to-Earn NFT project that aims at enabling its users to make a positive impact on the environment by growing and interacting with tree NFTs through a simplified mobile gaming experience. Project Forest aspires to be the next-generation Grow2Earn project that introduces the concept of Green-Fi to the Web3 space.",
+          "Project Forest is a unique, sustainability-focused, GROW-to-EARN NFT project that aims at enabling its users to make a positive impact on the environment by growing and interacting with tree NFTs through a simplified mobile gaming experience. Project Forest aspires to be the next-generation Grow2Earn project that introduces the concept of Green-Fi to the Web3 space.",
       },
       {
         id: 6,

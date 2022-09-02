@@ -112,20 +112,20 @@ export default function Gameplay() {
                 {/* Start Head section */}
                 <div className="block md:hidden">
                   <PageGradientTitle
-                    title={"Grow-to-Earn"}
+                    title={"GROW-to-EARN"}
                     className="uppercase"
                   />
                 </div>
                 <div className="flex flex-col-reverse md:flex-row justify-between items-center">
                   <div>
                     <PageGradientTitle
-                      title={"Grow-to-Earn"}
+                      title={"GROW-to-EARN"}
                       className="hidden md:block uppercase"
                     />
                     <div className="">
                       <p className="page-description text-center md:text-left w-full md:w-[75%] 2xl:w-[50%]">
                         Project Forest is the first NFT project to introduce the
-                        concept of Grow-to-Earn (G2E). As you nurture your
+                        concept of GROW-to-EARN (G2E). As you nurture your
                         virtual tree, it grows in levels, it naturally produces
                         more oxygen and subsequently yields greater O2 tokens
                         for you to earn. After it reaches a certain level, you

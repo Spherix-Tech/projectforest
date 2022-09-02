@@ -22,7 +22,7 @@
         @apply pb-[2rem] md:pb-[3rem] ;
     }
     .section-title{
-        @apply font-bold text-start text-textTitle text-[30px] lg:text-[40px];
+        @apply font-bold text-start text-textTitle text-[30px] lg:text-[40px] uppercase;
     }
     .section-sub-title{
         @apply font-normal text-start text-textTitle text-[18px] lg:text-[28px];
