@@ -20,8 +20,8 @@ const Profile = () => {
           <h1 className='text-xl font-medium'>Personal Information</h1>
           <TextField label='Nickname' />
           <div className='flex md:flex-row md:gap-10 flex-col'>
-            <Select label='Area' options={['UAE', 'USA', 'Pakistan', 'Arab']} />
-            <Select label='City' options={['UAE', 'USA', 'Pakistan', 'Arab']} />
+            <Select label='Area' options={[ 'UAE', 'China', 'Pakistan',  'USA' ]} />
+            <Select label='City' options={['Dubai', 'Abu Dhabi', 'Sharjah']} />
           </div>
           <div className='flex md:flex-row md:gap-10 flex-col'>
             <Select label='Gender' options={['Male', 'Female']} />
