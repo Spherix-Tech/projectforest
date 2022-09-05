@@ -31,7 +31,7 @@ function ImageComponent({
   const bubblesClickAnimation = (id) => {
     const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
     t1.to(id, { y: -20, opacity: 0 });
-    t1.to(id, { y: 0, opacity: 1, delay: 1 });
+    t1.to(id, { y: 0, opacity: 1, delay: 2 });
   };
 
   return showBubbles ? (
@@ -43,6 +43,7 @@ function ImageComponent({
         alt="right-1"
         onClick={() => bubblesClickAnimation("#bubble2")}
       />
+    
       <img
         className="w-7 h-7 absolute top-1/4 right-3.5 sm:right-10 xs:right-11 opacity-0 "
         src="/assets/hero/o2.svg"
