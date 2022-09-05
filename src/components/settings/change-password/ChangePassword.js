@@ -7,7 +7,7 @@ const ChangePassword = () => {
       <TextField label='Old Password' type='password' />
       <TextField label='New Password' type='password' />
       <TextField label='Confirm New Password' type='password' />
-      <button className='py-4 px-10 bg-[#C7CB91] max-w-fit rounded-lg font-semibold self-center md:self-start my-3 mb-6 md:mb-0'>
+      <button className='py-4 px-10 bg-[#C7CB91] max-w-fit rounded-lg font-semibold self-center md:self-start my-3 mb-6 md:mb-0 hover:bg-[#ACADAD]  hover:bg-opacity-50'>
         Save
       </button>
     </>

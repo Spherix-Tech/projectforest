@@ -27,7 +27,7 @@ const Profile = () => {
             <Select label='Gender' options={['Male', 'Female']} />
             <TextField label='Age' type='date' />
           </div>
-          <button className='py-4 px-10 bg-[#C7CB91] max-w-fit rounded-lg font-semibold self-center md:self-start my-4 mb-7 md:my-0'>
+          <button className='py-4 px-10 bg-[#C7CB91] max-w-fit rounded-lg font-semibold self-center md:self-start my-4 mb-7 md:my-0 hover:bg-[#ACADAD]  hover:bg-opacity-50'>
             Save
           </button>
         </div>

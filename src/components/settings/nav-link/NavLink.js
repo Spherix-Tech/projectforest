@@ -12,7 +12,7 @@ const NavLink = ({ children, path, icon }) => {
   return (
     <Link href={path}>
       <a
-        className={`flex flex-row items-center justify-center md:justify-start gap-4 px-3 md:px-9 py-3 w-1/2 md:w-full  ${
+        className={`flex flex-row items-center justify-center md:justify-start gap-4 px-3 md:px-9 py-3 w-1/2 md:w-full whitespace-nowrap  ${
           isActive && 'bg-[#CADBB6]'
         }`}
       >
@@ -21,7 +21,7 @@ const NavLink = ({ children, path, icon }) => {
           className="md:w-[20%] h-6  md:h-6"
         />
         <h3
-          className={`text-black text-[11px] md:text-[18px] md:w-3/4 ${
+          className={`text-black text-[12px] md:text-[18px] md:w-3/4 ${
             isActive ? 'text-[#434343] font-semibold' : 'text-[#919191]'
           }`}
         >
