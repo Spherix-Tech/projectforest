@@ -59,13 +59,13 @@ export default function Login() {
 
           <div className='nav-hero-section-bg'>
             <Navbar />
-            <div className='w-full flex flex-row justify-center items-center'>
+            {/* <div className='w-full flex flex-row justify-center items-center'>
               <ImageComponent src='/assets/logo.webp' className='w-20 h-20' />
               <span className='flex flex-col ml-2'>
                 <h1 className='text-xl text-black font-light'>Project</h1>
                 <h1 className='text-2xl text-black font-extrabold'>Forest</h1>
               </span>
-            </div>
+            </div> */}
 
             <div className='section-spacing'>
               <div className='flex justify-center items-center'>
