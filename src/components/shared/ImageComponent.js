@@ -10,13 +10,22 @@ function ImageComponent({
   showBubbles = false,
 }) {
   useEffect(() => {
-    const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
-    // t1.fromTo("#main-image", { y: "100vh" }, { y: 0, duration: 1.5 });
-    t1.fromTo(
-      ["#bubble1", "#bubble2", "#bubble3", "#bubble4", "#bubble5", "#bubble6"],
-      { opacity: 0 },
-      { opacity: 1, duration: 0.5 }
-    );
+    try {
+      const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
+      // t1.fromTo("#main-image", { y: "100vh" }, { y: 0, duration: 1.5 });
+      t1.fromTo(
+        [
+          "#bubble1",
+          "#bubble2",
+          "#bubble3",
+          "#bubble4",
+          "#bubble5",
+          "#bubble6",
+        ],
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5 }
+      );
+    } catch (e) {}
   }, []);
 
   const hoverTreeAnimation = () => {

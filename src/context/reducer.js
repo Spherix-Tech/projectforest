@@ -17,6 +17,8 @@ export const AuthReducer = (state = initialState, action) => {
         loading: true,
       };
     case "REGISTER_SUCCESS":
+      console.log("REG", state);
+      console.log("REG", user);
       return {
         ...state,
         ...user,
@@ -24,6 +26,8 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "OTP_VERIFIED":
+      console.log("OTP", state);
+      console.log("OTP", user);
       return {
         ...state,
         ...user,

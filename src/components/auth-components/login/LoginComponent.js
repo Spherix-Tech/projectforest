@@ -12,7 +12,6 @@ const addressWallet = "";
 export const LoginComponent = (props) => {
   const { setLoading } = props;
   const router = useRouter();
-  const [error, setError] = useState("");
   const userContaxt = useContext(UserContext);
   const [walletConnectionResponseObj, setWalletConnectionResponseObj] =
     useState(null);
@@ -26,7 +25,7 @@ export const LoginComponent = (props) => {
 
   const connectWallet = useCallback(async () => {
     setLoading(true);
-    setError("");
+    setWalletConnectionResponseObj(null);
     try {
       if (connectionStatus !== STATUS_CONNECTED) {
         const accountInfo = await connect();
