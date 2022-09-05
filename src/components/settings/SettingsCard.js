@@ -17,17 +17,17 @@ const SettingsCard = () => {
     <div className='flex justify-center items-center auth-card relative'>
       <div className='flex flex-col min-h-[400px] w-[350px] xs:w-[450px] sm:w-[450px] md:w-[750px] lg:w-[900px] 2xl:w-[1320px] rounded-[1rem] xl:rounded-[2rem] custom-shadow sha pt-8'>
         <div className='flex flex-col w-full'>
-          <div className='flex flex-row items-center mb-4 pl-9'>
-            <ImageComponent src='/assets/settings/setting-icon.svg' />
-            <h1 className='ml-3 text-3xl font-semibold text-[#434343]'>
+          <div className='flex flex-row items-center mb-4 md:pl-9 justify-center md:justify-start'>
+            <ImageComponent src='/assets/settings/setting-icon.svg' className='h-8 md:h-full' />
+            <h1 className='ml-3 text-xl md:text-3xl  font-semibold text-[#434343]'>
               Settings
             </h1>
           </div>
           <hr className='border-t-gray-300 border-transparent min-w-full border-1' />
         </div>
-        <div className='flex my-7 flex-grow'>
+        <div className='flex flex-col md:flex-row md:my-7 flex-grow'>
           {/* Left side */}
-          <div className='block h-[98.5%]'>
+          <div className='flex flex-row md:flex-col h-[98.5%]'>
             <NavLink
               icon='profile-icon.svg'
               path={{
@@ -51,7 +51,7 @@ const SettingsCard = () => {
           <span className='border-l-gray-300 border-transparent min-h-full w-1 border-[1.5px] ml-4' />
 
           {/* Right side */}
-          <div className='flex flex-grow flex-col text-labelTextColor pl-8 pr-6'>
+          <div className='flex flex-grow flex-col text-labelTextColor pl-8 pr-6 pt-3 md:pt-0'>
             {rightForm}
           </div>
         </div>

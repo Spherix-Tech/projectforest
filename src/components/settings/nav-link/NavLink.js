@@ -12,18 +12,18 @@ const NavLink = ({ children, path, icon }) => {
   return (
     <Link href={path}>
       <a
-        className={`flex flex-row items-center gap-4 px-3 rounded-r-lg md:px-9 py-3  ${
-          isActive && 'bg-[#E4F2E6]'
+        className={`flex flex-row items-center justify-center md:justify-start gap-4 px-3 md:px-9 py-3 w-1/2 md:w-full  ${
+          isActive && 'bg-[#CADBB6]'
         }`}
       >
         <ImageComponent
           src={`/assets/settings/${isActive ? `s-${icon}` : icon}`}
-          className="w-[20%] h-6"
+          className="md:w-[20%] h-6  md:h-6"
         />
         <h3
-          className={`text-black text-[18px] w-3/4 ${
+          className={`text-black text-[11px] md:text-[18px] md:w-3/4 ${
             isActive ? 'text-[#434343] font-semibold' : 'text-[#919191]'
-          }  md:block hidden`}
+          }`}
         >
           {children}
         </h3>
