@@ -1,12 +1,8 @@
 import { getAuthInfoObj, setAuthInfo } from "../services/localStorage";
-let { accessToken = null, user = null } = getAuthInfoObj()
-  ? getAuthInfoObj()
-  : {};
+let { user = null } = getAuthInfoObj() ? getAuthInfoObj() : {};
 export const initialState = {
   user: user,
-  token: accessToken,
   loading: false,
-  errorMessage: null,
 };
 
 export const AuthReducer = (state = initialState, action) => {
@@ -17,36 +13,41 @@ export const AuthReducer = (state = initialState, action) => {
         loading: true,
       };
     case "REGISTER_SUCCESS":
-      console.log("REG", state);
-      console.log("REG", user);
       return {
         ...state,
-        ...user,
         user: { email: action.payload.values.email },
         loading: false,
       };
     case "OTP_VERIFIED":
-      console.log("OTP", state);
-      console.log("OTP", user);
       return {
         ...state,
-        ...user,
-        user: { isOTPVerified: action.payload.isOTPVerified },
+        user: {
+          email: state.user.email,
+          isOTPVerified: action.payload.isOTPVerified,
+        },
         loading: false,
       };
     case "WALLET_CONNECTED":
+      let userObj = {
+        email: state.user.email,
+        isOTPVerified: state.user.isOTPVerified,
+        walletId: action.payload.walletId,
+      };
+      setAuthInfo({ user: userObj });
       return {
         ...state,
-        ...user,
-        user: { walletId: action.payload.walletId },
+        user: userObj,
         loading: false,
       };
     case "LOGIN_SUCCESS":
-      setAuthInfo(action.payload);
+      userObj = {
+        email: action.payload.email,
+        walletId: action.payload.walletId,
+      };
+      setAuthInfo(userObj);
       return {
         ...state,
-        user: action.payload.expires_in,
-        token: action.payload.access_token,
+        user: userObj,
         loading: false,
       };
     case "LOGOUT":

@@ -18,10 +18,10 @@ Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
-  const [user, dispatch] = useReducer(AuthReducer, initialState);
+  const [state, dispatch] = useReducer(AuthReducer, initialState);
   return (
     <div>
-      <UserContext.Provider value={{ user: user, dispatch: dispatch }}>
+      <UserContext.Provider value={{ state, dispatch }}>
         <Component {...pageProps} />;
       </UserContext.Provider>
     </div>

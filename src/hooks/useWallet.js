@@ -116,7 +116,6 @@ export const WalletProvider = ({ children }) => {
     () => noConnected || !addressWallet,
     [addressWallet, noConnected]
   );
-  //  console.log({ noConnected, addressWallet });
   const navigate = useRouter();
 
   const goSetting = useCallback(async () => {

@@ -14,20 +14,43 @@ export const SignupComponent = (props) => {
     otpSent: Yup.boolean(),
     email: Yup.string().when("otpSent", {
       is: false,
-      then: Yup.string().email().required("Email is required"),
+      then: Yup.string()
+        .email()
+        .required("Email is required")
+        .test(
+          "len",
+          "Email Length must be between 10-20 characters",
+          (val) => val && val.length >= 10 && val.length <= 20
+        ),
       otherwise: Yup.string(),
     }),
-    password: Yup.string("").when("otpSent", {
+    password: Yup.string().when("otpSent", {
       is: false,
-      then: Yup.string().required("Password is required"),
+      then: Yup.string()
+        .required("Password is required")
+        .test(
+          "len",
+          "Password Length must be between 8-20 characters",
+          (val) => val && val.length >= 8 && val.length <= 20
+        ),
       otherwise: Yup.string(),
     }),
-    verificationCode: Yup.string("").when("otpSent", {
+    verificationCode: Yup.number().when("otpSent", {
       is: true,
-      then: Yup.string().required("Verification Code is required"),
-      otherwise: Yup.string(),
+      then: Yup.number()
+        .test(
+          "len",
+          "Must be exactly 5 characters",
+          (val) => !val || (val && val.toString().length === 5)
+        )
+        .required("Verification Code is required"),
+      otherwise: Yup.number(),
     }),
   });
+
+  const resendOTP = () => {
+    console.log("RESEND");
+  };
 
   return (
     <div className="w-[70%]">
@@ -43,8 +66,6 @@ export const SignupComponent = (props) => {
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting }) => {
               setSubmitting(false);
-              // if API response if true then
-              // When True showWallet is set to True and WalletList card is shown
               setLoading(true);
               setTimeout(() => {
                 setLoading(false);
@@ -128,14 +149,17 @@ export const ResedOTP = () => {
         <div className="flex my-6 justify-between items-center">
           <div className="w-[77%]">
             <Field
-              type="text"
+              type="number"
               placeholder="Enter Verification Code"
               name="verificationCode"
               className="p-4 text-xs w-full rounded-lg"
             />
           </div>
           <div className="w-[20%]">
-            <button className="btnPrimary flex items-center justify-center rounded-[10px] w-full h-[45px] md:h-[47px] text-[10px] md:text-[10px] lg:text-[12px]">
+            <button
+              type="button"
+              className="btnPrimary flex items-center justify-center rounded-[10px] w-full h-[45px] md:h-[47px] text-[10px] md:text-[10px] lg:text-[12px]"
+            >
               Resend
             </button>
           </div>

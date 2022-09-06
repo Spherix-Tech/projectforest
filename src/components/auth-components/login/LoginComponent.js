@@ -31,12 +31,12 @@ export const LoginComponent = (props) => {
         const accountInfo = await connect();
         if (!accountInfo) throw Error("can't connect please try again");
         userContaxt.dispatch({
-          type: "WALLET_CONNECTED",
-          payload: { walletId: accountInfo },
+          type: "LOGIN_SUCCESS",
+          payload: { walletId: accountInfo, email: "user@user.com" },
         });
         setWalletConnectionResponseObj({
           type: "success",
-          message: "Wallet Connected Successfully",
+          message: "Logged In Successfully",
           imageName: "success-mark.svg",
           link: "/",
         });

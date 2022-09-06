@@ -22,6 +22,10 @@ export const setAuthInfo = (value) => {
 };
 
 export const getAuthInfoObj = () => {
+  const stringValue = getCookies(LOCAL_STORAGE_AUTH_INFO);
+  if (stringValue) {
+    return JSON.parse(stringValue);
+  }
   return getCookies(LOCAL_STORAGE_AUTH_INFO);
 };
 
