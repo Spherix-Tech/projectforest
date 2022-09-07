@@ -18,9 +18,9 @@ const Profile = () => {
 
   return (
     <>
-      <h1 className="text-2xl font-semibold">Profile</h1>
+      <h1 className="text-[18px] md:text-2xl font-medium my-4 md:my-0">Profile</h1>
       <div className="flex md:flex-row flex-col mt-8">
-        <div className="relative w-40 h-40 mb-7">
+        <div className="relative w-40 h-40 mb-7 self-center md:self-start">
           <ImageComponent
             src={imgUrl}
             className="w-full h-full rounded-full object-cover"
