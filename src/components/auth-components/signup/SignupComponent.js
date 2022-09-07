@@ -115,7 +115,7 @@ export const SignupComponent = (props) => {
                   </>
                 ) : (
                   // This part is shown after otp is sent
-                  <ResedOTP />
+                  <ResedOTP onClick={() => resendOTP} />
                 )}
                 <div className=" my-4 md:my-[1rem] w-full">
                   <button
@@ -139,7 +139,7 @@ export const SignupComponent = (props) => {
 };
 export default IsLoadingHOC(SignupComponent, "Registratring, please wait");
 
-export const ResedOTP = () => {
+export function ResedOTP(props) {
   return (
     <>
       <div className="font-semibold text-[12px] md:text-[17px] text-center">
@@ -158,6 +158,7 @@ export const ResedOTP = () => {
           <div className="w-[20%]">
             <button
               type="button"
+              onClick={props.onClick()}
               className="btnPrimary flex items-center justify-center rounded-[10px] w-full h-[45px] md:h-[47px] text-[10px] md:text-[10px] lg:text-[12px]"
             >
               Resend
@@ -168,4 +169,4 @@ export const ResedOTP = () => {
       </div>
     </>
   );
-};
+}
