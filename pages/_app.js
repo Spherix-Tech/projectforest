@@ -11,6 +11,7 @@ if (typeof window !== "undefined") {
 import { useReducer } from "react";
 import { UserContext } from "../src/context/userContext";
 import { AuthReducer, initialState } from "../src/context/reducer";
+import { QueryProvider } from "../src/hooks/react-query";
 
 //Binding events.
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -21,9 +22,11 @@ function MyApp({ Component, pageProps }) {
   const [state, dispatch] = useReducer(AuthReducer, initialState);
   return (
     <div>
-      <UserContext.Provider value={{ state, dispatch }}>
-        <Component {...pageProps} />;
-      </UserContext.Provider>
+      <QueryProvider>
+        <UserContext.Provider value={{ state, dispatch }}>
+          <Component {...pageProps} />;
+        </UserContext.Provider>
+      </QueryProvider>
     </div>
   );
 }

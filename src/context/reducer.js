@@ -12,17 +12,35 @@ export const AuthReducer = (state = initialState, action) => {
         ...state,
         loading: true,
       };
-    case "REGISTER_SUCCESS":
+    case "OTP_SENT":
+      console.log("PAYLOAD", action.payload);
       return {
         ...state,
-        user: { email: action.payload.values.email },
+        user: {
+          email: action.payload.values.email,
+          password: action.payload.values.password,
+          verify_code: action.payload.values.verificationCode,
+        },
+        loading: false,
+      };
+    case "REGISTER_SUCCESS":
+      console.log(action.payload);
+      return {
+        ...state,
+        user: {
+          email: action.payload.values.email,
+          password: action.payload.values.password,
+        },
         loading: false,
       };
     case "OTP_VERIFIED":
+      console.log("MASLA", action.payload);
       return {
         ...state,
         user: {
           email: state.user.email,
+          password: state.user.password,
+          verify_code: action.payload.verify_code,
           isOTPVerified: action.payload.isOTPVerified,
         },
         loading: false,

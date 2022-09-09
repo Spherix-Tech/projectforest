@@ -23,6 +23,35 @@ export const LoginComponent = (props) => {
     error: errorWallet,
   } = useWallet(addressWallet);
 
+  const getWalletNonce = async () => {
+    const userObj = userContaxt.state.user ?? null;
+    console.log(userObj);
+    const apiReq = getSignupApiReqBody(address, userObj);
+    const apiResponse = await signUpApi(apiReq);
+    console.log(apiResponse);
+    const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+    console.log(parsedResponse);
+    if (parsedResponse.error) {
+      setWalletConnectionResponseObj({
+        type: "error",
+        message: parsedResponse.error,
+        imageName: "error-mark.svg",
+        link: "/signup/wallet",
+      });
+    } else {
+      userContaxt.dispatch({
+        type: "WALLET_CONNECTED",
+        payload: { walletId: address },
+      });
+      setWalletConnectionResponseObj({
+        type: "success",
+        message: "Account created and wallet Connected Successfully",
+        imageName: "success-mark.svg",
+        link: "/",
+      });
+    }
+  };
+
   const connectWallet = useCallback(async () => {
     setLoading(true);
     setWalletConnectionResponseObj(null);

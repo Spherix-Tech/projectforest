@@ -3,14 +3,14 @@ export const siteTabKeys = {
   siteTwoUrlHash: "finaldigit",
 };
 // API
-export const API_BASE_URL = "https://api.theluckyhash.com/api/";
+export const API_BASE_URL = "http://uc.projectforest.io/";
 
 // LOCAL STORAGE
 export const LOCAL_STORAGE_AUTH_INFO = "LOCAL_STORAGE_AUTH_INFO";
 
 export const MODE_DEBUG = true;
 
-export const SUCCESS_CODE = 2000;
+export const SUCCESS_CODE = 0;
 // 4xx client errors
 export const STATUS_BAD_REQUEST = 400;
 export const STATUS_UNAUTHORIZED = 401;
