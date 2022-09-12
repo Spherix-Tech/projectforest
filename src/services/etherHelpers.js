@@ -107,8 +107,9 @@ export const signMessage = async (message) => {
     const signature = await signer.signMessage(message);
     return signature;
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    console.log(error);
+    console.log(error.error);
+    throw Error(error);
   }
 };
 

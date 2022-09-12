@@ -60,7 +60,8 @@ export const AuthReducer = (state = initialState, action) => {
     case "LOGIN_SUCCESS":
       userObj = {
         email: action.payload.email,
-        walletId: action.payload.walletId,
+        accessToken: action.payload.accessToken,
+        refreshToken: action.payload.refreshToken,
       };
       setAuthInfo(userObj);
       return {

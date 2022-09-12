@@ -8,5 +8,20 @@ export const getDataOrErrorMessageObj = (apiResponse) => {
 
 export const getErrorMessage = (error) => {
   console.log(error);
-  return error.message ? error.message : error.error.message;
+  return getDefaultErrorMessageForUnknownError(
+    error.message ? error.message : error.error.message
+  );
+};
+
+const getDefaultErrorMessageForUnknownError = (errorMessage) => {
+  return errorMessage.toString().length > 100
+    ? "Error! Please try again"
+    : errorMessage;
+};
+
+export const getWalletAddressStr = (walletAddress) => {
+  console.log(walletAddress);
+  return walletAddress.address.address
+    ? walletAddress.address.address
+    : walletAddress.address;
 };

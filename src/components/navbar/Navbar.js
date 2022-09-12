@@ -18,7 +18,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const user = userContaxt.state.user ?? null;
-    if (user && user.email && user.walletId) {
+    if (user && user.email && user.accessToken) {
       let newMenuItemsArr = DataArr.filter((obj) => obj.name !== "Login");
       newMenuItemsArr.push({
         name: "Profile",

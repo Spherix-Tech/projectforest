@@ -1,12 +1,23 @@
 import { useState, useCallback, useContext } from "react";
 import Link from "next/link";
+
 import { STATUS_CONNECTED } from "../../../utilities/constants";
 import { useWallet } from "../../../hooks/useWallet";
 import { UserContext } from "../../../context/userContext";
 import { useRouter } from "next/router";
-import { getErrorMessage } from "../../../utilities/helpers";
+import {
+  getDataOrErrorMessageObj,
+  getErrorMessage,
+  getWalletAddressStr,
+} from "../../../utilities/helpers";
 import StatusCard from "../../shared/StatusCard";
 import IsLoadingHOC from "../../shared/IsLoadingHOC";
+import {
+  getWalletNonceApi,
+  loginByWalletApi,
+} from "../../../services/api/auth";
+import { useApi } from "../../../hooks/react-query/useApi";
+
 const addressWallet = "";
 
 export const LoginComponent = (props) => {
@@ -23,58 +34,64 @@ export const LoginComponent = (props) => {
     error: errorWallet,
   } = useWallet(addressWallet);
 
-  const getWalletNonce = async () => {
-    const userObj = userContaxt.state.user ?? null;
-    console.log(userObj);
-    const apiReq = getSignupApiReqBody(address, userObj);
-    const apiResponse = await signUpApi(apiReq);
-    console.log(apiResponse);
-    const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-    console.log(parsedResponse);
-    if (parsedResponse.error) {
-      setWalletConnectionResponseObj({
-        type: "error",
-        message: parsedResponse.error,
-        imageName: "error-mark.svg",
-        link: "/signup/wallet",
-      });
-    } else {
-      userContaxt.dispatch({
-        type: "WALLET_CONNECTED",
-        payload: { walletId: address },
-      });
-      setWalletConnectionResponseObj({
-        type: "success",
-        message: "Account created and wallet Connected Successfully",
-        imageName: "success-mark.svg",
-        link: "/",
-      });
-    }
-  };
+  const {
+    callApi: getNonceApiCall,
+    reset: getNonceApiCallReset,
+    ...getNonceUseApi
+  } = useApi(getWalletNonceApi);
+
+  const {
+    callApi: loginApiCall,
+    reset: loginApiCallReset,
+    ...loginUseApi
+  } = useApi(loginByWalletApi);
 
   const connectWallet = useCallback(async () => {
     setLoading(true);
     setWalletConnectionResponseObj(null);
     try {
       if (connectionStatus !== STATUS_CONNECTED) {
-        const accountInfo = await connect();
-        if (!accountInfo) throw Error("can't connect please try again");
-        userContaxt.dispatch({
-          type: "LOGIN_SUCCESS",
-          payload: { walletId: accountInfo, email: "user@user.com" },
-        });
-        setWalletConnectionResponseObj({
-          type: "success",
-          message: "Logged In Successfully",
-          imageName: "success-mark.svg",
-          link: "/",
-        });
-        setLoading(false);
-        setTimeout(() => {
-          router.push("/");
-        }, 2000);
+        let walletAddress = await connect();
+        if (!walletAddress) throw Error("can't connect please try again");
+        walletAddress = getWalletAddressStr(walletAddress);
+        const apiResponse = await getWalletNonceApi(1, walletAddress);
+        const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+        const signature = await signMessage(parsedResponse.data.nonce);
+        if (!parsedResponse.error) {
+          const apiParams = {
+            category: 1,
+            address: walletAddress,
+            signature: signature,
+          };
+          let response = await loginByWalletApi(apiParams);
+          response = getDataOrErrorMessageObj(response);
+          if (response.error) {
+            throw Error(response.error);
+          } else {
+            userContaxt.dispatch({
+              type: "LOGIN_SUCCESS",
+              payload: {
+                email: response.data.user.account,
+                avatar: response.data.user.avatar,
+                accessToken: response.data.token.access_token,
+                refreshToken: response.data.token.refresh_token,
+              },
+            });
+            setWalletConnectionResponseObj({
+              type: "success",
+              message: "Logged In Successfully",
+              imageName: "success-mark.svg",
+              link: "/",
+            });
+            setLoading(false);
+            setTimeout(() => {
+              router.push("/");
+            }, 2000);
+          }
+        }
       }
     } catch (err) {
+      console.log("ERR", err);
       const errorMessage = getErrorMessage(err);
       setWalletConnectionResponseObj({
         type: "error",

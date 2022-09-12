@@ -27,10 +27,9 @@ export const checkVerificationCodeApi = async (params) => {
   });
   return res;
 };
-export const getWalletNonceApi = async (params) => {
-  const res = await publicApiCall.post({
-    url: "/user/v1/wallet_nonce",
-    body: params,
+export const getWalletNonceApi = async (category, address) => {
+  const res = await publicApiCall.get({
+    url: `/user/v1/wallet_nonce?category=${category}&address=${address}`,
   });
   return res;
 };
