@@ -98,3 +98,6 @@ button.disabled{
   transition: none !important;
   cursor: default;
 }
+.ReactQueryDevtools{
+  display: none !important;
+}

@@ -3,7 +3,7 @@ export const siteTabKeys = {
   siteTwoUrlHash: "finaldigit",
 };
 // API
-export const API_BASE_URL = "http://uc.projectforest.io/";
+export const API_BASE_URL = "https://uc.projectforest.io/";
 
 // LOCAL STORAGE
 export const LOCAL_STORAGE_AUTH_INFO = "LOCAL_STORAGE_AUTH_INFO";
