@@ -9,7 +9,7 @@ const Hero = () => {
         Your Journey Starts Here!
       </h4>
 
-      <p className=" text-primaryBlue text-base md:text-xl font-semibold  ">
+      <p className=" text-primaryBlue text-base md:text-xl  ">
         Project Forest’s closed beta will be launching shortly.<br></br>
         Be the first one to experience Grow-to-Earn and earn free NFTs.
       </p>
@@ -33,14 +33,14 @@ const Hero = () => {
         </a>
        
       </div>
-  
+      <div className="relative">
       <ImageComponent
             src={"/assets/beta/hero/hero.png"}
-            className="h-[750px]"
+            className=""
           />
           </div>
        
-
+    </div>
   );
 };
 

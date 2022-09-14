@@ -1,17 +1,17 @@
 const allBenefitsData = [
   {
     title: "First Look",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text: "Experience a pre-release version of the app through the beta and test out Project Forest’s game mechanics and features.",
     image: "look",
   },
   {
     title: "Get an Exclusive NFT",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text: "Participate in the closed beta and receive exclusive Project Forest’s NFT airdrops at its conclusion.",
     image: "nft",
   },
   {
     title: "Contribute to the Project Forest",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    text: "Earn rewards for finding bugs and suggesting improvements that get added to Project Forest.",
     image: "contribute",
   },
   
