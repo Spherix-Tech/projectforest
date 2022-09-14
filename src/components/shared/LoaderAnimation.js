@@ -9,7 +9,9 @@ const LoaderAnimation = ({ message }) => {
           <ImageComponent src={"/assets/loader/colored-loader.gif"} />
         </div>
         {message && (
-          <div className="whitespace-nowrap font-semibold">{message}</div>
+          <div className="text-[20px] whitespace-nowrap font-semibold">
+            {message}
+          </div>
         )}
       </div>
     </div>

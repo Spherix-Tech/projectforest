@@ -1,16 +1,19 @@
 import { LOCAL_STORAGE_AUTH_INFO } from "./constants";
 import nookies from "nookies";
 
-const removeCookies = (key) => {
-  nookies.destroyCookie("ctx", key);
+export const removeCookies = (key) => {
+  nookies.destroy("ctx", key);
 };
 
-const getCookies = (key) => {
-  const cookie = nookies.get();
-  console.log("cook", cookie);
-  return cookie[key];
+export const getCookies = (key) => {
+  let cookie = nookies.get();
+  cookie = cookie[key];
+  console.log(cookie);
+  if (!cookie || cookie === "undefined") return undefined;
+
+  return JSON.parse(cookie);
 };
-const setCookies = (key, value) => {
+export const setCookies = (key, value) => {
   nookies.set("ctx", key, JSON.stringify(value), {
     maxAge: 30 * 24 * 60 * 60,
     path: "/",
@@ -23,7 +26,6 @@ export const setAuthInfo = (value) => {
 };
 
 export const getAuthInfoObj = () => {
-  console.log(getCookies(LOCAL_STORAGE_AUTH_INFO));
   return getCookies(LOCAL_STORAGE_AUTH_INFO);
 };
 

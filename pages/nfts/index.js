@@ -131,14 +131,14 @@ export default function NFTs() {
                 />
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Trees are the main NFTs in Project Forest and are required to
-                  enter into the Project Forest Grow-to-Earn app. These trees
-                  When first planted, these trees are mere seeds that can be
-                  cultivated and grown by daily nurturing, watering and
-                  nourishing using fertilizers. In order to get their hands on a
-                  Project Forest Tree NFT, players must participate during the
-                  official Genesis Airdrop event before the launch of the public
-                  beta. Later, players can participate in the blind box sales or
-                  purchase them through the secondary marketplace.
+                  enter into the Project Forest GROW-to-EARN app. When first
+                  planted, these trees are mere seeds that can be cultivated and
+                  grown by daily nurturing, watering and nourishing using
+                  fertilizers. In order to acquire a Project Forest Tree NFT,
+                  players must participate during the official Genesis Airdrop
+                  event before the launch of the public beta. Later, players can
+                  participate in the blind box sales or purchase Tree NFTs
+                  through the secondary marketplace.
                 </p>
                 <ImageComponent
                   className="w-full rounded-xl"
@@ -152,7 +152,7 @@ export default function NFTs() {
                   Tree NFTs in Project Forest are differentiated to the extent
                   that no two Tree NFTs are alike. The appearance of Tree NFTs
                   helps physically distinguish them from other NFTs and makes
-                  for a diverse and beautiful Forest NFT that the player owns
+                  for a diverse and beautiful NFT forest that the player owns
                   and cultivates.
                 </p>
                 <p className="page-description my-[1rem] md:my-[2rem] text-[13px] font-semibold md:text-[16px]">
@@ -196,7 +196,7 @@ export default function NFTs() {
                   })}
                 </div>
                 <p className="page-description md:my-[2rem] text-[12px] font-normal md:text-[15px]">
-                  Attributes significantly impact the longterm production
+                  Attributes significantly impact the long-term production
                   capabilities of the Tree NFTs. Tree NFTs of better quality
                   have stronger attribute specifications and, therefore, provide
                   a more sustainable yield over time. The table below showcases
@@ -208,22 +208,21 @@ export default function NFTs() {
               <div className="section-spacing pt-0">
                 <PageGradientTitle title="Regions" className="uppercase" />
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
-                  Tree NFTs are further segmented into continents based on their
-                  most common geographical locations. There are 5 unique
-                  continents that these Tree NFTs can belong to, including
-                  Africa, Asia, Europe, America and Oceania. At the time of
-                  launch, each continent will be home to 6 unique species of
-                  Tree NFTs. This number will increase as new species are
-                  discovered When Project Forest’s reforestation milestones are
-                  met.
+                  Tree NFTs are further segmented into regions based on their
+                  most common geographical locations. There are 5 unique regions
+                  that these Tree NFTs can belong to: Africa, Asia, Europe,
+                  America and Oceania. At the time of launch, each region will
+                  be home to 6 unique species of Tree NFTs. This number will
+                  increase as new species are discovered when Project Forest’s
+                  reforestation milestones are met.
                 </p>
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Trees are a product of their geographical environment, and
-                  each continent has a distinct set of physical and
-                  environmental attributes such as climate, temperature,
-                  latitudes and longitudes. Therefore, each continent will be
-                  home to trees with distinct attributes and characteristics.
-                  This is outlined in the table below:
+                  each region has a distinct set of physical and environmental
+                  attributes such as climate, temperature, latitudes and
+                  longitudes. Therefore, each region will be home to trees with
+                  distinct attributes and characteristics. This is outlined in
+                  the table below:
                 </p>
                 <RegionsTable />
               </div>

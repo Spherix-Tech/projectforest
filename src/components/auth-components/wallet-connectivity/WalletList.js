@@ -1,16 +1,23 @@
-import { useState, useCallback, useContext } from "react";
+import { useState, useCallback, useEffect, useContext } from "react";
 import { getAllWalletListData } from "../../../services/data-files/WalletListData";
 import { STATUS_CONNECTED } from "../../../utilities/constants";
 import { connect, useWallet } from "../../../hooks/useWallet";
 import ImageComponent from "../../shared/ImageComponent";
 import StatusCard from "../../shared/StatusCard";
-import { getErrorMessage } from "../../../utilities/helpers";
+import {
+  getDataOrErrorMessageObj,
+  getErrorMessage,
+} from "../../../utilities/helpers";
 import IsLoadingHOC from "../../shared/IsLoadingHOC";
 import { UserContext } from "../../../context/userContext";
+import { getWalletNonceApi, signUpApi } from "../../../services/api/auth";
+import { useApi } from "../../../hooks/react-query/useApi";
+import { useRouter } from "next/router";
 
 const walletData = getAllWalletListData();
 const addressWallet = "";
 export const WalletList = (props) => {
+  const router = useRouter();
   const { setLoading } = props;
   const userContaxt = useContext(UserContext);
   const [selectedWalletName, setSelectedWallet] = useState(null);
@@ -24,10 +31,44 @@ export const WalletList = (props) => {
     error: errorWallet,
   } = useWallet(addressWallet);
 
+  const {
+    callApi: signupApiCall,
+    reset: signupApiCallReset,
+    ...verificationCodeUseApi
+  } = useApi(signUpApi);
+
+  const {
+    callApi: nonceApiCall,
+    reset: nonceApiCallReset,
+    ...nonceUseApi
+  } = useApi(getWalletNonceApi);
+
   const changeWalletSelection = (walletDetails) => {
     if (!walletDetails.enabled) return;
     setSelectedWallet(walletDetails.name);
   };
+
+  const getSignupApiReqBody = (walletAddress, userObj) => {
+    setTimeout(() => {
+      if (!userObj || !userObj.email || !userObj.password)
+        return router.push("/signup");
+    }, 1000);
+    const res = {
+      account: userObj.email,
+      password: userObj.password,
+      verify_code: userObj.verify_code,
+      wallet_category: 1,
+      wallet_address: walletAddress.address
+        ? walletAddress.address
+        : walletAddress,
+    };
+
+    return res;
+  };
+
+  useEffect(() => {
+    console.log("STATE", userContaxt.state.user);
+  }, []);
 
   const linkWalletHandler = useCallback(async () => {
     setLoading(true);
@@ -38,22 +79,38 @@ export const WalletList = (props) => {
         const accountInfo = await connect();
         if (!accountInfo) throw Error("Connection failed please try again");
         address = accountInfo?.address;
+        if (address) {
+          console.log("address", address);
+          const userObj = userContaxt.state.user ?? null;
+          console.log(userObj);
+          const apiReq = getSignupApiReqBody(address, userObj);
+          const apiResponse = await signUpApi(apiReq);
+          console.log(apiResponse);
+          const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+          console.log(parsedResponse);
+          if (parsedResponse.error) {
+            setWalletConnectionResponseObj({
+              type: "error",
+              message: parsedResponse.error,
+              imageName: "error-mark.svg",
+              link: "/signup/wallet",
+            });
+          } else {
+            userContaxt.dispatch({
+              type: "WALLET_CONNECTED",
+              payload: { walletId: address },
+            });
+            setWalletConnectionResponseObj({
+              type: "success",
+              message: "Account created and wallet Connected Successfully",
+              imageName: "success-mark.svg",
+              link: "/",
+            });
+          }
+
+          setLoading(false);
+        }
       }
-      userContaxt.dispatch({
-        type: "WALLET_CONNECTED",
-        payload: { walletId: address },
-      });
-      setWalletConnectionResponseObj({
-        type: "success",
-        message: "Wallet Connected Successfully",
-        imageName: "success-mark.svg",
-        link: "/",
-      });
-      setLoading(false);
-      // const nonceData = await getNonceApiCall({ address });
-      // const signature = await signMessage(nonceData.data.nonce);
-      // await linkMetamaskApiCall({ sign: signature, address });
-      // dispatch(updateAddress({ address }));
     } catch (err) {
       const errorMessage = getErrorMessage(err);
       setWalletConnectionResponseObj({
@@ -148,4 +205,7 @@ export const WalletList = (props) => {
   );
 };
 
-export default IsLoadingHOC(WalletList, "Connecting with wallet");
+export default IsLoadingHOC(
+  WalletList,
+  "Connecting, please check your wallet."
+);
