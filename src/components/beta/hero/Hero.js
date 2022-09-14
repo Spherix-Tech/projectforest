@@ -8,7 +8,6 @@ const Hero = () => {
       <h4 className=" text-2xl md:text-6xl text-[#3A3A3C] font-bold">
         Your Journey Starts Here!
       </h4>
-
       <p className=" text-primaryBlue text-base md:text-xl  ">
         Project Forest’s closed beta will be launching shortly.<br></br>
         Be the first one to experience Grow-to-Earn and earn free NFTs.
@@ -31,15 +30,10 @@ const Hero = () => {
             Discord
           </button>
         </a>
-       
       </div>
-      <div className="relative">
-      <ImageComponent
-            src={"/assets/beta/hero/hero.png"}
-            className=""
-          />
-          </div>
-       
+      <div>
+        <ImageComponent src={"/assets/beta/hero/hero.png"} className="" />
+      </div>
     </div>
   );
 };
