@@ -67,9 +67,7 @@ export const LoginComponent = (props) => {
             };
             let response = await loginByWalletApi(apiParams);
             response = getDataOrErrorMessageObj(response);
-            if (response.error) {
-              throw Error(response.error);
-            } else {
+            if (!response.error) {
               userContaxt.dispatch({
                 type: "LOGIN_SUCCESS",
                 payload: {

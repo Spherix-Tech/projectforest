@@ -30,10 +30,9 @@ export const METAMASK_ERROR_LIST = [
   },
 
   { code: -4001, message: "The request has been rejected by the user." },
-
   {
-    code: -4100,
-    message: "The user has denied request.",
+    code: "ACTION_REJECTED",
+    message: "The request has been rejected by the user.",
   },
 
   {

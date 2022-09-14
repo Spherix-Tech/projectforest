@@ -66,11 +66,8 @@ export const WalletList = (props) => {
     return res;
   };
 
-  useEffect(() => {
-    console.log("STATE", userContaxt.state.user);
-  }, []);
-
   const linkWalletHandler = useCallback(async () => {
+    console.log("In link");
     setLoading(true);
     // if (!selectedWalletName) return;
     try {

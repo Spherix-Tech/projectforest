@@ -12,7 +12,7 @@ import { useApi } from "../../../hooks/react-query/useApi";
 import StatusCard from "../../shared/StatusCard";
 import { getDataOrErrorMessageObj } from "../../../utilities/helpers";
 import Countdown from "../../shared/Countdown";
-import { getCookies } from "../../../services/localStorage";
+import { getCookies, setCookies } from "../../../services/localStorage";
 import { COUNTDOWN_STORAGE_KEY } from "../../../services/constants";
 
 export const SignupComponent = (props) => {
@@ -77,6 +77,7 @@ export const SignupComponent = (props) => {
 
   const verifyOTP = async (formValues) => {
     checkVerificationCodeApiCallReset();
+    setLoading(true);
     const apiReq = {
       account: formValues.email,
       verify_code: formValues.verificationCode,
@@ -90,6 +91,7 @@ export const SignupComponent = (props) => {
         imageName: "error-mark.svg",
         link: "/signup",
       });
+      setLoading(false);
     } else {
       userContaxt.dispatch({
         type: "OTP_VERIFIED",
@@ -98,17 +100,17 @@ export const SignupComponent = (props) => {
           verify_code: formValues.verificationCode,
         },
       });
+      setLoading(false);
       router.push("/signup/wallet");
     }
   };
 
   const sendVerificationCode = async (formValues) => {
     verificationCodeApiCallReset();
+    setLoading(true);
     const apiReq = { type: 1, account: formValues.email };
     const apiResponse = await sendVerificationCodeApi(apiReq);
-    console.log(apiResponse);
     const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-    console.log(parsedResponse);
     if (parsedResponse.error) {
       setWalletConnectionResponseObj({
         type: "error",
@@ -116,18 +118,18 @@ export const SignupComponent = (props) => {
         imageName: "error-mark.svg",
         link: "/signup",
       });
+      setLoading(false);
     } else {
-      console.log("VALUES", formValues);
       userContaxt.dispatch({
         type: "OTP_SENT",
         payload: { values: formValues },
       });
       formValues.otpSent = true;
+      setLoading(false);
     }
   };
 
   const atResetCountdownEnd = () => {
-    console.log("ENDED", getCookies(COUNTDOWN_STORAGE_KEY));
     if (!getCookies(COUNTDOWN_STORAGE_KEY)) {
       setShowCountdown(false);
     } else {
@@ -135,9 +137,31 @@ export const SignupComponent = (props) => {
     }
   };
 
+  const resendCodeApiCall = async () => {
+    const userEmail = userContaxt.state?.user?.email ?? null;
+    if (!userEmail) return;
+    setLoading(true);
+    const apiReq = { type: 1, account: userEmail };
+    const apiResponse = await sendVerificationCodeApi(apiReq);
+    const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+    if (parsedResponse.error) {
+      setWalletConnectionResponseObj({
+        type: "error",
+        message: parsedResponse.error,
+        imageName: "error-mark.svg",
+        link: "/signup",
+      });
+      setLoading(false);
+    } else {
+      setLoading(false);
+    }
+  };
+
   const resendOTP = () => {
-    console.log("RESEND");
+    if (showCountdown) return;
     setShowCountdown(true);
+    setCookies(COUNTDOWN_STORAGE_KEY, 120);
+    resendCodeApiCall();
   };
 
   useEffect(() => {
@@ -160,10 +184,6 @@ export const SignupComponent = (props) => {
                 validationSchema={validationSchema}
                 onSubmit={async (values, { setSubmitting }) => {
                   setSubmitting(false);
-                  setLoading(true);
-                  setTimeout(() => {
-                    setLoading(false);
-                  }, 1500);
                   if (values.otpSent && values.otpSent !== "") {
                     verifyOTP(values);
                   } else {
@@ -200,14 +220,18 @@ export const SignupComponent = (props) => {
                         </div>
                       </>
                     ) : (
-                      // This part is shown after otp is sent
-                      <ResedOTP onClick={() => resendOTP} />
-                    )}
-                    {showCountdown && (
-                      <Countdown
-                        initialSeconds="60"
-                        callback={atResetCountdownEnd}
-                      />
+                      <>
+                        <ResedOTP
+                          isCountdownRunning={showCountdown}
+                          onClick={() => resendOTP}
+                        />
+                        {showCountdown && (
+                          <Countdown
+                            initialSeconds={120}
+                            callback={atResetCountdownEnd}
+                          />
+                        )}
+                      </>
                     )}
                     <p id="countdown" className="text-center"></p>
                     <div className=" my-4 md:my-[1rem] w-full">
@@ -260,8 +284,12 @@ export function ResedOTP(props) {
           <div className="w-[20%]">
             <button
               type="button"
+              disabled={props.isCountdownRunning}
               onClick={props.onClick()}
-              className="btnPrimary flex items-center justify-center rounded-[10px] w-full h-[45px] md:h-[47px] text-[10px] md:text-[10px] lg:text-[12px]"
+              className={
+                "btnPrimary flex items-center justify-center rounded-[10px] w-full h-[45px] md:h-[47px] text-[10px] md:text-[10px] lg:text-[12px] " +
+                (props.isCountdownRunning ? " disabled" : "")
+              }
             >
               Resend
             </button>
