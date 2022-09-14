@@ -31,8 +31,16 @@ const Hero = () => {
             Discord
           </button>
         </a>
+       
       </div>
-    </div>
+  
+      <ImageComponent
+            src={"/assets/beta/hero/hero.png"}
+            className="h-[750px]"
+          />
+          </div>
+       
+
   );
 };
 
