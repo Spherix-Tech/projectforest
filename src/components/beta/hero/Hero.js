@@ -4,17 +4,17 @@ import { DISCORD_LINK } from "../../../utilities/constants";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-7 items-center text-center section-spacing">
-      <h4 className=" text-6xl text-[#3A3A3C] font-extrabold">
+    <div className="flex flex-col gap-4 md:gap-7 items-center text-center">
+      <h4 className=" text-2xl md:text-6xl text-[#3A3A3C] font-bold">
         Your Journey Starts Here!
       </h4>
 
-      <p className=" text-primaryBlue text-xl font-semibold  ">
+      <p className=" text-primaryBlue text-base md:text-xl font-semibold  ">
         Project Forest’s closed beta will be launching shortly.<br></br>
         Be the first one to experience Grow-to-Earn and earn free NFTs.
       </p>
       <div className="flex flex-row pt-1 gap-4">
-        <button className="btnPrimary cursor-pointer lg:w-56 w-40 mr-0">
+        <button className="btnPrimary cursor-pointer lg:w-56 w-40 mr-0 flex items-center">
           <ImageComponent
             src={"/assets/wallet/metamask.svg"}
             className="mr-[12px]"
