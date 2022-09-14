@@ -23,7 +23,7 @@ const StatusCard = ({ walletConnectionResponseObj, onNextClick }) => {
               alt="fail icon"
             />
           )}
-          <p className="text-sm md:text-lg pb-8 md:pb-0">
+          <p className="text-sm md:text-lg pb-8 md:pb-0 text-center">
             {walletConnectionResponseObj.message}
           </p>
         </div>

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/router";
@@ -11,11 +11,17 @@ import {
 import { useApi } from "../../../hooks/react-query/useApi";
 import StatusCard from "../../shared/StatusCard";
 import { getDataOrErrorMessageObj } from "../../../utilities/helpers";
+import Countdown from "../../shared/Countdown";
+import { getCookies } from "../../../services/localStorage";
+import { COUNTDOWN_STORAGE_KEY } from "../../../services/constants";
 
 export const SignupComponent = (props) => {
   const { setLoading } = props;
   const router = useRouter();
   const userContaxt = useContext(UserContext);
+
+  const [showCountdown, setShowCountdown] = useState(false);
+
   const [walletConnectionResponseObj, setWalletConnectionResponseObj] =
     useState(null);
 
@@ -76,9 +82,7 @@ export const SignupComponent = (props) => {
       verify_code: formValues.verificationCode,
     };
     const apiResponse = await checkVerificationCodeApi(apiReq);
-    console.log(apiResponse);
     const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-    console.log("RES", parsedResponse);
     if (parsedResponse.error) {
       setWalletConnectionResponseObj({
         type: "error",
@@ -87,7 +91,6 @@ export const SignupComponent = (props) => {
         link: "/signup",
       });
     } else {
-      console.log("VALUES", formValues);
       userContaxt.dispatch({
         type: "OTP_VERIFIED",
         payload: {
@@ -123,9 +126,23 @@ export const SignupComponent = (props) => {
     }
   };
 
+  const atResetCountdownEnd = () => {
+    console.log("ENDED", getCookies(COUNTDOWN_STORAGE_KEY));
+    if (!getCookies(COUNTDOWN_STORAGE_KEY)) {
+      setShowCountdown(false);
+    } else {
+      setShowCountdown(true);
+    }
+  };
+
   const resendOTP = () => {
     console.log("RESEND");
+    setShowCountdown(true);
   };
+
+  useEffect(() => {
+    atResetCountdownEnd();
+  }, []);
 
   return (
     <>
@@ -186,6 +203,13 @@ export const SignupComponent = (props) => {
                       // This part is shown after otp is sent
                       <ResedOTP onClick={() => resendOTP} />
                     )}
+                    {showCountdown && (
+                      <Countdown
+                        initialSeconds="60"
+                        callback={atResetCountdownEnd}
+                      />
+                    )}
+                    <p id="countdown" className="text-center"></p>
                     <div className=" my-4 md:my-[1rem] w-full">
                       <button
                         type="submit"
@@ -215,7 +239,7 @@ export const SignupComponent = (props) => {
     </>
   );
 };
-export default IsLoadingHOC(SignupComponent, "Registratring, please wait");
+export default IsLoadingHOC(SignupComponent, "Registring, please wait");
 
 export function ResedOTP(props) {
   return (

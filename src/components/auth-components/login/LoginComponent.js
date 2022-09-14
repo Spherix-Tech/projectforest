@@ -52,46 +52,49 @@ export const LoginComponent = (props) => {
     try {
       if (connectionStatus !== STATUS_CONNECTED) {
         let walletAddress = await connect();
-        if (!walletAddress) throw Error("can't connect please try again");
+        console.log("walletAddress", walletAddress);
+        if (!walletAddress) throw Error("Can't connect please try again");
         walletAddress = getWalletAddressStr(walletAddress);
-        const apiResponse = await getWalletNonceApi(1, walletAddress);
-        const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-        const signature = await signMessage(parsedResponse.data.nonce);
-        if (!parsedResponse.error) {
-          const apiParams = {
-            category: 1,
-            address: walletAddress,
-            signature: signature,
-          };
-          let response = await loginByWalletApi(apiParams);
-          response = getDataOrErrorMessageObj(response);
-          if (response.error) {
-            throw Error(response.error);
-          } else {
-            userContaxt.dispatch({
-              type: "LOGIN_SUCCESS",
-              payload: {
-                email: response.data.user.account,
-                avatar: response.data.user.avatar,
-                accessToken: response.data.token.access_token,
-                refreshToken: response.data.token.refresh_token,
-              },
-            });
-            setWalletConnectionResponseObj({
-              type: "success",
-              message: "Logged In Successfully",
-              imageName: "success-mark.svg",
-              link: "/",
-            });
-            setLoading(false);
-            setTimeout(() => {
-              router.push("/");
-            }, 2000);
+        if (walletAddress) {
+          const apiResponse = await getWalletNonceApi(1, walletAddress);
+          const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+          const signature = await signMessage(parsedResponse.data.nonce);
+          if (!parsedResponse.error) {
+            const apiParams = {
+              category: 1,
+              address: walletAddress,
+              signature: signature,
+            };
+            let response = await loginByWalletApi(apiParams);
+            response = getDataOrErrorMessageObj(response);
+            if (response.error) {
+              throw Error(response.error);
+            } else {
+              userContaxt.dispatch({
+                type: "LOGIN_SUCCESS",
+                payload: {
+                  email: response.data.user.account,
+                  avatar: response.data.user.avatar,
+                  accessToken: response.data.token.access_token,
+                  refreshToken: response.data.token.refresh_token,
+                },
+              });
+              setWalletConnectionResponseObj({
+                type: "success",
+                message: "Logged In Successfully",
+                imageName: "success-mark.svg",
+                link: "/",
+              });
+              setLoading(false);
+              setTimeout(() => {
+                router.push("/");
+              }, 2000);
+            }
           }
         }
       }
     } catch (err) {
-      console.log("ERR", err);
+      console.log("ERRR", err);
       const errorMessage = getErrorMessage(err);
       setWalletConnectionResponseObj({
         type: "error",
@@ -144,4 +147,7 @@ export const LoginComponent = (props) => {
     </div>
   );
 };
-export default IsLoadingHOC(LoginComponent, "Connecting with Metamask");
+export default IsLoadingHOC(
+  LoginComponent,
+  "Connecting, Please check your wallet."
+);

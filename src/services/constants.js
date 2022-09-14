@@ -7,6 +7,7 @@ export const API_BASE_URL = "https://uc.projectforest.io/";
 
 // LOCAL STORAGE
 export const LOCAL_STORAGE_AUTH_INFO = "LOCAL_STORAGE_AUTH_INFO";
+export const COUNTDOWN_STORAGE_KEY = "COUNTDOWN_STORAGE_KEY";
 
 export const MODE_DEBUG = true;
 
@@ -20,6 +21,69 @@ export const STATUS_NOT_FOUND = 404;
 export const STATUS_NOT_ALLOWED = 405;
 export const STATUS_NOT_ACCEPTABLE = 406;
 export const STATUS_SERVER_ERROR = 500;
+// Metamask Error codes
+export const METAMASK_ERROR_LIST = [
+  {
+    code: -32002,
+    message:
+      "allet confirmation request is already pending. Please approve from wallet.",
+  },
+
+  { code: -4001, message: "The request has been rejected by the user." },
+
+  {
+    code: -4100,
+    message: "The user has denied request.",
+  },
+
+  {
+    code: -4200,
+    message: "The requested method is not supported by this provider.",
+  },
+
+  { code: -4900, message: "You are not connected to any chain." },
+
+  { code: -4901, message: "You are not connected to this chain." },
+
+  {
+    code: -32700,
+    message:
+      "An error has been received by the wallet. Your request is incomplete.",
+  },
+
+  {
+    code: -32600,
+    message:
+      "An error has been received by the wallet. Your request is invalid.",
+  },
+
+  {
+    code: -32601,
+    message:
+      " An error has been received by the wallet. Your request does not exist / is not available.",
+  },
+
+  { code: -32602, message: "The method of your request is invalid." },
+
+  { code: -32603, message: "The wallet has received an internal error." },
+
+  { code: -32000, message: "The information provided by the user is invalid." },
+
+  {
+    code: -32001,
+    message: "The particular resource was not found.",
+  },
+
+  {
+    code: -32003,
+    message:
+      "Your transaction has been rejected. Please check your transaction details and try again.",
+  },
+
+  { code: -32004, message: "The method used is not supported on this wallet." },
+
+  { code: -32005, message: "The request limit has been exceeded." },
+];
 // LOCAL VALIDATION ERROR CODES
 export const REQUIRED = 1;
 export const EMAIL_INVALID = 2;
