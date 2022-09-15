@@ -67,9 +67,7 @@ export const LoginComponent = (props) => {
             };
             let response = await loginByWalletApi(apiParams);
             response = getDataOrErrorMessageObj(response);
-            if (response.error) {
-              throw Error(response.error);
-            } else {
+            if (!response.error) {
               userContaxt.dispatch({
                 type: "LOGIN_SUCCESS",
                 payload: {
@@ -114,7 +112,7 @@ export const LoginComponent = (props) => {
           <Link href="/signup">
             <a className="text-[#4599FC] underline font-semibold">
               {" "}
-              Register Now
+              Register now
             </a>
           </Link>
         </p>
@@ -123,17 +121,17 @@ export const LoginComponent = (props) => {
         <>
           <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
             <div className="font-semibold text-[12px] md:text-[17px]">
-              Hello Again!{" "}
+              Hello again!{" "}
             </div>
             <div className="text-[9px] md:text-[14px]">
-              Welcome Back You’ve been Missed!{" "}
+              Welcome back. You’ve been missed!{" "}
             </div>
             <div className="my-[0.7rem] md:my-[1rem]">
               <button
                 onClick={connectWallet}
                 className="btnPrimary flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
               >
-                Login with Metamask
+                Login with MetaMask
               </button>
             </div>
           </div>

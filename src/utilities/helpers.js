@@ -13,6 +13,7 @@ export const getErrorMessage = (error) => {
 };
 
 export const getErrorMessageFromErrorObj = (errorObj) => {
+  console.log(errorObj);
   const error = METAMASK_ERROR_LIST.filter(
     (error) => error.code === errorObj.code
   )[0];

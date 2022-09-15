@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { COUNTDOWN_STORAGE_KEY } from "../../services/constants";
 import {
   getCookies,
@@ -6,52 +6,46 @@ import {
   setCookies,
 } from "../../services/localStorage";
 
-const Countdown = ({ initialSeconds = 0, callback }) => {
+const Countdown = ({ callback }) => {
   const [time, setTime] = useState({
     minutes: 0,
-    seconds: initialSeconds,
+    seconds: 0,
   });
 
-  const [counterSecondsTime, setCounterSecondsTime] = useState(
-    getCookies(COUNTDOWN_STORAGE_KEY)
-      ? parseInt(getCookies(COUNTDOWN_STORAGE_KEY))
-      : initialSeconds
-  );
+  const updateTimeValuesInDom = (minutes, seconds) => {
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    setTime({ minutes, seconds });
+  };
 
   useEffect(() => {
-    // let timer = setInterval(() => {
-    //   console.log(parseInt(getCookies(COUNTDOWN_STORAGE_KEY)));
-    //   let tempCounterSeconds = getCookies(COUNTDOWN_STORAGE_KEY)
-    //     ? parseInt(getCookies(COUNTDOWN_STORAGE_KEY))
-    //     : counterSecondsTime;
-    //   console.log("tempCounterSeconds", tempCounterSeconds);
-    //   let minutes = parseInt(tempCounterSeconds / 60, 10);
-    //   let seconds = parseInt(tempCounterSeconds);
-    //   minutes = minutes < 10 ? "0" + minutes : minutes;
-    //   seconds = seconds < 10 ? "0" + seconds : seconds;
-    //   console.log(minutes, seconds);
-    //   document.getElementById(
-    //     "countdown"
-    //   ).innerHTML = `${minutes} : ${seconds}`;
-    //   // setTimeout(() => {
-    //   //   setTime({ minutes, seconds });
-    //   // }, 1000);
-    //   tempCounterSeconds = seconds--;
-    //   if (tempCounterSeconds > 0) {
-    //     setCookies(COUNTDOWN_STORAGE_KEY, tempCounterSeconds);
-    //     // setCounterSecondsTime(tempCounterSeconds);
-    //   } else {
-    //     removeCookies(COUNTDOWN_STORAGE_KEY);
-    //     // setCounterSecondsTime(0);
-    //     clearInterval(timer);
-    //     callback();
-    //   }
-    // }, 1000);
-  }, []);
+    let interval = setInterval(function () {
+      let counterTempSeconds = getCookies(COUNTDOWN_STORAGE_KEY)
+        ? parseInt(getCookies(COUNTDOWN_STORAGE_KEY), 10)
+        : 0;
+      if (counterTempSeconds > 0) {
+        let minutes = parseInt(counterTempSeconds / 60, 10);
+        let seconds = parseInt(counterTempSeconds, 10);
+        updateTimeValuesInDom(minutes, parseInt(seconds % 60, 10));
+        setCookies(COUNTDOWN_STORAGE_KEY, counterTempSeconds - 1);
+      } else {
+        removeCookies(COUNTDOWN_STORAGE_KEY);
+        clearInterval(interval);
+        callback();
+      }
+    }, 1000);
 
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
-      <div>{/* <h1 id="countdown" className="text-center"></h1> */}</div>
+      <div>
+        {time.seconds > 0 && (
+          <h1 id="countdown" className="text-center text-[15px]">
+            You can resend after {time.minutes} : {time.seconds}
+          </h1>
+        )}
+      </div>
     </>
   );
 };

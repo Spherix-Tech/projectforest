@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRef, useState } from 'react';
 import ImageComponent from "../../shared/ImageComponent";
 import Select from "../Select";
@@ -46,13 +45,12 @@ const Profile = () => {
           <h1 className=" text-base md:text-xl font-medium">
             Personal Information
           </h1>
-          <TextField label="Nickname" />
+          <TextField placeholder="Enter Name" label="Nickname" />
           <div className="flex md:flex-row md:gap-10 flex-col">
-            <Select
-              label="Area"
-              options={["UAE", "China", "Pakistan", "USA"]}
-            />
-            <Select label="City" options={["Dubai", "Abu Dhabi", "Sharjah"]} />
+            <TextField placeholder="Enter Country" label="Country" />
+            <TextField placeholder="Enter City" label="City" />
+            {/* <Select label='Area' options={[ 'UAE', 'China', 'Pakistan',  'USA' ]} />
+            <Select label='City' options={['Dubai', 'Abu Dhabi', 'Sharjah']} /> */}
           </div>
           <div className="flex md:flex-row md:gap-10 flex-col">
             <Select label="Gender" options={["Male", "Female"]} />

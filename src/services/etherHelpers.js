@@ -7,7 +7,7 @@ export const parseBalance = (balance) =>
 export const getEthereum = async () => {
   const { ethereum } = window;
   const metamaskIsInstalled = ethereum && ethereum?.isMetaMask;
-  if (!metamaskIsInstalled) throw new Error("Please install Metamask");
+  if (!metamaskIsInstalled) throw new Error("Please install MetaMask");
   return ethereum;
 };
 
@@ -34,7 +34,7 @@ export const isMetaMaskConnected = async () => {
 export const getSigner = async () => {
   const provider = await getProvider();
   const metaMaskConnected = await isMetaMaskConnected();
-  if (!metaMaskConnected) throw new Error("Please login to Metamask");
+  if (!metaMaskConnected) throw new Error("Please login to MetaMask");
   try {
     const signer = provider.getSigner();
     return signer;
