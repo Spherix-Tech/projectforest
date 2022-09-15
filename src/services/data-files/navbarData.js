@@ -47,6 +47,11 @@ const allData = [
     icon_src: "/assets/navbar/how-it-works.svg",
   },
   {
+    name: "Litepaper",
+    link: "/",
+    icon_src: "/assets/navbar/litepaper.svg",
+  },
+  {
     name: "About Us",
     link: "/about-us",
     icon_src: "/assets/navbar/about-us.svg",
