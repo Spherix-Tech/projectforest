@@ -32,8 +32,8 @@ const Hero = () => {
           </button>
         </a>
       </div>
-      <div>
-        <ImageComponent src={'/assets/beta/hero/hero.png'} className='' />
+      <div className='flex justify-center'>
+        <ImageComponent src={'/assets/gameplay-mobile.png'} className='lg:w-[50%] w-full' />
       </div>
       <ImageComponent
         src={'/assets/beta/hero/left-tree.png'}
