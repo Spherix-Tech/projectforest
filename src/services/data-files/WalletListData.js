@@ -11,12 +11,12 @@ const walletListData = [
     enabled: false,
   },
   {
-    name: "Wallett Connect",
+    name: "WalletConnect",
     icon: "walltconnect.svg",
     enabled: false,
   },
   {
-    name: "Formatic",
+    name: "Fortmatic",
     icon: "formatic.svg",
     enabled: false,
   },
