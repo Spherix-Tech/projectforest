@@ -8,7 +8,6 @@ export const removeCookies = (key) => {
 export const getCookies = (key) => {
   let cookie = nookies.get();
   cookie = cookie[key];
-  console.log(cookie);
   if (!cookie || cookie === "undefined") return undefined;
 
   return JSON.parse(cookie);

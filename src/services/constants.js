@@ -21,7 +21,7 @@ export const STATUS_NOT_FOUND = 404;
 export const STATUS_NOT_ALLOWED = 405;
 export const STATUS_NOT_ACCEPTABLE = 406;
 export const STATUS_SERVER_ERROR = 500;
-// Metamask Error codes
+// MetaMask Error codes
 export const METAMASK_ERROR_LIST = [
   {
     code: -32002,
@@ -30,10 +30,9 @@ export const METAMASK_ERROR_LIST = [
   },
 
   { code: -4001, message: "The request has been rejected by the user." },
-
   {
-    code: -4100,
-    message: "The user has denied request.",
+    code: "ACTION_REJECTED",
+    message: "The request has been rejected by the user.",
   },
 
   {
