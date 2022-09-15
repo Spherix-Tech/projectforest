@@ -148,7 +148,6 @@ export default function Home() {
             {/* NFT Slider Section */}
             <div className="nft-impact-section-bg">
               <NFTSlider DataArr={DataArr} />
-
               {/* Token Section */}
               <Token />
             </div>
@@ -156,10 +155,11 @@ export default function Home() {
             {/* Roadmap Section */}
             <Roadmap />
 
+            {/* Partners Section */}
+            <Partners />
+
             {/* Reforestation Section */}
             <Reforestation />
-
-            <Partners />
 
             {/* Newsletter Section */}
             {/* <MailingList /> */}
