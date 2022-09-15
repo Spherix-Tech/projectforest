@@ -162,7 +162,7 @@ export default function Home() {
             <Partners />
 
             {/* Newsletter Section */}
-            <MailingList />
+            {/* <MailingList /> */}
             <Footer />
           </div>
         </div>
