@@ -59,7 +59,7 @@ export default function Beta() {
           <div className="nav-hero-section-bg">
             <Navbar />
 
-            <div className="section-spacing">
+            <div className="">
               <BetaComponent />
             </div>
 

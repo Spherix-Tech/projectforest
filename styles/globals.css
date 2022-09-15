@@ -104,3 +104,7 @@ button.disabled{
 .ReactQueryDevtools{
   display: none !important;
 }
+
+.custom-gradient {
+  background: linear-gradient(to bottom, #d4f0f200 75%, #f3f1cb);
+}
