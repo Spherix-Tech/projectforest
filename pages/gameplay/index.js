@@ -118,7 +118,7 @@ export default function Gameplay() {
                     <div className="">
                       <p className="page-description text-center md:text-left w-full md:w-[75%] 2xl:w-[50%]">
                         Project Forest is the first NFT project to introduce the
-                        concept of GROW-to-EARN (G2E). As you nurture your
+                        concept of Grow-to-Earn (G2E). As you nurture your
                         virtual tree, it grows in levels and naturally produces
                         more oxygen, subsequently yielding greater O2 tokens for
                         you to earn. After it reaches a certain level, you can
@@ -184,12 +184,12 @@ export default function Gameplay() {
                     </div>
                     <div className="page-description text-center md:text-start my-[1rem]">
                       LEAF is the primary token of the Project Forest ecosystem
-                      and shall also act as the governance token for the
+                      and acts as the governance token for the
                       project. Participants and players of Project Forest will
-                      be able to earn LEAF through their Tree NFT once they
+                      be able to earn LEAF through their Tree NFTs once they
                       fulfill certain level conditions and through other in-app
-                      events and scenarios. Players can spend their LEAF token
-                      to mint new Tree NFTs and create a virtual Forest.
+                      events and scenarios. Players can spend their LEAF tokens
+                      to mint new Tree NFTs and create a virtual forest.
                     </div>
                   </div>
                   <div className="flex-1 flex justify-end">

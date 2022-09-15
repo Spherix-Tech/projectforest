@@ -6,7 +6,7 @@ const allFAQData = [
         id: 1,
         question: "What is Project Forest?",
         answer:
-          "Project Forest is a unique, sustainability-focused, GROW-to-EARN NFT project that aims at enabling its users to make a positive impact on the environment by growing and interacting with Tree NFTs through a simplified mobile gaming experience. Project Forest aspires to be the next-generation Grow-to-Earn project that introduces the concept of Green-Fi to the Web3 space.",
+          "Project Forest is a unique, sustainability-focused, Grow-to-Earn NFT project that aims at enabling its users to make a positive impact on the environment by growing and interacting with Tree NFTs through a simplified mobile gaming experience. Project Forest aspires to be the next-generation Grow-to-Earn project that introduces the concept of Green-Fi to the Web3 space.",
       },
       {
         id: 2,
@@ -28,23 +28,23 @@ const allFAQData = [
       },
     ],
   },
-  {
-    title: "Environment",
-    description: [
-      {
-        id: 5,
-        question: "How much does Project Forest contribute to the environment?",
-        answer:
-          "Project Forest is a unique, sustainability-focused, GROW-to-EARN NFT project that aims at enabling its users to make a positive impact on the environment by growing and interacting with Tree NFTs through a simplified mobile gaming experience. Project Forest aspires to be the next-generation Grow-to-Earn project that introduces the concept of Green-Fi to the Web3 space.",
-      },
-      {
-        id: 6,
-        question: "Will I own real-world trees through Project Forest?",
-        answer:
-          "No. Players will only have ownership of their in-app Tree NFTs. However, Tree NFTs in Project Forest imitate the characteristics of real-world trees very closely. Every tree NFT in Project Forest is designed precisely to reflect and showcase the natural characteristics of a real-world tree.",
-      },
-    ],
-  },
+  // {
+  //   title: "Environment",
+  //   description: [
+  //     {
+  //       id: 5,
+  //       question: "How much does Project Forest contribute to the environment?",
+  //       answer:
+  //         "Project Forest is a unique, sustainability-focused, GROW-to-EARN NFT project that aims at enabling its users to make a positive impact on the environment by growing and interacting with Tree NFTs through a simplified mobile gaming experience. Project Forest aspires to be the next-generation Grow-to-Earn project that introduces the concept of Green-Fi to the Web3 space.",
+  //     },
+  //     {
+  //       id: 6,
+  //       question: "Will I own real-world trees through Project Forest?",
+  //       answer:
+  //         "No. Players will only have ownership of their in-app Tree NFTs. However, Tree NFTs in Project Forest imitate the characteristics of real-world trees very closely. Every tree NFT in Project Forest is designed precisely to reflect and showcase the natural characteristics of a real-world tree.",
+  //     },
+  //   ],
+  // },
   {
     title: "Economics",
     description: [
@@ -88,7 +88,7 @@ const allFAQData = [
         id: 13,
         question: "When is the application launching?",
         answer:
-          "According to our current development cycle and timeline estimates, the Project Forest mobile application will be ready for official release by November 2022. Before the final launch, Project Forest will have a closed beta, followed by an open beta that will allow fans to enjoy early access to the application and its rewards.",
+          "According to our current development cycle and timeline estimates, the Project Forest mobile application will be ready for official release by January 2023. Before the final launch, Project Forest will have a closed beta, followed by an open beta that will allow fans to enjoy early access to the application and its rewards.",
       },
     ],
   },

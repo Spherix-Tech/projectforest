@@ -23,7 +23,7 @@ const Hero = () => {
           <span className="text-textDescription font-normal ">
             Project Forest is a collection of sustainability-focused NFTs that
             let you make a positive impact on the environment through a unique
-            GROW-to-EARN experience. Each time an NFT is minted in Project
+            Grow-to-Earn experience. Each time an NFT is minted in Project
             Forest, a portion of the proceeds are donated to NGOs to fund
             reforestation measures across the world.
           </span>
