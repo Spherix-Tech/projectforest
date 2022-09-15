@@ -12,7 +12,6 @@ export const NavbarMenuItems = ({
         return (
           <a
             key={i}
-            passHref
             rel="noreferrer"
             href={e.link}
             target={e.newtab === true ? "_blank" : ""}

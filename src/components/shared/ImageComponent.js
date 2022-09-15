@@ -10,13 +10,22 @@ function ImageComponent({
   showBubbles = false,
 }) {
   useEffect(() => {
-    const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
-    // t1.fromTo("#main-image", { y: "100vh" }, { y: 0, duration: 1.5 });
-    t1.fromTo(
-      ["#bubble1", "#bubble2", "#bubble3", "#bubble4", "#bubble5", "#bubble6"],
-      { opacity: 0 },
-      { opacity: 1, duration: 0.5 }
-    );
+    try {
+      const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
+      // t1.fromTo("#main-image", { y: "100vh" }, { y: 0, duration: 1.5 });
+      t1.fromTo(
+        [
+          "#bubble1",
+          "#bubble2",
+          "#bubble3",
+          "#bubble4",
+          "#bubble5",
+          "#bubble6",
+        ],
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5 }
+      );
+    } catch (e) {}
   }, []);
 
   const hoverTreeAnimation = () => {
@@ -31,7 +40,7 @@ function ImageComponent({
   const bubblesClickAnimation = (id) => {
     const t1 = gsap.timeline({ defaults: { ease: "power1.out" } });
     t1.to(id, { y: -20, opacity: 0 });
-    t1.to(id, { y: 0, opacity: 1, delay: 1 });
+    t1.to(id, { y: 0, opacity: 1, delay: 2 });
   };
 
   return showBubbles ? (
@@ -43,6 +52,7 @@ function ImageComponent({
         alt="right-1"
         onClick={() => bubblesClickAnimation("#bubble2")}
       />
+    
       <img
         className="w-7 h-7 absolute top-1/4 right-3.5 sm:right-10 xs:right-11 opacity-0 "
         src="/assets/hero/o2.svg"

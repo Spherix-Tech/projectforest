@@ -1,4 +1,5 @@
 import { utils, ethers } from "ethers";
+import { getErrorMessageFromErrorObj } from "../utilities/helpers";
 
 export const parseBalance = (balance) =>
   parseFloat(utils.formatEther(balance)).toFixed(3);
@@ -6,7 +7,7 @@ export const parseBalance = (balance) =>
 export const getEthereum = async () => {
   const { ethereum } = window;
   const metamaskIsInstalled = ethereum && ethereum?.isMetaMask;
-  if (!metamaskIsInstalled) throw new Error("Please install Metamask");
+  if (!metamaskIsInstalled) throw new Error("Please install MetaMask");
   return ethereum;
 };
 
@@ -16,8 +17,7 @@ export const getProvider = async () => {
     const provider = new ethers.providers.Web3Provider(ethereum);
     return provider;
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    throw new Error(getErrorMessageFromErrorObj(error));
   }
 };
 
@@ -27,21 +27,19 @@ export const isMetaMaskConnected = async () => {
     const accounts = await provider.listAccounts();
     return accounts.length > 0;
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    throw new Error(getErrorMessageFromErrorObj(error));
   }
 };
 
 export const getSigner = async () => {
   const provider = await getProvider();
   const metaMaskConnected = await isMetaMaskConnected();
-  if (!metaMaskConnected) throw new Error("Please login to Metamask");
+  if (!metaMaskConnected) throw new Error("Please login to MetaMask");
   try {
     const signer = provider.getSigner();
     return signer;
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    throw new Error(getErrorMessageFromErrorObj(error));
   }
 };
 
@@ -51,8 +49,7 @@ export const getNetwork = async () => {
     const network = await provider.getNetwork();
     return network;
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    throw new Error(getErrorMessageFromErrorObj(error));
   }
 };
 
@@ -64,8 +61,7 @@ export const getBalance = async () => {
     const balanceParsed = parseBalance(balance);
     return balanceParsed;
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    throw new Error(getErrorMessageFromErrorObj(error));
   }
 };
 
@@ -84,8 +80,7 @@ export const getWalletInfo = async () => {
     const address = await signer.getAddress();
     return { address, balance, network };
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    throw new Error(getErrorMessageFromErrorObj(error));
   }
 };
 
@@ -96,8 +91,7 @@ export const connectWallet = async () => {
     if (!accounts[0]) throw new Error("error please try again");
     return accounts;
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    throw new Error(getErrorMessageFromErrorObj(error));
   }
 };
 
@@ -107,8 +101,7 @@ export const signMessage = async (message) => {
     const signature = await signer.signMessage(message);
     return signature;
   } catch (error) {
-    console.log(error.message);
-    throw Error(error.message);
+    throw new Error(getErrorMessageFromErrorObj(error));
   }
 };
 
