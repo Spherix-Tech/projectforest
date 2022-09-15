@@ -263,7 +263,7 @@ export const SignupComponent = (props) => {
     </>
   );
 };
-export default IsLoadingHOC(SignupComponent, "Registring, please wait");
+export default IsLoadingHOC(SignupComponent, "Registering, please wait");
 
 export function ResedOTP(props) {
   return (

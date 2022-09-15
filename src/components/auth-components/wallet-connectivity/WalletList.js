@@ -132,7 +132,7 @@ export const WalletList = (props) => {
       {!walletConnectionResponseObj ? (
         <>
           <div className="font-semibold text-[14px] md:text-[18px] text-center md:leading-5 leading-5 md:pb-6 pb-3 pt-3 px-2">
-            Connect with one of our available wallet Providers or create a new
+            Connect with one of our available wallet providers or create a new
             one.
           </div>
           <div className="rounded-2xl cursor-pointer w-[80%]">
