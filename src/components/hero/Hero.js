@@ -37,9 +37,14 @@ const Hero = () => {
           >
             <button className="btnPrimary lg:w-60 w-40 mr-0">Litepaper</button>
           </a>
-          <button className="disabled cursor-default btnSecondary lg:w-60 w-40 mr-0">
+          {/* <a  
+            href="/beta"
+            className="cursor-pointer"
+            rel="noreferrer"> */}
+          <button className=" disabled btnSecondary lg:w-60 w-40 mr-0">
             Mint Now
           </button>
+          {/* </a> */}
         </div>
 
         <div className="w-full flex flex-row justify-center 2xl:-ml-[6.5rem] ">

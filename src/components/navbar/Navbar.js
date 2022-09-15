@@ -53,7 +53,8 @@ const Navbar = () => {
       <div className="navscreen:flex flex-row text-textTitle font-semibold hidden ">
         {DataArr.map((element, i) => {
           return (
-            <Link key={i} href={element.link}>
+            <Link key={i} href={element.link} >
+              <a target={element.newtab === true ? "_blank" : ""} rel="noreferrer">
               <div className="flex items-center flex-col mx-2 px-3 hover:text-primary text-sm justify-start cursor-pointer">
                 <div className="h-[50px] flex items-end w-[45px] justify-center">
                   <ImageComponent
@@ -67,6 +68,7 @@ const Navbar = () => {
                   </h5>
                 </div>
               </div>
+              </a>
             </Link>
           );
         })}

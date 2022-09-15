@@ -6,7 +6,7 @@ function Partners() {
   const [partnersData] = useState(getAllPartners());
 
   return (
-    <div className="bg-[#FFFFFF] section-spacing">
+    <div className="bg-[#F5F5F5] section-spacing">
       <div className="flex flex-col justify-start items-start">
         <div>
           <h2 className="section-title section-title-spacing">Partners</h2>
