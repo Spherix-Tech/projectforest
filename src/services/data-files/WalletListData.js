@@ -7,7 +7,7 @@ const walletListData = [
   },
   {
     name: "Trust Wallet",
-    icon: "coinbase.svg",
+    icon: "trust-wallet-icon.svg",
     enabled: false,
   },
   {
