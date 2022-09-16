@@ -78,12 +78,12 @@ const allFAQData = [
         answer:
           "No. Players will need Tree NFTs to interact with the application. In order to do so, you will need to purchase the NFTs. Once that is done, the application is free to play.",
       },
-      {
-        id: 12,
-        question: "Where can I find the website of Project Forest?",
-        answer:
-          "The Project Forest website is currently under development. Our developers have been busy polishing the site to make sure every sapling is getting enough care and every branch is getting enough sun. Stay tuned for the official website reveal.",
-      },
+      // {
+      //   id: 12,
+      //   question: "Where can I find the website of Project Forest?",
+      //   answer:
+      //     "The Project Forest website is currently under development. Our developers have been busy polishing the site to make sure every sapling is getting enough care and every branch is getting enough sun. Stay tuned for the official website reveal.",
+      // },
       {
         id: 13,
         question: "When is the application launching?",
