@@ -123,7 +123,7 @@ export default function AboutUs() {
                   charge and put together this project that introduces the
                   concept of environmentalism to the Web3 space while securing
                   sustainability and carbon neutrality and simultaneously
-                  rewards players for their time invested in enjoying the game.
+                  rewards players for their time invested in using the app.
                   <br />
                   <br />
                   Project Forest is a Web3 lifestyle app built from the ground
@@ -143,10 +143,10 @@ export default function AboutUs() {
                 <p className="page-description mt-4">
                   Project Forest is a Web3 project with an initiative to
                   reforest trees worldwide and improve the environment. Project
-                  Forest aims to be the world’s first Grow-To-Earn NFT mobile
-                  game that positively impacts Earth’s environment and be the
+                  Forest aims to be the world’s first Grow-to-Earn NFT mobile
+                  game that positively impacts the Earth’s environment and be the
                   next-generation NFT project that introduces the concept of
-                  De-Fi and Grow-To-Earn to the Web3 space.
+                  De-Fi and Grow-to-Earn to the Web3 space.
                 </p>
 
                 <PageGradientTitle
