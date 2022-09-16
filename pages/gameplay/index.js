@@ -130,6 +130,7 @@ export default function Gameplay() {
                   </div>
 
                   <div className="my-[2rem] md:py-0">
+                    
                     <ImageComponent
                       src={"assets/gameplay-mobile.png"}
                       alt="Gameplay"
