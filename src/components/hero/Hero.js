@@ -6,6 +6,7 @@ import {
   MEDIUM_LINK,
   TWITTER_LINK,
 } from "../../utilities/constants";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -37,14 +38,14 @@ const Hero = () => {
           >
             <button className="btnPrimary lg:w-60 w-40 mr-0">Litepaper</button>
           </a>
-          <a  
+          <Link
             href="/beta"
             className="cursor-pointer"
             rel="noreferrer">
           <button className=" btnSecondary lg:w-60 w-40 mr-0">
             Claim Beta Key
           </button>
-          </a>
+          </Link>
         </div>
 
         <div className="w-full flex flex-row justify-center 2xl:-ml-[6.5rem] ">
