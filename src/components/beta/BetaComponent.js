@@ -10,7 +10,7 @@ function BetaComponent() {
       <Hero />
       <div className='bg-[#f3f1cb] w-full section-spacing'>
         <Benefits />
-        <Timeline />
+        {/* <Timeline /> */}
       </div>
       <ImageComponent
         src={'/assets/beta/timeline/left-tree.png'}
