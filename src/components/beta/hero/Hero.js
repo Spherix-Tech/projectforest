@@ -33,7 +33,7 @@ const Hero = () => {
         </a>
       </div>
       <div className='flex justify-center'>
-        <ImageComponent src={'/assets/gameplay-mobile.png'} className='lg:w-[50%] w-full' />
+        <ImageComponent src={'/assets/gameplay-new.png'} className='lg:w-[50%] w-full' />
       </div>
       <ImageComponent
         src={'/assets/beta/hero/left-tree.png'}

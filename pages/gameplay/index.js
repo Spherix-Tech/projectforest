@@ -130,8 +130,9 @@ export default function Gameplay() {
                   </div>
 
                   <div className="my-[2rem] md:py-0">
+                    
                     <ImageComponent
-                      src={"assets/gameplay-mobile.png"}
+                      src={"assets/gameplay-new.png"}
                       alt="Gameplay"
                       className="min-w-[310px] h-[300px] sm:h-auto sm:min-w-[440px] md:min-w-[430px] lg:min-w-[470px] 2xl:min-w-[520px]"
                     />
