@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ClaimBeta = () => {
   return (
-    <div className="py-10 text-center flex flex-col items-center gap-5 relative  w-full">
+    <div className="py-10 text-center flex flex-col items-center gap-5 relative  w-full" id="claim">
       <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 md:pt-16 pt-3 ">
         Claim Your Closed Beta Invite
       </h2>

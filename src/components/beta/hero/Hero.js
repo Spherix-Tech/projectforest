@@ -26,9 +26,11 @@ const Hero = () => {
           className='cursor-pointer'
           rel='noreferrer'
         >
+          <a href='#claim'>
           <button className='cursor-pointer btnSecondary  lg:w-56 w-40 mr-0'>
-            Discord
+            Learn More
           </button>
+          </a>
         </a>
       </div>
       <div className='flex justify-center'>
