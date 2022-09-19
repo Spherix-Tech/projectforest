@@ -7,6 +7,8 @@ export const INSTAGRAM_LINK = "/";
 export const DISCORD_LINK = "https://discord.gg/projectforest";
 export const LITEPAPER_LINK =
   "https://project-forest-dev.gitbook.io/project-forest-litepaper";
+export const PRIVACY_POLICY_LINK =
+  "https://ankots-public-assets.s3.ap-southeast-1.amazonaws.com/ProjectForest-Privacy.pdf";
 
 // WALLET STATUS
 export const STATUS_UNKNOWN = "STATUS_UNKNOWN";
