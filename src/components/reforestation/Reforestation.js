@@ -18,7 +18,7 @@ const Reforestation = () => {
             <div
               key={i}
               className={
-                "flex flex-1 relative flex-col w-full sm:max-w-[650px] h-[15rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[28rem] gap-1 md:gap-2 lg:mb-0 mb-4 items-center bg-white p-4 pb-6 md:p-8 lg:p-4 " +
+                "flex flex-1 relative flex-col w-full sm:max-w-[650px] h-[15rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[28rem] 3xl:h-[32rem] gap-1 md:gap-2 lg:mb-0 mb-4 items-center bg-white p-4 pb-6 md:p-8 lg:p-4 " +
                 (i == DataArr.length ? "lg:mr-0" : "lg:mr-4")
               }
             >
