@@ -12,6 +12,7 @@ const benefits = () => {
         className="absolute lg:-top-32 lg:-left-24 lg:rotate-0 -top-36 left-0 h-32 lg:h-40 "
       />
       <div className="lg:w-[50%]  flex flex-col justify-center items-center lg:items-start lg:gap-10 gap-5 lg:pl-6 lg:pt-4 text-center lg:text-left">
+        <ImageComponent src={"assets/beta/benefits/rewards.png"} alt="Project Forest" />
         <h2 className=" text-labelTextColor text-xl lg:text-3xl font-semibold ">
           Closed Beta Rewards
         </h2>
