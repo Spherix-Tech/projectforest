@@ -14,7 +14,7 @@ const Hero = () => {
         Project Forest’s closed beta will be launching shortly.<br></br>
         Be the first one to experience Grow-to-Earn and earn free NFTs.
       </p>
-      <div className='flex flex-row pt-1 gap-4'>
+      {/* <div className='flex flex-row pt-1 gap-4'>
         <Link href="/signup"> 
         <button className='btnPrimary cursor-pointer lg:w-56 w-40 mr-0'>
           <p>Register</p>
@@ -32,7 +32,7 @@ const Hero = () => {
           </button>
           </a>
         </a>
-      </div>
+      </div> */}
       <div className='flex justify-center'>
         <ImageComponent src={'/assets/gameplay-new.png'} className='lg:w-[50%] w-full' />
       </div>
