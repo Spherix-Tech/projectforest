@@ -46,12 +46,12 @@ const allData = [
     icon_src: "/assets/navbar/nft.svg",
     newtab: false,
   },
-  {
-    name: "FAQs",
-    link: "/faq",
-    icon_src: "/assets/navbar/how-it-works.svg",
-    newtab: false,
-  },
+  // {
+  //   name: "FAQs",
+  //   link: "/faq",
+  //   icon_src: "/assets/navbar/how-it-works.svg",
+  //   newtab: false,
+  // },
   {
     name: "Litepaper",
     link: LITEPAPER_LINK,

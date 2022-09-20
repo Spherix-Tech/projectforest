@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageComponent from '../../shared/ImageComponent';
 import { DISCORD_LINK } from '../../../utilities/constants';
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -13,25 +14,25 @@ const Hero = () => {
         Project Forest’s closed beta will be launching shortly.<br></br>
         Be the first one to experience Grow-to-Earn and earn free NFTs.
       </p>
-      <div className='flex flex-row pt-1 gap-4'>
-        <button className='btnPrimary cursor-pointer lg:w-56 w-40 mr-0 flex items-center'>
-          <ImageComponent
-            src={'/assets/wallet/metamask.svg'}
-            className='mr-[12px]'
-          />
-          <p>Connect</p>
+      {/* <div className='flex flex-row pt-1 gap-4'>
+        <Link href="/signup"> 
+        <button className='btnPrimary cursor-pointer lg:w-56 w-40 mr-0'>
+          <p>Register</p>
         </button>
+        </Link>
         <a
           href={DISCORD_LINK}
           target='_blank'
           className='cursor-pointer'
           rel='noreferrer'
         >
+          <a href='#claim'>
           <button className='cursor-pointer btnSecondary  lg:w-56 w-40 mr-0'>
-            Discord
+            Learn More
           </button>
+          </a>
         </a>
-      </div>
+      </div> */}
       <div className='flex justify-center'>
         <ImageComponent src={'/assets/gameplay-new.png'} className='lg:w-[50%] w-full' />
       </div>

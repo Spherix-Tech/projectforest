@@ -24,9 +24,9 @@ const benefits = () => {
           yourself with Project Forest’s application today by participating in
           the closed beta.
         </p>
-        <button className='cursor-pointer btnSecondary h-12  lg:w-56 w-40 mb-8 md:mb-0'>
+        {/* <button className='cursor-pointer btnSecondary h-12  lg:w-56 w-40 mb-8 md:mb-0'>
           Read More
-        </button>
+        </button> */}
       </div>
       <div className='md:w-[40%] w-full flex flex-col gap-4'>
         {benefitsData.map((e, i) => {
