@@ -9,7 +9,6 @@ function BetaComponent() {
     <div className='w-full relative'>
       <Hero />
       <div className='bg-[#f3f1cb] w-full section-spacing'>
-      
         <ClaimBeta />
         <Benefits />
       </div>

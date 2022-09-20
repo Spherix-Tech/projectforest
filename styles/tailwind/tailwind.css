@@ -142,4 +142,8 @@
   .loader {
     @apply w-full h-full fixed top-0 left-0 flex justify-center items-center overflow-hidden z-100;
   }
+
+  .btnBeta {
+    @apply cursor-pointer rounded-2xl text-labelTextColor font-semibold text-sm md:text-xl bg-[#C3CA84] border-2 border-white shadow-[inset_0_-1px_16px_rgba(0,0,0,0.3)] hover:bg-[#A2AA5F];
+  }
 } ;
