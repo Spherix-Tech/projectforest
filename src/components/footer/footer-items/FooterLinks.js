@@ -46,6 +46,9 @@ const FooterLinks = () => {
           <h5>Litepaper</h5>
         </a>
         <h5 className="cursor-default">Marketplace</h5>
+        <Link href="/faq">
+        <h5>FAQs</h5>
+        </Link>
       </div>
     </div>
   );
