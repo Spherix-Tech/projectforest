@@ -30,22 +30,21 @@ const Hero = () => {
           </span>
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
+          <Link href="/beta" className="cursor-pointer" rel="noreferrer">
+            <button className="btnPrimary lg:w-60 w-40 mr-0">
+              Register for Beta
+            </button>
+          </Link>
           <a
             href={LITEPAPER_LINK}
             target="_blank"
             className="cursor-pointer"
             rel="noreferrer"
           >
-            <button className="btnPrimary lg:w-60 w-40 mr-0">Litepaper</button>
+            <button className=" btnSecondary lg:w-60 w-40 mr-0">
+              Litepaper
+            </button>
           </a>
-          <Link
-            href="/beta"
-            className="cursor-pointer"
-            rel="noreferrer">
-          <button className=" btnSecondary lg:w-60 w-40 mr-0">
-            Register for Beta
-          </button>
-          </Link>
         </div>
 
         <div className="w-full flex flex-row justify-center 2xl:-ml-[6.5rem] ">
