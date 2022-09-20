@@ -3,7 +3,7 @@ import ImageComponent from "./ImageComponent";
 
 function ClaimBetaCard({ title, text, social, href }) {
   return (
-    <div className=" flex items-center bg-black font-semibold justify-between rounded-2xl md:py-5 py-4 border-2 border-white ">
+    <div className=" flex items-center bg-black hover:bg-[#363333]  font-semibold justify-between rounded-2xl md:py-5 py-4 border-2 border-white ">
         <div className="flex flex-row items-center">
       <ImageComponent src="assets/beta/claim/quest-icon.svg" className="h-12 md:px-6 px-4" />
       <div className="flex flex-col items-start">

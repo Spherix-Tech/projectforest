@@ -20,7 +20,7 @@ const ClaimBeta = () => {
         Register on the Project Forest website & connect your MetaMask wallet.
       </p>
       <Link href="/signup"> 
-      <button className="flex md:gap-4 gap-2 justify-center items-center rounded-2xl md:py-6 py-5 text-labelTextColor text-sm md:text-xl  font-semibold bg-[#C3CA84] w-full md:w-3/4 border-2 border-white shadow-[inset_0_-1px_16px_rgba(0,0,0,0.3)]  ">
+      <button className="flex md:gap-4 gap-2 justify-center items-center rounded-2xl md:py-6 py-5 text-labelTextColor text-sm md:text-xl  font-semibold bg-[#C3CA84] w-full md:w-3/4 border-2 border-white shadow-[inset_0_-1px_16px_rgba(0,0,0,0.3)] hover:bg-[#A2AA5F]  ">
         <p>Register & Connect</p>
         <ImageComponent src="/assets/wallet/metamask.svg" />
         <p>MetaMask</p>
