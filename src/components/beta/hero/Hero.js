@@ -8,12 +8,12 @@ const Hero = () => {
       <h4 className=" text-2xl md:text-6xl text-[#3A3A3C] font-bold">
         Your Journey Starts Here!
       </h4>
-      <p className=" text-primaryBlue text-base md:text-xl  ">
-      Project Forest&apos;s closed beta is almost here. <br className="md:block hidden"></br> Be the first to experience Project Forest&apos;s &apos;grow-to-earn&apos; app and earn exclusive rewards for your participation.
+      <p className="  w-full md:w-3/4 text-primaryBlue text-base md:text-xl ">
+      Project Forest&apos;s closed beta is almost here. Be the first to experience Project Forest&apos;s <br className="md:block hidden"></br> &apos;grow-to-earn&apos; app and earn exclusive rewards for your participation.
       </p>
      <a href="#claim">
       <button className="md:w-64 w-44 py-4 btnBeta">
-        <p>Register for Beta</p>
+        <p>Claim Beta Invite</p>
       </button>
       </a>
 

@@ -7,7 +7,7 @@ import Link from "next/link";
 const ClaimBeta = () => {
   return (
     <div className="py-10 text-center flex flex-col items-center gap-5 relative  w-full" id="claim">
-      <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 md:pt-16 pt-3 ">
+      <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 pt-3 ">
         Claim Your Beta Invite
       </h2>
       <p className="md:w-[60%] w-full text-labelTextColor text-opacity-80 md:text-lg text-sm ">
