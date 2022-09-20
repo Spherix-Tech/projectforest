@@ -7,7 +7,7 @@ const DataArr = getDataBySectionName("reforestation");
 
 const Reforestation = () => {
   return (
-    <div className=" text-textTitle section-spacing panel">
+    <div className=" text-textTitle section-spacing panel bg-[#F5F5F5]">
       <div className="flex flex-col section-title-spacing justify-start items-start">
         <div className="section-title">Reforestation</div>
         <div className="section-sub-title">Need of the Hour</div>

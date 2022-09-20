@@ -155,14 +155,13 @@ export default function Home() {
             {/* Roadmap Section */}
             <Roadmap />
 
-            {/* Partners Section */}
-            <Partners />
-
+            
             {/* Reforestation Section */}
             <Reforestation />
 
-            {/* Newsletter Section */}
-            {/* <MailingList /> */}
+            {/* Partners Section */}
+            <Partners />
+
             <Footer />
           </div>
         </div>
