@@ -30,7 +30,7 @@ const benefits = () => {
           return (
             <div
               key={i}
-              className="w-full flex flex-col md:flex-row items-center rounded-3xl bg-[#C2C983] bg-opacity-30 px-4 py-6 gap-4 shadow-[0_2px_0px_0px_rgba(0,0,0,0.2)]"
+              className="w-full min-h-[200px] flex flex-col md:flex-row items-center rounded-3xl bg-[#C2C983] bg-opacity-30 px-4 py-6 gap-4 shadow-[0_2px_0px_0px_rgba(0,0,0,0.2)]"
             >
               <ImageComponent
                 src={`/assets/beta/benefits/${e.image}.svg`}
