@@ -14,11 +14,11 @@ function BetaComponent() {
       </div>
       <ImageComponent
         src={'/assets/beta/claim/left-tree.png'}
-        className='absolute left-0 lg:bottom-[950px] md:bottom-[1400px] h-[400px] z-50 lg:block hidden'
+        className='absolute left-0 2xl:bottom-[1000px] bottom-[1250px] h-[400px] z-50 lg:block hidden'
       />
       <ImageComponent
         src={'/assets/beta/claim/right-tree.png'}
-        className='absolute right-0 lg:bottom-[950px] md:bottom-[1400px] h-[400px] z-50 hidden lg:block'
+        className='absolute right-0 2xl:bottom-[1000px] bottom-[1250px] h-[400px] z-50 hidden lg:block'
       />
        {/* <ImageComponent
         src={'/assets/beta/claim/claim-bg.png'}
