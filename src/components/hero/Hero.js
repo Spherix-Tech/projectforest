@@ -43,7 +43,7 @@ const Hero = () => {
             className="cursor-pointer"
             rel="noreferrer">
           <button className=" btnSecondary lg:w-60 w-40 mr-0">
-            Claim Beta Key
+            Register for Beta
           </button>
           </Link>
         </div>
