@@ -31,7 +31,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
           {/* <Link href="/beta" className="cursor-pointer" rel="noreferrer"> */}
-            <button className="btnPrimary cursor-default hover:bg-primary hover:text-[#434343] disabled lg:w-60 w-40 mr-0">
+            <button className="btnPrimary lg:w-60 w-40 mr-0">
               Register for Beta
             </button>
           {/* </Link> */}
