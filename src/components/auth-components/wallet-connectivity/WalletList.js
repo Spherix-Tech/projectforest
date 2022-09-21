@@ -1,5 +1,7 @@
-import { useState, useCallback, useEffect, useContext } from "react";
+import { useRouter } from "next/router";
+import { useState, useCallback, useContext } from "react";
 import { getAllWalletListData } from "../../../services/data-files/WalletListData";
+import { getCookies } from "../../../services/localStorage";
 import { STATUS_CONNECTED } from "../../../utilities/constants";
 import { connect, useWallet } from "../../../hooks/useWallet";
 import ImageComponent from "../../shared/ImageComponent";
@@ -12,7 +14,6 @@ import IsLoadingHOC from "../../shared/IsLoadingHOC";
 import { UserContext } from "../../../context/userContext";
 import { getWalletNonceApi, signUpApi } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
-import { useRouter } from "next/router";
 
 const walletData = getAllWalletListData();
 const addressWallet = "";
@@ -93,6 +94,11 @@ export const WalletList = (props) => {
               link: "/signup/wallet",
             });
           } else {
+            let routerLink = "/";
+            const signupStarted = getCookies("signup");
+            if (signupStarted && signupStarted === "beta") {
+              routerLink = "/beta";
+            }
             userContaxt.dispatch({
               type: "WALLET_CONNECTED",
               payload: { walletId: address },
@@ -101,10 +107,12 @@ export const WalletList = (props) => {
               type: "success",
               message: "Account created and wallet Connected Successfully",
               imageName: "success-mark.svg",
-              link: "/",
+              link: routerLink,
             });
+            setTimeout(() => {
+              return router.push(routerLink);
+            }, 1500);
           }
-
           setLoading(false);
         }
       }
