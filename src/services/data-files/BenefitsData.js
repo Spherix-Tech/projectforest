@@ -1,17 +1,17 @@
 const allBenefitsData = [
   {
-    title: "First Look",
-    text: "Experience a pre-release version of the app through the beta and test out Project Forest’s game mechanics and features.",
+    title: "Early Access",
+    text: "Participants in the closed beta shall get the first look for the Project Forest ‘grow-to-earn’ app. Closed beta players will automatically be invited to the public open beta phase of Project Forest, releasing shortly after.",
     image: "look",
   },
   {
-    title: "Get an Exclusive NFT",
-    text: "Participate in the closed beta and receive exclusive Project Forest’s NFT airdrops at its conclusion.",
+    title: "Exclusive NFT Airdrops",
+    text: "During the closed beta, 3 randomly selected players will be airdropped a Tree NFT, each day. At the end of the closed beta, each participant will also receive a guaranteed NFT free mint.",
     image: "nft",
   },
   {
-    title: "Contribute to the Project Forest",
-    text: "Earn rewards for finding bugs and suggesting improvements that get added to Project Forest.",
+    title: "Contribute to Project Forest",
+    text: "Participants that provide new feature ideas, bug reports or suggest improvements that are implemented into the app shall be rewarded for their contributions with the project’s tokens.",
     image: "contribute",
   },
   
