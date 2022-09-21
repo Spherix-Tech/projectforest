@@ -96,7 +96,7 @@ export const WalletList = (props) => {
           } else {
             let routerLink = "/";
             const signupStarted = getCookies("signup");
-            if (signupStarted === "beta") {
+            if (signupStarted && signupStarted === "beta") {
               routerLink = "/beta";
             }
             userContaxt.dispatch({
