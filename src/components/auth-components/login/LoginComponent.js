@@ -1,18 +1,28 @@
 import { useState, useCallback, useContext } from "react";
 import Link from "next/link";
+
 import { STATUS_CONNECTED } from "../../../utilities/constants";
 import { useWallet } from "../../../hooks/useWallet";
 import { UserContext } from "../../../context/userContext";
 import { useRouter } from "next/router";
-import { getErrorMessage } from "../../../utilities/helpers";
+import {
+  getDataOrErrorMessageObj,
+  getErrorMessage,
+  getWalletAddressStr,
+} from "../../../utilities/helpers";
 import StatusCard from "../../shared/StatusCard";
 import IsLoadingHOC from "../../shared/IsLoadingHOC";
+import {
+  getWalletNonceApi,
+  loginByWalletApi,
+} from "../../../services/api/auth";
+import { useApi } from "../../../hooks/react-query/useApi";
+
 const addressWallet = "";
 
 export const LoginComponent = (props) => {
   const { setLoading } = props;
   const router = useRouter();
-  const [error, setError] = useState("");
   const userContaxt = useContext(UserContext);
   const [walletConnectionResponseObj, setWalletConnectionResponseObj] =
     useState(null);
@@ -24,35 +34,71 @@ export const LoginComponent = (props) => {
     error: errorWallet,
   } = useWallet(addressWallet);
 
+  const {
+    callApi: getNonceApiCall,
+    reset: getNonceApiCallReset,
+    ...getNonceUseApi
+  } = useApi(getWalletNonceApi);
+
+  const {
+    callApi: loginApiCall,
+    reset: loginApiCallReset,
+    ...loginUseApi
+  } = useApi(loginByWalletApi);
+
   const connectWallet = useCallback(async () => {
     setLoading(true);
-    setError("");
+    setWalletConnectionResponseObj(null);
     try {
       if (connectionStatus !== STATUS_CONNECTED) {
-        const accountInfo = await connect();
-        if (!accountInfo) throw Error("can't connect please try again");
-        userContaxt.dispatch({
-          type: "WALLET_CONNECTED",
-          payload: { walletId: accountInfo },
-        });
-        setWalletConnectionResponseObj({
-          type: "success",
-          message: "Wallet Connected Successfully",
-          imageName: "success-mark.svg",
-          link: "/",
-        });
-        setLoading(false);
-        setTimeout(() => {
-          router.push("/");
-        }, 2000);
+        let walletAddress = await connect();
+        console.log("walletAddress", walletAddress);
+        if (!walletAddress) throw Error("Can't connect please try again");
+        walletAddress = getWalletAddressStr(walletAddress);
+        if (walletAddress) {
+          const apiResponse = await getWalletNonceApi(1, walletAddress);
+          const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+          const signature = await signMessage(parsedResponse.data.nonce);
+          if (!parsedResponse.error) {
+            const apiParams = {
+              category: 1,
+              address: walletAddress,
+              signature: signature,
+            };
+            let response = await loginByWalletApi(apiParams);
+            response = getDataOrErrorMessageObj(response);
+            if (!response.error) {
+              userContaxt.dispatch({
+                type: "LOGIN_SUCCESS",
+                payload: {
+                  email: response.data.user.account,
+                  avatar: response.data.user.avatar,
+                  accessToken: response.data.token.access_token,
+                  refreshToken: response.data.token.refresh_token,
+                },
+              });
+              setWalletConnectionResponseObj({
+                type: "success",
+                message: "Logged In Successfully",
+                imageName: "success-mark.svg",
+                link: "/",
+              });
+              setLoading(false);
+              setTimeout(() => {
+                router.push("/");
+              }, 2000);
+            }
+          }
+        }
       }
     } catch (err) {
+      console.log("ERRR", err);
       const errorMessage = getErrorMessage(err);
       setWalletConnectionResponseObj({
         type: "error",
         message: errorMessage,
         imageName: "error-mark.svg",
-        link: "/signup/wallet",
+        link: "/login",
       });
       setLoading(false);
     }
@@ -66,7 +112,7 @@ export const LoginComponent = (props) => {
           <Link href="/signup">
             <a className="text-[#4599FC] underline font-semibold">
               {" "}
-              Register Now
+              Register now
             </a>
           </Link>
         </p>
@@ -75,17 +121,17 @@ export const LoginComponent = (props) => {
         <>
           <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
             <div className="font-semibold text-[12px] md:text-[17px]">
-              Hello Again!{" "}
+              Hello again!{" "}
             </div>
             <div className="text-[9px] md:text-[14px]">
-              Welcome Back You’ve been Missed!{" "}
+              Welcome back. You’ve been missed!{" "}
             </div>
             <div className="my-[0.7rem] md:my-[1rem]">
               <button
                 onClick={connectWallet}
                 className="btnPrimary flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
               >
-                Login with Metamask
+                Login with MetaMask
               </button>
             </div>
           </div>
@@ -99,4 +145,7 @@ export const LoginComponent = (props) => {
     </div>
   );
 };
-export default IsLoadingHOC(LoginComponent, "Connecting with Metamask");
+export default IsLoadingHOC(
+  LoginComponent,
+  "Connecting, Please check your wallet."
+);

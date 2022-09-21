@@ -17,9 +17,11 @@ module.exports = {
         sm: "640px",
         md: "768px",
         lg: "1024px",
+        navscreen: "1272px",
         xl: "1280px",
         "2xl": "1536px",
-        navscreen: "1272px",
+        "3xl": "2075px",
+        
       },
       colors: {
         primary: "#C3CA84",

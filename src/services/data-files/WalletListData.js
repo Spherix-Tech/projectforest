@@ -7,16 +7,16 @@ const walletListData = [
   },
   {
     name: "Trust Wallet",
-    icon: "coinbase.svg",
+    icon: "trust-wallet-icon.svg",
     enabled: false,
   },
   {
-    name: "Wallett Connect",
+    name: "WalletConnect",
     icon: "walltconnect.svg",
     enabled: false,
   },
   {
-    name: "Formatic",
+    name: "Fortmatic",
     icon: "formatic.svg",
     enabled: false,
   },

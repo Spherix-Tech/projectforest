@@ -1,5 +1,10 @@
 import React from "react";
-import { LITEPAPER_LINK } from "../../../utilities/constants";
+import {
+  LITEPAPER_LINK,
+  PRIVACY_POLICY_LINK,
+} from "../../../utilities/constants";
+import Link from "next/link";
+
 
 const FooterLinks = () => {
   return (
@@ -17,6 +22,15 @@ const FooterLinks = () => {
         <a href="#roadmap">
           <h5>Roadmap</h5>
         </a>
+        <Link href="/privacy-policy">
+        <a
+          target="_blank"
+          className="cursor-pointer"
+          rel="noreferrer"
+        >
+          <h5>Privacy Policy</h5>
+        </a>
+        </Link>
       </div>
 
       <div className=" w-2/4 flex flex-col items-end">
@@ -31,7 +45,10 @@ const FooterLinks = () => {
         >
           <h5>Litepaper</h5>
         </a>
-        <h5>Marketplace</h5>
+        <h5 className="cursor-default">Marketplace</h5>
+        <Link href="/faq">
+        <h5>FAQs</h5>
+        </Link>
       </div>
     </div>
   );

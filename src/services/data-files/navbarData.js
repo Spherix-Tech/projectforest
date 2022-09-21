@@ -1,3 +1,5 @@
+import { LITEPAPER_LINK } from "../../utilities/constants";
+
 const allData = [
   // {
   //   name: "HOME",
@@ -30,32 +32,44 @@ const allData = [
     name: "HOME",
     link: "/",
     icon_src: "/assets/navbar/home.svg",
+    newtab: false,
   },
   {
     name: "Gameplay",
     link: "/gameplay",
     icon_src: "/assets/navbar/token.svg",
+    newtab: false,
   },
   {
     name: "NFTs",
     link: "/nfts",
     icon_src: "/assets/navbar/nft.svg",
+    newtab: false,
   },
+  // {
+  //   name: "FAQs",
+  //   link: "/faq",
+  //   icon_src: "/assets/navbar/how-it-works.svg",
+  //   newtab: false,
+  // },
   {
-    name: "FAQs",
-    link: "/faq",
-    icon_src: "/assets/navbar/how-it-works.svg",
+    name: "Litepaper",
+    link: LITEPAPER_LINK,
+    icon_src: "/assets/navbar/litepaper.svg",
+    newtab: true,
   },
   {
     name: "About Us",
     link: "/about-us",
     icon_src: "/assets/navbar/about-us.svg",
+    newtab: false,
   },
-  // {
-  //   name: "Login",
-  //   link: "/login",
-  //   icon_src: "/assets/navbar/about-us.svg",
-  // },
+  {
+    name: "Login",
+    link: "/login",
+    icon_src: "/assets/navbar/token.svg",
+    newtab: false,
+  },
 
   // {
   //   name: "ROADMAP",

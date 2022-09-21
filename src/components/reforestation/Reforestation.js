@@ -7,7 +7,7 @@ const DataArr = getDataBySectionName("reforestation");
 
 const Reforestation = () => {
   return (
-    <div className=" text-textTitle bg-[#F5F5F5] section-spacing panel">
+    <div className=" text-textTitle section-spacing panel bg-[#F5F5F5]">
       <div className="flex flex-col section-title-spacing justify-start items-start">
         <div className="section-title">Reforestation</div>
         <div className="section-sub-title">Need of the Hour</div>
@@ -18,7 +18,7 @@ const Reforestation = () => {
             <div
               key={i}
               className={
-                "flex flex-1 relative flex-col w-full sm:max-w-[650px] h-[15rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[26rem] gap-1 md:gap-2 lg:mb-0 mb-4 items-center bg-white p-4 pb-6 md:p-8 lg:p-4 " +
+                "flex flex-1 relative flex-col w-full sm:max-w-[650px] h-[15rem] lg:h-[20rem] xl:h-[22rem] 2xl:h-[28rem] 3xl:h-[32rem] gap-1 md:gap-2 lg:mb-0 mb-4 items-center bg-white p-4 pb-6 md:p-8 lg:p-4 " +
                 (i == DataArr.length ? "lg:mr-0" : "lg:mr-4")
               }
             >
@@ -31,7 +31,7 @@ const Reforestation = () => {
               <div className="text-[#666666] w-full text-start font-light text-[13px] text-opacity-70">
                 {e.text}
               </div>
-              <a href={e.learnMoreLink}  target="_blank" rel="noreferrer">
+              <a href={e.learnMoreLink}  target="_blank" rel="noreferrer" className="2xl:mt-2">
                 <div className="cursor-pointer inline-flex absolute flex-row justify-end bottom-[3%] 2xl:bottom-[2%] right-[3.5%] w-full items-center gap-2 text-xs text-end underline text-[#8DABFD]">
                   <div>Learn more</div>
                   <div>
