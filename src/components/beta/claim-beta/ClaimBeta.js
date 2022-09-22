@@ -48,28 +48,28 @@ const ClaimBeta = () => {
       </p>
       <div className="md:w-3/4 w-full pb-4">
         <ClaimBetaCard
-          title="Project Forest Beta Quest #1"
+          title="Project Forest Beta Quest: A"
           text="Invite 3 people to Discord"
           social="discord.svg"
-          href={DISCORD_LINK}
+          href="https://app.quest3.xyz/quest/686831336190447736"
         />
         <p className="text-labelTextColor font-bold md:py-6 py-3 md:text-lg text-sm">
           OR
         </p>
         <ClaimBetaCard
-          title="Project Forest Beta Quest #2"
+          title="Project Forest Beta Quest: B"
           text="Reach level 5 on Discord"
           social="discord.svg"
-          href={DISCORD_LINK}
+          href="https://app.quest3.xyz/quest/686833715616649578"
         />
         <p className="text-labelTextColor font-bold md:py-6 py-3 md:text-lg text-sm">
           OR
         </p>
         <ClaimBetaCard
-          title="Project Forest Beta Quest #3"
+          title="Project Forest Beta Quest: C"
           text="Retweet 3 of Project Forest’s Tweets on Twitter"
           social="twitter.svg"
-          href={TWITTER_LINK}
+          href="https://app.quest3.xyz/quest/686834604343869939"
         />
       </div>
     </div>
