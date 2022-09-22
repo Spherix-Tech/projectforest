@@ -75,13 +75,21 @@ const FAQ = () => {
                 />
               </div>
 
-              {description.map(({ question, answer, id }) => (
+              {description.map(({ question, answer, answer1, answer2, answer3, answer4, answer5, quest1, quest2, quest3, id }) => (
                 //  <div onClick={handleClick} >
                 <FAQAccordion
                   key={id}
                   id={id}
                   question={question}
                   answer={answer}
+                  answer1={answer1}
+                  answer2={answer2}
+                  answer3={answer3}
+                  answer4={answer4}
+                  answer5={answer5}
+                  quest1={quest1}
+                  quest2={quest2}
+                  quest3={quest3}
                   selectedItem={selectedItem}
                   setSelectedItem={(id) => select(id)}
                 />
