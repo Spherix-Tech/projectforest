@@ -4,6 +4,11 @@ import ImageComponent from '../shared/ImageComponent';
 const FAQAccordion = ({
   question,
   answer,
+  answer1,
+  answer2,
+  answer3,
+  answer4,
+  answer5,
   id,
   selectedItem,
   setSelectedItem,
@@ -34,7 +39,12 @@ const FAQAccordion = ({
       {isActive && (
         <div className=' flex flex-row justify-between py-4'>
           <div className=' pl-4 pr-8 lg:text-sm text-xs text-textTitle'>
-            {answer}
+           <p>{answer}</p>
+           <p>{answer1}</p>
+           <p>{answer2}</p>
+           <p>{answer3}</p>
+           <p>{answer4}</p>
+           <p>{answer5}</p>
           </div>
         </div>
       )}
