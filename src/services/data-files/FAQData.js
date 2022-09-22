@@ -29,42 +29,99 @@ const allFAQData = [
       },
     ],
   },
-  
+  {
+    title: "Closed Beta",
+    description: [
+      {
+        id: 5,
+        question: "What is Project Forest Closed Beta?",
+        answer: "The closed beta is a pre-release version of the game in which players can try and test out Project Forest’s mechanics and features before its official release in January 2023.",
+      },
+      {
+        id: 6,
+        question: "How do I register for Project Forest Closed Beta?",
+        answer: "Players can register for the beta by following the registration steps:",
+        answer1: "Step 1: Participants will be required to create an account on the Project Forest website https://projectforest.io/ and connect their MetaMask wallets.",
+        answer2: "Step 2: Participants will need to complete any ONE of the three quests to be invited to the closed beta.",
+       quest1: " Project Forest Beta Quest A ",
+        answer3: "– Invite three people to Project Forest’s Discord https://app.quest3.xyz/quest/686831336190447736",
+       quest2: " Project Forest Beta Quest B ",
+        answer4: "– Reach level 5 on Project Forest’s Discord https://app.quest3.xyz/quest/686833715616649578",
+        quest3: " Project Forest Beta Quest C ",
+        answer5: "– Retweet three of Project Forest’s Tweets on Twitter https://app.quest3.xyz/quest/686834604343869939",
+      },
+      {
+        id: 7,
+        question: "How do I know I registered successfully?",
+        answer: "Successfully registered users will be emailed a download link and activation code for Project Forest at the time of the launch of the closed beta.",
+      },
+      {
+        id: 8,
+        question: "What is the purpose of Project Forest Closed Beta?",
+        answer: "The closed beta’s release is solely to test the application’s mechanics and features and provide a first look at the application to the community.",
+      },
+      {
+        id: 9,
+        question: "How long will the closed beta run for?",
+        answer: "The closed beta will be live for a month, starting September 27 and ending on October 27.",
+      },
+      {
+        id: 10,
+        question: "Are there unlimited slots for the closed beta?",
+        answer: "No, slots for the closed beta are limited to 1,000 and will be given out on a first-come-first-serve basis.",
+      },
+      {
+        id: 11,
+        question: "Am I eligible to register for the closed beta?",
+        answer: "Anyone with an active MetaMask wallet and completion of both the steps is eligible for a closed beta invite.",
+      },
+      {
+        id: 12,
+        question: "Will I earn through the closed beta?",
+        answer: "No, players cannot earn through the closed beta. However, players participating in the closed beta will be given exclusive rewards such as early access, random NFT airdrops and guaranteed free mints and tokens.",
+      },
+      {
+        id: 13,
+        question: "Will I own Tree NFTs through the closed beta?",
+        answer: "Every closed beta participant will receive exclusive Tree NFTs and mints through airdrops. Thus, it is probable you can own Tree NFTs through the closed beta. ",
+      },
+    ],
+  },
   {
     title: "Economics",
     description: [
       {
-        id: 5,
+        id: 14,
         question: "What are the tokens used in the application?",
         answer:
           "Project Forest uses LEAF (the primary token) and O2 (the utility token) as currencies to enable various in-app functions and transactions. Players can earn these tokens by using the application.",
       },
       {
-        id: 6,
+        id: 15,
         question: "What is LEAF?",
         answer:
           "LEAF is the primary token of Project Forest. LEAF has a fixed and limited supply in Project Forest’s ecosystem and holds the highest value in the dual-token economy. Players will need LEAF tokens to purchase Tree NFTs and to conduct NFT transactions and investments.",
       },
       {
-        id: 7,
+        id: 16,
         question: "What is O2?",
         answer:
           "O2 is the utility token of Project Forest and has an unlimited supply in the application’s ecosystem. Due to its infinite supply, O2 has a lower value compared to LEAF, but earning O2 is much easier through the application as compared to LEAF. O2 will be required for multiple in-app actions and features like buying fertilizers and nutrients and participating for rewards.",
       },
       {
-        id: 8,
+        id: 17,
         question: "What are the benefits of owning Tree NFTs?",
         answer:
           "Apart from accessing the earning aspect of the application, Tree NFTs in Project Forest grant players access to participate in decisions concerning Project Forest’s economics and developments. Through Tree NFTs, players mint additional NFTs and have the right to collect in-app rewards.",
       },
       {
-        id: 9,
+        id: 18,
         question: "Can I play Project Forest for free?",
         answer:
           "No. Players will need Tree NFTs to interact with the application. In order to do so, you will need to purchase the NFTs. Once that is done, the application is free to play.",
       },
       {
-        id: 10,
+        id: 19,
         question: "When is the application launching?",
         answer:
           "According to our current development cycle and timeline estimates, the Project Forest mobile application will be ready for official release by January 2023. Before the final launch, Project Forest will have a closed beta, followed by an open beta that will allow fans to enjoy early access to the application and its rewards.",
@@ -75,7 +132,7 @@ const allFAQData = [
     title: "Community",
     description: [
       {
-        id: 11,
+        id: 20,
         question:
           "I have some suggestions in mind. Will they be taken into consideration?",
         answer:
@@ -83,61 +140,7 @@ const allFAQData = [
       },
     ],
   },
-  {
-    title: "Closed Beta",
-    description: [
-      {
-        id: 12,
-        question: "What is Project Forest Closed Beta?",
-        answer: "The closed beta is a pre-release version of the game in which players can try and test out Project Forest’s mechanics and features before its official release in January 2023.",
-      },
-      {
-        id: 13,
-        question: "How do I register for Project Forest Closed Beta?",
-        answer: "Players can register for the beta by following the registration steps:",
-        answer1: "Step 1: Participants will be required to create an account on the Project Forest website https://projectforest.io/ and connect their MetaMask wallets.",
-        answer2: "Step 2: Participants will need to complete any ONE of the three quests to be invited to the closed beta.",
-        answer3: "• Project Forest Beta Quest A – Invite three people to Project Forest’s Discord https://app.quest3.xyz/quest/686831336190447736",
-        answer4: "• Project Forest Beta Quest B – Reach level 5 on Project Forest’s Discord https://app.quest3.xyz/quest/686833715616649578",
-        answer5: "• Project Forest Beta Quest C – Retweet three of Project Forest’s Tweets on Twitter https://app.quest3.xyz/quest/686834604343869939",
-      },
-      {
-        id: 14,
-        question: "How do I know I registered successfully?",
-        answer: "Successfully registered users will be emailed a download link and activation code for Project Forest at the time of the launch of the closed beta.",
-      },
-      {
-        id: 15,
-        question: "What is the purpose of Project Forest Closed Beta?",
-        answer: "The closed beta’s release is solely to test the application’s mechanics and features and provide a first look at the application to the community.",
-      },
-      {
-        id: 16,
-        question: "How long will the closed beta run for?",
-        answer: "The closed beta will be live for a month, starting September 27 and ending on October 27.",
-      },
-      {
-        id: 17,
-        question: "Are there unlimited slots for the closed beta?",
-        answer: "No, slots for the closed beta are limited to 1,000 and will be given out on a first-come-first-serve basis.",
-      },
-      {
-        id: 18,
-        question: "Am I eligible to register for the closed beta?",
-        answer: "Anyone with an active MetaMask wallet and completion of both the steps is eligible for a closed beta invite.",
-      },
-      {
-        id: 19,
-        question: "Will I earn through the closed beta?",
-        answer: "No, players cannot earn through the closed beta. However, players participating in the closed beta will be given exclusive rewards such as early access, random NFT airdrops and guaranteed free mints and tokens.",
-      },
-      {
-        id: 20,
-        question: "Will I own Tree NFTs through the closed beta?",
-        answer: "Every closed beta participant will receive exclusive Tree NFTs and mints through airdrops. Thus, it is probable you can own Tree NFTs through the closed beta. ",
-      },
-    ],
-  },
+ 
 ];
 
 export const getAllFAQData = () => allFAQData;
