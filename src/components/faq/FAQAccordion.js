@@ -4,6 +4,14 @@ import ImageComponent from '../shared/ImageComponent';
 const FAQAccordion = ({
   question,
   answer,
+  answer1,
+  answer2,
+  answer3,
+  answer4,
+  answer5,
+  quest1,
+  quest2,
+  quest3,
   id,
   selectedItem,
   setSelectedItem,
@@ -34,7 +42,12 @@ const FAQAccordion = ({
       {isActive && (
         <div className=' flex flex-row justify-between py-4'>
           <div className=' pl-4 pr-8 lg:text-sm text-xs text-textTitle'>
-            {answer}
+           <p>{answer}</p>
+           <p>{answer1}</p>
+           <p>{answer2}</p>
+          <p> <span className='cursor-pointer hover:underline text-[#0000EE]'><a href='https://app.quest3.xyz/quest/686831336190447736' target="_blank" rel="noreferrer">{quest1}</a></span>{answer3}</p> 
+          <p> <span className='cursor-pointer hover:underline text-[#0000EE]'><a href='https://app.quest3.xyz/quest/686833715616649578' target="_blank" rel="noreferrer">{quest2}</a></span>{answer4}</p>
+          <p> <span className='cursor-pointer hover:underline text-[#0000EE]'><a href='https://app.quest3.xyz/quest/686834604343869939' target="_blank" rel="noreferrer">{quest3}</a></span>{answer5}</p>
           </div>
         </div>
       )}
