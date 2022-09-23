@@ -4,8 +4,6 @@ import "../styles/nprogress.css";
 
 import "../styles/globals.css";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-XJKS1PTP6Y");
-sendGoogleAnalytics();
 const sendGoogleAnalytics = () => {
   if (typeof window !== "undefined") {
     console.log(window.location.pathname + window.location.search);
@@ -18,6 +16,8 @@ const sendGoogleAnalytics = () => {
     ReactGA.send({ hitType: "pageview" });
   }
 };
+ReactGA.initialize("G-XJKS1PTP6Y");
+sendGoogleAnalytics();
 import { useReducer } from "react";
 import { UserContext } from "../src/context/userContext";
 import { AuthReducer, initialState } from "../src/context/reducer";
