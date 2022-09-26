@@ -36,7 +36,7 @@ const Team = () => {
               key={i}
               className="flex flex-col justify-center items-center bg-white px-8 py-5 rounded-2xl border-[2px] border-[#dada9c] shadow-lg"
             >
-              <div className=" bg-[#434343] bg-opacity-10 w-[145px] h-[145px] rounded-full outline-[#dada9c] outline outline-1 outline-offset-8"></div>
+              <div className="m-2 bg-[#434343] bg-opacity-10 w-[145px] h-[145px] rounded-full ring-[#dada9c] ring-1  ring-offset-8"></div>
               <p className="text-labelTextColor font-semibold pt-4">{e.name}</p>
               <p className="text-[#5ACDEF] text-xs pt-1">{e.title}</p>
             </div>

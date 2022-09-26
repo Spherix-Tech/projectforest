@@ -121,7 +121,7 @@ export default function AboutUs() {
                 </p>
 
                 <div className="flex justify-between items-center flex-col-reverse md:flex-row mt-[2rem] md:mt-[5rem] md:gap-[4rem] gap-[2rem] ">
-                  <div className="w-full h-[255px] md:w-[40%] md:h-[350px] bg-[#434343] bg-opacity-10 rounded-2xl"></div>
+                  <div className="w-full h-[255px] md:w-[40%] md:h-[350px] bg-[#434343] bg-opacity-10 rounded-2xl mt-6 md:mt-0"></div>
                   <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
                   <div className="w-full ">
                     <PageGradientTitle
