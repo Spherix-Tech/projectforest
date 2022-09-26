@@ -32,8 +32,11 @@ const Team = () => {
       <div className="flex flex-row justify-center flex-wrap gap-10 py-16">
         {teamData.map((e, i) => {
           return (
-            <div key={i} className="flex flex-col justify-center items-center bg-white px-8 py-5 rounded-2xl border-[2px] border-[#dada9c] shadow-lg">
-              <div className="rounded-full outline-[#dada9c] outline outline-1 outline-offset-8  "><div className=" bg-[#434343] bg-opacity-10 w-[145px] h-[145px] rounded-full"></div></div>
+            <div
+              key={i}
+              className="flex flex-col justify-center items-center bg-white px-8 py-5 rounded-2xl border-[2px] border-[#dada9c] shadow-lg"
+            >
+              <div className=" bg-[#434343] bg-opacity-10 w-[145px] h-[145px] rounded-full outline-[#dada9c] outline outline-1 outline-offset-8"></div>
               <p className="text-labelTextColor font-semibold pt-4">{e.name}</p>
               <p className="text-[#5ACDEF] text-xs pt-1">{e.title}</p>
             </div>
