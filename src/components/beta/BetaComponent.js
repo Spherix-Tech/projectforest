@@ -11,7 +11,7 @@ function BetaComponent() {
       <Hero />
       <div className='bg-[#f3f1cb] w-full section-spacing'>
         <Timeline />
-        <ClaimBeta />
+        {/* <ClaimBeta /> */}
         <Benefits />
       </div>
       <ImageComponent

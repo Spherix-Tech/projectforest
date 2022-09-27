@@ -14,11 +14,11 @@ const Hero = () => {
         participation. Let’s rebuild the Earth’s environment one branch at a
         time.
       </p>
-      <a href="#claim">
+      {/* <a href="#claim">
         <button className="md:w-64 w-44 py-4 btnBeta">
           <p>Play Beta Now</p>
         </button>
-      </a>
+      </a> */}
 
       <div className="flex justify-center">
         <ImageComponent
