@@ -9,7 +9,7 @@ const benefits = () => {
     <div className="mt-20 relative w-full flex flex-col lg:flex-row justify-between nav-hero-section-bg rounded-[2rem] lg:p-12 p-8 py-18 shadow-xl">
       <ImageComponent
         src="/assets/beta/benefits/arrow.png"
-        className="absolute lg:-top-32 lg:-left-24 lg:rotate-0 -top-36 left-0 h-32 lg:h-40 "
+        className="absolute lg:-top-32 lg:-left-24 lg:rotate-0 -top-28 left-0 h-24 lg:h-36 "
       />
       <div className="lg:w-[50%]  flex flex-col lg:items-start lg:gap-10 gap-5 lg:pt-4 text-center lg:text-left">
         <ImageComponent src={"assets/beta/benefits/rewards.png"} alt="Project Forest" className="-mt-4 2xl:h-[400px] self-center" />
