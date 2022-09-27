@@ -9,7 +9,7 @@ const Hero = () => {
         Reforestation Is Here
       </h4>
       <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl ">
-        Project Forest's closed beta is now live. Be the first to experience the Grow-to-Earn app and earn
+        Project Forest&apos;s closed beta is now live. Be the first to experience the Grow-to-Earn app and earn
         exclusive rewards. Pre-registrations for the closed beta have concluded, and beta invites have
         been sent out. Players that wish to be a part of the closed beta can
         stay tuned for updates in the coming days.<br></br>
