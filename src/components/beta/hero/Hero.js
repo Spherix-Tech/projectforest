@@ -13,7 +13,7 @@ const Hero = () => {
         exclusive rewards. Pre-registrations for the closed beta have concluded, and beta invites have
         been sent out. Players that wish to be a part of the closed beta can
         stay tuned for updates in the coming days.<br></br>
-        <br></br> Let’s rebuild the Earth’s environment one branch at a time.
+        <br></br> Let&apos;s rebuild the Earth&apos;s environment one branch at a time.
       </p>
       <p className="text-primaryBlue text-base md:text-xl md:w-3/4 lg:w-2/4  "></p>
       {/* <a href="#claim">
