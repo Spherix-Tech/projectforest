@@ -6,7 +6,7 @@ const allTimelineData = [
         date: "20 Sep 2022 - 20 Oct 2022",
         image: "phase-1.png",
         status: true,
-        desktopBorder: "md:left-[100%] md:w-[130%] w-[370%] left-[100%] "
+        desktopBorder: "md:left-[100%] md:w-[130%] w-[150%] left-[100%] "
     },
     {
         phase: "PHASE 2",
@@ -24,7 +24,7 @@ const allTimelineData = [
         date: "29 Nov 2022 - 31 Dec 2022",
         image: "phase-3.png",
         status: false,
-        desktopBorder: "md:left-[100%]  md:w-[130%] w-[370%] left-[100%]"
+        desktopBorder: "md:left-[100%]  md:w-[130%] w-[150%] left-[100%]"
     },
     {
         phase: "PHASE 4",
