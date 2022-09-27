@@ -23,12 +23,12 @@ const Timeline = () => {
         the closed beta is now live, followed by the NFT Reveal, Open Public
         Beta, and finally the official launch of Project Forest.
       </p>
-      <div className="flex md:flex-row flex-col gap-6 pt-10 ">
+      <div className="flex md:flex-row flex-col gap-6 pt-10">
         {timelineData.map((e, i) => {
           return (
             <div
               key={i}
-              className="flex flex-col justify-center items-center text-labelTextColor  max-w-[200px] "
+              className="flex flex-col justify-center items-center text-labelTextColor md:max-w-[200px] "
             >
               <div className={`${e.status === true ? 'bg-[#C2C982]' : 'bg-white'} m-2 bg-white w-[100px] h-[100px] rounded-full flex justify-center items-center font-semibold shadow-xl ring-white ring-[1px] relative z-100`}>
                 {e.phase}
