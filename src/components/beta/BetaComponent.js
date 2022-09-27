@@ -3,12 +3,14 @@ import Hero from './hero/Hero';
 import Benefits from './benefits/benefits';
 import ClaimBeta from './claim-beta/ClaimBeta';
 import ImageComponent from '../shared/ImageComponent';
+import Timeline from './timeline/Timeline';
 
 function BetaComponent() {
   return (
     <div className='w-full relative'>
       <Hero />
       <div className='bg-[#f3f1cb] w-full section-spacing'>
+        <Timeline />
         <ClaimBeta />
         <Benefits />
       </div>
