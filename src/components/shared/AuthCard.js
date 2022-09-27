@@ -7,7 +7,7 @@ function AuthCard({ component }) {
         <div className="hidden md:block flex-1 how-section-bg h-[98.5%] ml-[8px] rounded-[1rem] xl:rounded-[2rem]">
           <ImageComponent
             src="/assets/authentication/left-side-img.webp"
-            className="h-full w-[330px] m-auto"
+            className="h-full w-[330px] m-auto object-contain"
           />
         </div>
         <div className="flex-1 flex justify-center items-center m-auto text-labelTextColor">
