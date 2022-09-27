@@ -37,7 +37,7 @@ const Timeline = () => {
               </div>
 
               {e.status === true ? (
-                <div className="flex flex-col md:h-[80px]">
+                <div className="flex flex-col md:h-[100px]">
                     <div className="flex flex-row gap-[5px]">
                   <ImageComponent src="/assets/beta/timeline/check.svg" className="-mb-3" />
                   <p className=" font-semibold pt-4 italic text-[14px]">{e.title}</p>
@@ -47,7 +47,7 @@ const Timeline = () => {
                   <p></p>
                 </div>
               ) : (
-                  <div className="md:h-[80px]">
+                  <div className="md:h-[100px]">
                 <p className=" font-semibold pt-4 italic text-[14px]">{e.title}</p>
                 <p className="text-[12px] pt-2 text-opacity-70 text-labelTextColor">{e.text}</p>
                 <p className="md:hidden block py-2 text-[12px] italic font-semibold text-opacity-80 text-labelTextColor">{e.date}</p>
