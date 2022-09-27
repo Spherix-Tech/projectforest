@@ -19,7 +19,7 @@ const Timeline = () => {
         the closed beta is now live, followed by the NFT Reveal, Open Public
         Beta, and finally the official launch of Project Forest.
       </p>
-      <div className="flex flex-row gap-6 pt-10 ">
+      <div className="flex md:flex-row flex-col gap-6 pt-10 ">
         {timelineData.map((e, i) => {
           return (
             <div
@@ -33,27 +33,30 @@ const Timeline = () => {
               </div>
 
               {e.status === true ? (
-                <div className="flex flex-col h-[60px]">
+                <div className="flex flex-col md:h-[60px]">
                     <div className="flex flex-row gap-[5px]">
                   <ImageComponent src="/assets/beta/timeline/check.svg" className="-mb-3" />
                   <p className=" font-semibold pt-4 italic text-[14px]">{e.title}</p>
                   </div>
                   <p className="text-[12px] pt-2 text-opacity-70 text-labelTextColor">{e.text}</p>
+                  <p className="md:hidden block py-2 text-[12px] italic font-semibold text-opacity-80 text-labelTextColor ">{e.date}</p>
+                  <p></p>
                 </div>
               ) : (
-                  <div className="h-[60px]">
+                  <div className="md:h-[60px]">
                 <p className=" font-semibold pt-4 italic text-[14px]">{e.title}</p>
                 <p className="text-[12px] pt-2 text-opacity-70 text-labelTextColor">{e.text}</p>
+                <p className="md:hidden block py-2 text-[12px] italic font-semibold text-opacity-80 text-labelTextColor">{e.date}</p>
                 </div>
               )}
 
              
-              <ImageComponent src={"/assets/beta/timeline/" + e.image } className="py-6 object-contain" />
+              <ImageComponent src={"/assets/beta/timeline/" + e.image } className="py-6 object-contain md:block hidden" />
             </div>
           );
         })}
       </div>
-      {/* <div className="border border-dashed border-[#434343] border-opacity-20 w-[50%] absolute top-[70%] z-0"></div> */}
+      <div className="border border-dashed border-[#434343] border-opacity-20 w-[150%] mt-12 md:hidden block"></div>
     </div>
   );
 };
