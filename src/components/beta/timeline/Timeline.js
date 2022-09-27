@@ -6,7 +6,7 @@ const timelineData = getAllTimelineData();
 
 const Timeline = () => {
   return (
-    <div className="flex  flex-col items-center text-center relative">
+    <div className="flex flex-col items-center text-center 2xl:pt-10 relative">
        <ImageComponent
         src="/assets/beta/timeline/arrow.svg"
         className="absolute lg:-top-24 -top-[90px] lg:-right-30 right-5 lg:rotate-0 h-24 lg:h-36 z-[100]"
@@ -37,7 +37,7 @@ const Timeline = () => {
               </div>
 
               {e.status === true ? (
-                <div className="flex flex-col md:h-[60px]">
+                <div className="flex flex-col md:h-[80px]">
                     <div className="flex flex-row gap-[5px]">
                   <ImageComponent src="/assets/beta/timeline/check.svg" className="-mb-3" />
                   <p className=" font-semibold pt-4 italic text-[14px]">{e.title}</p>
@@ -47,7 +47,7 @@ const Timeline = () => {
                   <p></p>
                 </div>
               ) : (
-                  <div className="md:h-[60px]">
+                  <div className="md:h-[80px]">
                 <p className=" font-semibold pt-4 italic text-[14px]">{e.title}</p>
                 <p className="text-[12px] pt-2 text-opacity-70 text-labelTextColor">{e.text}</p>
                 <p className="md:hidden block py-2 text-[12px] italic font-semibold text-opacity-80 text-labelTextColor">{e.date}</p>

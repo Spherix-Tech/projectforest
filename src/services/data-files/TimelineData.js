@@ -3,7 +3,7 @@ const allTimelineData = [
         phase: "PHASE 1",
         title: "Closed Beta - Ongoing",
         text: "Be the first one to play Project Forest",
-        date: "20 Sep 2022 - 20 Oct 2022",
+        date: "27 Sep 2022 - 20 Oct 2022",
         image: "phase-1.png",
         status: true,
         desktopBorder: "md:left-[100%] md:w-[130%] w-[160%] left-[100%] "
@@ -19,7 +19,7 @@ const allTimelineData = [
     },
     {
         phase: "PHASE 3",
-        title: "Open Beta - Upcoming",
+        title: "Open Beta - Coming Soon",
         text: "Play and get rewarded for promoting reforestation.",
         date: "29 Nov 2022 - 31 Dec 2022",
         image: "phase-3.png",
@@ -28,7 +28,7 @@ const allTimelineData = [
     },
     {
         phase: "PHASE 4",
-        title: "Official Launch – Upcoming",
+        title: "Official Launch – Coming Soon",
         text: "The big day – the official release of Project Forest.",
         date: "1 January 2023",
         image: "phase-4.png",
