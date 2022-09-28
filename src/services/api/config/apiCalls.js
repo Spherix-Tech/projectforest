@@ -14,7 +14,7 @@ const customCalls = getCustomCalls(customAxios);
 const apiCall = async (callback, header) => {
   if (!header) {
     header = {
-      "Access-Control-Allow-Origin": "*, https://projectforest.io",
+      "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
     };
   }
