@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
           <Link href="/beta" className="cursor-pointer" rel="noreferrer">
             <button className="btnPrimary lg:w-60 w-40 mr-0">
-              Play Beta!
+              JOIN BETA!
             </button>
           </Link>
           <a
@@ -42,7 +42,7 @@ const Hero = () => {
             rel="noreferrer"
           >
             <button className=" btnSecondary lg:w-60 w-40 mr-0">
-              Litepaper
+              LITEPAPER
             </button>
           </a>
         </div>
