@@ -68,53 +68,46 @@ export const WalletList = (props) => {
   };
 
   const linkWalletHandler = useCallback(async () => {
-    console.log("In link");
     setLoading(true);
     // if (!selectedWalletName) return;
     try {
       let address = account?.address;
-      if (connectionStatus !== STATUS_CONNECTED) {
-        const accountInfo = await connect();
-        if (!accountInfo) throw Error("Connection failed please try again");
-        address = accountInfo?.address;
-        if (address) {
-          console.log("address", address);
-          const userObj = userContaxt.state.user ?? null;
-          console.log(userObj);
-          const apiReq = getSignupApiReqBody(address, userObj);
-          const apiResponse = await signUpApi(apiReq);
-          console.log(apiResponse);
-          const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-          console.log(parsedResponse);
-          if (parsedResponse.error) {
-            setWalletConnectionResponseObj({
-              type: "error",
-              message: parsedResponse.error,
-              imageName: "error-mark.svg",
-              link: "/signup/wallet",
-            });
-          } else {
-            let routerLink = "/";
-            const signupStarted = getCookies("signup");
-            if (signupStarted && signupStarted === "beta") {
-              routerLink = "/beta";
-            }
-            userContaxt.dispatch({
-              type: "WALLET_CONNECTED",
-              payload: { walletId: address },
-            });
-            setWalletConnectionResponseObj({
-              type: "success",
-              message: "Account created and wallet Connected Successfully",
-              imageName: "success-mark.svg",
-              link: routerLink,
-            });
-            setTimeout(() => {
-              return router.push(routerLink);
-            }, 1500);
+      const accountInfo = await connect();
+      if (!accountInfo) throw Error("Connection failed please try again");
+      address = accountInfo?.address;
+      if (address) {
+        const userObj = userContaxt.state.user ?? null;
+        const apiReq = getSignupApiReqBody(address, userObj);
+        const apiResponse = await signUpApi(apiReq);
+        const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+        if (parsedResponse.error) {
+          setWalletConnectionResponseObj({
+            type: "error",
+            message: parsedResponse.error,
+            imageName: "error-mark.svg",
+            link: "/signup/wallet",
+          });
+        } else {
+          let routerLink = "/";
+          const signupStarted = getCookies("signup");
+          if (signupStarted && signupStarted === "beta") {
+            routerLink = "/beta";
           }
-          setLoading(false);
+          userContaxt.dispatch({
+            type: "WALLET_CONNECTED",
+            payload: { walletId: address },
+          });
+          setWalletConnectionResponseObj({
+            type: "success",
+            message: "Account created and wallet Connected Successfully",
+            imageName: "success-mark.svg",
+            link: routerLink,
+          });
+          setTimeout(() => {
+            return router.push(routerLink);
+          }, 1500);
         }
+        setLoading(false);
       }
     } catch (err) {
       const errorMessage = getErrorMessage(err);
