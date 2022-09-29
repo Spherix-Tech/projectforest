@@ -7,6 +7,10 @@ const timelineData = getAllTimelineData();
 const Timeline = () => {
   return (
     <div className="flex flex-col items-center text-center 2xl:pt-10 relative">
+      <ImageComponent
+        src="/assets/beta/timeline/arrow.svg"
+        className="absolute lg:-top-24 -top-[90px] lg:-right-30 right-5 lg:rotate-0 h-24 lg:h-36 z-[100]"
+      />
       <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 pt-3 py-6 ">
         Launch Phase Timeline
       </h2>
