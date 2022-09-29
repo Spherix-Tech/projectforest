@@ -86,6 +86,8 @@ export const LoginComponent = (props) => {
             setTimeout(() => {
               router.push("/");
             }, 2000);
+          } else {
+            throw Error(response.error);
           }
         }
       }
