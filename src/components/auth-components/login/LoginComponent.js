@@ -89,6 +89,8 @@ export const LoginComponent = (props) => {
           } else {
             throw Error(response.error);
           }
+        } else {
+          throw Error(parsedResponse.error);
         }
       }
     } catch (err) {
