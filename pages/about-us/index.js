@@ -121,13 +121,18 @@ export default function AboutUs() {
                 </p>
 
                 <div className="flex justify-between items-center flex-col-reverse md:flex-row mt-[2rem] md:mt-[5rem] md:gap-[4rem] gap-[2rem] ">
-                  <div className="w-full h-[255px] md:w-[40%] md:h-[350px] bg-[#434343] bg-opacity-10 rounded-2xl mt-6 md:mt-0"></div>
-                  <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
-                  <div className="w-full ">
-                    <PageGradientTitle
-                      title="Mission"
-                      className="uppercase"
+                  <div className=" bg-[#434343] bg-opacity-10 rounded-2xl mt-6 md:mt-0">
+                    <ImageComponent
+                      src="/assets/about-us/mission.png"
+                      className="w-full h-[255px]"
                     />
+                  </div>
+                  <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
+                    <div className="w-full ">
+                      <PageGradientTitle
+                        title="Mission"
+                        className="uppercase"
+                      />
                     </div>
                     <p className="page-description mt-4">
                       Project Forest is a Web3 project with an initiative to
@@ -144,10 +149,7 @@ export default function AboutUs() {
                 <div className="flex justify-between items-center flex-col md:flex-row mt-[2rem] md:mt-[5rem] md:gap-[4rem] gap-[2rem] ">
                   <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
                     <div className="w-full ">
-                    <PageGradientTitle
-                      title="Vision"
-                      className="uppercase"
-                    />
+                      <PageGradientTitle title="Vision" className="uppercase" />
                     </div>
                     <p className="page-description mt-4">
                       We envision ourselves to be the pioneers that introduce
@@ -160,10 +162,15 @@ export default function AboutUs() {
                       space.
                     </p>
                   </div>
-                  <div className="w-full h-[255px] md:w-[40%] md:h-[350px] bg-[#434343] bg-opacity-10 rounded-2xl"></div>
+                  <div className=" bg-[#434343] bg-opacity-10 rounded-2xl">
+                    <ImageComponent
+                      src="/assets/about-us/vision.png"
+                      className="w-full h-[255px]"
+                    />
+                  </div>
                 </div>
-                <div className="border-dashed h-[10px] border-t-[2px] md:mt-16 mt-12 border-[#434343] border-opacity-10"></div>
-                <Team />
+                {/* <div className="border-dashed h-[10px] border-t-[2px] md:mt-16 mt-12 border-[#434343] border-opacity-10"></div> */}
+                {/* <Team /> */}
               </div>
             </div>
 
