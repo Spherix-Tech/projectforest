@@ -24,17 +24,17 @@ const Hero = () => {
 
       <div className="flex justify-center">
         <ImageComponent
-          src={"/assets/gameplay-new.png"}
-          className="md:w-[50%] w-full"
+          src={"/assets/gameplay.webp"}
+          className=" w-full"
         />
       </div>
 
       <ImageComponent
-        src={"/assets/beta/hero/left-tree.png"}
+        src={"/assets/beta/hero/left-tree.webp"}
         className="absolute left-0 top-24 h-[700px] z-50 lg:block hidden"
       />
       <ImageComponent
-        src={"/assets/beta/hero/right-tree.png"}
+        src={"/assets/beta/hero/right-tree.webp"}
         className="absolute right-0 top-24 h-[700px] z-50 hidden lg:block"
       />
     </div>

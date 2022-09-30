@@ -17,11 +17,11 @@ function BetaComponent() {
         <Benefits />
       </div>
       <ImageComponent
-        src={'/assets/beta/claim/left-tree.png'}
+        src={'/assets/beta/claim/left-tree.webp'}
         className='absolute left-0 2xl:bottom-[1000px] bottom-[1250px] h-[400px] z-50 lg:block hidden'
       />
       <ImageComponent
-        src={'/assets/beta/claim/right-tree.png'}
+        src={'/assets/beta/claim/right-tree.webp'}
         className='absolute right-0 2xl:bottom-[1000px] bottom-[1250px] h-[400px] z-50 hidden lg:block'
       />
 

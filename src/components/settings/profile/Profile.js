@@ -5,7 +5,7 @@ import TextField from "../TextField";
 
 const Profile = () => {
   const picker = useRef();
-  const [imgUrl, setImgUrl] = useState("/assets/logo.png");
+  const [imgUrl, setImgUrl] = useState("/assets/logo.webp");
 
   const pickImage = (event) => {
     const fileReader = new FileReader();
