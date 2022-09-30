@@ -6,6 +6,7 @@ import {
   MEDIUM_LINK,
   TWITTER_LINK,
 } from "../../utilities/constants";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -23,23 +24,27 @@ const Hero = () => {
           <span className="text-textDescription font-normal ">
             Project Forest is a collection of sustainability-focused NFTs that
             let you make a positive impact on the environment through a unique
-            GROW-to-EARN experience. Each time an NFT is minted in Project
+            Grow-to-Earn experience. Each time an NFT is minted in Project
             Forest, a portion of the proceeds are donated to NGOs to fund
             reforestation measures across the world.
           </span>
         </p>
         <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
+          <Link href="/beta" className="cursor-pointer" rel="noreferrer">
+            <button className="btnPrimary lg:w-60 w-40 mr-0">
+              JOIN BETA!
+            </button>
+          </Link>
           <a
             href={LITEPAPER_LINK}
             target="_blank"
             className="cursor-pointer"
             rel="noreferrer"
           >
-            <button className="btnPrimary lg:w-60 w-40 mr-0">Litepaper</button>
+            <button className=" btnSecondary lg:w-60 w-40 mr-0">
+              LITEPAPER
+            </button>
           </a>
-          <button className="disabled cursor-default btnSecondary lg:w-60 w-40 mr-0">
-            Mint Now
-          </button>
         </div>
 
         <div className="w-full flex flex-row justify-center 2xl:-ml-[6.5rem] ">

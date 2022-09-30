@@ -60,6 +60,9 @@ h2 {
 font-family: "Poppins", sans-serif;
 }
 
+h4 {
+  font-family: "Montserrat";
+}
 
 .container-how {
 height: auto;
@@ -100,4 +103,11 @@ button.disabled{
 }
 .ReactQueryDevtools{
   display: none !important;
+}
+
+.custom-gradient {
+  background: linear-gradient(to bottom, #d4f0f200 75%, #f3f1cb);
+}
+main{
+  height: 100vh;
 }

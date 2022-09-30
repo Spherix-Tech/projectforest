@@ -58,8 +58,8 @@ export const LoginComponent = (props) => {
         if (walletAddress) {
           const apiResponse = await getWalletNonceApi(1, walletAddress);
           const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-          const signature = await signMessage(parsedResponse.data.nonce);
           if (!parsedResponse.error) {
+            const signature = await signMessage(parsedResponse.data.nonce);
             const apiParams = {
               category: 1,
               address: walletAddress,
