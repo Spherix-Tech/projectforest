@@ -50,45 +50,47 @@ export const LoginComponent = (props) => {
     setLoading(true);
     setWalletConnectionResponseObj(null);
     try {
-      if (connectionStatus !== STATUS_CONNECTED) {
-        let walletAddress = await connect();
-        console.log("walletAddress", walletAddress);
-        if (!walletAddress) throw Error("Can't connect please try again");
-        walletAddress = getWalletAddressStr(walletAddress);
-        if (walletAddress) {
-          const apiResponse = await getWalletNonceApi(1, walletAddress);
-          const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-          if (!parsedResponse.error) {
-            const signature = await signMessage(parsedResponse.data.nonce);
-            const apiParams = {
-              category: 1,
-              address: walletAddress,
-              signature: signature,
-            };
-            let response = await loginByWalletApi(apiParams);
-            response = getDataOrErrorMessageObj(response);
-            if (!response.error) {
-              userContaxt.dispatch({
-                type: "LOGIN_SUCCESS",
-                payload: {
-                  email: response.data.user.account,
-                  avatar: response.data.user.avatar,
-                  accessToken: response.data.token.access_token,
-                  refreshToken: response.data.token.refresh_token,
-                },
-              });
-              setWalletConnectionResponseObj({
-                type: "success",
-                message: "Logged In Successfully",
-                imageName: "success-mark.svg",
-                link: "/",
-              });
-              setLoading(false);
-              setTimeout(() => {
-                router.push("/");
-              }, 2000);
-            }
+      let walletAddress = await connect();
+      console.log("walletAddress", walletAddress);
+      if (!walletAddress) throw Error("Can't connect please try again");
+      walletAddress = getWalletAddressStr(walletAddress);
+      if (walletAddress) {
+        const apiResponse = await getWalletNonceApi(1, walletAddress);
+        const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+        if (!parsedResponse.error) {
+          const signature = await signMessage(parsedResponse.data.nonce);
+          const apiParams = {
+            category: 1,
+            address: walletAddress,
+            signature: signature,
+          };
+          let response = await loginByWalletApi(apiParams);
+          response = getDataOrErrorMessageObj(response);
+          if (!response.error) {
+            userContaxt.dispatch({
+              type: "LOGIN_SUCCESS",
+              payload: {
+                email: response.data.user.account,
+                avatar: response.data.user.avatar,
+                accessToken: response.data.token.access_token,
+                refreshToken: response.data.token.refresh_token,
+              },
+            });
+            setWalletConnectionResponseObj({
+              type: "success",
+              message: "Logged In Successfully",
+              imageName: "success-mark.svg",
+              link: "/",
+            });
+            setLoading(false);
+            setTimeout(() => {
+              router.push("/");
+            }, 2000);
+          } else {
+            throw Error(response.error);
           }
+        } else {
+          throw Error(parsedResponse.error);
         }
       }
     } catch (err) {
