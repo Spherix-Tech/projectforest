@@ -9,24 +9,34 @@ const Hero = () => {
         Reforestation Is Here
       </h4>
       <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl ">
-        Project Forest&apos;s closed beta is now live. Be the first to experience the Grow-to-Earn app and earn
-        exclusive rewards. Pre-registrations for the closed beta have concluded, and beta invites have
-        been sent out. Players that wish to be a part of the closed beta can
-        stay tuned for updates in the coming days.<br></br>
-        <br></br> Let&apos;s rebuild the Earth&apos;s environment one branch at a time.
+        Project Forest&apos;s closed beta is now live. Be the first to
+        experience the Grow-to-Earn app and earn exclusive rewards.
+        Pre-registrations for the closed beta have concluded, and beta invites
+        have been sent out. Players that wish to be a part of the closed beta
+        can stay tuned for updates in the coming days.<br></br>
+        <br></br> Let&apos;s rebuild the Earth&apos;s environment one branch at
+        a time.
       </p>
-      <p className="text-primaryBlue text-base md:text-xl md:w-3/4 lg:w-2/4  "></p>
-      {/* <a href="#claim">
-        <button className="md:w-64 w-44 py-4 btnBeta">
-          <p>Play Beta Now</p>
-        </button>
-      </a> */}
-
+      <div className="flex flex-row gap-3">
+        <div>
+          <a href="">
+            <button className=" btnBeta bg-[#C3CA84]">
+              <p>Download Beta (APK) </p>
+            </button>
+          </a>
+          <p className="pt-2 text-[#A0A0A0] text-xs">For mobile phones only</p>
+        </div>
+        <a href="">
+          <button className=" btnBeta bg-transparent">
+            <p>Get Activation Code</p>
+          </button>
+          <p className="pt-2 text-[#A0A0A0] text-xs">
+            Complete gleam to receive code
+          </p>
+        </a>
+      </div>
       <div className="flex justify-center">
-        <ImageComponent
-          src={"/assets/gameplay.webp"}
-          className=" w-full"
-        />
+        <ImageComponent src={"/assets/gameplay.webp"} className=" w-full" />
       </div>
 
       <ImageComponent

@@ -19,9 +19,7 @@ const Timeline = () => {
         release date of Project Forest just around the corner. Currently, the
         devs are busy perfecting the Project Forest application, making sure
         every sapling is getting enough care and every branch is getting enough
-        sun. The timeline below illustrates the Project Forest Launch Timeline –
-        the closed beta is now live, followed by the NFT Reveal, Open Public
-        Beta, and finally the official launch of Project Forest.
+        sun. 
       </p>
       <div className="flex md:flex-row flex-col gap-6 pt-10">
         {timelineData.map((e, i) => {
