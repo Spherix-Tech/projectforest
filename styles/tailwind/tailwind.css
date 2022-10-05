@@ -144,6 +144,6 @@
   }
 
   .btnBeta {
-    @apply cursor-pointer rounded-xl md:rounded-3xl px-4 md:px-6 whitespace-nowrap py-3 md:py-5 text-labelTextColor font-semibold text-[11px] md:text-xl border-2 border-white shadow-[inset_0_-1px_16px_rgba(0,0,0,0.3)] ;
+    @apply cursor-pointer rounded-xl md:rounded-3xl px-4 md:px-8 whitespace-nowrap py-3 md:py-5 text-labelTextColor font-semibold text-[11px] md:text-xl border-2 border-white shadow-[inset_0_-1px_16px_rgba(0,0,0,0.3)] ;
   }
 } ;
