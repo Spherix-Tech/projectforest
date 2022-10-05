@@ -17,28 +17,36 @@ const Hero = () => {
         <br></br> Let&apos;s rebuild the Earth&apos;s environment one branch at
         a time.
       </p>
-      {/* <div className="flex flex-row gap-3 w-full justify-center">
+      <div className="flex flex-row gap-3 w-full justify-center">
         <div className="w-[165px] md:w-auto flex flex-col">
-          <a href="">
-          <button className=" btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]">
-            <p>Download Beta (APK) </p>
-          </button>
+          <a
+            href="https://projectforest.io/download-game"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className=" btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]">
+              <p>Download Beta (APK) </p>
+            </button>
           </a>
           <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
             For mobile phones only
           </p>
         </div>
         <div className="w-[165px] md:w-auto flex flex-col">
-          <a href="">
-          <button className=" btnBeta bg-transparent hover:bg-white">
-            <p>Get Activation Code</p>
-          </button>
+          <a
+            href="https://gleam.io/competitions/DB317-project-forest-closed-beta-invite"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className=" btnBeta bg-transparent hover:bg-white">
+              <p>Get Activation Code</p>
+            </button>
           </a>
           <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
             Complete gleam to receive code
           </p>
         </div>
-      </div> */}
+      </div>
       <div className="flex justify-center">
         <ImageComponent src={"/assets/gameplay.webp"} className=" w-full" />
       </div>
