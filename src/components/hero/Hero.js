@@ -30,7 +30,8 @@ const Hero = () => {
             reforestation measures across the world.
           </span>
         </p>
-        <div className="flex flex-row pt-1 navscreen:items-start gap-4 ">
+        <div className="flex flex-col  gap-4 ">
+        <div className="flex flex-row pt-1 gap-4 ">
           <Link href="/beta" className="cursor-pointer" rel="noreferrer">
             <button className="btnPrimary lg:w-60 w-40 mr-0">
               JOIN BETA!
@@ -46,9 +47,8 @@ const Hero = () => {
               LITEPAPER
             </button>
           </a>
-        </div>
-
-        <div className="w-full flex flex-row justify-center 2xl:-ml-[6.5rem] ">
+          </div>
+          <div className="w-full flex flex-row justify-center">
           <a
             className=" flex flex-row items-center justify-center"
             href={TWITTER_LINK}
@@ -94,6 +94,8 @@ const Hero = () => {
             />
           </a>
         </div>
+        </div>
+
       </div>
       <div className="flex flex-col">
         <ImageComponent

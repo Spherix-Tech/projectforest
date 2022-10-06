@@ -124,11 +124,11 @@ export const LoginComponent = (props) => {
     <div className="w-[80%]">
       <div className="absolute top-[2.25rem] right-[2.5rem] text-[12px] md:text-[15px]">
         <p className="font-medium">
-          Not a member?
+          New user? 
           <Link href="/signup">
             <a className="text-[#4599FC] underline font-semibold">
               {" "}
-              Register now
+               Register now
             </a>
           </Link>
         </p>
