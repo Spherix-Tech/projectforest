@@ -37,7 +37,7 @@ const Navbar = () => {
         >
           <ImageComponent
             alt="Project Forest Logo"
-            src={"/assets/logo.png"}
+            src={"/assets/logo.webp"}
             className="h-[66px] lg:h-[100px]"
           />
           <h2 className="lg:text-[26px] text-[18px] lg:leading-[2rem] leading-6">
@@ -95,7 +95,7 @@ const Navbar = () => {
               <ImageComponent
                 alt="Project Forest Logo"
                 className="h-[66px] lg:h-[100px]"
-                src={"/assets/logo.png"}
+                src={"/assets/logo.webp"}
               />
               <NavbarMenuItems
                 classname="w-full h-max flex-col flex items-start text-left whitespace-nowrap"

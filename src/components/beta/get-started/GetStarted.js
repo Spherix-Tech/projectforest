@@ -34,13 +34,15 @@ const GetStarted = () => {
               <p className=" md:text-2xl text-xl font-semibold">{e.title}</p>
               <p className="font-light py-2 text-sm min-h-[100px]">{e.text}</p>
               {e.linkAvailable === true ? (
-                <div className="flex flex-row gap-2 items-center justify-center pb-2">
-                  <p className="">{e.subText}</p>
-                  <ImageComponent
-                    src={"/assets/beta/get-started/" + e.subIcon}
-                    className="object-contain"
-                  />
-                </div>
+                <a href={e.link} target="_blank" rel="noreferrer">
+                  <div className="flex flex-row gap-2 items-center justify-center pb-2 hover:underline">
+                    <p className="">{e.subText}</p>
+                    <ImageComponent
+                      src={"/assets/beta/get-started/" + e.subIcon}
+                      className="object-contain"
+                    />
+                  </div>
+                </a>
               ) : (
                 ""
               )}

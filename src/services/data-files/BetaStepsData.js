@@ -7,7 +7,7 @@ const betaStepsData = [
         subText: "Closed beta APK",
         subIcon: "download-btn.png",
         linkAvailable: true,
-        link: "",
+        link: "https://projectforest.io/download-game",
         bgColor: "bg-[#9ED57F]",
     },
     {
@@ -18,7 +18,7 @@ const betaStepsData = [
         subText: "Gleam Tasks",
         subIcon: "claim-check.png",
         linkAvailable: true,
-        link: "",
+        link: "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
         bgColor: "bg-[#EA8EA2]",
     },
     {
