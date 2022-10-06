@@ -4,6 +4,7 @@ import {
   DISCORD_LINK,
   LITEPAPER_LINK,
   MEDIUM_LINK,
+  TELEGRAM_LINK,
   TWITTER_LINK,
 } from "../../utilities/constants";
 import Link from "next/link";
@@ -78,6 +79,17 @@ const Hero = () => {
           >
             <ImageComponent
               src={"/assets/hero/medium.svg"}
+              className="mx-[8px]"
+            />
+          </a>
+          <a
+            className=" flex items-center justify-center"
+            href={TELEGRAM_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ImageComponent
+              src={"/assets/hero/telegram.svg"}
               className="mx-[8px]"
             />
           </a>
