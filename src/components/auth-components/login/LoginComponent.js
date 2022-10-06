@@ -17,6 +17,7 @@ import {
   loginByWalletApi,
 } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
+import { getCookies, setCookies } from "../../../services/localStorage";
 
 const addressWallet = "";
 
@@ -83,9 +84,22 @@ export const LoginComponent = (props) => {
               link: "/",
             });
             setLoading(false);
-            setTimeout(() => {
-              router.push("/");
-            }, 2000);
+
+            let activationCode = getCookies("ACTIVATION_BUTTON_TRIGGERED");
+            if (activationCode === true) {
+              setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
+              setTimeout(() => {
+                window.open(
+                  "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
+                  "_blank"
+                );
+                router.push("/");
+              }, 500);
+            } else {
+              setTimeout(() => {
+                router.push("/");
+              }, 1000);
+            }
           } else {
             throw Error(response.error);
           }
