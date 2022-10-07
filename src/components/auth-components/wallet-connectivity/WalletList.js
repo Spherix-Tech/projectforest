@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState, useCallback, useContext } from "react";
 import { getAllWalletListData } from "../../../services/data-files/WalletListData";
-import { getCookies } from "../../../services/localStorage";
+import { getCookies, setCookies } from "../../../services/localStorage";
 import { STATUS_CONNECTED } from "../../../utilities/constants";
 import { connect, useWallet } from "../../../hooks/useWallet";
 import ImageComponent from "../../shared/ImageComponent";
@@ -118,7 +118,7 @@ export const WalletList = (props) => {
                 "_blank"
               );
               router.push(routerLink);
-            }, 500);
+            }, 1000);
           } else {
             setTimeout(() => {
               return router.push(routerLink);

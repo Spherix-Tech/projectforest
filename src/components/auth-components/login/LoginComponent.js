@@ -131,7 +131,7 @@ export const LoginComponent = (props) => {
                 <Link href="/signup">
                   <a className="text-[#4599FC] underline font-semibold">
                     {" "}
-                    Register now
+                    Register Now
                   </a>
                 </Link>
               </p>
@@ -145,7 +145,7 @@ export const LoginComponent = (props) => {
             <div className="my-[0.7rem] md:my-[1rem]">
               <button
                 onClick={connectWallet}
-                className="btnPrimary flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
+                className="btnPrimary mr-0 flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
               >
                 Login with MetaMask
               </button>
