@@ -91,9 +91,9 @@ export const LoginComponent = (props) => {
               setTimeout(() => {
                 window.open(
                   "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
-                  "_blank"
+                  "_self"
                 );
-                router.push("/");
+                //  router.push("/beta");
               }, 500);
             } else {
               setTimeout(() => {

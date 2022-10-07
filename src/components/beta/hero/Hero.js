@@ -17,7 +17,7 @@ const Hero = () => {
       setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
       window.open(
         "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
-        "_blank"
+        "_self"
       );
     } else {
       router.push("/login");
