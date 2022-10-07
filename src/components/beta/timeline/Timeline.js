@@ -6,22 +6,20 @@ const timelineData = getAllTimelineData();
 
 const Timeline = () => {
   return (
-    <div className="flex flex-col items-center text-center 2xl:pt-10 relative">
-      <ImageComponent
+    <div className="flex flex-col items-center text-center 2xl:pt-10">
+      {/* <ImageComponent
         src="/assets/beta/timeline/arrow.svg"
         className="absolute lg:-top-24 -top-[90px] lg:-right-30 right-5 lg:rotate-0 h-24 lg:h-36 z-[100]"
-      />
+      /> */}
       <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 pt-3 py-6 ">
-        Launch Phase Timeline
+        Launch Timeline
       </h2>
       <p className="md:w-[60%] w-full text-labelTextColor text-opacity-80 md:text-lg text-sm ">
         We have accomplished most of our major development milestones, with the
         release date of Project Forest just around the corner. Currently, the
         devs are busy perfecting the Project Forest application, making sure
         every sapling is getting enough care and every branch is getting enough
-        sun. The timeline below illustrates the Project Forest Launch Timeline –
-        the closed beta is now live, followed by the NFT Reveal, Open Public
-        Beta, and finally the official launch of Project Forest.
+        sun. 
       </p>
       <div className="flex md:flex-row flex-col gap-6 pt-10">
         {timelineData.map((e, i) => {

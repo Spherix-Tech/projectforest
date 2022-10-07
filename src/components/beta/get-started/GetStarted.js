@@ -12,7 +12,7 @@ const GetStarted = () => {
         className="absolute lg:-top-24 -top-[90px] lg:-right-30 right-5 lg:rotate-0 h-24 lg:h-36 z-[100]"
       />
       <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 pt-3 py-10 ">
-        Get Started
+      Steps to join Closed Beta
       </h2>
       <div className="flex flex-row flex-wrap lg:flex-nowrap lg:flex-row gap-4 justify-center">
         {betaSteps.map((e, i) => {
@@ -34,13 +34,15 @@ const GetStarted = () => {
               <p className=" md:text-2xl text-xl font-semibold">{e.title}</p>
               <p className="font-light py-2 text-sm min-h-[100px]">{e.text}</p>
               {e.linkAvailable === true ? (
-                <div className="flex flex-row gap-2 items-center justify-center pb-2">
-                  <p className="">{e.subText}</p>
-                  <ImageComponent
-                    src={"/assets/beta/get-started/" + e.subIcon}
-                    className="object-contain"
-                  />
-                </div>
+                <a href={e.link} target="_blank" rel="noreferrer">
+                  <div className="flex flex-row gap-2 items-center justify-center pb-2 hover:underline">
+                    <p className="">{e.subText}</p>
+                    <ImageComponent
+                      src={"/assets/beta/get-started/" + e.subIcon}
+                      className="object-contain"
+                    />
+                  </div>
+                </a>
               ) : (
                 ""
               )}

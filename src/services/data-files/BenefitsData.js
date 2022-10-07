@@ -6,7 +6,7 @@ const allBenefitsData = [
   },
   {
     title: "Exclusive NFT Airdrops",
-    text: "During the closed beta, 3 randomly selected players will be airdropped a Tree NFT, each day. At the end of the closed beta, each participant will also receive a guaranteed NFT free mint.",
+    text: "During each day of the closed beta phase, tree NFT airdrops will be rewarded randomly to players that find and report bugs, increase their daily activity and tweet images of their gameplay on the beta app.",
     image: "nft",
   },
   {
