@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState, useCallback, useContext } from "react";
 import { getAllWalletListData } from "../../../services/data-files/WalletListData";
-import { getCookies } from "../../../services/localStorage";
+import { getCookies, setCookies } from "../../../services/localStorage";
 import { STATUS_CONNECTED } from "../../../utilities/constants";
 import { connect, useWallet } from "../../../hooks/useWallet";
 import ImageComponent from "../../shared/ImageComponent";
@@ -68,53 +68,64 @@ export const WalletList = (props) => {
   };
 
   const linkWalletHandler = useCallback(async () => {
-    console.log("In link");
     setLoading(true);
     // if (!selectedWalletName) return;
     try {
       let address = account?.address;
-      if (connectionStatus !== STATUS_CONNECTED) {
-        const accountInfo = await connect();
-        if (!accountInfo) throw Error("Connection failed please try again");
-        address = accountInfo?.address;
-        if (address) {
-          console.log("address", address);
-          const userObj = userContaxt.state.user ?? null;
-          console.log(userObj);
-          const apiReq = getSignupApiReqBody(address, userObj);
-          const apiResponse = await signUpApi(apiReq);
-          console.log(apiResponse);
-          const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-          console.log(parsedResponse);
-          if (parsedResponse.error) {
-            setWalletConnectionResponseObj({
-              type: "error",
-              message: parsedResponse.error,
-              imageName: "error-mark.svg",
-              link: "/signup/wallet",
-            });
+      console.log(address);
+      const accountInfo = await connect();
+      debugger;
+      if (!accountInfo) throw Error("Connection failed please try again");
+      address = accountInfo?.address;
+      debugger;
+      if (address) {
+        const userObj = userContaxt.state.user ?? null;
+        const apiReq = getSignupApiReqBody(address, userObj);
+        const apiResponse = await signUpApi(apiReq);
+        const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+        if (parsedResponse.error) {
+          setWalletConnectionResponseObj({
+            type: "error",
+            message: parsedResponse.error,
+            imageName: "error-mark.svg",
+            link: "/signup/wallet",
+          });
+          setLoading(false);
+        } else {
+          let routerLink = "/";
+          const signupStarted = getCookies("signup");
+          if (signupStarted && signupStarted === "beta") {
+            routerLink = "/beta";
+          }
+          userContaxt.dispatch({
+            type: "WALLET_CONNECTED",
+            payload: { walletId: address },
+          });
+          setWalletConnectionResponseObj({
+            type: "success",
+            message: "Account created and wallet Connected Successfully",
+            imageName: "success-mark.svg",
+            link: routerLink,
+          });
+          setLoading(false);
+
+          let activationCode = getCookies("ACTIVATION_BUTTON_TRIGGERED");
+          if (activationCode === true) {
+            setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
+            setTimeout(() => {
+              window.open(
+                "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
+                "_self"
+              );
+              router.push(routerLink);
+            }, 1000);
           } else {
-            let routerLink = "/";
-            const signupStarted = getCookies("signup");
-            if (signupStarted && signupStarted === "beta") {
-              routerLink = "/beta";
-            }
-            userContaxt.dispatch({
-              type: "WALLET_CONNECTED",
-              payload: { walletId: address },
-            });
-            setWalletConnectionResponseObj({
-              type: "success",
-              message: "Account created and wallet Connected Successfully",
-              imageName: "success-mark.svg",
-              link: routerLink,
-            });
             setTimeout(() => {
               return router.push(routerLink);
             }, 1500);
           }
-          setLoading(false);
         }
+        setLoading(false);
       }
     } catch (err) {
       const errorMessage = getErrorMessage(err);

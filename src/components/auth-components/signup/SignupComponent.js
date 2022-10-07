@@ -116,7 +116,7 @@ export const SignupComponent = (props) => {
         type: "error",
         message: parsedResponse.error,
         imageName: "error-mark.svg",
-        link: "/signup",
+        link: "/login",
       });
       setLoading(false);
     } else {

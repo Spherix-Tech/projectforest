@@ -4,7 +4,7 @@ const allTimelineData = [
         title: "Closed Beta - Ongoing",
         text: "Be the first one to play Project Forest",
         date: "27 Sep 2022 - 20 Oct 2022",
-        image: "phase-1.png",
+        image: "phase-1.webp",
         status: true,
         desktopBorder: "md:left-[100%] md:w-[130%] w-[150%] left-[100%] "
     },
@@ -13,7 +13,7 @@ const allTimelineData = [
         title: "NFT Reveal - Upcoming",
         text: "Witness the reveal of the spectacular Tree NFTs.",
         date: "27 Oct 2022 - 25 Nov 2022",
-        image: "phase-2.png",
+        image: "phase-2.webp",
         status: false,
         desktopBorder: "md:left-[100%]  md:w-[130%] w-[160%] right-[100%]"
     },
@@ -22,7 +22,7 @@ const allTimelineData = [
         title: "Open Beta - Coming Soon",
         text: "Play and get rewarded for promoting reforestation.",
         date: "29 Nov 2022 - 31 Dec 2022",
-        image: "phase-3.png",
+        image: "phase-3.webp",
         status: false,
         desktopBorder: "md:left-[100%]  md:w-[130%] w-[150%] left-[100%]"
     },
@@ -31,7 +31,7 @@ const allTimelineData = [
         title: "Official Launch – Coming Soon",
         text: "The big day – the official release of Project Forest.",
         date: "1 January 2023",
-        image: "phase-4.png",
+        image: "phase-4.webp",
         status: false,
         desktopBorder: "md:right-[100%]  md:w-0 w-[160%] right-[100%]"
     },
