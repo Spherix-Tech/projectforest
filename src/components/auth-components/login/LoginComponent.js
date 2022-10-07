@@ -122,20 +122,20 @@ export const LoginComponent = (props) => {
 
   return (
     <div className="w-[80%]">
-      <div className="absolute top-[2.25rem] right-[2.5rem] text-[12px] md:text-[15px]">
-        <p className="font-medium">
-          New user? 
-          <Link href="/signup">
-            <a className="text-[#4599FC] underline font-semibold">
-              {" "}
-               Register now
-            </a>
-          </Link>
-        </p>
-      </div>
       {!walletConnectionResponseObj ? (
         <>
           <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
+            <div className="absolute top-[2.25rem] right-[2.5rem] text-[12px] md:text-[15px]">
+              <p className="font-medium">
+                New user?
+                <Link href="/signup">
+                  <a className="text-[#4599FC] underline font-semibold">
+                    {" "}
+                    Register now
+                  </a>
+                </Link>
+              </p>
+            </div>
             <div className="font-semibold text-[12px] md:text-[17px]">
               Hello again!{" "}
             </div>

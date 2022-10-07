@@ -1,18 +1,18 @@
 const betaStepsData = [
     {
         number: "1.png",
-        icon: "download.png",
+        icon: "register.png",
         title: "REGISTER",
         text: "Create an account on the Project Forest website by completing signup and connecting your MetaMask wallet",
         subText: "Register",
-        subIcon: "",
+        subIcon: "register-click.svg",
         linkAvailable: true,
         link: "",
         bgColor: "bg-[#9ED57F]",
     },
     {
         number: "2.png",
-        icon: "claim.png",
+        icon: "download.png",
         title: "DOWNLOAD",
         text: "Get the closed beta app. Click on the button below to download Project Forest’s APK on your phone.",
         subText: "Closed beta APK",
@@ -23,7 +23,7 @@ const betaStepsData = [
     },
     {
         number: "3.png",
-        icon: "enter.png",
+        icon: "claim.png",
         title: "CLAIM",
         text: "Claim your activation code by completing a set of tasks on Gleam. Click below to get started.",
         subText: "Gleam Tasks",

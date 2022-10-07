@@ -23,9 +23,22 @@ const StatusCard = ({ walletConnectionResponseObj, onNextClick }) => {
               alt="fail icon"
             />
           )}
-          <p className="text-sm md:text-lg pb-8 md:pb-0 text-center">
+          <p className="text-sm md:text-lg md:pb-0 text-center">
             {walletConnectionResponseObj.message}
-          </p>
+          </p>{" "}
+          {walletConnectionResponseObj.message === "Account does not exist." ? (
+            <p className="font-medium pb-4 md:pb-0">
+              New user?
+              <Link href="/signup">
+                <a className="text-[#4599FC] underline font-semibold">
+                  {" "}
+                  Register now
+                </a>
+              </Link>
+            </p>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
 

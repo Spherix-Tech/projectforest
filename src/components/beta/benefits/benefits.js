@@ -13,7 +13,7 @@ const benefits = () => {
       />
       <div className="lg:w-[50%]  flex flex-col lg:items-start lg:gap-10 gap-5 lg:pt-4 text-center lg:text-left">
         <ImageComponent src={"assets/beta/benefits/rewards.webp"} alt="Project Forest" className="-mt-4 2xl:h-[400px] self-center" />
-        <h2 className=" text-labelTextColor text-xl lg:text-3xl font-semibold ">
+        <h2 className=" text-xl md:text-4xl font-semibold text-labelTextColor">
           Closed Beta Rewards
         </h2>
         <p className="text-labelTextColor text-opacity-80 lg:text-lg text-base">

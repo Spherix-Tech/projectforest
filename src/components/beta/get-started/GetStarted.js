@@ -12,7 +12,7 @@ const GetStarted = () => {
         className="absolute lg:-top-24 -top-[90px] lg:-right-30 right-5 lg:rotate-0 h-24 lg:h-36 z-[100]"
       />
       <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 pt-3 py-10 ">
-        Get Started
+      Steps to join Closed Beta
       </h2>
       <div className="flex flex-row flex-wrap lg:flex-nowrap lg:flex-row gap-4 justify-center">
         {betaSteps.map((e, i) => {
