@@ -34,7 +34,7 @@ const GetStarted = () => {
               <p className=" md:text-2xl text-xl font-semibold">{e.title}</p>
               <p className="font-light py-2 text-sm min-h-[100px]">{e.text}</p>
               {e.linkAvailable === true ? (
-                <a href={e.link} target="_blank" rel="noreferrer">
+                <a href={e.link} target={e.target} rel="noreferrer">
                   <div className="flex flex-row gap-2 items-center justify-center pb-2 hover:underline">
                     <p className="">{e.subText}</p>
                     <ImageComponent
