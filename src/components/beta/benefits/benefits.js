@@ -31,6 +31,7 @@ const benefits = () => {
           <a
             href="https://medium.com/project-forest/its-raining-nfts-5c91aa69a0e4"
             target="_blank"
+            rel="noreferrer"
             className="pointer text-footerBgColor underline"
           >
             click here

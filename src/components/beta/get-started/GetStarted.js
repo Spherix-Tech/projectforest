@@ -55,6 +55,7 @@ const GetStarted = () => {
         <a
           href="https://medium.com/project-forest/closed-beta-registrations-resume-6d2bad46c672"
           target="_blank"
+          rel="noreferrer"
           className="pointer text-footerBgColor underline"
         >
           clicking here
