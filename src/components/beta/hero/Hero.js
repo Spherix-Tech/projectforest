@@ -29,11 +29,11 @@ const Hero = () => {
         Reforestation Is Here
       </h4>
       <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl ">
-        Project Forest's closed beta is now live. Be the first to experience the
-        Grow-to-Earn app and earn exclusive rewards. Project Forest's beta
-        registrations have re-opened. Interested players can now play Project
-        Forest beta for free by completing 2 simple steps and receiving the
-        activation code.
+        Project Forest&apos;s closed beta is now live. Be the first to
+        experience the Grow-to-Earn app and earn exclusive rewards. Project
+        Forest&apos;s beta registrations have re-opened. Interested players can
+        now play Project Forest beta for free by completing 2 simple steps and
+        receiving the activation code.
       </p>
       <div className="flex flex-row gap-3 w-full justify-center">
         <div className="w-[165px] md:w-auto flex flex-col">
