@@ -12,7 +12,11 @@ const benefits = () => {
         className="absolute lg:-top-32 lg:-left-24 lg:rotate-0 -top-28 left-0 h-24 lg:h-36 "
       />
       <div className="lg:w-[50%]  flex flex-col lg:items-start lg:gap-10 gap-5 lg:pt-4 text-center lg:text-left">
-        <ImageComponent src={"assets/beta/benefits/rewards.webp"} alt="Project Forest" className="-mt-4 2xl:h-[400px] self-center" />
+        <ImageComponent
+          src={"assets/beta/benefits/rewards.webp"}
+          alt="Project Forest"
+          className="-mt-4 2xl:h-[400px] self-center"
+        />
         <h2 className=" text-xl md:text-4xl font-semibold text-labelTextColor">
           Closed Beta Rewards
         </h2>
@@ -21,6 +25,17 @@ const benefits = () => {
           Forest’s closed beta. Register and participate to get a first look at
           the project and earn a variety of rewards including NFTs, project
           tokens and priority during future launches.
+        </p>
+        <p className="text-[#A0A0A0] text-[12px] leading-4 md:text-sm">
+          To learn more about earning NFT airdrops during the beta, {""}
+          <a
+            href="https://medium.com/project-forest/its-raining-nfts-5c91aa69a0e4"
+            target="_blank"
+            className="pointer text-footerBgColor underline"
+          >
+            click here
+          </a>
+          !
         </p>
         {/* <button className='cursor-pointer btnSecondary h-12  lg:w-56 w-40 mb-8 lg:mb-0'>
           Read More

@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import ImageComponent from "../../shared/ImageComponent";
-import {
-  setCookies,
-} from "../../../services/localStorage";
+import { setCookies } from "../../../services/localStorage";
 import { useRouter } from "next/router";
 import { UserContext } from "../../../context/userContext";
 
@@ -31,13 +29,11 @@ const Hero = () => {
         Reforestation Is Here
       </h4>
       <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl ">
-        Project Forest&apos;s closed beta is now live. Be the first to
-        experience the Grow-to-Earn app and earn exclusive rewards.
-        Pre-registrations for the closed beta have concluded, and beta invites
-        have been sent out. Players that wish to be a part of the closed beta
-        can stay tuned for updates in the coming days.<br></br>
-        <br></br> Let&apos;s rebuild the Earth&apos;s environment one branch at
-        a time.
+        Project Forest's closed beta is now live. Be the first to experience the
+        Grow-to-Earn app and earn exclusive rewards. Project Forest's beta
+        registrations have re-opened. Interested players can now play Project
+        Forest beta for free by completing 2 simple steps and receiving the
+        activation code.
       </p>
       <div className="flex flex-row gap-3 w-full justify-center">
         <div className="w-[165px] md:w-auto flex flex-col">
@@ -47,7 +43,7 @@ const Hero = () => {
             rel="noreferrer"
           >
             <button className=" btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]">
-              <p>Download Beta (APK) </p>
+              <p>Download Beta </p>
             </button>
           </a>
           <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
