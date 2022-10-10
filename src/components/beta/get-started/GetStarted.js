@@ -12,7 +12,7 @@ const GetStarted = () => {
         className="absolute lg:-top-24 -top-[90px] lg:-right-30 right-5 lg:rotate-0 h-24 lg:h-36 z-[100]"
       />
       <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 pt-3 py-10 ">
-      Steps to join Closed Beta
+        Steps to join Closed Beta
       </h2>
       <div className="flex flex-row flex-wrap lg:flex-nowrap lg:flex-row gap-4 justify-center">
         {betaSteps.map((e, i) => {
@@ -50,6 +50,18 @@ const GetStarted = () => {
           );
         })}
       </div>
+      <p className="md:w-[60%] w-full text-[#A0A0A0] text-[12px] leading-4 md:text-sm  text-center pt-4">
+        For more information, refer to the step-by-step registration tutorial by{" "}
+        <a
+          href="https://medium.com/project-forest/closed-beta-registrations-resume-6d2bad46c672"
+          target="_blank"
+          rel="noreferrer"
+          className="pointer text-footerBgColor underline"
+        >
+          clicking here
+        </a>
+        !
+      </p>
     </div>
   );
 };
