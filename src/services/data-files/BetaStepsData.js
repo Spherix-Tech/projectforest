@@ -19,7 +19,7 @@ const betaStepsData = [
     subText: "Create Account",
     subIcon: "register-click.svg",
     linkAvailable: true,
-    link: "https://projectforest.io/login",
+    // link: "https://projectforest.io/login",
     target: "_self",
     bgColor: "bg-[#9ED57F]",
   },

@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import ImageComponent from "../../shared/ImageComponent";
 import { getAllBetaStepsData } from "../../../services/data-files/BetaStepsData";
+import { useRouter } from "next/router";
+import { UserContext } from "../../../context/userContext";
+import { setCookies } from "../../../services/localStorage";
 
 const betaSteps = getAllBetaStepsData();
 
 const GetStarted = () => {
+  const router = useRouter();
+  const userContaxt = useContext(UserContext);
+  function setActivationCode() {
+    setCookies("ACTIVATION_BUTTON_TRIGGERED", true);
+    const user = userContaxt.state.user ?? null;
+    if (user && user.email && user.accessToken) {
+      setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
+      router.push("/beta");
+    } else {
+      router.push("/login");
+    }
+  }
+
   return (
     <div className="flex flex-col items-center justify-center w-full text-center 2xl:pt-10 relative md:pb-10 pb-6">
       <ImageComponent
@@ -34,14 +50,22 @@ const GetStarted = () => {
               <p className=" md:text-2xl text-xl font-semibold">{e.title}</p>
               <p className="font-light py-2 text-sm min-h-[100px]">{e.text}</p>
               {e.linkAvailable === true ? (
-                <a href={e.link} target={e.target} rel="noreferrer">
-                  <div className="flex flex-row gap-2 items-center justify-center pb-2 hover:underline">
+                <a
+                  href={e.link}
+                  target={e.target}
+                  rel="noreferrer"
+                  className="self-center"
+                >
+                  <button
+                    className="flex flex-row gap-2 items-center justify-center pb-2 hover:underline"
+                    onClick={e.title === "REGISTER" ? setActivationCode : ""}
+                  >
                     <p className="">{e.subText}</p>
                     <ImageComponent
                       src={"/assets/beta/get-started/" + e.subIcon}
                       className="object-contain"
                     />
-                  </div>
+                  </button>
                 </a>
               ) : (
                 ""
