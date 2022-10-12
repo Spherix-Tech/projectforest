@@ -4,10 +4,12 @@ import { setCookies } from "../../../services/localStorage";
 import { useRouter } from "next/router";
 import { UserContext } from "../../../context/userContext";
 
+
+
+
 const Hero = () => {
   const router = useRouter();
   const userContaxt = useContext(UserContext);
-
   function setActivationCode() {
     setCookies("ACTIVATION_BUTTON_TRIGGERED", true);
     const user = userContaxt.state.user ?? null;
@@ -27,25 +29,14 @@ const Hero = () => {
       </h4>
       <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl font-medium">
         Project Forest&apos;s first round of public beta is currently live.
-        Participate in the Project Forest beta for free and earn exclusive NFT
-        rewards and more. Get started by creating a Project Forest account and
+        Participate in the closed beta for free and earn exclusive NFT rewards
+        and more. Get started by creating a Project Forest account and
         downloading the beta app on your iOS or Android mobile devices.
       </p>
       <p className="text-primaryBlue text-sm w-full md:w-3/4 lg:w-2/4 ">
         Closed beta is limited to 1000 player slots only.
       </p>
       <div className="flex flex-row gap-6 w-full justify-center">
-        <div className=" w-[165px] md:w-[250px] flex flex-col">
-          <button
-            className=" btnBeta bg-transparent hover:bg-white"
-            onClick={setActivationCode}
-          >
-            <p>Register</p>
-          </button>
-          <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
-            Register to receive code via email
-          </p>
-        </div>
         <div className=" w-[165px] md:w-[250px] flex flex-col">
           <button className=" btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]">
             <a
@@ -59,6 +50,17 @@ const Hero = () => {
 
           <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
             For iOS and Android mobile devices
+          </p>
+        </div>
+        <div className=" w-[165px] md:w-[250px] flex flex-col">
+          <button
+            className=" btnBeta bg-transparent hover:bg-white"
+            onClick={setActivationCode}
+          >
+            <p>Register</p>
+          </button>
+          <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
+            Register to receive code via email
           </p>
         </div>
       </div>
