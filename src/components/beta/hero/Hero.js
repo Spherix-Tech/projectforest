@@ -29,8 +29,8 @@ const Hero = () => {
       </h4>
       <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl font-medium">
         Project Forest&apos;s first round of public beta is currently live.
-        Participate in the closed beta for free and earn exclusive NFT rewards
-        and more. Get started by creating a Project Forest account and
+        Participate in the closed beta for free and earn exclusive Tree-NFT
+        airdrops, each day. Get started by creating a Project Forest account and
         downloading the beta app on your iOS or Android mobile devices.
       </p>
       <p className="text-primaryBlue text-sm w-full md:w-3/4 lg:w-2/4 ">
