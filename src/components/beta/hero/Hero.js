@@ -38,7 +38,7 @@ const Hero = () => {
       </p>
       <div className="flex flex-row gap-6 w-full justify-center">
         <div className=" w-[165px] md:w-[250px] flex flex-col">
-          <button className=" btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]">
+          <button className=" btnBeta bg-transparent hover:bg-white ">
             <a
               href="https://projectforest.io/download-game"
               target="_blank"
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
         <div className=" w-[165px] md:w-[250px] flex flex-col">
           <button
-            className=" btnBeta bg-transparent hover:bg-white"
+            className="  btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]"
             onClick={setActivationCode}
           >
             <p>Register</p>
