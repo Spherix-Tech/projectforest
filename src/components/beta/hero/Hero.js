@@ -48,7 +48,7 @@ const Hero = () => {
             </a>
           </button>
 
-          <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
+          <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-xs">
             For iOS and Android mobile devices
           </p>
         </div>
@@ -59,8 +59,8 @@ const Hero = () => {
           >
             <p>Register</p>
           </button>
-          <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
-            Register to receive code via email
+          <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-xs">
+            Create your Project Forest beta account
           </p>
         </div>
       </div>
