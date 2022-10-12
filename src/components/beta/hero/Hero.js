@@ -4,19 +4,18 @@ import { setCookies } from "../../../services/localStorage";
 import { useRouter } from "next/router";
 import { UserContext } from "../../../context/userContext";
 
+
+
+
 const Hero = () => {
   const router = useRouter();
   const userContaxt = useContext(UserContext);
-
   function setActivationCode() {
     setCookies("ACTIVATION_BUTTON_TRIGGERED", true);
     const user = userContaxt.state.user ?? null;
     if (user && user.email && user.accessToken) {
       setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
-      window.open(
-        "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
-        "_self"
-      );
+      router.push("/beta");
     } else {
       router.push("/login");
     }
@@ -26,39 +25,42 @@ const Hero = () => {
     <div className="relative max-h-[100vh] overflow-hidden flex flex-col gap-4 md:gap-7 items-center text-center px-8">
       <div className="pointer-events-none absolute top-0 bottom-0 w-full h-full custom-gradient z-100" />
       <h4 className=" text-2xl md:text-6xl text-[#3A3A3C] font-bold">
-        Reforestation Is Here
+        Reforestation Starts Here
       </h4>
-      <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl ">
-        Project Forest&apos;s closed beta is now live. Be the first to
-        experience the Grow-to-Earn app and earn exclusive rewards. Project
-        Forest&apos;s beta registrations have re-opened. Interested players can
-        now play Project Forest beta for free by completing 2 simple steps and
-        receiving the activation code.
+      <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl font-medium">
+        Project Forest&apos;s first round of public beta is currently live.
+        Participate in the closed beta for free and earn exclusive NFT rewards
+        and more. Get started by creating a Project Forest account and
+        downloading the beta app on your iOS or Android mobile devices.
       </p>
-      <div className="flex flex-row gap-3 w-full justify-center">
-        <div className="w-[165px] md:w-auto flex flex-col">
-          <a
-            href="https://projectforest.io/download-game"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className=" btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]">
+      <p className="text-primaryBlue text-sm w-full md:w-3/4 lg:w-2/4 ">
+        Closed beta is limited to 1000 player slots only.
+      </p>
+      <div className="flex flex-row gap-6 w-full justify-center">
+        <div className=" w-[165px] md:w-[250px] flex flex-col">
+          <button className=" btnBeta bg-transparent hover:bg-white ">
+            <a
+              href="https://projectforest.io/download-game"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p>Download Beta </p>
-            </button>
-          </a>
+            </a>
+          </button>
+
           <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
-            For mobile phones only
+            For iOS and Android mobile devices
           </p>
         </div>
-        <div className="w-[165px] md:w-auto flex flex-col">
+        <div className=" w-[165px] md:w-[250px] flex flex-col">
           <button
-            className=" btnBeta bg-transparent hover:bg-white"
+            className="  btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]"
             onClick={setActivationCode}
           >
-            <p>Get Activation Code</p>
+            <p>Register</p>
           </button>
           <p className="pt-2 text-[#A0A0A0] text-[10px] md:text-sm">
-            Complete gleam to receive code
+            Register to receive code via email
           </p>
         </div>
       </div>

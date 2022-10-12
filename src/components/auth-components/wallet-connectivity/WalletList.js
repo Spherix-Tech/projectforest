@@ -113,11 +113,11 @@ export const WalletList = (props) => {
           if (activationCode === true) {
             setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
             setTimeout(() => {
-              window.open(
-                "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
-                "_self"
-              );
-              router.push(routerLink);
+              // window.open(
+              //   "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
+              //   "_self"
+              // );
+              router.push("/beta");
             }, 1000);
           } else {
             setTimeout(() => {
