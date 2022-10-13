@@ -58,7 +58,9 @@ const GetStarted = () => {
                 >
                   <button
                     className="flex flex-row gap-2 items-center justify-center pb-2 hover:underline"
-                    onClick={e.title === "REGISTER" ? setActivationCode : ""}
+                    onClick={() =>
+                      e.title === "REGISTER" ? setActivationCode : ""
+                    }
                   >
                     <p className="">{e.subText}</p>
                     <ImageComponent
