@@ -20,7 +20,7 @@ const PopupA = ({ open, onClose }) => {
         <div className="flex bg-transparent z-100 relative">
           <div className="w-1/2 hidden md:block">
             <ImageComponent
-              src="/assets/pop-up-img.png"
+              src="/assets/pop-up-img.webp"
               className="w-full h-full"
             />
           </div>
