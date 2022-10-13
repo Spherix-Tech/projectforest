@@ -72,7 +72,6 @@ export const WalletList = (props) => {
     // if (!selectedWalletName) return;
     try {
       let address = account?.address;
-      console.log(address);
       const accountInfo = await connect();
       debugger;
       if (!accountInfo) throw Error("Connection failed please try again");

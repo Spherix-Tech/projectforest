@@ -6,13 +6,11 @@ import "../styles/globals.css";
 import ReactGA from "react-ga4";
 const sendGoogleAnalytics = () => {
   if (typeof window !== "undefined") {
-    console.log(window.location.pathname + window.location.search);
     ReactGA.send({
       hitType: "pageview",
       page: window.location.pathname + window.location.search,
     });
   } else {
-    console.log("Page Viewed");
     ReactGA.send({ hitType: "pageview" });
   }
 };

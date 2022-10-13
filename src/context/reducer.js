@@ -1,5 +1,5 @@
 import { getAuthInfoObj, setAuthInfo } from "../services/localStorage";
-let { user = null } = getAuthInfoObj() ? getAuthInfoObj() : {};
+let user = getAuthInfoObj() || {};
 export const initialState = {
   user: user,
   loading: false,
@@ -13,7 +13,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: true,
       };
     case "OTP_SENT":
-      console.log("PAYLOAD", action.payload);
       return {
         ...state,
         user: {
@@ -24,7 +23,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "REGISTER_SUCCESS":
-      console.log(action.payload);
       return {
         ...state,
         user: {
@@ -34,7 +32,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "OTP_VERIFIED":
-      console.log("MASLA", action.payload);
       return {
         ...state,
         user: {

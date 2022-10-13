@@ -39,7 +39,6 @@ export const signUpApi = async (params) => {
     url: "user/v1/signup",
     body: { ...params },
   });
-  console.log(res);
   return res;
 };
 
