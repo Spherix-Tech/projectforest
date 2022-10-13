@@ -23,13 +23,6 @@ export default function Home() {
   const [popupOpen, setPopupOpen] = useState(false);
   const userContaxt = useContext(UserContext);
   useEffect(() => {
-    // if (window.performance) {
-    //   if (performance.getEntriesByType("navigation") == 1) {
-    //     setPopupOpen(false);
-    //   } else {
-    //     setPopupOpen(true);
-    //   }
-    // }
     const user = userContaxt.state.user ?? null;
     if (user && user.email && user.accessToken) {
       setPopupOpen(false);
