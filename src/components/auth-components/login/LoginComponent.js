@@ -52,7 +52,6 @@ export const LoginComponent = (props) => {
     setWalletConnectionResponseObj(null);
     try {
       let walletAddress = await connect();
-      console.log("walletAddress", walletAddress);
       if (!walletAddress) throw Error("Can't connect please try again");
       walletAddress = getWalletAddressStr(walletAddress);
       if (walletAddress) {
@@ -108,7 +107,6 @@ export const LoginComponent = (props) => {
         }
       }
     } catch (err) {
-      console.log("ERRR", err);
       const errorMessage = getErrorMessage(err);
       setWalletConnectionResponseObj({
         type: "error",
