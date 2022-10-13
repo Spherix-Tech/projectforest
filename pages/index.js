@@ -13,21 +13,28 @@ import { getHowItWorksData } from "../src/services/data-files/howItWorksData";
 import { getDataBySectionName } from "../src/services/dataService";
 import Partners from "../src/components/partners/Partners";
 import PopupA from "../src/components/shared/PopupA";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../src/context/userContext";
 import Link from "next/link";
 const howItWorksItemsList = getHowItWorksData("homepage");
 const DataArr = getDataBySectionName("nft");
 
 export default function Home() {
   const [popupOpen, setPopupOpen] = useState(false);
-
+  const userContaxt = useContext(UserContext);
   useEffect(() => {
-    if (window.performance) {
-      if (performance.getEntriesByType("navigation") == 1) {
-        setPopupOpen(false);
-      } else {
-        setPopupOpen(true);
-      }
+    // if (window.performance) {
+    //   if (performance.getEntriesByType("navigation") == 1) {
+    //     setPopupOpen(false);
+    //   } else {
+    //     setPopupOpen(true);
+    //   }
+    // }
+    const user = userContaxt.state.user ?? null;
+    if (user && user.email && user.accessToken) {
+      setPopupOpen(false);
+    } else {
+      setPopupOpen(true);
     }
   }, []);
 
