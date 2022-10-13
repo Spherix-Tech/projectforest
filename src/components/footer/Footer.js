@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex flex-row gap-2 items-center">
               <ImageComponent
                 alt="Project Forest Logo"
-                src="/assets/logo.png"
+                src="/assets/logo.webp"
                 className="h-[80px] lg:h-[100px]"
               />
               <h2 className="lg:text-[35px] text-[24px] font-light text-white lg:leading-9 leading-7">

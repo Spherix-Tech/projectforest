@@ -8,7 +8,7 @@ const StatusCard = ({ walletConnectionResponseObj, onNextClick }) => {
   };
   return (
     <div className="md:min-h-[400px] w-[100%]">
-      <div className="bg-white bg-opacity-60 flex flex-col items-center rounded-xl h-[200px] md:h-[300px] ">
+      <div className="bg-white bg-opacity-60 flex flex-col items-center rounded-xl h-[250px] md:h-[300px] px-10 ">
         <div className="flex flex-col justify-center w-full h-full items-center gap-2 pt-4">
           {walletConnectionResponseObj.type == "success" ? (
             <ImageComponent
@@ -23,9 +23,28 @@ const StatusCard = ({ walletConnectionResponseObj, onNextClick }) => {
               alt="fail icon"
             />
           )}
-          <p className="text-sm md:text-lg pb-8 md:pb-0 text-center">
-            {walletConnectionResponseObj.message}
-          </p>
+
+          {walletConnectionResponseObj.message === "Account does not exist." ? (
+            <div className="flex flex-col items-center gap-6 text-center text-[#434343]">
+              <p className="text-sm md:text-base md:pb-0 text-center">
+                {walletConnectionResponseObj.message} Please try again with a
+                registered wallet.
+              </p>
+              <p className="text-sm md:text-base  ">
+                New user?
+                <Link href="/signup">
+                  <a className="text-[#4599FC] underline font-semibold">
+                    {" "}
+                    Register Now
+                  </a>
+                </Link>
+              </p>
+            </div>
+          ) : (
+            <p className="text-sm md:text-base text-center text-[#434343]">
+              {walletConnectionResponseObj.message}
+            </p>
+          )}
         </div>
       </div>
 
