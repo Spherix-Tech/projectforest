@@ -173,7 +173,7 @@ export const WalletList = (props) => {
             <ImageComponent
               onClick={() => router.push("/beta")}
               src="/assets/circle-button.svg"
-              className="h-10 mt-10 mr-2 md:mr-10 cursor-pointer"
+              className="h-10 mt-10 mr-2 cursor-pointer"
             />
           </Link>
         </div>
