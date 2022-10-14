@@ -15,7 +15,7 @@ const Hero = ({ showPopup }) => {
       setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
       showPopup();
     } else {
-      router.push("/login");
+      router.push("/signup");
     }
   }
 

@@ -25,6 +25,18 @@ const SettingsCard = () => {
             <h1 className="ml-3 text-xl md:text-3xl  font-semibold text-[#434343]">
               Settings
             </h1>
+            <NavLink
+              icon="logout.svg"
+              show="md:hidden block"
+              path={{
+                href: "/settings",
+                query: {
+                  page: "",
+                },
+              }}
+            >
+              Logout
+            </NavLink>
           </div>
           <hr className="border-t-gray-300 border-transparent min-w-full border-1" />
         </div>
@@ -49,6 +61,19 @@ const SettingsCard = () => {
               }}
             >
               Change Password
+            </NavLink>
+
+            <NavLink
+              icon="logout.svg"
+              show="hidden md:block"
+              path={{
+                href: "/settings",
+                query: {
+                  page: "",
+                },
+              }}
+            >
+              Logout
             </NavLink>
           </div>
           <span className="border-l-gray-300 border-transparent min-h-full w-1 border-[1.5px] ml-4" />

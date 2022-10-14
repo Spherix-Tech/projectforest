@@ -18,8 +18,8 @@ import {
 } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
 import { getCookies, setCookies } from "../../../services/localStorage";
-import PopupB from "../../shared/PopupB";
-import ImageComponent from "../../shared/ImageComponent";
+// import PopupB from "../../shared/PopupB";
+// import ImageComponent from "../../shared/ImageComponent";
 
 const addressWallet = "";
 
@@ -120,29 +120,6 @@ export const LoginComponent = (props) => {
 
   return (
     <div className="w-[80%]">
-      <PopupB open={popup1Open} onClose={() => setPopup1Open((prev) => !prev)}>
-        <div className="flex items-end">
-          <div className="flex flex-col">
-            <div className="flex gap-2 mb-3 items-center">
-              <ImageComponent
-                src="/assets/mail-icon.svg"
-                className="object-contain h-6"
-              />
-              <h1 className="text-xl font-bold">Get Started</h1>
-            </div>
-            <p className="w-[90%]">
-              You already have a Project Forest account. Please download the
-              beta app and log in with your account details to start playing.
-            </p>
-          </div>
-          <Link href="/beta" className="cursor-pointer" rel="noreferrer">
-            <ImageComponent
-              src="/assets/circle-button.svg"
-              className="h-10 mb-2"
-            />
-          </Link>
-        </div>
-      </PopupB>
       {!walletConnectionResponseObj ? (
         <>
           <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
