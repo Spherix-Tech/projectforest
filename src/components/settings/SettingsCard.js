@@ -5,9 +5,12 @@ import NavLink from "./nav-link/NavLink";
 import Profile from "./profile/Profile";
 import ChangePassword from "./change-password/ChangePassword";
 import { removeAuthInfo } from "../../services/localStorage";
+import { UserContext } from "../../context/userContext";
+import { useContext } from "react";
 
 const SettingsCard = () => {
   const { query, replace } = useRouter();
+  const userContaxt = useContext(UserContext);
 
   let rightForm;
 
@@ -24,15 +27,17 @@ const SettingsCard = () => {
                 src="/assets/settings/setting-icon.svg"
                 className="h-8 md:h-full"
               />
-              <h1 className="ml-3 text-xl md:text-3xl text-[#434343] font-semibold">
+              <h1 className="ml-3 text-xl md:text-3xl text-[#434343]  font-semibold">
                 Settings
               </h1>
             </div>
             <div
-              className="flex cursor-pointer md:hidden flex-row items-center gap-2 font-medium text-sm text-[#919191] hover:text-[#434343] "
+              className="flex md:hidden flex-row items-center gap-2 font-medium text-sm text-[#919191] hover:text-[#434343] cursor-pointer"
               onClick={() => {
+                userContaxt.dispatch({
+                  type: "LOGOUT",
+                });
                 removeAuthInfo();
-                console.log("remoe");
                 replace("/");
               }}
             >
@@ -49,7 +54,7 @@ const SettingsCard = () => {
           {/* Left side */}
           <div className="flex flex-row md:flex-col h-[98.5%]">
             <NavLink
-              icon="profile2.svg"
+              icon="profile-icon.svg"
               path={{
                 href: "/settings",
               }}
@@ -57,7 +62,7 @@ const SettingsCard = () => {
               Profile
             </NavLink>
             <NavLink
-              icon="forgot-password-icon2.svg"
+              icon="forgot-password-icon.svg"
               path={{
                 href: "/settings",
                 query: {
@@ -69,16 +74,16 @@ const SettingsCard = () => {
             </NavLink>
 
             <div
-              className="md:flex hidden flex-row items-center gap-6 text-sm text-[#919191] text-[18px] px-10 py-3 cursor-pointer"
+              className="md:flex hidden flex-row items-center gap-6 text-sm text-[#919191] hover:text-[#434343] text-[18px] px-10 py-3 cursor-pointer"
               onClick={() => {
-                replace("/");
+                userContaxt.dispatch({
+                  type: "LOGOUT",
+                });
                 removeAuthInfo();
+                replace("/");
               }}
             >
-              <ImageComponent
-                src="/assets/settings/logout.svg"
-                className="h-6"
-              />
+              <ImageComponent src="/assets/settings/logout.svg" className="" />
               Logout
             </div>
           </div>
