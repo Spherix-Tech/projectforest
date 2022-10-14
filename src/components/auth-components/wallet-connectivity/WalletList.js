@@ -160,7 +160,7 @@ export const WalletList = (props) => {
             />
             <div className="flex gap-2 mb-3">
               <ImageComponent src="/assets/mail-icon.svg" />
-              <h1 className="text-xl font-bold">Get Started</h1>
+              <h1 className="text-xl font-bold">Get Started!</h1>
             </div>
             <p className="w-[90%]">
               Congratulations, you are now a Forester and have successfully
