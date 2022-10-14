@@ -73,10 +73,8 @@ export const WalletList = (props) => {
     try {
       let address = account?.address;
       const accountInfo = await connect();
-      debugger;
       if (!accountInfo) throw Error("Connection failed please try again");
       address = accountInfo?.address;
-      debugger;
       if (address) {
         const userObj = userContaxt.state.user ?? null;
         const apiReq = getSignupApiReqBody(address, userObj);
