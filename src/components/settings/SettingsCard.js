@@ -41,7 +41,7 @@ const SettingsCard = () => {
           {/* Left side */}
           <div className="flex flex-row md:flex-col h-[98.5%]">
             <NavLink
-              icon="profile-icon.svg"
+              icon="profile-icon2.svg"
               path={{
                 href: "/settings",
               }}
@@ -49,7 +49,7 @@ const SettingsCard = () => {
               Profile
             </NavLink>
             <NavLink
-              icon="forgot-password-icon.svg"
+              icon="forgot-password-icon2.svg"
               path={{
                 href: "/settings",
                 query: {
@@ -59,27 +59,11 @@ const SettingsCard = () => {
             >
               Change Password
             </NavLink>
-
-            {/* <NavLink
-              icon="logout.svg"
-              show="hidden md:flex"
-              path={{
-                href: "/settings",
-                query: {
-                  page: "",
-                },
-              }}
-            >
-              Logout
-            </NavLink> */}
             <div
               className="md:flex hidden flex-row items-center gap-6 
-            text-sm text-[#919191] hover:text-[#434343] text-[18px] px-12 py-3"
+            text-sm text-[#919191] hover:text-[#434343] text-[18px] px-11 py-3"
             >
-              <ImageComponent
-                src="/assets/settings/logout.svg"
-                className="h-5"
-              />
+              <ImageComponent src="/assets/settings/logout.svg" className="" />
               Logout
             </div>
           </div>
