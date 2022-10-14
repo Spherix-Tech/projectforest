@@ -24,7 +24,7 @@ const PopupA = ({ open, onClose }) => {
               className="w-full h-full"
             />
           </div>
-          <div className="h-full w-full md:w-1/2 bg-gradient-to-b from-[#D9F0EC] to-[#EEF1D1] text-textTitle text-center md:text-left rounded-r-2xl rounded-l-2xl md:rounded-r-2xl md:rounded-l-none px-6  py-6 overflow-scroll">
+          <div className="h-full w-full md:w-1/2 bg-gradient-to-b from-[#D9F0EC] to-[#EEF1D1] text-textTitle text-left rounded-r-2xl rounded-l-2xl md:rounded-r-2xl md:rounded-l-none px-6  py-6 overflow-scroll">
             {/* {children} */}
             <h1 className="font-bold text-3xl py-4 ">
               Join the Project Forest closed beta

@@ -23,7 +23,7 @@ export const SignupComponent = (props) => {
   const userContaxt = useContext(UserContext);
 
   const [showCountdown, setShowCountdown] = useState(false);
-  const [popup2Open, setPopup2Open] = useState(false);
+  
 
   const [walletConnectionResponseObj, setWalletConnectionResponseObj] =
     useState(null);
@@ -156,7 +156,6 @@ export const SignupComponent = (props) => {
       });
       setLoading(false);
     } else {
-      setPopup2Open(true);
       setLoading(false);
     }
   };
@@ -174,26 +173,6 @@ export const SignupComponent = (props) => {
 
   return (
     <>
-      <PopupB open={popup2Open} onClose={() => setPopup2Open((prev) => !prev)}>
-        <div className="flex">
-          <div className="flex flex-col">
-            <div className="flex gap-2 mb-3">
-              <ImageComponent src="/assets/mail-icon.svg" />
-              <h1 className="text-xl font-bold">Get Started</h1>
-            </div>
-            <p>
-              You have successfully completed registration of your Project
-              Forest account. Please download the beta app and log in with your
-              account details to start playing.
-            </p>
-          </div>
-          <ImageComponent
-            onClick={() => router.push("/beta")}
-            src="/assets/circle-button.svg"
-            className="w-10 h-10 mt-auto mx-5 cursor-pointer"
-          />
-        </div>
-      </PopupB>
       {!walletConnectionResponseObj ? (
         <div className="w-[70%]">
           <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">

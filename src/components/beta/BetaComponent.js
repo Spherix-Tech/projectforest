@@ -29,7 +29,7 @@ function BetaComponent() {
         className="absolute right-0 2xl:bottom-[1000px] bottom-[1250px] h-[400px] z-50 hidden lg:block"
       />
       <PopupB open={popup1Open} onClose={() => setPopup1Open((prev) => !prev)}>
-        <div className="flex">
+        <div className="flex items-end ">
           <div className="flex flex-col">
             <div className="flex gap-2 mb-3 items-center">
               <ImageComponent
@@ -38,7 +38,7 @@ function BetaComponent() {
               />
               <h1 className="text-xl font-bold">Get Started</h1>
             </div>
-            <p>
+            <p className="w-[90%]">
               You already have a Project Forest account. Please download the
               beta app and log in with your account details to start playing.
             </p>
@@ -46,7 +46,7 @@ function BetaComponent() {
           <Link href="/beta" className="cursor-pointer" rel="noreferrer">
             <ImageComponent
               src="/assets/circle-button.svg"
-              className="w-10 h-10 mt-auto mx-5 cursor-pointer"
+              className="h-10 mb-2"
               onClick={() => setPopup1Open(!popup1Open)}
             />
           </Link>
