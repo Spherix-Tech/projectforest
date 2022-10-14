@@ -29,24 +29,27 @@ function BetaComponent() {
         className="absolute right-0 2xl:bottom-[1000px] bottom-[1250px] h-[400px] z-50 hidden lg:block"
       />
       <PopupB open={popup1Open} onClose={() => setPopup1Open((prev) => !prev)}>
-        <div className="flex items-end ">
+        <div className="flex items-end py-2 relative">
           <div className="flex flex-col">
             <div className="flex gap-2 mb-3 items-center">
               <ImageComponent
                 src="/assets/mail-icon.svg"
                 className="object-contain h-6"
               />
-              <h1 className="text-xl font-bold">Get Started</h1>
+              <h1 className="text-xl font-semibold pl-1">
+                Account already exists!
+              </h1>
             </div>
-            <p className="w-[90%]">
-              You already have a Project Forest account. Please download the
-              beta app and log in with your account details to start playing.
+            <p className="w-[95%] text-sm">
+              Forester, it seems you already have a Project Forest account.
+              Please download the beta app and log in with your account details
+              to start playing.
             </p>
           </div>
           <Link href="/beta" className="cursor-pointer" rel="noreferrer">
             <ImageComponent
-              src="/assets/circle-button.svg"
-              className="h-10 mb-2"
+              src="/assets/x-icon.svg"
+              className="absolute top-0 right-0 h-3  cursor-pointer  object-contain"
               onClick={() => setPopup1Open(!popup1Open)}
             />
           </Link>

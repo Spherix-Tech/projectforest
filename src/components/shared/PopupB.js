@@ -15,8 +15,8 @@ const PopupB = ({ children, open, onClose }) => {
           className="bg-[#000000] h-full w-full bg-opacity-70 fixed top-0 left-0 z-100"
         />
         <div className="flex min-h-1/6 max-w-2xl bg-transparent z-[101]">
-          <div className="w-3 h-full bg-[#59B1B2] rounded-l-md" />
-          <div className="h-full w-full bg-white text-textTitle leading-5 px-4 py-6 rounded-r-md text-left">
+          {/* <div className="w-3 h-full bg-[#59B1B2] rounded-l-md" /> */}
+          <div className="h-full w-full bg-gradient-to-b from-[#D9F0EC] to-[#EEF1D1] text-textTitle leading-5 px-6 py-6 rounded-xl text-left">
             {children}
           </div>
         </div>

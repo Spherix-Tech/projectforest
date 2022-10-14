@@ -17,26 +17,23 @@ const SettingsCard = () => {
     <div className="flex justify-center items-center auth-card relative">
       <div className="flex flex-col min-h-[400px] w-[350px] xs:w-[450px] sm:w-[450px] md:w-[750px] lg:w-[900px] 2xl:w-[1320px] rounded-[1rem] xl:rounded-[2rem] custom-shadow sha pt-8">
         <div className="flex flex-col w-full">
-          <div className="flex flex-row items-center mb-4 md:pl-9 justify-center md:justify-start">
-            <ImageComponent
-              src="/assets/settings/setting-icon.svg"
-              className="h-8 md:h-full"
-            />
-            <h1 className="ml-3 text-xl md:text-3xl  font-semibold text-[#434343]">
-              Settings
-            </h1>
-            <NavLink
-              icon="logout.svg"
-              show="md:hidden block"
-              path={{
-                href: "/settings",
-                query: {
-                  page: "",
-                },
-              }}
-            >
+          <div className="flex flex-row items-center justify-between mb-4 md:pl-9 px-6 md:justify-start ">
+            <div className="flex flex-row items-center">
+              <ImageComponent
+                src="/assets/settings/setting-icon.svg"
+                className="h-8 md:h-full"
+              />
+              <h1 className="ml-3 text-xl md:text-3xl text-[#434343]  font-semibold">
+                Settings
+              </h1>
+            </div>
+            <div className="flex md:hidden flex-row items-center gap-2 font-medium text-sm text-[#919191] hover:text-[#434343] ">
+              <ImageComponent
+                src="/assets/settings/logout.svg"
+                className="h-5"
+              />
               Logout
-            </NavLink>
+            </div>
           </div>
           <hr className="border-t-gray-300 border-transparent min-w-full border-1" />
         </div>
@@ -63,9 +60,9 @@ const SettingsCard = () => {
               Change Password
             </NavLink>
 
-            <NavLink
+            {/* <NavLink
               icon="logout.svg"
-              show="hidden md:block"
+              show="hidden md:flex"
               path={{
                 href: "/settings",
                 query: {
@@ -74,7 +71,17 @@ const SettingsCard = () => {
               }}
             >
               Logout
-            </NavLink>
+            </NavLink> */}
+            <div
+              className="md:flex hidden flex-row items-center gap-6 
+            text-sm text-[#919191] hover:text-[#434343] text-[18px] px-12 py-3"
+            >
+              <ImageComponent
+                src="/assets/settings/logout.svg"
+                className="h-5"
+              />
+              Logout
+            </div>
           </div>
           <span className="border-l-gray-300 border-transparent min-h-full w-1 border-[1.5px] ml-4" />
 
