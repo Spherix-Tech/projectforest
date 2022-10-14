@@ -163,9 +163,10 @@ export const WalletList = (props) => {
               <h1 className="text-xl font-bold">Get Started</h1>
             </div>
             <p className="w-[90%]">
-              You have successfully completed registration of your Project
-              Forest account. Please download the beta app and log in with your
-              account details to start playing.
+              Congratulations, you are now a Forester and have successfully
+              completed registration of your Project Forest account. Please
+              download the beta app and log in with your account details to
+              start playing.
             </p>
           </div>
           <Link href="/beta" className="cursor-pointer" rel="noreferrer">
