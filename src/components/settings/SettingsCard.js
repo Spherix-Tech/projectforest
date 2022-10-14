@@ -4,9 +4,10 @@ import ImageComponent from "../shared/ImageComponent";
 import NavLink from "./nav-link/NavLink";
 import Profile from "./profile/Profile";
 import ChangePassword from "./change-password/ChangePassword";
+import { removeAuthInfo } from "../../services/localStorage";
 
 const SettingsCard = () => {
-  const { query } = useRouter();
+  const { query, replace } = useRouter();
 
   let rightForm;
 
@@ -23,11 +24,18 @@ const SettingsCard = () => {
                 src="/assets/settings/setting-icon.svg"
                 className="h-8 md:h-full"
               />
-              <h1 className="ml-3 text-xl md:text-3xl text-[#434343]  font-semibold">
+              <h1 className="ml-3 text-xl md:text-3xl text-[#434343] font-semibold">
                 Settings
               </h1>
             </div>
-            <div className="flex md:hidden flex-row items-center gap-2 font-medium text-sm text-[#919191] hover:text-[#434343] ">
+            <div
+              className="flex cursor-pointer md:hidden flex-row items-center gap-2 font-medium text-sm text-[#919191] hover:text-[#434343] "
+              onClick={() => {
+                removeAuthInfo();
+                console.log("remoe");
+                replace("/");
+              }}
+            >
               <ImageComponent
                 src="/assets/settings/logout.svg"
                 className="h-5"
@@ -41,7 +49,7 @@ const SettingsCard = () => {
           {/* Left side */}
           <div className="flex flex-row md:flex-col h-[98.5%]">
             <NavLink
-              icon="profile-icon2.svg"
+              icon="profile2.svg"
               path={{
                 href: "/settings",
               }}
@@ -59,11 +67,18 @@ const SettingsCard = () => {
             >
               Change Password
             </NavLink>
+
             <div
-              className="md:flex hidden flex-row items-center gap-6 
-            text-sm text-[#919191] hover:text-[#434343] text-[18px] px-11 py-3"
+              className="md:flex hidden flex-row items-center gap-6 text-sm text-[#919191] text-[18px] px-10 py-3 cursor-pointer"
+              onClick={() => {
+                replace("/");
+                removeAuthInfo();
+              }}
             >
-              <ImageComponent src="/assets/settings/logout.svg" className="" />
+              <ImageComponent
+                src="/assets/settings/logout.svg"
+                className="h-6"
+              />
               Logout
             </div>
           </div>
