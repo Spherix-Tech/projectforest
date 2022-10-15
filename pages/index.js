@@ -12,61 +12,76 @@ import ImageComponent from "../src/components/shared/ImageComponent";
 import { getHowItWorksData } from "../src/services/data-files/howItWorksData";
 import { getDataBySectionName } from "../src/services/dataService";
 import Partners from "../src/components/partners/Partners";
+import PopupA from "../src/components/shared/PopupA";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../src/context/userContext";
+import Link from "next/link";
 const howItWorksItemsList = getHowItWorksData("homepage");
 const DataArr = getDataBySectionName("nft");
 
 export default function Home() {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const userContaxt = useContext(UserContext);
+  useEffect(() => {
+    const user = userContaxt.state.user ?? null;
+    if (user && user.email && user.accessToken) {
+      setPopupOpen(false);
+    } else {
+      setPopupOpen(true);
+    }
+  }, []);
+
   // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   gsap.registerPlugin(ScrollToPlugin);
+  // gsap.registerPlugin(ScrollTrigger);
+  // gsap.registerPlugin(ScrollToPlugin);
 
-  //   // let smoother = ScrollSmoother.create({
-  //   //   wrapper: '#smooth-wrapper',
-  //   //   content: '#smooth-content',
-  //   //   smooth: 2,
-  //   //   smoothTouch: 0.1,
+  // // let smoother = ScrollSmoother.create({
+  // // wrapper: '#smooth-wrapper',
+  // // content: '#smooth-content',
+  // // smooth: 2,
+  // // smoothTouch: 0.1,
 
-  //   // });
+  // // });
 
-  //   gsap.fromTo("#home", { opacity: 0 }, { opacity: 1, duration: 1 });
-  //   gsap.fromTo(
-  //     ".how-section-trees",
-  //     {
-  //       opacity: 0,
-  //       y: 500,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       duration: 3,
-  //       ease: Power3.easeInOut,
-  //       y: 0,
-  //       // scrollTrigger: {
-  //       //   trigger: "#how-section",
-  //       //   start: "top top",
-  //       //   end: "bottom center",
-  //       //   scrub: true,
-  //       // }
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     ".how-section",
-  //     {
-  //       opacity: 0,
-  //       y: 500,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       duration: 3,
-  //       ease: Power3.easeInOut,
-  //       y: 0,
-  //       // scrollTrigger: {
-  //       //   trigger: "#how-section",
-  //       //   start: "top top",
-  //       //   end: "bottom center",
-  //       //   scrub: true,
-  //       // }
-  //     }
-  //   );
+  // gsap.fromTo("#home", { opacity: 0 }, { opacity: 1, duration: 1 });
+  // gsap.fromTo(
+  // ".how-section-trees",
+  // {
+  // opacity: 0,
+  // y: 500,
+  // },
+  // {
+  // opacity: 1,
+  // duration: 3,
+  // ease: Power3.easeInOut,
+  // y: 0,
+  // // scrollTrigger: {
+  // // trigger: "#how-section",
+  // // start: "top top",
+  // // end: "bottom center",
+  // // scrub: true,
+  // // }
+  // }
+  // );
+  // gsap.fromTo(
+  // ".how-section",
+  // {
+  // opacity: 0,
+  // y: 500,
+  // },
+  // {
+  // opacity: 1,
+  // duration: 3,
+  // ease: Power3.easeInOut,
+  // y: 0,
+  // // scrollTrigger: {
+  // // trigger: "#how-section",
+  // // start: "top top",
+  // // end: "bottom center",
+  // // scrub: true,
+  // // }
+  // }
+  // );
   // }, []);
   return (
     <div>
@@ -117,13 +132,13 @@ export default function Home() {
         />
 
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJKS1PTP6Y"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments);}
-          gtag('js', new Date());
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments);}
+gtag('js', new Date());
 
-          gtag('config', 'G-XJKS1PTP6Y');
-        </script> */}
+gtag('config', 'G-XJKS1PTP6Y');
+</script> */}
       </Head>
       <main>
         <div id="smooth-wrapper">
@@ -155,7 +170,6 @@ export default function Home() {
             {/* Roadmap Section */}
             <Roadmap />
 
-            
             {/* Reforestation Section */}
             <Reforestation />
 
@@ -165,6 +179,10 @@ export default function Home() {
             <Footer />
           </div>
         </div>
+        <PopupA
+          open={popupOpen}
+          onClose={() => setPopupOpen(!popupOpen)}
+        ></PopupA>
       </main>
     </div>
   );

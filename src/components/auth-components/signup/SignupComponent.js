@@ -14,6 +14,8 @@ import { getDataOrErrorMessageObj } from "../../../utilities/helpers";
 import Countdown from "../../shared/Countdown";
 import { getCookies, setCookies } from "../../../services/localStorage";
 import { COUNTDOWN_STORAGE_KEY } from "../../../services/constants";
+import PopupB from "../../shared/PopupB";
+import ImageComponent from "../../shared/ImageComponent";
 
 export const SignupComponent = (props) => {
   const { setLoading } = props;
@@ -21,6 +23,7 @@ export const SignupComponent = (props) => {
   const userContaxt = useContext(UserContext);
 
   const [showCountdown, setShowCountdown] = useState(false);
+  
 
   const [walletConnectionResponseObj, setWalletConnectionResponseObj] =
     useState(null);
@@ -238,7 +241,7 @@ export const SignupComponent = (props) => {
                       <button
                         type="submit"
                         className={
-                          "btnPrimary  w-full flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] text-[0.8rem] md:text-[1rem] " +
+                          "btnPrimary w-full flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] text-[0.8rem] md:text-[1rem] " +
                           (isSubmitting ? "disabled" : "")
                         }
                         disabled={isSubmitting}

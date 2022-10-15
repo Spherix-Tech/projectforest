@@ -4,6 +4,7 @@ import { getAllBetaStepsData } from "../../../services/data-files/BetaStepsData"
 import { useRouter } from "next/router";
 import { UserContext } from "../../../context/userContext";
 import { setCookies } from "../../../services/localStorage";
+import Link from "next/link";
 
 const betaSteps = getAllBetaStepsData();
 
@@ -50,7 +51,7 @@ const GetStarted = () => {
               <p className=" md:text-2xl text-xl font-semibold">{e.title}</p>
               <p className="font-light py-2 text-sm min-h-[100px]">{e.text}</p>
               {e.linkAvailable === true ? (
-                <a
+                <Link
                   href={e.link}
                   target={e.target}
                   rel="noreferrer"
@@ -68,7 +69,7 @@ const GetStarted = () => {
                       className="object-contain"
                     />
                   </button>
-                </a>
+                </Link>
               ) : (
                 ""
               )}
