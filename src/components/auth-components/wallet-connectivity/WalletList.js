@@ -53,8 +53,8 @@ export const WalletList = (props) => {
 
   const extractTokens = (apiResponse) => {
     return {
-      access_token: apiResponse.data.token.access_token || null,
-      refresh_token: apiResponse.data.token.refresh_token || null,
+      accessToken: apiResponse.data.token.access_token || null,
+      refreshToken: apiResponse.data.token.refresh_token || null,
     };
   };
 
@@ -103,6 +103,7 @@ export const WalletList = (props) => {
           if (signupStarted && signupStarted === "beta") {
             routerLink = "/beta";
           }
+          console.log("apiResponse", apiResponse, extractTokens(apiResponse));
           userContaxt.dispatch({
             type: "WALLET_CONNECTED",
             payload: extractTokens(apiResponse),
