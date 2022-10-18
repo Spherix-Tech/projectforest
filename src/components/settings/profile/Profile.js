@@ -15,6 +15,14 @@ const Profile = () => {
     fileReader.readAsDataURL(event.target.files[0]);
   };
 
+  const [textArea, setTextArea] = useState(
+    " https://projectforest.io/sharjeel/jdbcd54544654"
+  );
+
+  const copyText = () => {
+    navigator.clipboard.writeText(textArea);
+  };
+
   const [copied, setCopied] = useState(false);
 
   return (
@@ -62,18 +70,15 @@ const Profile = () => {
           </div>
           <h1 className=" text-base md:text-xl font-medium">Referral Link</h1>
           <div className="bg-[#C3CA84] bg-opacity-30 py-2 px-4 items-center flex flex-row justify-between my-4">
-            <p
-              className="text-[#307F91] overflow-x-scroll"
-              onClick={() => {
-                navigator.clipboard.writeText(
-                  "https://projectforest.io/sharjeel/jdbcd54544654"
-                );
-              }}
-            >
+            <p className="text-[#307F91] overflow-x-scroll">
               https://projectforest.io/sharjeel/jdbcd54544654
             </p>
 
-            <button onClick={() => setCopied(true)}>
+            <button
+              onClick={() => {
+                setCopied(true), copyText();
+              }}
+            >
               <ImageComponent
                 src="/assets/settings/copy-icon.svg"
                 className="md:h-6 h-5 ml-2"
