@@ -7,7 +7,7 @@ const TextField = ({
   pattern,
 }) => {
   return (
-    <div className="my-4 md:my-8  w-full">
+    <div className="my-4  w-full">
       <label className="text-sm font-medium text-[#aab1ae]" htmlFor={label}>
         {label}
       </label>
