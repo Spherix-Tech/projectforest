@@ -71,7 +71,7 @@ const Profile = () => {
           <button className="py-4 px-10 bg-[#C7CB91] max-w-fit rounded-lg font-semibold self-center md:self-start mt-2 mb-8 hover:bg-[#ACADAD]  hover:bg-opacity-50">
             Save
           </button>
-          <h1 className=" text-base md:text-xl font-medium">Referral Link</h1>
+          {/* <h1 className=" text-base md:text-xl font-medium">Referral Link</h1>
           <div className="bg-[#C3CA84] bg-opacity-30 py-2 px-4 items-center flex flex-row justify-between my-4">
             <p className="text-[#307F91] overflow-x-scroll">
               https://projectforest.io/sharjeel/jdbcd54544654
@@ -94,7 +94,7 @@ const Profile = () => {
             </p>
           ) : (
             ""
-          )}
+          )} */}
         </div>
       </div>
     </>
