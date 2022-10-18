@@ -1,12 +1,11 @@
+import { useContext } from "react";
 import { useRouter } from "next/router";
 
 import ImageComponent from "../shared/ImageComponent";
 import NavLink from "./nav-link/NavLink";
 import Profile from "./profile/Profile";
 import ChangePassword from "./change-password/ChangePassword";
-import { removeAuthInfo } from "../../services/localStorage";
 import { UserContext } from "../../context/userContext";
-import { useContext } from "react";
 
 const SettingsCard = () => {
   const { query, replace } = useRouter();
@@ -16,6 +15,13 @@ const SettingsCard = () => {
 
   if (!query.page) rightForm = <Profile />;
   else if (query.page === "change-password") rightForm = <ChangePassword />;
+
+  const logout = () => {
+    userContaxt.dispatch({
+      type: "LOGOUT",
+    });
+    replace("/");
+  };
 
   return (
     <div className="flex justify-center items-center auth-card relative">
@@ -33,13 +39,7 @@ const SettingsCard = () => {
             </div>
             <div
               className="flex md:hidden flex-row items-center gap-2 font-medium text-sm text-[#919191] hover:text-[#434343] cursor-pointer"
-              onClick={() => {
-                userContaxt.dispatch({
-                  type: "LOGOUT",
-                });
-                removeAuthInfo();
-                replace("/");
-              }}
+              onClick={() => {}}
             >
               <ImageComponent
                 src="/assets/settings/logout.svg"
@@ -74,14 +74,8 @@ const SettingsCard = () => {
             </NavLink>
 
             <div
-              className="md:flex hidden flex-row items-center gap-6 text-sm text-[#919191] hover:text-[#434343] text-[18px] px-11 py-3 cursor-pointer"
-              onClick={() => {
-                userContaxt.dispatch({
-                  type: "LOGOUT",
-                });
-                removeAuthInfo();
-                replace("/");
-              }}
+              className="md:flex hidden flex-row items-center gap-6 text-sm text-[#919191] hover:text-[#434343] text-[18px] px-10 py-3 cursor-pointer"
+              onClick={logout}
             >
               <ImageComponent
                 src="/assets/settings/logout.svg"

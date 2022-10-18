@@ -51,6 +51,13 @@ export const WalletList = (props) => {
     setSelectedWallet(walletDetails.name);
   };
 
+  const extractTokens = (apiResponse) => {
+    return {
+      access_token: apiResponse.data.token.access_token || null,
+      refresh_token: apiResponse.data.token.refresh_token || null,
+    };
+  };
+
   const getSignupApiReqBody = (walletAddress, userObj) => {
     setTimeout(() => {
       if (!userObj || !userObj.email || !userObj.password)
@@ -98,7 +105,7 @@ export const WalletList = (props) => {
           }
           userContaxt.dispatch({
             type: "WALLET_CONNECTED",
-            payload: { walletId: address },
+            payload: extractTokens(apiResponse),
           });
           setWalletConnectionResponseObj({
             type: "success",
