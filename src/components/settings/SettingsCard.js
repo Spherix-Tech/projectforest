@@ -74,7 +74,7 @@ const SettingsCard = () => {
             </NavLink>
 
             <div
-              className="md:flex hidden flex-row items-center gap-6 text-sm text-[#919191] hover:text-[#434343] text-[18px] px-10 py-3 cursor-pointer"
+              className="md:flex hidden flex-row items-center gap-6 text-sm text-[#919191] hover:text-[#434343] text-[18px] px-11 py-3 cursor-pointer"
               onClick={() => {
                 userContaxt.dispatch({
                   type: "LOGOUT",
@@ -83,7 +83,10 @@ const SettingsCard = () => {
                 replace("/");
               }}
             >
-              <ImageComponent src="/assets/settings/logout.svg" className="" />
+              <ImageComponent
+                src="/assets/settings/logout.svg"
+                className="h-6"
+              />
               Logout
             </div>
           </div>
