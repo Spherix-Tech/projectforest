@@ -39,7 +39,7 @@ const SettingsCard = () => {
             </div>
             <div
               className="flex md:hidden flex-row items-center gap-2 font-medium text-sm text-[#919191] hover:text-[#434343] cursor-pointer"
-              onClick={() => {}}
+              onClick={logout}
             >
               <ImageComponent
                 src="/assets/settings/logout.svg"

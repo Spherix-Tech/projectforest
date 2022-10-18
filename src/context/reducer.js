@@ -1,4 +1,8 @@
-import { getAuthInfoObj, setAuthInfo } from "../services/localStorage";
+import {
+  getAuthInfoObj,
+  removeAuthInfo,
+  setAuthInfo,
+} from "../services/localStorage";
 let user = getAuthInfoObj() || {};
 export const initialState = {
   user: user,
@@ -49,6 +53,7 @@ export const AuthReducer = (state = initialState, action) => {
         accessToken: action.payload.accessToken,
         refreshToken: action.payload.refreshToken,
       };
+      console.log("userObj", userObj, action.payload);
       setAuthInfo(userObj);
       return {
         ...state,
@@ -68,12 +73,12 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "LOGOUT":
+      removeAuthInfo();
       return {
         ...state,
         user: null,
         accessToken: null,
       };
-
     case "LOGIN_ERROR":
       return {
         ...state,
