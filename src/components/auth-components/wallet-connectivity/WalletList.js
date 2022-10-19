@@ -14,6 +14,8 @@ import IsLoadingHOC from "../../shared/IsLoadingHOC";
 import { UserContext } from "../../../context/userContext";
 import { getWalletNonceApi, signUpApi } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
+import PopupB from "../../shared/PopupB";
+import Link from "next/link";
 
 const walletData = getAllWalletListData();
 const addressWallet = "";
@@ -49,6 +51,13 @@ export const WalletList = (props) => {
     setSelectedWallet(walletDetails.name);
   };
 
+  const extractTokens = (apiResponse) => {
+    return {
+      accessToken: apiResponse.data.token.access_token || null,
+      refreshToken: apiResponse.data.token.refresh_token || null,
+    };
+  };
+
   const getSignupApiReqBody = (walletAddress, userObj) => {
     setTimeout(() => {
       if (!userObj || !userObj.email || !userObj.password)
@@ -72,12 +81,9 @@ export const WalletList = (props) => {
     // if (!selectedWalletName) return;
     try {
       let address = account?.address;
-      console.log(address);
       const accountInfo = await connect();
-      debugger;
       if (!accountInfo) throw Error("Connection failed please try again");
       address = accountInfo?.address;
-      debugger;
       if (address) {
         const userObj = userContaxt.state.user ?? null;
         const apiReq = getSignupApiReqBody(address, userObj);
@@ -99,7 +105,7 @@ export const WalletList = (props) => {
           }
           userContaxt.dispatch({
             type: "WALLET_CONNECTED",
-            payload: { walletId: address },
+            payload: extractTokens(apiResponse),
           });
           setWalletConnectionResponseObj({
             type: "success",
@@ -108,6 +114,7 @@ export const WalletList = (props) => {
             link: routerLink,
           });
           setLoading(false);
+          setPopup2Open(true);
 
           let activationCode = getCookies("ACTIVATION_BUTTON_TRIGGERED");
           if (activationCode === true) {
@@ -118,11 +125,11 @@ export const WalletList = (props) => {
               //   "_self"
               // );
               router.push("/beta");
-            }, 1000);
+            }, 1000000);
           } else {
             setTimeout(() => {
               return router.push(routerLink);
-            }, 1500);
+            }, 1500000);
           }
         }
         setLoading(false);
@@ -146,8 +153,38 @@ export const WalletList = (props) => {
     //linkMetamaskApiCall,
     //signMessage,
   ]);
+
+  const [popup2Open, setPopup2Open] = useState(false);
   return (
     <div className="flex flex-col items-center w-full ">
+      <PopupB open={popup2Open} onClose={() => setPopup2Open((prev) => !prev)}>
+        <div className="flex items-center relative">
+          <div className="flex flex-col">
+            <ImageComponent
+              src="/assets/x-icon.svg"
+              className="absolute top-0 right-2 h-3  cursor-pointer  object-contain"
+              onClick={() => setPopup2Open(!popup2Open)}
+            />
+            <div className="flex gap-2 mb-3">
+              <ImageComponent src="/assets/mail-icon.svg" />
+              <h1 className="text-xl font-bold">Get Started!</h1>
+            </div>
+            <p className="w-[90%]">
+              Congratulations, you are now a Forester and have successfully
+              completed registration of your Project Forest account. Please
+              download the beta app and log in with your account details to
+              start playing.
+            </p>
+          </div>
+          <Link href="/beta" className="cursor-pointer" rel="noreferrer">
+            <ImageComponent
+              onClick={() => router.push("/beta")}
+              src="/assets/circle-button.svg"
+              className="h-10 mt-10 mr-2 cursor-pointer"
+            />
+          </Link>
+        </div>
+      </PopupB>
       {!walletConnectionResponseObj ? (
         <>
           <div className="font-semibold text-[14px] md:text-[18px] text-center md:leading-5 leading-5 md:pb-6 pb-3 pt-3 px-2">

@@ -1,5 +1,9 @@
-import { getAuthInfoObj, setAuthInfo } from "../services/localStorage";
-let { user = null } = getAuthInfoObj() ? getAuthInfoObj() : {};
+import {
+  getAuthInfoObj,
+  removeAuthInfo,
+  setAuthInfo,
+} from "../services/localStorage";
+let user = getAuthInfoObj() || {};
 export const initialState = {
   user: user,
   loading: false,
@@ -13,7 +17,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: true,
       };
     case "OTP_SENT":
-      console.log("PAYLOAD", action.payload);
       return {
         ...state,
         user: {
@@ -24,7 +27,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "REGISTER_SUCCESS":
-      console.log(action.payload);
       return {
         ...state,
         user: {
@@ -34,7 +36,6 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "OTP_VERIFIED":
-      console.log("MASLA", action.payload);
       return {
         ...state,
         user: {
@@ -49,9 +50,10 @@ export const AuthReducer = (state = initialState, action) => {
       let userObj = {
         email: state.user.email,
         isOTPVerified: state.user.isOTPVerified,
-        walletId: action.payload.walletId,
+        accessToken: action.payload.accessToken,
+        refreshToken: action.payload.refreshToken,
       };
-      setAuthInfo({ user: userObj });
+      setAuthInfo(userObj);
       return {
         ...state,
         user: userObj,
@@ -70,12 +72,12 @@ export const AuthReducer = (state = initialState, action) => {
         loading: false,
       };
     case "LOGOUT":
+      removeAuthInfo();
       return {
         ...state,
-        user: "",
-        token: "",
+        user: null,
+        accessToken: null,
       };
-
     case "LOGIN_ERROR":
       return {
         ...state,

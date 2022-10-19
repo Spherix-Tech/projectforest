@@ -1,13 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import ImageComponent from "../../shared/ImageComponent";
 import { setCookies } from "../../../services/localStorage";
 import { useRouter } from "next/router";
 import { UserContext } from "../../../context/userContext";
+import PopupB from "../../shared/PopupB";
 
-
-
-
-const Hero = () => {
+const Hero = ({ showPopup }) => {
   const router = useRouter();
   const userContaxt = useContext(UserContext);
   function setActivationCode() {
@@ -15,19 +13,19 @@ const Hero = () => {
     const user = userContaxt.state.user ?? null;
     if (user && user.email && user.accessToken) {
       setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
-      router.push("/beta");
+      showPopup();
     } else {
-      router.push("/login");
+      router.push("/signup");
     }
   }
 
   return (
     <div className="relative max-h-[100vh] overflow-hidden flex flex-col gap-4 md:gap-7 items-center text-center px-8">
-      <div className="pointer-events-none absolute top-0 bottom-0 w-full h-full custom-gradient z-100" />
+      <div className="pointer-events-none absolute top-0 bottom-0 w-full h-full custom-gradient" />
       <h4 className=" text-2xl md:text-6xl text-[#3A3A3C] font-bold">
         Reforestation Starts Here
       </h4>
-      <p className="  w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl font-medium">
+      <p className=" w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl font-medium">
         Project Forest&apos;s first round of public beta is currently live.
         Participate in the closed beta for free and earn exclusive Tree-NFT
         airdrops, each day. Get started by creating a Project Forest account and
@@ -54,7 +52,7 @@ const Hero = () => {
         </div>
         <div className=" w-[165px] md:w-[250px] flex flex-col">
           <button
-            className="  btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]"
+            className=" btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]"
             onClick={setActivationCode}
           >
             <p>Register</p>
