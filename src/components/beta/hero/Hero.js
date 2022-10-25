@@ -1,11 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import ImageComponent from "../../shared/ImageComponent";
 import { setCookies } from "../../../services/localStorage";
 import { useRouter } from "next/router";
 import { UserContext } from "../../../context/userContext";
 import PopupB from "../../shared/PopupB";
+import { getAppStoreUrl } from "../../../utilities/helpers";
 
 const Hero = ({ showPopup }) => {
+  const [appDownloadLink, setAppDownloadLink] = useState();
   const router = useRouter();
   const userContaxt = useContext(UserContext);
   function setActivationCode() {
@@ -18,6 +20,13 @@ const Hero = ({ showPopup }) => {
       router.push("/signup");
     }
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      const appLink = getAppStoreUrl();
+      setAppDownloadLink(appLink);
+    }, 500);
+  }, []);
 
   return (
     <div className="relative max-h-[100vh] overflow-hidden flex flex-col gap-4 md:gap-7 items-center text-center px-8">
@@ -37,11 +46,7 @@ const Hero = ({ showPopup }) => {
       <div className="flex flex-row gap-6 w-full justify-center">
         <div className=" w-[165px] md:w-[250px] flex flex-col">
           <button className=" btnBeta bg-transparent hover:bg-white ">
-            <a
-              href="https://projectforest.io/download-game"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={appDownloadLink} target="_blank" rel="noreferrer">
               <p>Download Beta </p>
             </a>
           </button>

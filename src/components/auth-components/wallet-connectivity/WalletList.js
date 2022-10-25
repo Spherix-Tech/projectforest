@@ -103,7 +103,6 @@ export const WalletList = (props) => {
           if (signupStarted && signupStarted === "beta") {
             routerLink = "/beta";
           }
-          console.log("apiResponse", apiResponse, extractTokens(apiResponse));
           userContaxt.dispatch({
             type: "WALLET_CONNECTED",
             payload: extractTokens(apiResponse),

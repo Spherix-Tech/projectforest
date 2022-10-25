@@ -53,7 +53,6 @@ export const AuthReducer = (state = initialState, action) => {
         accessToken: action.payload.accessToken,
         refreshToken: action.payload.refreshToken,
       };
-      console.log("userObj", userObj, action.payload);
       setAuthInfo(userObj);
       return {
         ...state,
