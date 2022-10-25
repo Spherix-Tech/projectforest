@@ -11,9 +11,9 @@ import { APP_ANDROID_STORE } from "../../../services/constants";
 const betaSteps = getAllBetaStepsData();
 
 const GetStarted = () => {
-  const [appDownloadLink, setAppDownloadLink] = useState(APP_ANDROID_STORE);
   const router = useRouter();
   const userContaxt = useContext(UserContext);
+  const [appDownloadLink, setAppDownloadLink] = useState(APP_ANDROID_STORE);
   function setActivationCode() {
     setCookies("ACTIVATION_BUTTON_TRIGGERED", true);
     const user = userContaxt.state.user ?? null;
