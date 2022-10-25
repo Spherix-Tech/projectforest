@@ -1,4 +1,9 @@
-import { METAMASK_ERROR_LIST, SUCCESS_CODE } from "../services/constants";
+import {
+  APP_ANDROID_STORE,
+  APP_APPLE_STORE,
+  METAMASK_ERROR_LIST,
+  SUCCESS_CODE,
+} from "../services/constants";
 
 export const getDataOrErrorMessageObj = (apiResponse) => {
   return apiResponse.code === SUCCESS_CODE
@@ -32,4 +37,34 @@ export const getWalletAddressStr = (walletAddress) => {
   return walletAddress.address.address
     ? walletAddress.address.address
     : walletAddress.address;
+};
+
+const getMobileOperatingSystem = () => {
+  if (!navigator && !window) {
+    return "unknown";
+  }
+
+  let userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  // Windows Phone must come first because its UA also contains "Android"
+  if (/windows phone/i.test(userAgent)) {
+    return "Windows Phone";
+  }
+
+  if (/android/i.test(userAgent)) {
+    return "Android";
+  }
+
+  if (/iPad|iPhone|Macintosh|Mac|iPod/.test(userAgent) && !window.MSStream) {
+    return "iOS";
+  }
+
+  return "unknown";
+};
+
+export const getAppStoreUrl = () => {
+  const operatingSystem = getMobileOperatingSystem();
+  if (operatingSystem === "iOS") {
+    return APP_APPLE_STORE;
+  }
+  return APP_ANDROID_STORE;
 };
