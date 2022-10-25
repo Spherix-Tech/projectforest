@@ -9,6 +9,10 @@ export const API_BASE_URL = "https://uc.projectforest.io/";
 export const LOCAL_STORAGE_AUTH_INFO = "LOCAL_STORAGE_AUTH_INFO";
 export const COUNTDOWN_STORAGE_KEY = "COUNTDOWN_STORAGE_KEY";
 
+export const APP_APPLE_STORE = "https://apps.apple.com/us/app/id1645009569";
+export const APP_ANDROID_STORE =
+  "https://play.google.com/store/apps/details?id=com.nft.projectforest";
+
 export const MODE_DEBUG = true;
 
 export const SUCCESS_CODE = 0;

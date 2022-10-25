@@ -1,14 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import ImageComponent from "../../shared/ImageComponent";
 import { getAllBetaStepsData } from "../../../services/data-files/BetaStepsData";
 import { useRouter } from "next/router";
 import { UserContext } from "../../../context/userContext";
 import { setCookies } from "../../../services/localStorage";
 import Link from "next/link";
+import { getAppStoreUrl } from "../../../utilities/helpers";
+import { APP_ANDROID_STORE } from "../../../services/constants";
 
 const betaSteps = getAllBetaStepsData();
 
 const GetStarted = () => {
+  const [appDownloadLink, setAppDownloadLink] = useState(APP_ANDROID_STORE);
   const router = useRouter();
   const userContaxt = useContext(UserContext);
   function setActivationCode() {
@@ -21,6 +24,13 @@ const GetStarted = () => {
       router.push("/login");
     }
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      const appLink = getAppStoreUrl();
+      setAppDownloadLink(appLink);
+    }, 500);
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center w-full text-center 2xl:pt-10 relative md:pb-10 pb-6">
@@ -52,7 +62,7 @@ const GetStarted = () => {
               <p className="font-light py-2 text-sm min-h-[100px]">{e.text}</p>
               {e.linkAvailable === true ? (
                 <Link
-                  href={e.link}
+                  href={e.title !== "REGISTER" ? appDownloadLink : e.link}
                   target={e.target}
                   rel="noreferrer"
                   className="self-center"
