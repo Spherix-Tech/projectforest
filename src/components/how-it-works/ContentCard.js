@@ -20,7 +20,7 @@ const ContentCard = ({
   return (
     <div
       className={
-        "flex  flex-col justify-start items-start text-textTitle " +
+        "flex  flex-col justify-start items-start text-white " +
         (selectedStatus ? " activeCard" : "") +
         (clickable ? " cursor-pointer" : " cursor-default")
       }

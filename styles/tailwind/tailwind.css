@@ -4,10 +4,10 @@
 
 @layer base {
   .btnPrimary {
-    @apply text-[#434343] bg-primary border-[1px] border-primary lg:max-w-2xl hover:bg-[#ACADAD] hover:text-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
+    @apply text-[#434343] bg-[#F49755] border-[1px] border-[#F49755] lg:max-w-2xl hover:bg-[#ACADAD] hover:text-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
   }
   .btnSecondary {
-    @apply text-primaryBlue border-[1px] border-borderColor lg:max-w-2xl hover:bg-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
+    @apply text-white border-[1px] border-white lg:max-w-2xl hover:bg-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
   }
 
   .attributes-header {
@@ -78,7 +78,7 @@
     @apply bg-[#F1FCDF];
   }
   .activeCard {
-    @apply bg-[#E4E7C7] p-4 rounded-[15px];
+    @apply bg-[#F49755] p-4 rounded-[15px];
   }
   .auth-card {
     @apply bg-gradient-to-b from-[#D4F0F2] to-[#E8F1D8] p-1 rounded-[2rem] border border-[#e7f1d89a];
@@ -90,12 +90,13 @@
   }
   .nav-hero-section-bg {
     position: relative;
-    /* width: 100%;
-        background-image: url("/assets/bg/nav-hero-section-bg.webp");
+    width: 100%;
+    
+        background-image: url("/assets/bg.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover; */
-    @apply bg-gradient-to-b from-[#D1F0F6] to-[#F3F1CB];
+        background-size: cover;
+  
   }
   .nft-impact-section-bg {
     width: 100%;

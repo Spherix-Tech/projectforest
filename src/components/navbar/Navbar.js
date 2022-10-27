@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className="w-full flex flex-row  justify-between items-center py-8 section-spacing">
       <Link href="/">
         <div
-          className="cursor-pointer flex flex-row gap-2 text-primaryBlue items-center "
+          className="cursor-pointer flex flex-row gap-2 text-white items-center "
           onClick={() => onToggleChange(false)}
         >
           <ImageComponent
@@ -50,7 +50,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop/ Laptop Nav Items */}
-      <div className="navscreen:flex flex-row text-textTitle font-semibold hidden ">
+      <div className="navscreen:flex flex-row text-white font-semibold hidden ">
         {DataArr.map((element, i) => {
           return (
             <Link key={i} href={element.link}>
@@ -81,13 +81,13 @@ const Navbar = () => {
       <div className="navscreen:hidden flex">
         {toggleMenu ? (
           <RiCloseLine
-            color="#3A3A3C"
+            color="#FFF"
             size={30}
             onClick={() => onToggleChange(false)}
           />
         ) : (
           <RiMenuFill
-            color="#3A3A3C"
+            color="#FFF"
             size={30}
             onClick={() => onToggleChange(true)}
           />

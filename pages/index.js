@@ -143,17 +143,13 @@ gtag('config', 'G-XJKS1PTP6Y');
       <main>
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <div className="nav-hero-section-bg">
+            <div className="nav-hero-section-bg h-[1500px] md:h-[1250px]">
               <Navbar />
 
               {/* Hero Section */}
               <Hero />
 
               {/* How It Works Section */}
-              <ImageComponent
-                src={"/assets/trees-bg.png"}
-                className="how-section-trees -mb-2"
-              />
             </div>
             <HowItWorks
               howItWorksItemsList={howItWorksItemsList}

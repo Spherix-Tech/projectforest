@@ -78,12 +78,14 @@ export default function NFTSlider({
   return (
     <div
       id="nft"
-      className={"section-spacing panel " + className}
+      className={"section-spacing panel bg-[#35215D]  " + className}
       ref={reference}
     >
       <div className="hidden md:block">
         <div className="flex justify-between items-center section-title-spacing">
-          <div>{!hideTitle && <h3 className="section-title">NFT</h3>}</div>
+          <div>
+            {!hideTitle && <h3 className="section-title text-white">NFT</h3>}
+          </div>
           <div>
             <div className="flex w-full justify-end gap-2">
               <div>
@@ -130,7 +132,7 @@ export default function NFTSlider({
             />
           </div>
 
-          <div className="w-2/4 md:w-[60%] lg:w-[55%] xl:w-[70%] max-w-sm md:max-w-[35rem] lg:max-w-[40rem] xl:max-w-[70rem] flex flex-col h-full text-textTitle">
+          <div className="w-2/4 md:w-[60%] lg:w-[55%] xl:w-[70%] max-w-sm md:max-w-[35rem] lg:max-w-[40rem] xl:max-w-[70rem] flex flex-col h-full text-white">
             {/* NFT Slider */}
             <div ref={sliderRef} className="keen-slider w-full flex ">
               {DataArr &&
@@ -159,17 +161,17 @@ export default function NFTSlider({
             {/* NFT Slider ends */}
             <h3 className=" lg:text-[40px] text-xl md:text-3xl font-semibold pt-2 lg:pb-[0.5rem] lg:pt-[0.5rem] xl:pt-8 xl:pb-2 pb-0">
               Purchase your first Tree
-              <span className="text-[#19B7B7]"> NFT </span>
+              <span className="text-[#F49755]"> NFT </span>
             </h3>
 
-            <p className="lg:text-[16px] text-xs lg:w-[90%] md:w-full w-full leading-4 sm:leading-5 py-1 sm:py-4 lg:py-[0.5rem] xl:py-4 text-textDescription">
+            <p className="lg:text-[16px] text-xs lg:w-[90%] md:w-full w-full leading-4 sm:leading-5 py-1 sm:py-4 lg:py-[0.5rem] xl:py-4 text-white">
               Take the first step in building your NFT forest. Choose from a
               distinct collection of unique plant species, each with their own
               characteristics such as O2 production, water intake, climate
               resistance, terrain suitability and more.
             </p>
             <a>
-              <button className="disabled btnPrimary lg:w-60 w-44">
+              <button className="disabled btnPrimary hover:bg-[#F49755] lg:w-60 w-44 text-white hover:text-white">
                 Mint Now
               </button>
             </a>

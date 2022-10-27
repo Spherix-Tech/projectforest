@@ -33,7 +33,7 @@ const MobileContentCard = ({
           </div>
         </div>
 
-        <div className="flex flex-row items-center w-[90%] text-[#1D3C34] justify-between">
+        <div className="flex flex-row items-center w-[90%] text-white justify-between">
           <h1
             className={
               isActive ? "font-extrabold text-[16px]" : "font-bold text-[14px]"
@@ -61,9 +61,7 @@ const MobileContentCard = ({
         }
       >
         <div className="px-4 py-2 w-full">
-          <p className="text-textTitle pb-2 font-medium text-sm">
-            {description}
-          </p>
+          <p className="text-white pb-2 font-medium text-sm">{description}</p>
           <div className="flex justify-center items-center">
             <ImageComponent
               src={"/assets/how-it-works/" + imageName}

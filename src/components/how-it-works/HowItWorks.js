@@ -27,15 +27,15 @@ const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
   }, [inView, howItWorksItemsList]);
 
   return (
-    <div className="how-section" id="how-it-works">
+    <div className="how-section " id="how-it-works">
       <div
-        className="how-section-bg py-[2rem] md:py-[4rem] lg:pt-[3rem] lg:pb-[6rem] section-spacing "
+        className="bg-[#35215D] py-[2rem] md:py-[4rem] lg:pt-[3rem] lg:pb-[6rem] section-spacing "
         id="how-it"
       >
         <div className="w-full text-start">
-          <p className="section-sub-title">Introducing</p>
+          <p className="section-sub-title text-white">Introducing</p>
           <br />
-          <h1 className="section-title section-title-spacing pb-[2rem]">
+          <h1 className="section-title text-white section-title-spacing pb-[2rem]">
             GROW-to-EARN
           </h1>
         </div>
@@ -76,7 +76,7 @@ const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
               <div className="absolute left-4 h-[538px] xs:h-[475px] sm:h-[460px!important]  md:h-[90%!important] xl:h-[92%!important] mt-[2.8rem]">
                 {haveRoundedPoints ? (
                   <ImageComponent
-                    src={"/assets/how-it-works/rounded-dashed-img.svg"}
+                    src={"/assets/how-it-works/rounded-dashed-white.svg"}
                     className="hidden lg:block h-[inherit]"
                   />
                 ) : (
@@ -104,7 +104,7 @@ const HowItWorks = ({ howItWorksItemsList, haveRoundedPoints = false }) => {
                       }
                     >
                       {/* Numbring circle */}
-                      <div className="min-w-[35px] text-white h-[35px] rounded-full font-bold border-2 z-10 border-[#1D3C34] flex justify-center items-center bg-[#1D3C34]">
+                      <div className="min-w-[35px] text-[#35215D] h-[35px] rounded-full font-bold border-2 z-10 border-[white] flex justify-center items-center bg-white">
                         <div className="mt-[10%]">{index + 1}</div>
                       </div>
                       {/* Details Card */}

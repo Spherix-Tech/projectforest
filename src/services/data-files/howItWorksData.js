@@ -2,7 +2,7 @@ const howItWorksHomepageData = [
   {
     boldTitle: "Mint ",
     normalTitle: "a Virtual Tree",
-    imageName: "intro-main-img.webp",
+    imageName: "halloween-tree.webp",
     description:
       "Purchase or redeem your virtual Tree NFT from Project Forest. Each tree has a unique set of attributes and belongs to a distinct class of species.",
   },

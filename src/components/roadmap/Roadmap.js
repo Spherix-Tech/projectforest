@@ -12,24 +12,21 @@ const DataArr = getDataBySectionName("roadmap");
 
 const Roadmap = () => {
   return (
-    <div
-      className=" text-textDescription py-[2rem] md:py-[3rem] bg-[#F2F2F2] panel"
-      id="roadmap"
-    >
-      <h3 className="section-title section-title-spacing px-[2rem] lg:px-[12rem]">
+    <div className=" text-textDescription bg-[#2D1955] panel" id="roadmap">
+      <h3 className="section-title pt-[3rem] text-white bg-[#2D1955] section-title-spacing px-[2rem] lg:px-[12rem]">
         Roadmap
       </h3>
 
       {/* Roadmap Large Screen */}
       <MediaQuery query="(min-width: 1024px)">
-        <div className="w-full relative flex justify-center">
-          <ImageComponent src={"/assets/roadmap/roadmap.png"} />
+        <div className="w-full relative flex justify-center bg-[#2D1955] pb-[3rem]">
+          <ImageComponent src={"/assets/roadmap/roadmap-halloween.webp"} />
         </div>
       </MediaQuery>
 
       {/* Roadmap Mobile & Tablet Screen */}
       <MediaQuery query="(max-width: 1023px)">
-        <div className="px-6 py-8">
+        <div className="px-6 py-8 bg-[#2D1955]">
           {DataArr.map((e, i) => {
             return (
               <div key={i} className="w-full flex flex-row justify-between">
@@ -46,7 +43,7 @@ const Roadmap = () => {
                   className="object-contain py-4"
                 />
 
-                <div className="flex flex-col w-2/4 justify-center text-[12px] text-textDescription text-opacity-70 leading-4 pl-2">
+                <div className="flex flex-col w-2/4 justify-center text-[12px] text-white text-opacity-70 leading-4 pl-2">
                   <p>{e.text}</p>
                   <p>{e.text2}</p>
                   <p>{e.text3}</p>

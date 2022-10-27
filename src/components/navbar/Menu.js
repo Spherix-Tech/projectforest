@@ -18,7 +18,7 @@ export const NavbarMenuItems = ({
             onClick={onClick}
             className="w-full flex flex-row justify-between py-2 items-center"
           >
-            <h5 className=" text-textTitle uppercase">{e.name}</h5>
+            <h5 className=" text-white uppercase">{e.name}</h5>
             <ImageComponent src={e.icon_src} />
           </a>
         );

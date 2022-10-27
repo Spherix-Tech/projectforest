@@ -31,19 +31,19 @@ const allData = [
   {
     name: "HOME",
     link: "/",
-    icon_src: "/assets/navbar/home.svg",
+    icon_src: "/assets/navbar/halloween/home.svg",
     newtab: false,
   },
   {
     name: "Gameplay",
     link: "/gameplay",
-    icon_src: "/assets/navbar/token.svg",
+    icon_src: "/assets/navbar/halloween/gameplay.svg",
     newtab: false,
   },
   {
     name: "NFTs",
     link: "/nfts",
-    icon_src: "/assets/navbar/nft.svg",
+    icon_src: "/assets/navbar/halloween/nft.svg",
     newtab: false,
   },
   // {
@@ -55,13 +55,13 @@ const allData = [
   {
     name: "Litepaper",
     link: LITEPAPER_LINK,
-    icon_src: "/assets/navbar/litepaper.svg",
+    icon_src: "/assets/navbar/halloween/litepaper.svg",
     newtab: true,
   },
   {
     name: "About Us",
     link: "/about-us",
-    icon_src: "/assets/navbar/about-us.svg",
+    icon_src: "/assets/navbar/halloween/about.svg",
     newtab: false,
   },
   {
