@@ -11,10 +11,10 @@ const Timeline = () => {
         src="/assets/beta/timeline/arrow.svg"
         className="absolute lg:-top-24 -top-[90px] lg:-right-30 right-5 lg:rotate-0 h-24 lg:h-36 z-[100]"
       /> */}
-      <h2 className="text-xl md:text-4xl font-semibold -mb-4 md:-mb-2 pt-3 py-6 ">
+      <h2 className="text-xl md:text-4xl font-semibold -mb-4 md:-mb-2 pt-3 py-6 text-white ">
         Launch Timeline
       </h2>
-      <p className="md:w-[60%] w-full  text-opacity-80 md:text-lg text-sm ">
+      <p className="md:w-[60%] w-full  text-opacity-80 md:text-lg text-sm text-white ">
         We have accomplished most of our major development milestones, with the
         release date of Project Forest just around the corner. Currently, the
         devs are busy perfecting the Project Forest application, making sure
@@ -30,7 +30,9 @@ const Timeline = () => {
             >
               <div
                 className={`${
-                  e.status === true ? "bg-[#C2C982]" : "bg-white bg-opacity-10"
+                  e.status === true
+                    ? "bg-[#C2C982]"
+                    : "bg-white bg-opacity-10 text-white"
                 } m-2  w-[100px] h-[100px] rounded-full flex justify-center items-center font-semibold shadow-xl ring-white ring-[1px] relative z-100`}
               >
                 {e.phase}
@@ -46,7 +48,7 @@ const Timeline = () => {
                       src="/assets/beta/timeline/check.svg"
                       className="-mb-3"
                     />
-                    <p className=" font-semibold pt-4 italic text-[14px]">
+                    <p className=" font-semibold pt-4 italic text-[14px] text-white">
                       {e.title}
                     </p>
                   </div>
@@ -60,7 +62,7 @@ const Timeline = () => {
                 </div>
               ) : (
                 <div className="md:h-[100px]">
-                  <p className=" font-semibold pt-4 italic text-[14px]">
+                  <p className=" font-semibold pt-4 italic text-[14px] text-white">
                     {e.title}
                   </p>
                   <p className="text-[12px] pt-2 text-opacity-70 text-white">

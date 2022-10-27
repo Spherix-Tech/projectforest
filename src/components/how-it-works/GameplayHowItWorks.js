@@ -53,7 +53,7 @@ const GameplayHowItWorks = ({ howItWorksItemsList }) => {
                     }
                   >
                     {/* Numbring circle */}
-                    <div className="min-w-[35px] text-white h-[35px] rounded-full font-bold border-2 z-10 border-[#1D3C34] flex justify-center items-center bg-[#1D3C34]">
+                    <div className="min-w-[35px] text-black h-[35px] rounded-full font-bold border-2 z-10 border-white flex justify-center items-center bg-white">
                       <div className="mt-[10%]">{index + 1}</div>
                     </div>
                     {/* Details Card */}
