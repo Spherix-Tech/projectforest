@@ -99,7 +99,7 @@ export default function Gameplay() {
       <main>
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <div className="full-page-bg-img">
+            <div className="bg-[#35215D]">
               <Navbar />
               <div className="section-spacing">
                 {/* Start Head section */}
@@ -130,7 +130,6 @@ export default function Gameplay() {
                   </div>
 
                   <div className="my-[2rem] md:py-0">
-                    
                     <ImageComponent
                       src={"assets/gameplay.webp"}
                       alt="Gameplay"
@@ -185,12 +184,12 @@ export default function Gameplay() {
                     </div>
                     <div className="page-description text-center md:text-start my-[1rem]">
                       LEAF is the primary token of the Project Forest ecosystem
-                      and acts as the governance token for the
-                      project. Participants and players of Project Forest will
-                      be able to earn LEAF through their Tree NFTs once they
-                      fulfill certain level conditions and through other in-app
-                      events and scenarios. Players can spend their LEAF tokens
-                      to mint new Tree NFTs and create a virtual forest.
+                      and acts as the governance token for the project.
+                      Participants and players of Project Forest will be able to
+                      earn LEAF through their Tree NFTs once they fulfill
+                      certain level conditions and through other in-app events
+                      and scenarios. Players can spend their LEAF tokens to mint
+                      new Tree NFTs and create a virtual forest.
                     </div>
                   </div>
                   <div className="flex-1 flex justify-end">
@@ -211,7 +210,7 @@ export default function Gameplay() {
                 <div className="flex justify-center items-center flex-col md:flex-row gap-[2rem] lg:gap-[10rem]">
                   <div>
                     <div className="flex flex-col justify-center items-center">
-                      <div className="text-[#666666] font-bold pb-4 text-[20px]">
+                      <div className="text-white font-bold pb-4 text-[20px]">
                         Normal Mode
                       </div>
                     </div>
@@ -227,7 +226,7 @@ export default function Gameplay() {
 
                   <div>
                     <div className="flex flex-col justify-center items-center">
-                      <div className="text-[#666666] font-bold pb-4 text-[20px]">
+                      <div className="text-white font-bold pb-4 text-[20px]">
                         Special Events
                       </div>
                     </div>

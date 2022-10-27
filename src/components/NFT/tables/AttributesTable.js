@@ -6,7 +6,7 @@ const attributesData = getAllAttributesData();
 
 const AttributesTable = () => {
   return (
-    <div className="w-full rounded-xl border-2 border-dotted  border-borderColor border-opacity-20 my-10">
+    <div className="w-full rounded-xl border-2 border-dotted  border-white border-opacity-20 my-10 bg-white bg-opacity-10">
       <table className="w-full">
         <thead className="">
           <tr className="flex flex-row items-center w-full">
@@ -24,10 +24,10 @@ const AttributesTable = () => {
           {attributesData.map((e, i) => {
             return (
               <tr
-                className="flex flex-row items-center w-full border-t-[1px] border-dashed border-borderColor border-opacity-20 text-[8px] md:text-sm text-[#797979]"
+                className="flex flex-row items-center w-full border-t-[1px] border-dashed border-white border-opacity-20 text-[8px] md:text-sm text-white"
                 key={i}
               >
-                <td className=" w-[20%] flex flex-col md:flex-row justify-start items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:px-6 md:h-[90px] h-[50px] ">
+                <td className=" w-[20%] flex flex-col md:flex-row justify-start items-center border-r-[1px] border-dashed border-white border-opacity-20 md:px-6 md:h-[90px] h-[50px] ">
                   <ImageComponent
                     src={"assets/nft/attributes-table/" + e.valueImage}
                     className="md:h-12 h-7"
@@ -35,19 +35,19 @@ const AttributesTable = () => {
                   />
                   <p className="text-center md:text-start">{e.value}</p>
                 </td>
-                <td className=" w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px] ">
+                <td className=" w-[16%] flex justify-center items-center border-r-[1px] border-dashed border-white border-opacity-20 md:h-[90px] h-[50px] ">
                   <p>{e.common}</p>
                 </td>
-                <td className="w-[18%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]  ">
+                <td className="w-[18%] flex justify-center items-center border-r-[1px] border-dashed border-white border-opacity-20 md:h-[90px] h-[50px]  ">
                   <p>{e.uncommon}</p>
                 </td>
-                <td className="w-[15%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]">
+                <td className="w-[15%] flex justify-center items-center border-r-[1px] border-dashed border-white border-opacity-20 md:h-[90px] h-[50px]">
                   <p>{e.rare}</p>
                 </td>
-                <td className="w-[15%] flex justify-center items-center border-r-[1px] border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[50px]">
+                <td className="w-[15%] flex justify-center items-center border-r-[1px] border-dashed border-white border-opacity-20 md:h-[90px] h-[50px]">
                   <p>{e.epic}</p>
                 </td>
-                <td className="w-[16%] flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[90px] h-[47px]">
+                <td className="w-[16%] flex justify-center items-center border-dashed border-white border-opacity-20 md:h-[90px] h-[47px]">
                   <p>{e.legend}</p>
                 </td>
               </tr>

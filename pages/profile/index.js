@@ -57,7 +57,7 @@ export default function Login() {
         <div id="smooth-wrapper">
           <div id="smooth-content"></div>
 
-          <div className="nav-hero-section-bg">
+          <div className="bg-[#35215D]">
             <Navbar />
             {/* <div className='w-full flex flex-row justify-center items-center'>
               <ImageComponent src='/assets/logo.webp' className='w-20 h-20' />

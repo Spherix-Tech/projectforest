@@ -110,7 +110,7 @@ export default function NFTs() {
       <main>
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <div className="full-page-bg-img">
+            <div className="bg-[#35215D]">
               <Navbar />
               <div className="section-spacing pb-0 mb-[2rem] md:mb-0">
                 <PageGradientTitle
@@ -136,7 +136,8 @@ export default function NFTs() {
                   grown by daily nurturing, watering and nourishing using
                   fertilizers. In order to acquire a Project Forest Tree NFT,
                   players must participate during the official Genesis Airdrop
-                  event before the launch of the public beta or partake in the closed beta for an exclusive Tree NFT. Later, players can
+                  event before the launch of the public beta or partake in the
+                  closed beta for an exclusive Tree NFT. Later, players can
                   participate in the blind box sales or purchase Tree NFTs
                   through the secondary marketplace.
                 </p>
@@ -179,9 +180,9 @@ export default function NFTs() {
                     return (
                       <div
                         key={i}
-                        className="text-[#797979] w-1/5 flex flex-col items-center "
+                        className="text-white w-1/5 flex flex-col items-center "
                       >
-                        <div className="rounded-xl border-2 border-dotted border-borderColor border-opacity-20 ">
+                        <div className="rounded-xl border-2 border-dotted border-white border-opacity-20 ">
                           <ImageComponent
                             src={"assets/nft/attributes-table/" + e.image}
                             className="md:h-44 lg:h-52"
@@ -197,9 +198,9 @@ export default function NFTs() {
                 </div>
                 <p className="page-description md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Attributes significantly impact the long-term production
-                  capabilities of Tree NFTs. Tree NFTs of better quality
-                  have stronger attribute specifications and, therefore, provide
-                  a more sustainable yield over time. The table below showcases
+                  capabilities of Tree NFTs. Tree NFTs of better quality have
+                  stronger attribute specifications and, therefore, provide a
+                  more sustainable yield over time. The table below showcases
                   the attribute bonuses for each quality tier.
                 </p>
                 <AttributesTable />

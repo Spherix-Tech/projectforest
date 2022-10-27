@@ -31,21 +31,21 @@ const Hero = ({ showPopup }) => {
   return (
     <div className="relative max-h-[100vh] overflow-hidden flex flex-col gap-4 md:gap-7 items-center text-center px-8">
       <div className="pointer-events-none absolute top-0 bottom-0 w-full h-full custom-gradient" />
-      <h4 className=" text-2xl md:text-6xl text-[#3A3A3C] font-bold">
+      <h4 className=" text-2xl md:text-6xl text-[#A2AA5F] font-bold">
         Reforestation Starts Here
       </h4>
-      <p className=" w-full md:w-3/4 lg:w-2/4 text-primaryBlue text-base md:text-xl font-medium">
+      <p className=" w-full md:w-3/4 lg:w-2/4 text-white text-base md:text-xl font-medium">
         Project Forest&apos;s first round of public beta is currently live.
         Participate in the closed beta for free and earn exclusive Tree-NFT
         airdrops, each day. Get started by creating a Project Forest account and
         downloading the beta app on your iOS or Android mobile devices.
       </p>
-      <p className="text-primaryBlue text-sm w-full md:w-3/4 lg:w-2/4 ">
+      <p className="text-white text-sm w-full md:w-3/4 lg:w-2/4 ">
         Closed beta is limited to 1000 player slots only.
       </p>
       <div className="flex flex-row gap-6 w-full justify-center">
         <div className=" w-[165px] md:w-[250px] flex flex-col">
-          <button className=" btnBeta bg-transparent hover:bg-white ">
+          <button className=" btnBeta text-white hover:text-labelTextColor bg-transparent hover:bg-white ">
             <a href={appDownloadLink} target="_blank" rel="noreferrer">
               <p>Download Beta </p>
             </a>
@@ -57,7 +57,7 @@ const Hero = ({ showPopup }) => {
         </div>
         <div className=" w-[165px] md:w-[250px] flex flex-col">
           <button
-            className=" btnBeta bg-[#C3CA84] hover:bg-[#A2AA5F]"
+            className=" btnBeta bg-[#F49755] hover:bg-[#A2AA5F]"
             onClick={setActivationCode}
           >
             <p>Register</p>

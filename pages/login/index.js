@@ -57,7 +57,7 @@ export default function Login() {
         <div id="smooth-wrapper">
           <div id="smooth-content"></div>
 
-          <div className="nav-hero-section-bg">
+          <div className="bg-[#35215D]">
             <Navbar />
 
             <div className="section-spacing">

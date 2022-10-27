@@ -6,7 +6,7 @@ const benefitsData = getAllBenefitsData();
 
 const benefits = () => {
   return (
-    <div className="mt-20 relative w-full flex flex-col lg:flex-row justify-between nav-hero-section-bg rounded-[2rem] lg:p-12 p-8 py-18 shadow-xl">
+    <div className="mt-20 relative w-full flex flex-col lg:flex-row justify-between bg-gradient-to-b from-[#47356C] to-[#702461] rounded-[2rem] lg:p-12 p-8 py-18 shadow-xl">
       <ImageComponent
         src="/assets/beta/benefits/arrow.png"
         className="absolute lg:-top-32 lg:-left-24 lg:rotate-0 -top-28 left-0 h-24 lg:h-36 "
@@ -17,22 +17,22 @@ const benefits = () => {
           alt="Project Forest"
           className="-mt-4 2xl:h-[400px] self-center"
         />
-        <h2 className=" text-xl md:text-4xl font-semibold text-labelTextColor">
+        <h2 className=" text-xl md:text-4xl font-semibold">
           Closed Beta Rewards
         </h2>
-        <p className="text-labelTextColor text-opacity-80 lg:text-lg text-base">
+        <p className=" text-opacity-80 lg:text-lg text-base">
           Take the first steps toward a more sustainable future with Project
           Forest’s closed beta. Register and participate to get a first look at
           the project and earn a variety of rewards including NFTs, project
           tokens and priority during future launches.
         </p>
-        <p className="text-[#A0A0A0] text-[12px] leading-4 md:text-sm">
+        <p className="text-white text-opacity-70 text-[12px] leading-4 md:text-sm">
           To learn more about earning NFT airdrops during the beta, {""}
           <a
             href="https://medium.com/project-forest/its-raining-nfts-5c91aa69a0e4"
             target="_blank"
             rel="noreferrer"
-            className="pointer text-footerBgColor underline"
+            className="pointer text-[#C2C982] underline"
           >
             click here
           </a>
@@ -55,12 +55,8 @@ const benefits = () => {
                 className="object-contain w-12 h-10"
               />
               <div className="flex flex-col items-center text-center lg:text-left lg:items-start w-[90%]">
-                <h2 className="text-lg text-labelTextColor font-semibold pb-1">
-                  {e.title}
-                </h2>
-                <p className="text-labelTextColor text-opacity-80 text-base">
-                  {e.text}
-                </p>
+                <h2 className="text-lg  font-semibold pb-1">{e.title}</h2>
+                <p className=" text-opacity-80 text-base">{e.text}</p>
               </div>
             </div>
           );

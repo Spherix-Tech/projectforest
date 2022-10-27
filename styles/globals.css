@@ -106,7 +106,7 @@ button.disabled{
 }
 
 .custom-gradient {
-  background: linear-gradient(to bottom, #d4f0f200 75%, #f3f1cb);
+  background: linear-gradient(to bottom, #d4f0f200 75%, #35215D);
 }
 main{
   height: 100vh;

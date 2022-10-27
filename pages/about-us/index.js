@@ -103,7 +103,7 @@ export default function AboutUs() {
       <main>
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <div className="full-page-bg-img">
+            <div className="bg-[#35215D]">
               <Navbar />
 
               <div className="section-spacing relative">

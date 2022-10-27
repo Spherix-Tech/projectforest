@@ -14,7 +14,7 @@ function BetaComponent() {
   return (
     <div className="w-full relative">
       <Hero showPopup={() => setPopup1Open((prev) => !prev)} />
-      <div className="bg-[#f3f1cb] w-full section-spacing">
+      <div className="bg-[#35215D] w-full section-spacing">
         <GetStarted />
         <Timeline />
         {/* <ClaimBeta /> */}

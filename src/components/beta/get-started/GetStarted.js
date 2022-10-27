@@ -33,12 +33,12 @@ const GetStarted = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full text-center 2xl:pt-10 relative md:pb-10 pb-6">
+    <div className="flex flex-col items-center justify-center w-full text-center 2xl:pt-10 relative md:pb-10 pb-6 text-white">
       <ImageComponent
         src="/assets/beta/timeline/arrow.svg"
         className="absolute lg:-top-24 -top-[90px] lg:-right-30 right-5 lg:rotate-0 h-24 lg:h-36 z-[100]"
       />
-      <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-4 md:-mb-2 pt-3 py-10 ">
+      <h2 className="text-xl md:text-4xl font-semibold  -mb-4 md:-mb-2 pt-3 py-10 ">
         Start Playing the Beta
       </h2>
       <div className="flex flex-row flex-wrap lg:flex-nowrap lg:flex-row gap-10 justify-center">
@@ -87,13 +87,13 @@ const GetStarted = () => {
           );
         })}
       </div>
-      <p className="md:w-[60%] w-full text-[#A0A0A0] text-[12px] leading-4 md:text-sm  text-center pt-4">
+      <p className="md:w-[60%] w-full  text-[12px] leading-4 md:text-sm  text-center pt-4">
         For more information, refer to the step-by-step registration tutorial by{" "}
         <a
           href="https://medium.com/project-forest/closed-beta-registrations-resume-6d2bad46c672"
           target="_blank"
           rel="noreferrer"
-          className="pointer text-footerBgColor underline"
+          className="pointer text-[#A2AA5F] underline"
         >
           clicking here
         </a>

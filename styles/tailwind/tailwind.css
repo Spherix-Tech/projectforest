@@ -11,7 +11,7 @@
   }
 
   .attributes-header {
-    @apply md:h-[120px] h-[50px] py-4 border-r-[1px] border-dashed border-borderColor border-opacity-20 flex flex-col justify-center items-center font-semibold text-[#434343] md:text-lg text-[8px];
+    @apply md:h-[120px] h-[50px] py-4 border-r-[1px] border-dashed border-white border-opacity-20 flex flex-col justify-center items-center font-semibold text-white md:text-lg text-[8px];
   }
 
   .section-spacing {
@@ -126,10 +126,10 @@
     @apply bg-[#FFFFFF];
   }
   .title-gradient {
-    @apply p-4 w-fit text-[#3A3A3C] bg-gradient-to-r from-[#DED897] font-bold leading-[23px] text-[21px] md:text-[33px];
+    @apply p-4 w-fit text-white bg-gradient-to-r from-[#DED897] font-bold leading-[23px] text-[21px] md:text-[33px];
   }
   .page-description {
-    @apply text-[#666666] w-fit font-normal leading-6 text-[14px] md:text-[17px];
+    @apply text-white w-fit font-normal leading-6 text-[14px] md:text-[17px];
   }
   .coming-soon-text {
     @apply font-extrabold uppercase text-[#3A3A3C] text-center text-[30px] md:text-[45px];
@@ -138,7 +138,7 @@
     display: none;
   }
   .regions-table {
-    @apply flex justify-center items-center border-dashed border-borderColor border-opacity-20 md:h-[115px] h-[60px] px-1 py-1;
+    @apply flex justify-center items-center border-dashed border-white border-opacity-20 md:h-[115px] h-[60px] px-1 py-1;
   }
   .loader {
     @apply w-full h-full fixed top-0 left-0 flex justify-center items-center overflow-hidden z-100;
