@@ -4,10 +4,10 @@
 
 @layer base {
   .btnPrimary {
-    @apply text-[#434343] bg-[#F49755] border-[1px] border-[#F49755] lg:max-w-2xl hover:bg-[#ACADAD] hover:text-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
+    @apply text-[#434343]  bg-[#F49755] border-[1px] border-[#F49755] hover:border-white lg:max-w-2xl hover:bg-white   hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
   }
   .btnSecondary {
-    @apply text-white border-[1px] border-white lg:max-w-2xl hover:bg-primaryBlue  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
+    @apply text-white hover:text-[#434343] border-[1px] border-white lg:max-w-2xl hover:bg-white  hover:bg-opacity-50 focus:outline-none font-medium text-sm lg:text-xl lg:w-full lg:h-full px-5  flex justify-center content-center text-center mr-4 py-2 cursor-pointer active:scale-90 transition-all duration-75 ease-out;
   }
 
   .attributes-header {
