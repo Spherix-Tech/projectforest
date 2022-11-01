@@ -95,7 +95,7 @@ const Hero = () => {
           showBubbles
         />
 
-        <div className="flex md:pl-4 flex-row gap-3 items-center justify-center text-white py-4 pb-7 md:py-2">
+        <div className="flex md:pl-4 flex-row gap-3 items-center justify-center text-white py-4 md:py-2">
           <a
             href="https://apps.apple.com/us/app/id1645009569?l=en-us"
             target="_blank"
