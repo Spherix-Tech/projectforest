@@ -30,79 +30,100 @@ const Hero = () => {
             reforestation measures across the world.
           </span>
         </p>
-        <div className="flex flex-col  gap-4 ">
-        <div className="flex flex-row pt-1 gap-4 ">
-          <Link href="/beta" className="cursor-pointer" rel="noreferrer">
-            <button className="btnPrimary lg:w-60 w-40 mr-0">
-              JOIN BETA!
-            </button>
-          </Link>
+        <div className="flex flex-col  gap-4 md:w-[400px] w-[350px] ">
           <a
             href={LITEPAPER_LINK}
             target="_blank"
             className="cursor-pointer"
             rel="noreferrer"
           >
-            <button className=" btnSecondary lg:w-60 w-40 mr-0">
-              LITEPAPER
-            </button>
+            <button className=" btnPrimary w-full  mr-0">LITEPAPER</button>
           </a>
-          </div>
-          <div className="w-full flex flex-row justify-center">
-          <a
-            className=" flex flex-row items-center justify-center"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImageComponent
-              src={"/assets/hero/twitter.svg"}
-              className="mx-[8px]"
-            />
-          </a>
-          <a
-            className=" flex flex-row items-center justify-center"
-            href={DISCORD_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImageComponent
-              src={"/assets/hero/discord.svg"}
-              className="mx-[8px]"
-            />
-          </a>
-          <a
-            className=" flex items-center justify-center"
-            href={MEDIUM_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImageComponent
-              src={"/assets/hero/medium.svg"}
-              className="mx-[8px]"
-            />
-          </a>
-          <a
-            className=" flex items-center justify-center"
-            href={TELEGRAM_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImageComponent
-              src={"/assets/hero/telegram.svg"}
-              className="mx-[8px]"
-            />
-          </a>
-        </div>
-        </div>
 
+          <div className="w-full flex flex-row justify-center pt-4 md:pt-6">
+            <a
+              className=" flex flex-row items-center justify-center"
+              href={TWITTER_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageComponent
+                src={"/assets/hero/twitter.svg"}
+                className="mx-[8px]"
+              />
+            </a>
+            <a
+              className=" flex flex-row items-center justify-center"
+              href={DISCORD_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageComponent
+                src={"/assets/hero/discord.svg"}
+                className="mx-[8px]"
+              />
+            </a>
+            <a
+              className=" flex items-center justify-center"
+              href={MEDIUM_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageComponent
+                src={"/assets/hero/medium.svg"}
+                className="mx-[8px]"
+              />
+            </a>
+            <a
+              className=" flex items-center justify-center"
+              href={TELEGRAM_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageComponent
+                src={"/assets/hero/telegram.svg"}
+                className="mx-[8px]"
+              />
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-center ">
         <ImageComponent
           src={"/assets/hero/main-nft.webp"}
-          className=" lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]"
+          className=" lg:w-[360px] lg:h-[430px] h-[380px] w-[310px]"
           showBubbles
         />
+
+        <div className="flex md:pl-4 flex-row gap-3 items-center justify-center text-white py-4 md:py-2">
+          <a
+            href="https://apps.apple.com/us/app/id1645009569?l=en-us"
+            target="_blank"
+            className="cursor-pointer w-[155px] bg-black flex flex-row items-center  rounded-md"
+            rel="noreferrer"
+          >
+            <ImageComponent src="/assets/hero/apple.svg" className="p-2 pl-3" />
+            <div className="flex flex-col py-1">
+              <p className="text-[10px] -mb-1">Download on the</p>
+              <p>App Store</p>
+            </div>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.nft.projectforest"
+            target="_blank"
+            className="cursor-pointer w-[155px] bg-black flex flex-row items-center rounded-md"
+            rel="noreferrer"
+          >
+            <ImageComponent
+              src="/assets/hero/googleplay.svg"
+              className="p-2 pl-3"
+            />
+            <div className="flex flex-col py-1">
+              <p className="text-[10px] -mb-1">GET IT ON</p>
+              <p>Google Play</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );
