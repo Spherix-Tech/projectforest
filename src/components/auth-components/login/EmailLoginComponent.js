@@ -7,6 +7,7 @@ import { UserContext } from "../../../context/userContext";
 import { useApi } from "../../../hooks/react-query/useApi";
 import StatusCard from "../../shared/StatusCard";
 import { getErrorMessage } from "../../../utilities/helpers";
+import { loginWithEmail } from "../../../services/api/auth";
 
 export const EmailLoginComponent = (props) => {
   const { setLoading } = props;
