@@ -2,7 +2,7 @@ import React from "react";
 
 const Select = ({ options, value, onChange, label }) => {
   return (
-    <div className="inline-block relative w-full my-4 md:my-8">
+    <div className="inline-block relative w-full my-4">
       <label className="text-sm font-medium text-[#aab1ae]" htmlFor={label}>
         {label}
       </label>
