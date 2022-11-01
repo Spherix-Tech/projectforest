@@ -52,7 +52,7 @@ const Hero = () => {
                 className="p-2 pl-3"
               />
               <div className="flex flex-col py-1">
-                <p className="text-[10px]">Download on the</p>
+                <p className="text-[10px] -mb-1">Download on the</p>
                 <p>App Store</p>
               </div>
             </a>
@@ -67,7 +67,7 @@ const Hero = () => {
                 className="p-2 pl-3"
               />
               <div className="flex flex-col py-1">
-                <p className="text-[10px]">GET IT ON</p>
+                <p className="text-[10px] -mb-1">GET IT ON</p>
                 <p>Google Play</p>
               </div>
             </a>
