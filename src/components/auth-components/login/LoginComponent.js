@@ -126,7 +126,7 @@ export const LoginComponent = (props) => {
     <div className="w-[80%]">
       {!walletConnectionResponseObj ? (
         <>
-          <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
+          <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.2rem]">
             <div className="absolute top-[2.25rem] right-[2.5rem] text-[12px] md:text-[15px]">
               <p className="font-medium">
                 New user?
@@ -151,6 +151,12 @@ export const LoginComponent = (props) => {
               >
                 Login with MetaMask
               </button>
+            </div>
+
+            <div className="relative flex justify-center items-center w-[11rem] md:w-[15rem]">
+              <div className="flex-grow w-full border-t border-[#434343]"></div>
+              <span className="flex-shrink mx-4 text-[#434343]">OR</span>
+              <div className="flex-grow w-full border-t border-[#434343]"></div>
             </div>
 
             <div className="my-[0.7rem] md:my-[1rem]">
