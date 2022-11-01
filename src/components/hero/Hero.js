@@ -40,22 +40,36 @@ const Hero = () => {
             <button className=" btnPrimary w-full  mr-0">LITEPAPER</button>
           </a>
 
-          <div className="flex flex-row gap-3 items-center justify-center">
+          <div className="flex flex-row gap-3 items-center justify-center text-white">
             <a
               href="https://apps.apple.com/us/app/id1645009569?l=en-us"
               target="_blank"
-              className="cursor-pointer"
+              className="cursor-pointer w-[150px] bg-black flex flex-row items-center  rounded-md"
               rel="noreferrer"
             >
-              <ImageComponent src="/assets/hero/appstore.png" />
+              <ImageComponent
+                src="/assets/hero/apple.svg"
+                className="p-2 pl-3"
+              />
+              <div className="flex flex-col py-2">
+                <p className="text-[10px] pb-1">Download on the</p>
+                <p>App Store</p>
+              </div>
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.nft.projectforest"
               target="_blank"
-              className="cursor-pointer"
+              className="cursor-pointer w-[155px] bg-black flex flex-row items-center rounded-md"
               rel="noreferrer"
             >
-              <ImageComponent src="/assets/hero/google.png" />
+              <ImageComponent
+                src="/assets/hero/googleplay.svg"
+                className="p-2 pl-3"
+              />
+              <div className="flex flex-col py-2">
+                <p className="text-[10px] pb-1">GET IT ON</p>
+                <p>Google Play</p>
+              </div>
             </a>
           </div>
 
