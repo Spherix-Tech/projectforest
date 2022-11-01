@@ -32,7 +32,7 @@ export const EmailLoginComponent = (props) => {
       .required("Password is required"),
   });
 
-  const loginWithEmail = async (formValues) => {
+  const login = async (formValues) => {
     loginApiCallReset();
     setLoading(true);
     try {
@@ -77,7 +77,7 @@ export const EmailLoginComponent = (props) => {
                 validationSchema={validationSchema}
                 onSubmit={async (values, { setSubmitting }) => {
                   setSubmitting(false);
-                  loginWithEmail(values);
+                  login(values);
                 }}
               >
                 {({ values, isSubmitting }) => (
