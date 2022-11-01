@@ -150,20 +150,20 @@ export const LoginComponent = (props) => {
               </button>
             </div>
 
-            <div className="relative flex justify-center items-center w-[11rem] md:w-[15rem]">
+            {/* <div className="relative flex justify-center items-center w-[11rem] md:w-[15rem]">
               <div className="flex-grow w-full border-t border-[#898989]"></div>
               <span className="flex-shrink mx-4 text-[#434343]">OR</span>
               <div className="flex-grow w-full border-t border-[#898989]"></div>
-            </div>
+            </div> */}
 
-            <div className="my-[0.7rem] md:my-[1rem]">
+            {/* <div className="my-[0.7rem] md:my-[1rem]">
               <button
                 onClick={emailLogin}
                 className="btnPrimary bg-[transparent] border-[#898989] mr-0 flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
               >
                 Login with Email
               </button>
-            </div>
+            </div> */}
           </div>
         </>
       ) : (
