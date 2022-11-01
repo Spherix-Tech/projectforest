@@ -30,72 +30,82 @@ const Hero = () => {
             reforestation measures across the world.
           </span>
         </p>
-        <div className="flex flex-col  gap-4 ">
-        <div className="flex flex-row pt-1 gap-4 ">
-          <Link href="/beta" className="cursor-pointer" rel="noreferrer">
-            <button className="btnPrimary lg:w-60 w-40 mr-0">
-              JOIN BETA!
-            </button>
-          </Link>
+        <div className="flex flex-col  gap-4 md:w-[400px] w-[350px] ">
           <a
             href={LITEPAPER_LINK}
             target="_blank"
             className="cursor-pointer"
             rel="noreferrer"
           >
-            <button className=" btnSecondary lg:w-60 w-40 mr-0">
-              LITEPAPER
-            </button>
+            <button className=" btnPrimary w-full  mr-0">LITEPAPER</button>
           </a>
-          </div>
-          <div className="w-full flex flex-row justify-center">
-          <a
-            className=" flex flex-row items-center justify-center"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImageComponent
-              src={"/assets/hero/twitter.svg"}
-              className="mx-[8px]"
-            />
-          </a>
-          <a
-            className=" flex flex-row items-center justify-center"
-            href={DISCORD_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImageComponent
-              src={"/assets/hero/discord.svg"}
-              className="mx-[8px]"
-            />
-          </a>
-          <a
-            className=" flex items-center justify-center"
-            href={MEDIUM_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImageComponent
-              src={"/assets/hero/medium.svg"}
-              className="mx-[8px]"
-            />
-          </a>
-          <a
-            className=" flex items-center justify-center"
-            href={TELEGRAM_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ImageComponent
-              src={"/assets/hero/telegram.svg"}
-              className="mx-[8px]"
-            />
-          </a>
-        </div>
-        </div>
 
+          <div className="flex flex-row gap-3 items-center justify-center">
+            <a
+              href="https://apps.apple.com/us/app/id1645009569?l=en-us"
+              target="_blank"
+              className="cursor-pointer"
+              rel="noreferrer"
+            >
+              <ImageComponent src="/assets/hero/appstore.png" />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.nft.projectforest"
+              target="_blank"
+              className="cursor-pointer"
+              rel="noreferrer"
+            >
+              <ImageComponent src="/assets/hero/google.png" />
+            </a>
+          </div>
+
+          <div className="w-full flex flex-row justify-center">
+            <a
+              className=" flex flex-row items-center justify-center"
+              href={TWITTER_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageComponent
+                src={"/assets/hero/twitter.svg"}
+                className="mx-[8px]"
+              />
+            </a>
+            <a
+              className=" flex flex-row items-center justify-center"
+              href={DISCORD_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageComponent
+                src={"/assets/hero/discord.svg"}
+                className="mx-[8px]"
+              />
+            </a>
+            <a
+              className=" flex items-center justify-center"
+              href={MEDIUM_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageComponent
+                src={"/assets/hero/medium.svg"}
+                className="mx-[8px]"
+              />
+            </a>
+            <a
+              className=" flex items-center justify-center"
+              href={TELEGRAM_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageComponent
+                src={"/assets/hero/telegram.svg"}
+                className="mx-[8px]"
+              />
+            </a>
+          </div>
+        </div>
       </div>
       <div className="flex flex-col">
         <ImageComponent
