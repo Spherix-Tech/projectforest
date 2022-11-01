@@ -95,11 +95,11 @@ const Hero = () => {
           showBubbles
         />
 
-        <div className="flex flex-row gap-3 items-center justify-center text-white py-4 md:py-2">
+        <div className="flex md:pl-4 flex-row gap-3 items-center justify-center text-white py-4 md:py-2">
           <a
             href="https://apps.apple.com/us/app/id1645009569?l=en-us"
             target="_blank"
-            className="cursor-pointer w-[150px] bg-black flex flex-row items-center  rounded-md"
+            className="cursor-pointer w-[155px] bg-black flex flex-row items-center  rounded-md"
             rel="noreferrer"
           >
             <ImageComponent src="/assets/hero/apple.svg" className="p-2 pl-3" />
