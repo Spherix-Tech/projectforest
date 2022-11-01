@@ -111,3 +111,43 @@ button.disabled{
 main{
   height: 100vh;
 }
+
+.slider {
+  -webkit-appearance: none; 
+  appearance: none;
+  height: 15px; 
+  background: #d3d3d3; 
+  outline: none; 
+  opacity: 0.7; 
+  -webkit-transition: 0.2s; 
+  transition: opacity 0.2s;
+  border-radius: 0.2rem;
+  }
+  
+  .slider:hover {
+  opacity: 1; 
+  }
+  
+  
+  .slider::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  height: 25px; 
+  background: transparent; 
+  cursor: pointer; 
+  background: url('/assets/level.svg');
+  background-repeat: no-repeat;
+  width: 18px;
+  translate: 0 0.8em;
+  }
+  
+  .slider::-moz-range-thumb {
+  height: 25px; 
+  width: 18px;
+  background: url('/assets/level.svg');
+  background-repeat: no-repeat;
+  translate: 0 0.8em;
+  cursor: pointer; 
+  border: none;
+  position: absolute;
+  }
