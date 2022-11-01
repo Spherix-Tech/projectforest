@@ -40,40 +40,7 @@ const Hero = () => {
             <button className=" btnPrimary w-full  mr-0">LITEPAPER</button>
           </a>
 
-          <div className="flex flex-row gap-3 items-center justify-center text-white">
-            <a
-              href="https://apps.apple.com/us/app/id1645009569?l=en-us"
-              target="_blank"
-              className="cursor-pointer w-[150px] bg-black flex flex-row items-center  rounded-md"
-              rel="noreferrer"
-            >
-              <ImageComponent
-                src="/assets/hero/apple.svg"
-                className="p-2 pl-3"
-              />
-              <div className="flex flex-col py-1">
-                <p className="text-[10px] -mb-1">Download on the</p>
-                <p>App Store</p>
-              </div>
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.nft.projectforest"
-              target="_blank"
-              className="cursor-pointer w-[155px] bg-black flex flex-row items-center rounded-md"
-              rel="noreferrer"
-            >
-              <ImageComponent
-                src="/assets/hero/googleplay.svg"
-                className="p-2 pl-3"
-              />
-              <div className="flex flex-col py-1">
-                <p className="text-[10px] -mb-1">GET IT ON</p>
-                <p>Google Play</p>
-              </div>
-            </a>
-          </div>
-
-          <div className="w-full flex flex-row justify-center">
+          <div className="w-full flex flex-row justify-center pt-4 md:pt-6">
             <a
               className=" flex flex-row items-center justify-center"
               href={TWITTER_LINK}
@@ -121,12 +88,42 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-center ">
         <ImageComponent
           src={"/assets/hero/main-nft.webp"}
           className=" lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]"
           showBubbles
         />
+
+        <div className="flex flex-row gap-3 items-center justify-center text-white py-4 md:py-2">
+          <a
+            href="https://apps.apple.com/us/app/id1645009569?l=en-us"
+            target="_blank"
+            className="cursor-pointer w-[150px] bg-black flex flex-row items-center  rounded-md"
+            rel="noreferrer"
+          >
+            <ImageComponent src="/assets/hero/apple.svg" className="p-2 pl-3" />
+            <div className="flex flex-col py-1">
+              <p className="text-[10px] -mb-1">Download on the</p>
+              <p>App Store</p>
+            </div>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.nft.projectforest"
+            target="_blank"
+            className="cursor-pointer w-[155px] bg-black flex flex-row items-center rounded-md"
+            rel="noreferrer"
+          >
+            <ImageComponent
+              src="/assets/hero/googleplay.svg"
+              className="p-2 pl-3"
+            />
+            <div className="flex flex-col py-1">
+              <p className="text-[10px] -mb-1">GET IT ON</p>
+              <p>Google Play</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );
