@@ -14,8 +14,7 @@ import { getDataOrErrorMessageObj } from "../../../utilities/helpers";
 import Countdown from "../../shared/Countdown";
 import { getCookies, setCookies } from "../../../services/localStorage";
 import { COUNTDOWN_STORAGE_KEY } from "../../../services/constants";
-import PopupB from "../../shared/PopupB";
-import ImageComponent from "../../shared/ImageComponent";
+
 
 export const SignupComponent = (props) => {
   const { setLoading } = props;
