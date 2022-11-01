@@ -50,6 +50,10 @@ export const LoginComponent = (props) => {
     ...loginUseApi
   } = useApi(loginByWalletApi);
 
+  const emailLogin = () => {
+    console.log("Login with email");
+    router.push("/login/email");
+  };
   const connectWallet = useCallback(async () => {
     setLoading(true);
     setWalletConnectionResponseObj(null);
@@ -146,6 +150,15 @@ export const LoginComponent = (props) => {
                 className="btnPrimary mr-0 flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
               >
                 Login with MetaMask
+              </button>
+            </div>
+
+            <div className="my-[0.7rem] md:my-[1rem]">
+              <button
+                onClick={emailLogin}
+                className="btnPrimary bg-[transparent] border-[#898989] mr-0 flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
+              >
+                Login with Email
               </button>
             </div>
           </div>
