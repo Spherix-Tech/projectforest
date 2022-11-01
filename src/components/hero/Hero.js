@@ -91,7 +91,7 @@ const Hero = () => {
       <div className="flex flex-col items-center justify-center ">
         <ImageComponent
           src={"/assets/hero/main-nft.webp"}
-          className=" lg:w-[418px] lg:h-[540px] h-[380px] w-[310px]"
+          className=" lg:w-[360px] lg:h-[430px] h-[380px] w-[310px]"
           showBubbles
         />
 
