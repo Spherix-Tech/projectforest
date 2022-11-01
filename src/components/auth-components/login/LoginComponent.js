@@ -154,9 +154,9 @@ export const LoginComponent = (props) => {
             </div>
 
             <div className="relative flex justify-center items-center w-[11rem] md:w-[15rem]">
-              <div className="flex-grow w-full border-t border-[#434343]"></div>
+              <div className="flex-grow w-full border-t border-[#898989]"></div>
               <span className="flex-shrink mx-4 text-[#434343]">OR</span>
-              <div className="flex-grow w-full border-t border-[#434343]"></div>
+              <div className="flex-grow w-full border-t border-[#898989]"></div>
             </div>
 
             <div className="my-[0.7rem] md:my-[1rem]">
