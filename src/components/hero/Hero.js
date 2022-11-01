@@ -51,8 +51,8 @@ const Hero = () => {
                 src="/assets/hero/apple.svg"
                 className="p-2 pl-3"
               />
-              <div className="flex flex-col py-2">
-                <p className="text-[10px] pb-1">Download on the</p>
+              <div className="flex flex-col py-1">
+                <p className="text-[10px]">Download on the</p>
                 <p>App Store</p>
               </div>
             </a>
@@ -66,8 +66,8 @@ const Hero = () => {
                 src="/assets/hero/googleplay.svg"
                 className="p-2 pl-3"
               />
-              <div className="flex flex-col py-2">
-                <p className="text-[10px] pb-1">GET IT ON</p>
+              <div className="flex flex-col py-1">
+                <p className="text-[10px]">GET IT ON</p>
                 <p>Google Play</p>
               </div>
             </a>
