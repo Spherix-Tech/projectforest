@@ -115,7 +115,7 @@ export const WalletList = (props) => {
           });
           setLoading(false);
           const query = getQueryParamsFromRouter(router);
-          if (query && Object.keys(query).length !== 0) {
+          if (query && Object.keys(query).length !== 0 && query.referral) {
             router.push("/download-game");
           } else {
             router.push(routerLink);
