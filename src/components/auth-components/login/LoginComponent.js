@@ -19,7 +19,6 @@ import {
 import { useApi } from "../../../hooks/react-query/useApi";
 import { getCookies, setCookies } from "../../../services/localStorage";
 
-
 const addressWallet = "";
 
 export const LoginComponent = (props) => {
@@ -49,7 +48,6 @@ export const LoginComponent = (props) => {
   } = useApi(loginByWalletApi);
 
   const emailLogin = () => {
-    console.log("Login with email");
     router.push("/login/email");
   };
   const connectWallet = useCallback(async () => {

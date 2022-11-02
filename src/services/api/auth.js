@@ -15,7 +15,7 @@ export const loginByWalletApi = async (params) => {
 };
 export const loginWithEmail = async (params) => {
   const res = await publicApiCall.post({
-    url: "user/v1/send_code",
+    url: "user/v1/login",
     body: params,
   });
   return res;
