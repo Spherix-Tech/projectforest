@@ -1,6 +1,5 @@
 import { useState, useCallback, useContext } from "react";
 import Link from "next/link";
-
 import { STATUS_CONNECTED } from "../../../utilities/constants";
 import { useWallet } from "../../../hooks/useWallet";
 import { UserContext } from "../../../context/userContext";
@@ -17,7 +16,6 @@ import {
   loginByWalletApi,
 } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
-import { getCookies, setCookies } from "../../../services/localStorage";
 
 const addressWallet = "";
 
@@ -86,14 +84,7 @@ export const LoginComponent = (props) => {
               link: "/",
             });
             setLoading(false);
-
-            let activationCode = getCookies("ACTIVATION_BUTTON_TRIGGERED");
-            if (activationCode === true) {
-              setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
-              setTimeout(() => {
-                router.push("/beta");
-              }, 10000000);
-            } else {
+            {
               setTimeout(() => {
                 router.push("/");
               }, 1000);
