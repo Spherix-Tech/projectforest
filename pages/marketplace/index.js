@@ -1,13 +1,178 @@
 import Head from "next/head";
 import FilterOptions from "../../src/components/marketplace/FilterOptions";
+import ItemCard from "../../src/components/marketplace/ItemCard";
 import MarketplaceNav from "../../src/components/marketplace/MarketplaceNav";
 import Slider from "../../src/components/marketplace/Slider";
+import Footer from "../../src/components/footer/Footer";
+import { useState } from "react";
 
 const filterAreas = ["Asia", "Africa", "Europe", "America", "Oceania"];
 const filterQualities = ["Common", "Uncommon", "Rare", "Epic", "Legendary"];
 const filterSeedMint = ["0", "1", "2"];
 
+const shop = [
+  {
+    id: "200168321",
+    title: "Phoenix",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/phoenix.png",
+  },
+  {
+    id: "200168321",
+    title: "Quercus Robur",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/quercus.png",
+  },
+  {
+    id: "200168321",
+    title: "Saguaro",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/sugaro.png",
+  },
+  {
+    id: "200168321",
+    title: "Eucalypt",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/eucalypt.png",
+  },
+  {
+    id: "200168321",
+    title: "Banyan",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/banyan.png",
+  },
+  {
+    id: "200168321",
+    title: "Quercus Robur",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/quercus.png",
+  },
+  {
+    id: "200168321",
+    title: "Spathoda",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/spathoda.png",
+  },
+  {
+    id: "200168321",
+    title: "Banyan",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/banyan.png",
+  },
+  {
+    id: "200168321",
+    title: "Phoenix",
+    mint: 0,
+    age: 0,
+    level: 1,
+    price: 500000,
+    area: "Asia",
+    o2Output: 25,
+    upgrade: 500,
+    withered: 119,
+    rating: 28,
+    rarity: "Common",
+    src: "/assets/marketplace/phoenix2.png",
+  },
+];
+
 export default function MarketPlace() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [items] = useState([
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+    ...shop,
+  ]);
+
   return (
     <div>
       <Head>
@@ -66,93 +231,130 @@ gtag('config', 'G-XJKS1PTP6Y');
 </script> */}
       </Head>
 
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <div className="full-page-bg-img text-black">
-            <div className="flex w-full min-h-screen flex-col">
-              <MarketplaceNav />
-              <main className="flex border-t border-stone-300">
-                <div className="w-72 pr-2 border-r border-stone-300">
-                  <div className="flex justify-between border-b border-stone-300 items-center py-4 px-2">
-                    <h1 className="text-sm">Filters ({"0"})</h1>
-                    <button className="text-sm">Clear All</button>
+      <div className="full-page-bg-img min-h-screen text-black">
+        <div className="flex w-full flex-col">
+          <MarketplaceNav />
+          <main className="flex h-full border-t border-stone-300">
+            <div className="w-72 pr-2 border-r border-stone-300">
+              <div className="flex justify-between border-b border-stone-300 items-center py-4 px-2">
+                <h1 className="text-sm">Filters ({"0"})</h1>
+                <button className="text-sm">Clear All</button>
+              </div>
+              <FilterOptions
+                title="SORT"
+                options={
+                  <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
+                    <button className="bg-white rounded-md py-1">
+                      Price ⯅
+                    </button>
+                    <button className="bg-white rounded-md py-1">
+                      Quality ⯅
+                    </button>
+                    <button className="bg-white rounded-md py-1">
+                      Score ⯅
+                    </button>
+                    <button className="bg-white rounded-md py-1">
+                      Price ⯆
+                    </button>
+                    <button className="bg-white rounded-md py-1">
+                      Quality ⯆
+                    </button>
+                    <button className="bg-white rounded-md py-1">
+                      Score ⯆
+                    </button>
                   </div>
-                  <FilterOptions
-                    title="SORT"
-                    options={
-                      <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
-                        <button className="bg-white rounded-md py-1">
-                          Price ⯅
-                        </button>
-                        <button className="bg-white rounded-md py-1">
-                          Quality ⯅
-                        </button>
-                        <button className="bg-white rounded-md py-1">
-                          Score ⯅
-                        </button>
-                        <button className="bg-white rounded-md py-1">
-                          Price ⯆
-                        </button>
-                        <button className="bg-white rounded-md py-1">
-                          Quality ⯆
-                        </button>
-                        <button className="bg-white rounded-md py-1">
-                          Score ⯆
-                        </button>
-                      </div>
-                    }
-                  />
-                  <FilterOptions
-                    title="AREA"
-                    options={
-                      <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
-                        {filterAreas.map((area, i) => (
-                          <button key={i} className="bg-white rounded-md py-1">
-                            {area}
-                          </button>
-                        ))}
-                      </div>
-                    }
-                  />
-                  <FilterOptions
-                    title="QUALITY"
-                    options={
-                      <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
-                        {filterQualities.map((area, i) => (
-                          <button key={i} className="bg-white rounded-md py-1">
-                            {area}
-                          </button>
-                        ))}
-                      </div>
-                    }
-                  />
-                  <FilterOptions
-                    title="SEEDS MINT"
-                    options={
-                      <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
-                        {filterSeedMint.map((area, i) => (
-                          <button key={i} className="bg-white rounded-md py-1">
-                            {area}
-                          </button>
-                        ))}
-                      </div>
-                    }
-                  />
-                  <FilterOptions
-                    title="LEVEL"
-                    options={<Slider min={0} max={35} />}
-                  />
-                  <FilterOptions
-                    title="AGE"
-                    options={<Slider min={0} max={100} />}
-                  />
-                </div>
-                <div className="flex-grow px-2 pt-2">Market Place</div>
-              </main>
+                }
+              />
+              <FilterOptions
+                title="AREA"
+                options={
+                  <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
+                    {filterAreas.map((area, i) => (
+                      <button key={i} className="bg-white rounded-md py-1">
+                        {area}
+                      </button>
+                    ))}
+                  </div>
+                }
+              />
+              <FilterOptions
+                title="QUALITY"
+                options={
+                  <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
+                    {filterQualities.map((area, i) => (
+                      <button key={i} className="bg-white rounded-md py-1">
+                        {area}
+                      </button>
+                    ))}
+                  </div>
+                }
+              />
+              <FilterOptions
+                title="SEEDS MINT"
+                options={
+                  <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
+                    {filterSeedMint.map((area, i) => (
+                      <button key={i} className="bg-white rounded-md py-1">
+                        {area}
+                      </button>
+                    ))}
+                  </div>
+                }
+              />
+              <FilterOptions
+                title="LEVEL"
+                options={<Slider min={0} max={35} />}
+              />
+              <FilterOptions
+                title="AGE"
+                options={<Slider min={0} max={100} />}
+              />
             </div>
-          </div>
+            <div className="flex-grow p-4">
+              <div className="flex justify-between items-center">
+                <h1 className="text-2xl font-semibold">Marketplace</h1>
+                <select
+                  value="Price: Low To High"
+                  className="bg-white text-sm p-1"
+                >
+                  <option value="Price: Low to High">Price: Low To High</option>
+                  <option value="Price: High to Low">Price: High To Low</option>
+                </select>
+              </div>
+              <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-4 relative gap-4">
+                {items
+
+                  .slice((currentPage - 1) * 15, currentPage * 15)
+                  .map((props, i) => (
+                    <ItemCard key={i} {...props} />
+                  ))}
+              </div>
+              <div className="flex justify-end items-center mt-4 gap-2 text-xs text-[#a2a2a2]">
+                <button
+                  disabled={currentPage === 1}
+                  onClick={() => setCurrentPage((prev) => (prev -= 1))}
+                  className="text-2xl text-[#a2a2a2] border border-[#d0d0b3] px-3 rounded-md disabled:text-[#d9d9c0]"
+                >
+                  🡐
+                </button>
+                <p>Page</p>
+                <p className="bg-[#fbfbf0] text-black py-1 px-3 rounded-md shadow-lg">
+                  {currentPage.toString().padStart(2, "0")}
+                </p>
+                <p>Of {Math.ceil(items.length / 15)}</p>
+                <button
+                  disabled={currentPage === Math.ceil(items.length / 15)}
+                  onClick={() => setCurrentPage((prev) => (prev += 1))}
+                  className="text-2xl text-[#a2a2a2] border border-[#d0d0b3] px-3 rounded-md disabled:text-[#d9d9c0]"
+                >
+                  🡒
+                </button>
+              </div>
+            </div>
+          </main>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

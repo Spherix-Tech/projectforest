@@ -24,7 +24,7 @@ const MarketplaceNav = () => {
         <div className="mr-16 flex justify-end flex-grow rounded-md">
           <ImageComponent
             src="/assets/marketplace/search.svg"
-            className="rounded-l-md bg-white px-2 pl-3"
+            className="rounded-l-md bg-white px-4 hover:bg-slate-100 cursor-pointer"
           />
           <input
             type="text"
