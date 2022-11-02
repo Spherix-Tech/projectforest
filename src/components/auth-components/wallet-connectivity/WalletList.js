@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState, useCallback, useContext } from "react";
+import { useState, useCallback, useContext, useEffect } from "react";
 import { getAllWalletListData } from "../../../services/data-files/WalletListData";
 import { getCookies, setCookies } from "../../../services/localStorage";
 import { STATUS_CONNECTED } from "../../../utilities/constants";
@@ -9,6 +9,7 @@ import StatusCard from "../../shared/StatusCard";
 import {
   getDataOrErrorMessageObj,
   getErrorMessage,
+  getQueryParamsFromRouter,
 } from "../../../utilities/helpers";
 import IsLoadingHOC from "../../shared/IsLoadingHOC";
 import { UserContext } from "../../../context/userContext";
@@ -113,21 +114,11 @@ export const WalletList = (props) => {
             link: routerLink,
           });
           setLoading(false);
-
-          let activationCode = getCookies("ACTIVATION_BUTTON_TRIGGERED");
-          if (activationCode === true) {
-            setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
-            setTimeout(() => {
-              // window.open(
-              //   "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
-              //   "_self"
-              // );
-              router.push("/beta");
-            }, 1000000);
+          const query = getQueryParamsFromRouter(router);
+          if (query && Object.keys(query).length !== 0) {
+            router.push("/download-game");
           } else {
-            setTimeout(() => {
-              return router.push(routerLink);
-            }, 1500000);
+            router.push(routerLink);
           }
         }
         setLoading(false);
