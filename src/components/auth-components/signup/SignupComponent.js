@@ -170,8 +170,6 @@ export const SignupComponent = (props) => {
 
   useEffect(() => {
     atResetCountdownEnd();
-    const query = getQueryParamsFromRouter(router);
-    router.push({ pathname: "/signup/wallet", query: query });
   }, []);
 
   return (
