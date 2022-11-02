@@ -114,7 +114,7 @@ export default function AboutUs() {
                   vision.
                 </p>
                 <p className="page-description mt-4">
-                  Through adopting the principles of Web3 in Project Forest, we
+                  Through the adoption of Web3 principles in Project Forest, we
                   believe we can reforest our planet and achieve sustainability
                   in the broader global environment while working toward
                   tackling the climate crisis.
