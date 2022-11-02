@@ -10,12 +10,13 @@ import {
 } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
 import StatusCard from "../../shared/StatusCard";
-import { getDataOrErrorMessageObj } from "../../../utilities/helpers";
+import {
+  getDataOrErrorMessageObj,
+  getQueryParamsFromRouter,
+} from "../../../utilities/helpers";
 import Countdown from "../../shared/Countdown";
 import { getCookies, setCookies } from "../../../services/localStorage";
 import { COUNTDOWN_STORAGE_KEY } from "../../../services/constants";
-import PopupB from "../../shared/PopupB";
-import ImageComponent from "../../shared/ImageComponent";
 
 export const SignupComponent = (props) => {
   const { setLoading } = props;
@@ -23,7 +24,6 @@ export const SignupComponent = (props) => {
   const userContaxt = useContext(UserContext);
 
   const [showCountdown, setShowCountdown] = useState(false);
-  
 
   const [walletConnectionResponseObj, setWalletConnectionResponseObj] =
     useState(null);
@@ -104,7 +104,8 @@ export const SignupComponent = (props) => {
         },
       });
       setLoading(false);
-      router.push("/signup/wallet");
+      const query = getQueryParamsFromRouter(router);
+      router.push({ pathname: "/signup/wallet", query: query });
     }
   };
 
@@ -169,6 +170,8 @@ export const SignupComponent = (props) => {
 
   useEffect(() => {
     atResetCountdownEnd();
+    const query = getQueryParamsFromRouter(router);
+    router.push({ pathname: "/signup/wallet", query: query });
   }, []);
 
   return (

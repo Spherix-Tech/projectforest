@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/router";
@@ -6,7 +6,10 @@ import IsLoadingHOC from "../../shared/IsLoadingHOC";
 import { UserContext } from "../../../context/userContext";
 import { useApi } from "../../../hooks/react-query/useApi";
 import StatusCard from "../../shared/StatusCard";
-import { getErrorMessage } from "../../../utilities/helpers";
+import {
+  getDataOrErrorMessageObj,
+  getErrorMessage,
+} from "../../../utilities/helpers";
 import { loginWithEmail } from "../../../services/api/auth";
 
 export const EmailLoginComponent = (props) => {
@@ -37,22 +40,38 @@ export const EmailLoginComponent = (props) => {
     loginApiCallReset();
     setLoading(true);
     try {
-      const apiReq = { email: formValues.email, password: formValues.password };
-      // const apiResponse = await loginWithEmail(apiReq);
-      // const parsedResponse = getDataOrErrorMessageObj(apiResponse);
-      console.log(apiReq);
-      setTimeout(() => {
-        router.push("/login/email");
-      }, 2000);
-      throw Error("parsedResponse error");
-      // if (parsedResponse.error) {
-      //   throw Error(parsedResponse.error);
-      // } else {
-      //   console.log("Logged In");
-      // router.push("/profile");
-      // }
+      const apiReq = {
+        login_type: 0,
+        account: formValues.email,
+        password: formValues.password,
+      };
+      const apiResponse = await loginWithEmail(apiReq);
+      const parsedResponse = getDataOrErrorMessageObj(apiResponse);
+      if (parsedResponse.error) {
+        throw Error(parsedResponse.error);
+      } else {
+        const apiData = parsedResponse.data;
+        userContaxt.dispatch({
+          type: "LOGIN_SUCCESS",
+          payload: {
+            email: apiData.user.account,
+            avatar: apiData.user.avatar,
+            accessToken: apiData.token.access_token,
+            refreshToken: apiData.token.refresh_token,
+          },
+        });
+        setWalletConnectionResponseObj({
+          type: "success",
+          message: "Logged In Successfully",
+          imageName: "success-mark.svg",
+          link: "/",
+        });
+        setLoading(false);
+        setTimeout(() => {
+          router.push("/");
+        }, 2000);
+      }
     } catch (err) {
-      console.log("ERR", err);
       const errorMessage = getErrorMessage(err);
       setWalletConnectionResponseObj({
         type: "error",

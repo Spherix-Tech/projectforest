@@ -68,3 +68,12 @@ export const getAppStoreUrl = () => {
   }
   return APP_ANDROID_STORE;
 };
+
+export const getQueryParamsFromRouter = (router) => {
+  const { query } = router;
+  if (!query || Object.keys(query).length === 0) {
+    return router.asPath.split("?")[1];
+  } else {
+    return query;
+  }
+};

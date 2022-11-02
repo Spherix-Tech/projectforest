@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState, useCallback, useContext } from "react";
+import { useState, useCallback, useContext, useEffect } from "react";
 import { getAllWalletListData } from "../../../services/data-files/WalletListData";
 import { getCookies, setCookies } from "../../../services/localStorage";
 import { STATUS_CONNECTED } from "../../../utilities/constants";
@@ -9,12 +9,12 @@ import StatusCard from "../../shared/StatusCard";
 import {
   getDataOrErrorMessageObj,
   getErrorMessage,
+  getQueryParamsFromRouter,
 } from "../../../utilities/helpers";
 import IsLoadingHOC from "../../shared/IsLoadingHOC";
 import { UserContext } from "../../../context/userContext";
 import { getWalletNonceApi, signUpApi } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
-import PopupB from "../../shared/PopupB";
 import Link from "next/link";
 
 const walletData = getAllWalletListData();
@@ -114,22 +114,11 @@ export const WalletList = (props) => {
             link: routerLink,
           });
           setLoading(false);
-          setPopup2Open(true);
-
-          let activationCode = getCookies("ACTIVATION_BUTTON_TRIGGERED");
-          if (activationCode === true) {
-            setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
-            setTimeout(() => {
-              // window.open(
-              //   "https://gleam.io/competitions/DB317-project-forest-closed-beta-invite",
-              //   "_self"
-              // );
-              router.push("/beta");
-            }, 1000000);
+          const query = getQueryParamsFromRouter(router);
+          if (query && Object.keys(query).length !== 0 && query.referral) {
+            router.push("/download-game");
           } else {
-            setTimeout(() => {
-              return router.push(routerLink);
-            }, 1500000);
+            router.push(routerLink);
           }
         }
         setLoading(false);
@@ -154,37 +143,8 @@ export const WalletList = (props) => {
     //signMessage,
   ]);
 
-  const [popup2Open, setPopup2Open] = useState(false);
   return (
     <div className="flex flex-col items-center w-full ">
-      <PopupB open={popup2Open} onClose={() => setPopup2Open((prev) => !prev)}>
-        <div className="flex items-center relative">
-          <div className="flex flex-col">
-            <ImageComponent
-              src="/assets/x-icon.svg"
-              className="absolute top-0 right-2 h-3  cursor-pointer  object-contain"
-              onClick={() => setPopup2Open(!popup2Open)}
-            />
-            <div className="flex gap-2 mb-3">
-              <ImageComponent src="/assets/mail-icon.svg" />
-              <h1 className="text-xl font-bold">Get Started!</h1>
-            </div>
-            <p className="w-[90%]">
-              Congratulations, you are now a Forester and have successfully
-              completed registration of your Project Forest account. Please
-              download the beta app and log in with your account details to
-              start playing.
-            </p>
-          </div>
-          <Link href="/beta" className="cursor-pointer" rel="noreferrer">
-            <ImageComponent
-              onClick={() => router.push("/beta")}
-              src="/assets/circle-button.svg"
-              className="h-10 mt-10 mr-2 cursor-pointer"
-            />
-          </Link>
-        </div>
-      </PopupB>
       {!walletConnectionResponseObj ? (
         <>
           <div className="font-semibold text-[14px] md:text-[18px] text-center md:leading-5 leading-5 md:pb-6 pb-3 pt-3 px-2">

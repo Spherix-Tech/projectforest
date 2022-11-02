@@ -3,7 +3,6 @@ import Navbar from "../src/components/navbar/Navbar";
 import Hero from "../src/components/hero/Hero";
 import Footer from "../src/components/footer/Footer";
 import HowItWorks from "../src/components/how-it-works/HowItWorks";
-import MailingList from "../src/components/mailing-list/MailingList";
 import Reforestation from "../src/components/reforestation/Reforestation";
 import NFTSlider from "../src/components/NFT/NFTSlider";
 import Roadmap from "../src/components/roadmap/Roadmap";
@@ -12,25 +11,12 @@ import ImageComponent from "../src/components/shared/ImageComponent";
 import { getHowItWorksData } from "../src/services/data-files/howItWorksData";
 import { getDataBySectionName } from "../src/services/dataService";
 import Partners from "../src/components/partners/Partners";
-import PopupA from "../src/components/shared/PopupA";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../src/context/userContext";
-import Link from "next/link";
 const howItWorksItemsList = getHowItWorksData("homepage");
 const DataArr = getDataBySectionName("nft");
 
 export default function Home() {
-  const [popupOpen, setPopupOpen] = useState(false);
-  const userContaxt = useContext(UserContext);
-  useEffect(() => {
-    const user = userContaxt.state.user ?? null;
-    if (user && user.email && user.accessToken) {
-      setPopupOpen(false);
-    } else {
-      setPopupOpen(true);
-    }
-  }, []);
-
   // useEffect(() => {
   // gsap.registerPlugin(ScrollTrigger);
   // gsap.registerPlugin(ScrollToPlugin);
@@ -179,10 +165,6 @@ gtag('config', 'G-XJKS1PTP6Y');
             <Footer />
           </div>
         </div>
-        <PopupA
-          open={popupOpen}
-          onClose={() => setPopupOpen(!popupOpen)}
-        ></PopupA>
       </main>
     </div>
   );
