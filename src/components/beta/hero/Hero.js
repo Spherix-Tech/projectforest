@@ -3,10 +3,9 @@ import ImageComponent from "../../shared/ImageComponent";
 import { setCookies } from "../../../services/localStorage";
 import { useRouter } from "next/router";
 import { UserContext } from "../../../context/userContext";
-import PopupB from "../../shared/PopupB";
 import { getAppStoreUrl } from "../../../utilities/helpers";
 
-const Hero = ({ showPopup }) => {
+const Hero = () => {
   const [appDownloadLink, setAppDownloadLink] = useState();
   const router = useRouter();
   const userContaxt = useContext(UserContext);
@@ -15,7 +14,6 @@ const Hero = ({ showPopup }) => {
     const user = userContaxt.state.user ?? null;
     if (user && user.email && user.accessToken) {
       setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
-      showPopup();
     } else {
       router.push("/signup");
     }

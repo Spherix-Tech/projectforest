@@ -18,8 +18,7 @@ import {
 } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
 import { getCookies, setCookies } from "../../../services/localStorage";
-// import PopupB from "../../shared/PopupB";
-// import ImageComponent from "../../shared/ImageComponent";
+
 
 const addressWallet = "";
 
@@ -27,7 +26,6 @@ export const LoginComponent = (props) => {
   const { setLoading } = props;
   const router = useRouter();
   const userContaxt = useContext(UserContext);
-  const [popup1Open, setPopup1Open] = useState(false);
   const [walletConnectionResponseObj, setWalletConnectionResponseObj] =
     useState(null);
   const {
@@ -50,6 +48,10 @@ export const LoginComponent = (props) => {
     ...loginUseApi
   } = useApi(loginByWalletApi);
 
+  const emailLogin = () => {
+    console.log("Login with email");
+    router.push("/login/email");
+  };
   const connectWallet = useCallback(async () => {
     setLoading(true);
     setWalletConnectionResponseObj(null);
@@ -89,7 +91,6 @@ export const LoginComponent = (props) => {
 
             let activationCode = getCookies("ACTIVATION_BUTTON_TRIGGERED");
             if (activationCode === true) {
-              setPopup1Open(true);
               setCookies("ACTIVATION_BUTTON_TRIGGERED", false);
               setTimeout(() => {
                 router.push("/beta");
@@ -122,7 +123,7 @@ export const LoginComponent = (props) => {
     <div className="w-[80%]">
       {!walletConnectionResponseObj ? (
         <>
-          <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.5rem]">
+          <div className="flex flex-col justify-center items-center gap-[1rem] lg:gap-[1.2rem]">
             <div className="absolute top-[2.25rem] right-[2.5rem] text-[12px] md:text-[15px]">
               <p className="font-medium">
                 New user?
@@ -146,6 +147,21 @@ export const LoginComponent = (props) => {
                 className="btnPrimary mr-0 flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
               >
                 Login with MetaMask
+              </button>
+            </div>
+
+            <div className="relative flex justify-center items-center w-[11rem] md:w-[15rem]">
+              <div className="flex-grow w-full border-t border-[#898989]"></div>
+              <span className="flex-shrink mx-4 text-[#434343]">OR</span>
+              <div className="flex-grow w-full border-t border-[#898989]"></div>
+            </div>
+
+            <div className="my-[0.7rem] md:my-[1rem]">
+              <button
+                // onClick={emailLogin}
+                className="btnPrimary disabled hover:bg-transparent hover:text-[#434343] bg-[transparent] border-[#898989] mr-0 flex items-center justify-center rounded-[10px] h-[45px] md:h-[52px] w-[11rem] md:w-[15rem] text-[0.8rem] md:text-[1rem]"
+              >
+                Login with Email
               </button>
             </div>
           </div>

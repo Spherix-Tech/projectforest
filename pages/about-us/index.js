@@ -1,13 +1,6 @@
 import Head from "next/head";
 import Navbar from "../../src/components/navbar/Navbar";
-import Hero from "../../src/components/hero/Hero";
 import Footer from "../../src/components/footer/Footer";
-import HowItWorks from "../../src/components/how-it-works/HowItWorks";
-import MailingList from "../../src/components/mailing-list/MailingList";
-import Reforestation from "../../src/components/reforestation/Reforestation";
-import NFTSlider from "../../src/components/NFT/NFTSlider";
-import Roadmap from "../../src/components/roadmap/Roadmap";
-import Token from "../../src/components/token/Token";
 import React, { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
@@ -15,7 +8,6 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap, Power3 } from "gsap";
 import PageGradientTitle from "../../src/components/shared/PageGradientTitle";
 import ImageComponent from "../../src/components/shared/ImageComponent";
-import Team from "../../src/components/team/Team";
 
 export default function AboutUs() {
   useEffect(() => {
@@ -110,14 +102,22 @@ export default function AboutUs() {
                 <PageGradientTitle title="About Us" className="uppercase" />
                 <p className="page-description mt-4">
                   Project Forest was established with a simple but realistic
-                  mission: to restore the Earth’s environment. At Project
-                  Forest, we all come to work every day because we want to solve
-                  the biggest crisis humanity has ever faced. We believe that
-                  through Project Forest, we can reforest our planet and achieve
-                  sustainability in the broader global environment and resolve
-                  the climate crisis whilst incorporating the principles of
-                  Web-3 technology amidst the widespread adoption of blockchain
-                  technology.
+                  mission of restoring the Earth&apos;s environment while
+                  rewarding users with a unique gameplay experience as well as
+                  incentives for investing their time to use the app. To
+                  accomplish this mission, we required a team of self-driven and
+                  sophisticated individuals who would work toward realizing our
+                  dream of a sustainable planet by incorporating technological
+                  innovations. In order to achieve this, the founding team took
+                  aboard individuals who were not only talented but also
+                  believed in the true potential of Project Forest&apos;s
+                  vision.
+                </p>
+                <p className="page-description mt-4">
+                  Through adopting the principles of Web3 in Project Forest, we
+                  believe we can reforest our planet and achieve sustainability
+                  in the broader global environment while working toward
+                  tackling the climate crisis.
                 </p>
 
                 <div className="flex justify-between items-center flex-col-reverse md:flex-row mt-[2rem] md:mt-[5rem] md:gap-[4rem] gap-[2rem] ">
@@ -135,13 +135,12 @@ export default function AboutUs() {
                       />
                     </div>
                     <p className="page-description mt-4">
-                      Project Forest is a Web3 project with an initiative to
-                      reforest trees worldwide and improve the environment.
-                      Project Forest aims to be the world’s first Grow-to-Earn
-                      NFT mobile game that positively impacts the Earth’s
-                      environment and be the next-generation NFT project that
-                      introduces the concept of De-Fi and Grow-to-Earn to the
-                      Web3 space.
+                      We aim to tackle the climate crisis and address the
+                      energy-consumption concerns surrounding blockchain
+                      technology by introducing a unique Game-Fi model titled
+                      &apos;Grow2Earn&apos; that incentivizes and facilitates
+                      crowdsourced reforestation efforts through in-app
+                      activities.
                     </p>
                   </div>
                 </div>
@@ -152,14 +151,17 @@ export default function AboutUs() {
                       <PageGradientTitle title="Vision" className="uppercase" />
                     </div>
                     <p className="page-description mt-4">
-                      We envision ourselves to be the pioneers that introduce
-                      real-world ecological utility to the blockchain revolution
-                      by bridging the gap between technology and
-                      environmentalism. We see ourselves as the breakthrough to
-                      the Web3 space that introduces NFTs with real-world
-                      utilities which promote reforestation and provide new and
-                      sustainable use cases with a greater utility to the De-Fi
-                      space.
+                      “To be the pioneers that introduce real-world ecological
+                      utility to the blockchain revolution by bridging the gap
+                      between technology and environmentalism.”
+                    </p>
+                    <p className="page-description mt-4">
+                      This reflects our ambition to be the breakthrough in Web3
+                      technology that introduces sustainable NFTs with
+                      eco-friendly utilities. These NFTs will provide new and
+                      sustainable use cases to the De-Fi space whilst promoting
+                      our commitment to improve the environment through
+                      reforestation.
                     </p>
                   </div>
                   <div className=" bg-[#434343] bg-opacity-10 rounded-2xl">

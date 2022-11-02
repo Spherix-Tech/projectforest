@@ -13,6 +13,13 @@ export const loginByWalletApi = async (params) => {
   });
   return res;
 };
+export const loginWithEmail = async (params) => {
+  const res = await publicApiCall.post({
+    url: "user/v1/send_code",
+    body: params,
+  });
+  return res;
+};
 export const sendVerificationCodeApi = async (params) => {
   const res = await publicApiCall.post({
     url: "user/v1/send_code",
