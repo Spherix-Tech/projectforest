@@ -121,6 +121,12 @@
     /* background-size: 1600px 454px; */
     @apply rounded-xl;
   }
+  .download-game-bg{
+    background-image: url("/assets/download-game/download-background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @apply bg-top sm:bg-center;
+  }
   #roadmap {
     @apply bg-[#FFFFFF];
   }
