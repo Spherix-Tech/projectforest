@@ -135,7 +135,7 @@ main{
   height: 25px; 
   background: transparent; 
   cursor: pointer; 
-  background: url('/assets/level.svg');
+  background: url('/assets/marketplace/level.svg');
   background-repeat: no-repeat;
   width: 18px;
   translate: 0 0.8em;
@@ -144,7 +144,7 @@ main{
   .slider::-moz-range-thumb {
   height: 25px; 
   width: 18px;
-  background: url('/assets/level.svg');
+  background: url('/assets/marketplace/level.svg');
   background-repeat: no-repeat;
   translate: 0 0.8em;
   cursor: pointer; 

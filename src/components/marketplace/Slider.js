@@ -1,6 +1,6 @@
 import React from "react";
 
-const Slider = ({ min, max, onChange }) => {
+const Slider = ({ min, max, onChange, value }) => {
   return (
     <div className="bg-white rounded-md p-2">
       <div className="flex justify-between items-center">
@@ -9,7 +9,7 @@ const Slider = ({ min, max, onChange }) => {
       </div>
       <input
         type="range"
-        defaultValue={min}
+        value={value}
         min={min}
         max={max}
         className="slider w-full"
