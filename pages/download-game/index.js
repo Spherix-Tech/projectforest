@@ -1,12 +1,7 @@
-import { useEffect } from "react";
 import Head from "next/head";
+import DownloadGameComponent from "../../src/components/download-game/DownloadGameComponent";
 
 function DownloadGame() {
-  useEffect(() => {
-    window.location.assign(
-      "https://portal.testapp.io/apps/install/xBXvQxjQ3azPq"
-    );
-  }, []);
   return (
     <div>
       {" "}
@@ -56,6 +51,13 @@ function DownloadGame() {
           content="Project Forest is a collection of sustainability focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
       </Head>
+      <main>
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            <DownloadGameComponent />
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
