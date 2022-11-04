@@ -58,10 +58,20 @@ export const WalletList = (props) => {
     };
   };
 
+  const getQueryParamsStr = () => {
+    if (queryParams && queryParams.referral) {
+      return "?referral=" + queryParams.referral.toString();
+    } else if (query && query.referral) {
+      return "?referral=" + query.referral.toString();
+    } else {
+      return "";
+    }
+  };
+
   const getReferralId = () => {
     if (queryParams && queryParams.referral) {
       return queryParams.referral.toString();
-    } else if (query.referral) {
+    } else if (query && query.referral) {
       return query.referral.toString();
     } else {
       return null;
@@ -71,7 +81,7 @@ export const WalletList = (props) => {
   const getSignupApiReqBody = (walletAddress, userObj) => {
     setTimeout(() => {
       if (!userObj || !userObj.email || !userObj.password)
-        return router.push("/signup");
+        return router.push("/signup" + getQueryParamsStr());
     }, 1000);
     const res = {
       account: userObj.email,
@@ -105,7 +115,7 @@ export const WalletList = (props) => {
             type: "error",
             message: parsedResponse.error,
             imageName: "error-mark.svg",
-            link: "/signup/wallet",
+            link: "/signup/wallet" + getQueryParamsStr(),
           });
           setLoading(false);
         } else {
@@ -139,7 +149,7 @@ export const WalletList = (props) => {
         type: "error",
         message: errorMessage,
         imageName: "error-mark.svg",
-        link: "/signup/wallet",
+        link: "/signup/wallet" + getQueryParamsStr(),
       });
       setLoading(false);
     }
