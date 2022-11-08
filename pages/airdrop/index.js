@@ -56,11 +56,11 @@ export default function Airdrop() {
         <div id="smooth-wrapper">
           <div id="smooth-content"></div>
 
-          <div className="nav-hero-section-bg">
+          <div className="airdrop-page-bg">
             <Navbar />
 
             {/* <div className="section-spacing bg-gradient-to-b from-[#BFF5F2] to-[#EDF1CF]"> */}
-            <div className="section-spacing">
+            <div className="">
               <AirdropComponent />
             </div>
 

@@ -111,3 +111,16 @@ button.disabled{
 main{
   height: 100vh;
 }
+.triangle1 {
+  border: 0 solid transparent;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-right: 60px solid #DEDCA8;
+}
+
+.triangle2 {
+  border: 0 solid transparent;
+  border-bottom-width: 60px;
+  border-top-width: 60px;
+  border-left: 60px solid #DEDCA8;
+}
