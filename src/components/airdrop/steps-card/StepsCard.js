@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import ImageComponent from "../../shared/ImageComponent";
 
 function StepsCard({ className, mainTitle, description, number }) {

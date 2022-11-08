@@ -60,37 +60,59 @@ export default function AirdropSlider({ DataArr }) {
 
   return (
     <div id="gaming" className="flex flex-col gap-8 w-full">
-      <div className="flex justify-center items-center">
+      <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="flex-1 flex justify-center items-center">
           <ImageComponent
             src={`/assets/nft/${selectedNFTObj?.imageName}`}
             alt="NFT Ankot"
-            className={" h-[20rem] "}
+            className={" h-[25rem] "}
           />
         </div>
-        <div className="flex-1 gap-4 flex flex-col justify-start items-start">
-          <div className="airdrop-title-gradient w-[70%] inline-flex justify-between items-center">
+        <div className="flex-1 gap-4 flex flex-col justify-center items-center 2xl:justify-start 2xl:items-start">
+          <div className="airdrop-title-gradient w-[100%] lg:w-[70%] inline-flex justify-between items-center">
             <div>
               <h2 className="text-[#3A3A3C] font-semibold">Name: </h2>
             </div>
             <div className="text-[#666666] font-light">CEDAR TREE</div>
           </div>
-          <div className="airdrop-title-gradient w-[70%] inline-flex justify-between items-center">
+          <div className="airdrop-title-gradient w-[100%] lg:w-[70%] inline-flex justify-between items-center">
             <div>
               <h2 className="text-[#3A3A3C] font-semibold">Species: </h2>
             </div>
             <div className="text-[#666666] font-light">XXXXXXXXXX</div>
           </div>
-          <div className="airdrop-title-gradient w-[70%] inline-flex justify-between items-center">
+          <div className="airdrop-title-gradient w-[100%] lg:w-[70%] inline-flex justify-between items-center">
             <div>
               <h2 className="text-[#3A3A3C] font-semibold">Location: </h2>
             </div>
             <div className="text-[#666666] font-light">XXXXXXXXXX</div>
           </div>
+
+          {/* Three images */}
+          <div className="flex justify-start items-center w-[100%] lg:w-[70%] gap-6">
+            <div className="bg-gradient-to-b p-4 from-[#DED897] w-[130px] md:w-[200px]">
+              <ImageComponent
+                src={`/assets/nft/${selectedNFTObj?.imageName}`}
+                alt="NFT Ankot"
+              />
+            </div>
+            <div className="bg-gradient-to-b p-4 from-[#DED897] w-[130px] md:w-[200px]">
+              <ImageComponent
+                src={`/assets/nft/${selectedNFTObj?.imageName}`}
+                alt="NFT Ankot"
+              />
+            </div>
+            <div className="bg-gradient-to-b p-4 from-[#DED897] w-[130px] md:w-[200px]">
+              <ImageComponent
+                src={`/assets/nft/${selectedNFTObj?.imageName}`}
+                alt="NFT Ankot"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="w-full inline-flex justify-start items-center gap-4">
+      <div className="w-full my-8 inline-flex justify-start items-center gap-4">
         {/* NFT Slider */}
         <div>
           {loaded && instanceRef.current && (
@@ -120,7 +142,7 @@ export default function AirdropSlider({ DataArr }) {
                   }
                 >
                   <div
-                    className={`${slide?.bgGradientColorClass} flex flex-col justify-center h-[110px] items-center gap-2 rounded-2xl `}
+                    className={`${slide?.bgGradientColorClass} flex flex-col justify-center h-[110px] 2xl:h-[140px] items-center gap-2 rounded-2xl `}
                   >
                     <ImageComponent
                       className="h-[80px]"
@@ -154,11 +176,11 @@ export default function AirdropSlider({ DataArr }) {
 function Arrow(props) {
   return (
     <div
-      className="w-7 flex flex-col items-center justify-center"
+      className="w-7 md:w-12 flex flex-col items-center justify-center"
       onClick={props.onClick}
     >
       <ImageComponent
-        className="cursor-pointer"
+        className="cursor-pointer w-full"
         alt="ankots"
         src={`/assets/nft/${
           props.left ? "slider-right-arrow" : "slider-left-arrow"
