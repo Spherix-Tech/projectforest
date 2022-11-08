@@ -1,9 +1,8 @@
 import { useRouter } from "next/router";
 import { useState, useCallback, useContext, useEffect } from "react";
 import { getAllWalletListData } from "../../../services/data-files/WalletListData";
-import { getCookies, setCookies } from "../../../services/localStorage";
-import { STATUS_CONNECTED } from "../../../utilities/constants";
-import { connect, useWallet } from "../../../hooks/useWallet";
+import { getCookies } from "../../../services/localStorage";
+import { useWallet } from "../../../hooks/useWallet";
 import ImageComponent from "../../shared/ImageComponent";
 import StatusCard from "../../shared/StatusCard";
 import {
@@ -15,12 +14,13 @@ import IsLoadingHOC from "../../shared/IsLoadingHOC";
 import { UserContext } from "../../../context/userContext";
 import { getWalletNonceApi, signUpApi } from "../../../services/api/auth";
 import { useApi } from "../../../hooks/react-query/useApi";
-import Link from "next/link";
 
 const walletData = getAllWalletListData();
 const addressWallet = "";
 export const WalletList = (props) => {
   const router = useRouter();
+  const query = getQueryParamsFromRouter(router);
+  const [queryParams, setQueryParams] = useState(query);
   const { setLoading } = props;
   const userContaxt = useContext(UserContext);
   const [selectedWalletName, setSelectedWallet] = useState(null);
@@ -58,16 +58,37 @@ export const WalletList = (props) => {
     };
   };
 
+  const getQueryParamsStr = () => {
+    if (queryParams && queryParams.referral) {
+      return "?referral=" + queryParams.referral.toString();
+    } else if (query && query.referral) {
+      return "?referral=" + query.referral.toString();
+    } else {
+      return "";
+    }
+  };
+
+  const getReferralId = () => {
+    if (queryParams && queryParams.referral) {
+      return queryParams.referral.toString();
+    } else if (query && query.referral) {
+      return query.referral.toString();
+    } else {
+      return null;
+    }
+  };
+
   const getSignupApiReqBody = (walletAddress, userObj) => {
     setTimeout(() => {
       if (!userObj || !userObj.email || !userObj.password)
-        return router.push("/signup");
+        return router.push("/signup" + getQueryParamsStr());
     }, 1000);
     const res = {
       account: userObj.email,
       password: userObj.password,
       verify_code: userObj.verify_code,
       wallet_category: 1,
+      inviter_id: getReferralId(),
       wallet_address: walletAddress.address
         ? walletAddress.address
         : walletAddress,
@@ -94,7 +115,7 @@ export const WalletList = (props) => {
             type: "error",
             message: parsedResponse.error,
             imageName: "error-mark.svg",
-            link: "/signup/wallet",
+            link: "/signup/wallet" + getQueryParamsStr(),
           });
           setLoading(false);
         } else {
@@ -114,7 +135,6 @@ export const WalletList = (props) => {
             link: routerLink,
           });
           setLoading(false);
-          const query = getQueryParamsFromRouter(router);
           if (query && Object.keys(query).length !== 0 && query.referral) {
             router.push("/download-game");
           } else {
@@ -129,7 +149,7 @@ export const WalletList = (props) => {
         type: "error",
         message: errorMessage,
         imageName: "error-mark.svg",
-        link: "/signup/wallet",
+        link: "/signup/wallet" + getQueryParamsStr(),
       });
       setLoading(false);
     }
@@ -142,6 +162,10 @@ export const WalletList = (props) => {
     //linkMetamaskApiCall,
     //signMessage,
   ]);
+
+  useEffect(() => {
+    setQueryParams(query);
+  }, [query]);
 
   return (
     <div className="flex flex-col items-center w-full ">

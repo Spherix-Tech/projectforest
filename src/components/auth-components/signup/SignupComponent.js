@@ -78,8 +78,13 @@ export const SignupComponent = (props) => {
     }),
   });
 
+  const getQueryParamsStr = (query) => {
+    return query && query.referral ? `?referral=${query.referral}` : "";
+  };
+
   const verifyOTP = async (formValues) => {
     checkVerificationCodeApiCallReset();
+    const query = getQueryParamsFromRouter(router);
     setLoading(true);
     const apiReq = {
       account: formValues.email,
@@ -92,7 +97,7 @@ export const SignupComponent = (props) => {
         type: "error",
         message: parsedResponse.error,
         imageName: "error-mark.svg",
-        link: "/signup",
+        link: "/signup" + getQueryParamsStr(query),
       });
       setLoading(false);
     } else {
@@ -104,7 +109,6 @@ export const SignupComponent = (props) => {
         },
       });
       setLoading(false);
-      const query = getQueryParamsFromRouter(router);
       router.push({ pathname: "/signup/wallet", query: query });
     }
   };
@@ -144,6 +148,7 @@ export const SignupComponent = (props) => {
   const resendCodeApiCall = async () => {
     const userEmail = userContaxt.state?.user?.email ?? null;
     if (!userEmail) return;
+    const query = getQueryParamsFromRouter(router);
     setLoading(true);
     const apiReq = { type: 1, account: userEmail };
     const apiResponse = await sendVerificationCodeApi(apiReq);
@@ -153,7 +158,7 @@ export const SignupComponent = (props) => {
         type: "error",
         message: parsedResponse.error,
         imageName: "error-mark.svg",
-        link: "/signup",
+        link: "/signup" + getQueryParamsStr(query),
       });
       setLoading(false);
     } else {
