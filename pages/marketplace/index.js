@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import { useRouter } from "next/router";
+
 import ItemCard from "../../src/components/marketplace/ItemCard";
 import MarketplaceNav from "../../src/components/marketplace/MarketplaceNav";
 import Footer from "../../src/components/footer/Footer";
@@ -13,9 +14,9 @@ const shop = getAllMarketData();
 export default function MarketPlace() {
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
-  const [level, setLevel] = useState(0);
+  const [level, setLevel] = useState(1);
   const [age, setAge] = useState(1);
-  const [items] = useState(shop);
+  const [items] = useState([...shop, ...shop]);
 
   const setQueryParam = (key, value) => {
     router.push({
@@ -23,6 +24,16 @@ export default function MarketPlace() {
       query: { ...router.query, [key]: value },
     });
   };
+
+  const removeAllQueryParams = () => {
+    router.push({
+      pathname: "/marketplace",
+      query: {},
+    });
+    setLevel(1);
+    setAge(1);
+  };
+
   let shopList = [];
 
   shopList = items
@@ -32,7 +43,7 @@ export default function MarketPlace() {
         router.query.sort === null ||
         router.query.sort === ""
       )
-        return parseFloat(a.price) - parseFloat(b.price);
+        return;
       if (router.query.sort === "Price: Low To High")
         return parseFloat(a.price) - parseFloat(b.price);
       if (router.query.sort === "Price: High To Low");
@@ -82,6 +93,21 @@ export default function MarketPlace() {
     })
     .filter((item) => {
       if (item.age >= age) return true;
+      return false;
+    })
+    .filter((item) => {
+      if (
+        router.query.search === "" ||
+        !!!router.query.search ||
+        router.query.search === null
+      )
+        return true;
+      if (
+        item.title
+          .toLocaleLowerCase()
+          .includes(router.query.search.toLocaleLowerCase())
+      )
+        return true;
       return false;
     })
     .slice((currentPage - 1) * 15, currentPage * 15)
@@ -148,19 +174,22 @@ gtag('config', 'G-XJKS1PTP6Y');
       <div className="full-page-bg-img min-h-screen text-black">
         <div className="flex w-full flex-col">
           <MarketplaceNav />
-          <main className="flex h-full border-t border-stone-300">
+          <main className="flex h-full border-t border-[#CECECE] border-opacity-40">
             <Filters
               age={age}
               level={level}
               setAge={setAge}
               setLevel={setLevel}
+              removeAllQueryParams={removeAllQueryParams}
             />
             <div className="flex-grow p-4 relative">
-              <div className="flex justify-between items-center">
-                <h1 className="text-2xl font-semibold">Marketplace</h1>
+              <div className="flex gap-5 md:gap-0 justify-between items-center">
+                <h1 className="md:text-2xl text-lg -mt-2 font-semibold">
+                  Marketplace
+                </h1>
                 <select
-                  value={router.query.price ?? "Price: Low To High"}
-                  className="bg-white text-sm p-1"
+                  value={router.query.sort ?? "Price: Low To High"}
+                  className="bg-white text-[10px] md:text-sm p-1  text-[#A2A2A2] border-r-[4px] border-white"
                   onChange={(e) => setQueryParam("sort", e.target.value)}
                 >
                   <option value="Price: Low To High">Price: Low To High</option>

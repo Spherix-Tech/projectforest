@@ -1,38 +1,54 @@
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useRef, useState } from "react";
 import ImageComponent from "../shared/ImageComponent";
 
 const MarketplaceNav = () => {
+  const searchRef = useRef();
+  const router = useRouter();
+
   return (
-    <nav className="flex w-full justify-between p-2 items-center">
+    <nav className="flex w-full justify-between p-2 px-4 items-center">
       <Link href="/">
-        <div className="w-72 cursor-pointer flex flex-row gap-2 text-primaryBlue items-center ">
+        <div className=" md:w-80 cursor-pointer flex flex-row gap-2 text-[#434343] items-center ">
           <ImageComponent
             alt="Project Forest Logo"
             src={"/assets/logo.webp"}
-            className="h-[23px] lg:h-[60px]"
+            className="h-[33px] md:h-[60px]"
           />
-          <h2 className="lg:text-[12px] text-[8px] lg:leading-[1.3rem] leading-3">
+          <h2 className="md:text-[14px] text-[10px] md:leading-[1.3rem] leading-3">
             PROJECT <br></br>
-            <span className="lg:text-[22px] text-[11px] font-semibold">
+            <span className="md:text-[22px] text-[15px] font-semibold">
               FOREST
             </span>
           </h2>
         </div>
       </Link>
-      <div className="flex flex-row items-center mr-7 w-full">
-        <div className="mr-16 flex justify-end flex-grow rounded-md">
-          <ImageComponent
-            src="/assets/marketplace/search.svg"
-            className="rounded-l-md bg-white px-4 hover:bg-slate-100 cursor-pointer"
-          />
+      <div className="flex flex-row items-center md:w-full">
+        <form
+          className="md:mr-16 mr-5 flex md:justify-start w-full md:py-1 rounded-md bg-white bg-opacity-50"
+          onSubmit={(e) => {
+            e.preventDefault();
+            router.push({
+              pathname: "/marketplace",
+              query: { ...router.query, search: searchRef.current.value },
+            });
+          }}
+        >
+          <button
+            type="submit"
+            className="rounded-l-md px-4 hover:bg-slate-100 cursor-pointer"
+          >
+            <ImageComponent src="/assets/marketplace/search.svg" />
+          </button>
           <input
             type="text"
             placeholder="Search"
-            className="py-1 p-2 rounded-r-md w-4/5"
+            className="text-[14px] py-1 p-2 rounded-r-md w-4/5 outline-none  bg-transparent placeholder:text-[14px] placeholder:font-light"
+            ref={searchRef}
           />
-        </div>
-        <button className="border-stone-300 bg-[#bcedab] py-2 px-10 rounded-md text-sm">
+        </form>
+        <button className=" bg-[#bcedab] border border-[#d7dd87] md:py-2 py-1 px-10 rounded-md text-sm">
           Login
         </button>
       </div>

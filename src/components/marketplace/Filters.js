@@ -9,7 +9,7 @@ const filterAreas = ["Asia", "Africa", "Europe", "America", "Oceania"];
 const filterQualities = ["Common", "Uncommon", "Rare", "Epic", "Legendary"];
 const filterSeedMint = ["0", "1", "2"];
 
-const Filters = ({ age, level, setAge, setLevel }) => {
+const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
   const router = useRouter();
   const setQueryParam = (key, value) => {
     router.push({
@@ -18,16 +18,9 @@ const Filters = ({ age, level, setAge, setLevel }) => {
     });
   };
 
-  const removeAllQueryParams = () => {
-    router.push({
-      pathname: "/marketplace",
-      query: {},
-    });
-  };
-
   return (
-    <div className="w-72 pr-2 border-r border-stone-300">
-      <div className="border-b border-stone-300">
+    <div className="w-72 pr-2 border-r border-[#CECECE] border-opacity-40">
+      <div className="border-b border-[#CECECE] border-opacity-40">
         <div className="flex justify-between items-center py-4 px-2">
           <h1 className="text-sm">Filters ({"0"})</h1>
           <button className="text-sm" onClick={removeAllQueryParams}>
@@ -172,7 +165,7 @@ const Filters = ({ age, level, setAge, setLevel }) => {
             min={1}
             max={35}
             value={level}
-            onChange={(e) => setLevel(e.target.valueAsNumber)}
+            onChange={(value) => setLevel(value)}
           />
         }
       />
@@ -183,7 +176,7 @@ const Filters = ({ age, level, setAge, setLevel }) => {
             min={1}
             max={100}
             value={age}
-            onChange={(e) => setAge(e.target.valueAsNumber)}
+            onChange={(value) => setAge(value)}
           />
         }
       />
