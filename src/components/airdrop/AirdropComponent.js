@@ -32,16 +32,15 @@ function AirdropComponent() {
             <div className="flex flex-col justify-center items-center gap-[8px]">
               <div>
                 <h1 className="text-[#3A3A3C] font-bold text-[1rem] md:text-[3rem] 2xl:text-[3.5rem]">
-                  Reforestation Starts Here
+                  Project Forest’s NFT Airdrops are here!
                 </h1>
               </div>
               <div className="text-[#055555] text-center 2xl:max-w-[720px]">
                 <p className="text-[0.5rem] md:text-[1.2rem] 2xl:text-[1.5rem]">
-                  Project Forest’s first round of public beta is currently live.
-                  Participate in the Project Forest beta for free and earn
-                  exclusive NFT rewards and more. Get started by creating an
-                  account on the website and downloading the app on your iOS or
-                  Android devices.
+                  The Genesis NFT Airdrop event is now online. Up to 2,000 white
+                  list spots are up for grabs, so get your hands on one and play
+                  Project Forest. Participate in the airdrop event by completing
+                  these fun-filled activities to win a white list spot today.
                 </p>
                 <p className="my-[1rem] text-[0.5rem] md:text-[0.8rem] 2xl:text-[1rem] font-light">
                   Closed beta is limited to 1000 player slots only. The
@@ -55,20 +54,20 @@ function AirdropComponent() {
             <StepsCard
               className="bg-[#82B764]"
               number={1}
-              mainTitle="Invite Friends"
-              description="Complete registration on Project Forest website and receive your activation code via email."
+              mainTitle="Act Natural"
+              description="Share your original content on Twitter by tagging @ProjectForestHQ to claim one of 500 freemint whitelist spots."
             />
             <StepsCard
               className="bg-[#5FB4B6]"
               number={2}
-              mainTitle="Invite Friends"
-              description="Complete registration on Project Forest website and receive your activation code via email."
+              mainTitle="Green Geeks"
+              description="Participate in the Project Forest quiz conducted on Discord. Answer questions as quickly as you can to claim one of 1,000 freemint whitelist spots."
             />
             <StepsCard
               className="bg-[#EA8EA2]"
               number={3}
-              mainTitle="Invite Friends"
-              description="Complete registration on Project Forest website and receive your activation code via email."
+              mainTitle="Spread Out"
+              description="Claim one of 500 freemint whitelist spots when your friends download and play Project Forest."
             />
           </div>
 
