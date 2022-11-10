@@ -52,6 +52,20 @@ export const AuthReducer = (state = initialState, action) => {
         isOTPVerified: state.user.isOTPVerified,
         accessToken: action.payload.accessToken,
         refreshToken: action.payload.refreshToken,
+        walletAddress: action.payload.walletAddress,
+      };
+      setAuthInfo(userObj);
+      return {
+        ...state,
+        user: userObj,
+        loading: false,
+      };
+    case "SETTINGS_WALLET_CONNECTED":
+      userObj = {
+        email: state.user.email,
+        accessToken: state.user.accessToken,
+        refreshToken: state.user.refreshToken,
+        walletAddress: action.payload.walletAddress,
       };
       setAuthInfo(userObj);
       return {
@@ -64,6 +78,7 @@ export const AuthReducer = (state = initialState, action) => {
         email: action.payload.email,
         accessToken: action.payload.accessToken,
         refreshToken: action.payload.refreshToken,
+        walletAddress: action.payload.walletAddress,
       };
       setAuthInfo(userObj);
       return {

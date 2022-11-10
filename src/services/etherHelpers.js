@@ -73,8 +73,8 @@ export const getAddress = async () => {
 
 export const getWalletInfo = async () => {
   const provider = await getProvider();
-  const signer = await getSigner();
   try {
+    const signer = await getSigner();
     const network = await provider.getNetwork();
     const balance = await signer.getBalance();
     const address = await signer.getAddress();

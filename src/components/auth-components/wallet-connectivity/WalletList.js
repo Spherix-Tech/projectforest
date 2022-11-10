@@ -51,10 +51,11 @@ export const WalletList = (props) => {
     setSelectedWallet(walletDetails.name);
   };
 
-  const extractTokens = (apiResponse) => {
+  const extractTokens = (apiResponse, walletAddress) => {
     return {
       accessToken: apiResponse.data.token.access_token || null,
       refreshToken: apiResponse.data.token.refresh_token || null,
+      walletAddress: walletAddress || null,
     };
   };
 
@@ -99,7 +100,6 @@ export const WalletList = (props) => {
 
   const linkWalletHandler = useCallback(async () => {
     setLoading(true);
-    // if (!selectedWalletName) return;
     try {
       let address = account?.address;
       const accountInfo = await connect();
@@ -126,7 +126,7 @@ export const WalletList = (props) => {
           }
           userContaxt.dispatch({
             type: "WALLET_CONNECTED",
-            payload: extractTokens(apiResponse),
+            payload: extractTokens(apiResponse, address),
           });
           setWalletConnectionResponseObj({
             type: "success",
