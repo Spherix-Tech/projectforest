@@ -77,3 +77,7 @@ export const getQueryParamsFromRouter = (router) => {
     return query;
   }
 };
+
+export const extractWalletAddressFromContext = (context) => {
+  return context?.state?.user?.walletAddress || null;
+};

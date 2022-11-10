@@ -75,6 +75,7 @@ export const LoginComponent = (props) => {
                 avatar: response.data.user.avatar,
                 accessToken: response.data.token.access_token,
                 refreshToken: response.data.token.refresh_token,
+                walletAddress: walletAddress,
               },
             });
             setWalletConnectionResponseObj({
