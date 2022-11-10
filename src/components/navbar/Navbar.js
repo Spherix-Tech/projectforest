@@ -20,12 +20,14 @@ const Navbar = () => {
     const user = userContaxt.state.user ?? null;
     if (user && user.email && user.accessToken) {
       let newMenuItemsArr = DataArr.filter((obj) => obj.name !== "Login");
-      newMenuItemsArr.push({
-        name: "Profile",
-        link: "/profile",
-        icon_src: "/assets/navbar/home.svg",
-      });
-      setDataArr(newMenuItemsArr);
+      if (!newMenuItemsArr.find((item) => item.name == "Profile")) {
+        newMenuItemsArr.push({
+          name: "Profile",
+          link: "/profile",
+          icon_src: "/assets/navbar/home.svg",
+        });
+        setDataArr(newMenuItemsArr);
+      }
     }
   }, [userContaxt.state]);
   return (

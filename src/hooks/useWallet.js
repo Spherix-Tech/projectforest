@@ -44,12 +44,16 @@ export const useWallet = (expectedAddress = "") => {
   const update = useCallback(
     async (connectFirst = false) => {
       setErrorWallet("");
+      setConnectionStatus(STATUS_CONNECTING);
+      if (connectFirst) await connectWallet();
       try {
-        setConnectionStatus(STATUS_CONNECTING);
-        if (connectFirst) await connectWallet();
         const walletInfo = await getWalletInfo();
         //assertAllowedNetwork(walletInfo?.network?.chainId, networkAllowed);
-        if (expectedAddress && walletInfo.address !== expectedAddress)
+        if (
+          expectedAddress &&
+          walletInfo &&
+          walletInfo.address !== expectedAddress
+        )
           throw Error(
             "Something’s not right! Please make sure you use the same address that you used for signing up."
           );
@@ -59,7 +63,7 @@ export const useWallet = (expectedAddress = "") => {
       } catch (err) {
         setErrorWallet(err.message);
         setConnectionStatus(STATUS_NOT_CONNECTED);
-        throw err;
+        return err;
       }
     },
     [expectedAddress]
@@ -75,18 +79,18 @@ export const useWallet = (expectedAddress = "") => {
     setAccount({});
   }, []);
 
-  // useEffect(() => {
-  //   update();
-  //   onChainChanged(update);
-  //   onAccountsChanged(update);
-  //   onDisconnect(update);
+  useEffect(() => {
+    update();
+    onChainChanged(update);
+    onAccountsChanged(update);
+    onDisconnect(update);
 
-  //   return () => {
-  //     offChainChanged(update);
-  //     offAccountsChanged(update);
-  //     offDisconnect(update);
-  //   };
-  // }, [update]);
+    return () => {
+      offChainChanged(update);
+      offAccountsChanged(update);
+      offDisconnect(update);
+    };
+  }, [update]);
 
   return {
     account,
