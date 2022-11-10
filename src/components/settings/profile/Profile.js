@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react';
+import { useRouter } from "next/router";
+import { useRef, useState, useContext, useEffect } from "react";
+import { UserContext } from "../../../context/userContext";
 import ImageComponent from "../../shared/ImageComponent";
 import Select from "../Select";
 import TextField from "../TextField";
@@ -6,6 +8,8 @@ import TextField from "../TextField";
 const Profile = () => {
   const picker = useRef();
   const [imgUrl, setImgUrl] = useState("/assets/logo.webp");
+  const router = useRouter();
+  const userContaxt = useContext(UserContext);
 
   const pickImage = (event) => {
     const fileReader = new FileReader();
@@ -24,6 +28,14 @@ const Profile = () => {
   };
 
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const user = userContaxt.state.user ?? null;
+    if (!user || !user.email || !user.accessToken) {
+      router.replace("/login", undefined, { shallow: true });
+      // router.push("/login");
+    }
+  }, []);
 
   return (
     <>
