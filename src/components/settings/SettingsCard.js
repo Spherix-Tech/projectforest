@@ -34,13 +34,6 @@ const SettingsCard = (props) => {
   if (!query.page) rightForm = <Profile />;
   else if (query.page === "change-password") rightForm = <ChangePassword />;
 
-  useEffect(() => {
-    if (addressWallet) {
-      setShowConnectWallet(false);
-    } else {
-      setShowConnectWallet(true);
-    }
-  }, [addressWallet]);
   const connectWallet = useCallback(async () => {
     setLoading(true);
     try {
@@ -76,6 +69,14 @@ const SettingsCard = (props) => {
     });
     replace("/");
   };
+
+  useEffect(() => {
+    if (addressWallet) {
+      setShowConnectWallet(false);
+    } else {
+      setShowConnectWallet(true);
+    }
+  }, [addressWallet]);
 
   return (
     <div className="flex justify-center items-center auth-card relative">
