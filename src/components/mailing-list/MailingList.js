@@ -10,9 +10,9 @@ const MailingList = () => {
         className="hidden lg:flex justify-center items-center lg:h-[230px] mr-6"
       />
       <div className="flex flex-col w-full">
-        <h3 className=" text-[25px] font-semibold py-2 text-textTitle">
+        <p className=" text-[25px] font-semibold py-2 text-textTitle">
           Take your first step toward a greener tomorrow
-        </h3>
+        </p>
         <p className="text-[#1D3C34] text-sm pb-6">Join our mailing list</p>
         <div className="flex lg:flex-row flex-col gap-4 space-between">
           <input

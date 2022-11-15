@@ -1,6 +1,6 @@
 import React from "react";
 function PageGradientTitle({ title, className = "" }) {
-  return <h2 className={"title-gradient uppercase " + className}>{title}</h2>;
+  return <p className={"title-gradient uppercase " + className}>{title}</p>;
 }
 
 export default PageGradientTitle;

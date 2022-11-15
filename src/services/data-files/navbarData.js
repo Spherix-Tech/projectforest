@@ -14,7 +14,7 @@ const allData = [
 
   // {
   //   name: "NFTs",
-  //   link: "/nfts",
+  //   link: "/tree-nfts",
   //   icon_src: "/assets/navbar/nft.svg",
   // },
   // {
@@ -42,7 +42,7 @@ const allData = [
   },
   {
     name: "NFTs",
-    link: "/nfts",
+    link: "/tree-nfts",
     icon_src: "/assets/navbar/nft.svg",
     newtab: false,
   },

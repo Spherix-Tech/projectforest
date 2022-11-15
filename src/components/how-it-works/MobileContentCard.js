@@ -34,14 +34,14 @@ const MobileContentCard = ({
         </div>
 
         <div className="flex flex-row items-center w-[90%] text-[#1D3C34] justify-between">
-          <h1
+          <p
             className={
               isActive ? "font-extrabold text-[16px]" : "font-bold text-[14px]"
             }
           >
             {boldTitle}
             {normalTitle}
-          </h1>
+          </p>
           <ImageComponent
             src={
               isActive
