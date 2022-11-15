@@ -19,12 +19,10 @@ const Profile = () => {
     fileReader.readAsDataURL(event.target.files[0]);
   };
 
-  const [textArea, setTextArea] = useState(
-    " https://projectforest.io/sharjeel/jdbcd54544654"
-  );
-
   const copyText = () => {
-    navigator.clipboard.writeText(textArea);
+    navigator.clipboard.writeText(
+      "https://projectforest.io/sharjeel/jdbcd54544654"
+    );
   };
 
   const [copied, setCopied] = useState(false);
@@ -33,7 +31,6 @@ const Profile = () => {
     const user = userContaxt.state.user ?? null;
     if (!user || !user.email || !user.accessToken) {
       router.replace("/login", undefined, { shallow: true });
-      // router.push("/login");
     }
   }, []);
 

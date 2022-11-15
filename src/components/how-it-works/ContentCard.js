@@ -27,12 +27,12 @@ const ContentCard = ({
       onClick={() => selectCardItem(item)}
     >
       <div>
-        <h1 className="font-bold text-[14px] lg:text-[20px] ">
+        <p className="font-bold text-[14px] lg:text-[20px] ">
           {item.boldTitle}
           <span className="text-[14px] lg:text-[19px] font-light">
             {item.normalTitle}
           </span>
-        </h1>
+        </p>
       </div>
       <div className="font-light text-[14px] pt-2">{item.description}</div>
     </div>

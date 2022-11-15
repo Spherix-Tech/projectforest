@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-import ImageComponent from '../../shared/ImageComponent';
+import ImageComponent from "../../shared/ImageComponent";
 
 const NavLink = ({ children, path, icon, show }) => {
   const { pathname, query } = useRouter();
@@ -20,13 +20,13 @@ const NavLink = ({ children, path, icon, show }) => {
           src={`/assets/settings/${isActive ? `s-${icon}` : icon}`}
           className="md:w-[20%] h-6  md:h-6"
         />
-        <h3
+        <p
           className={`text-black text-[12px] md:text-[18px] md:w-3/4 ${
             isActive ? "text-[#434343] font-semibold" : "text-[#919191]"
           }`}
         >
           {children}
-        </h3>
+        </p>
       </a>
     </Link>
   );

@@ -15,12 +15,12 @@ const Footer = () => {
                 src="/assets/logo.webp"
                 className="h-[80px] lg:h-[100px]"
               />
-              <h2 className="lg:text-[35px] text-[24px] font-light text-white lg:leading-9 leading-7">
+              <strong className="lg:text-[35px] text-[24px] font-light text-white lg:leading-9 leading-7">
                 PROJECT <br></br>
                 <span className="lg:text-[48px] text-[33px] font-semibold">
                   FOREST
                 </span>
-              </h2>
+              </strong>
             </div>
             <div className="flex flex-col items-center">
               <Socials />
@@ -32,9 +32,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full pt-6 flex flex-col items-center justify-center">
-        <h5 className=" font-light cursor-pointer lg:text-lg text-sm text-white text-opacity-60">
+        <p className=" font-light cursor-pointer lg:text-lg text-sm text-white text-opacity-60">
           All Rights Reserved 2022. By Project Forest
-        </h5>
+        </p>
       </div>
     </div>
   );

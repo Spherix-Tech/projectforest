@@ -16,8 +16,6 @@ import {
   onDisconnect,
   signMessage,
 } from "../services/etherHelpers";
-// import { assertAllowedNetwork } from '../utilities/validators';
-// import { networkAllowed } from 'contracts/ankt';
 import { useRouter } from "next/router";
 import {
   STATUS_UNKNOWN,

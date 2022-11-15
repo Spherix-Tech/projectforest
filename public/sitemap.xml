@@ -25,7 +25,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://projectforest.io/nfts</loc>
+    <loc>https://projectforest.io/tree-nfts</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -38,6 +38,12 @@
   </url>
   <url>
     <loc>https://projectforest.io/privacy-policy</loc>
+    <lastmod>2022-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://projectforest.io/beta</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>

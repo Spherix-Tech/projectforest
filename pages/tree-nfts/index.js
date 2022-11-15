@@ -125,10 +125,12 @@ export default function NFTs() {
               <NFTSlider className="pt-0" hideTitle={true} DataArr={DataArr} />
 
               <div className="section-spacing">
-                <PageGradientTitle
-                  title="Tree NFTs — A Closer Look"
-                  className="uppercase"
-                />
+                <h1>
+                  <PageGradientTitle
+                    title="Tree NFTs — A Closer Look"
+                    className="uppercase"
+                  />
+                </h1>
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Trees are the main NFTs in Project Forest and are required to
                   enter into the Project Forest Grow-to-Earn app. When first
@@ -136,7 +138,8 @@ export default function NFTs() {
                   grown by daily nurturing, watering and nourishing using
                   fertilizers. In order to acquire a Project Forest Tree NFT,
                   players must participate during the official Genesis Airdrop
-                  event before the launch of the public beta or partake in the closed beta for an exclusive Tree NFT. Later, players can
+                  event before the launch of the public beta or partake in the
+                  closed beta for an exclusive Tree NFT. Later, players can
                   participate in the blind box sales or purchase Tree NFTs
                   through the secondary marketplace.
                 </p>
@@ -147,7 +150,9 @@ export default function NFTs() {
               </div>
 
               <div className="section-spacing">
-                <PageGradientTitle title="Appearance" className="uppercase" />
+                <h2>
+                  <PageGradientTitle title="Appearance" className="uppercase" />
+                </h2>
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Tree NFTs in Project Forest are differentiated to the extent
                   that no two Tree NFTs are alike. The appearance of Tree NFTs
@@ -197,16 +202,18 @@ export default function NFTs() {
                 </div>
                 <p className="page-description md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Attributes significantly impact the long-term production
-                  capabilities of Tree NFTs. Tree NFTs of better quality
-                  have stronger attribute specifications and, therefore, provide
-                  a more sustainable yield over time. The table below showcases
+                  capabilities of Tree NFTs. Tree NFTs of better quality have
+                  stronger attribute specifications and, therefore, provide a
+                  more sustainable yield over time. The table below showcases
                   the attribute bonuses for each quality tier.
                 </p>
                 <AttributesTable />
               </div>
               {/* Regions Section Starts */}
               <div className="section-spacing pt-0">
-                <PageGradientTitle title="Regions" className="uppercase" />
+                <h3>
+                  <PageGradientTitle title="Regions" className="uppercase" />
+                </h3>
                 <p className="page-description my-[1rem] md:my-[2rem] text-[12px] font-normal md:text-[15px]">
                   Tree NFTs are further segmented into regions based on their
                   most common geographical locations. There are 5 unique regions

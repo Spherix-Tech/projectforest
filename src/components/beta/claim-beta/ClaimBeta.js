@@ -26,9 +26,9 @@ const ClaimBeta = () => {
         closed beta. Shortlisted participants shall receive their invitation via
         email once both steps once both steps are completed.
       </p>
-      <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-5 md:-mb-2 pt-5 md:pt-12">
+      <p className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-5 md:-mb-2 pt-5 md:pt-12">
         Step 1
-      </h2>
+      </p>
       <p className=" w-full text-labelTextColor text-opacity-80 md:text-lg text-sm ">
         Register on the Project Forest website & connect your MetaMask wallet.
       </p>
@@ -40,9 +40,9 @@ const ClaimBeta = () => {
         <ImageComponent src="/assets/wallet/metamask.svg" />
         <p>MetaMask</p>
       </button>
-      <h2 className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-5 md:-mb-2 md:pt-12">
+      <p className="text-xl md:text-4xl font-semibold text-labelTextColor -mb-5 md:-mb-2 md:pt-12">
         Step 2
-      </h2>
+      </p>
       <p className="w-full text-labelTextColor text-opacity-80 md:text-lg text-sm ">
         Complete any 1 of the 3 Beta Quests to be invited to our closed beta
       </p>

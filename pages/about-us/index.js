@@ -99,7 +99,9 @@ export default function AboutUs() {
               <Navbar />
 
               <div className="section-spacing relative">
-                <PageGradientTitle title="About Us" className="uppercase" />
+                <h1>
+                  <PageGradientTitle title="About Us" className="uppercase" />
+                </h1>
                 <p className="page-description mt-4">
                   Project Forest was established with a simple but realistic
                   mission of restoring the Earth&apos;s environment while
@@ -129,10 +131,12 @@ export default function AboutUs() {
                   </div>
                   <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
                     <div className="w-full ">
-                      <PageGradientTitle
-                        title="Mission"
-                        className="uppercase"
-                      />
+                      <h2>
+                        <PageGradientTitle
+                          title="Mission"
+                          className="uppercase"
+                        />
+                      </h2>
                     </div>
                     <p className="page-description mt-4">
                       We aim to tackle the climate crisis and address the
@@ -148,7 +152,12 @@ export default function AboutUs() {
                 <div className="flex justify-between items-center flex-col md:flex-row mt-[2rem] md:mt-[5rem] md:gap-[4rem] gap-[2rem] ">
                   <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
                     <div className="w-full ">
-                      <PageGradientTitle title="Vision" className="uppercase" />
+                      <h3>
+                        <PageGradientTitle
+                          title="Vision"
+                          className="uppercase"
+                        />
+                      </h3>
                     </div>
                     <p className="page-description mt-4">
                       “To be the pioneers that introduce real-world ecological
