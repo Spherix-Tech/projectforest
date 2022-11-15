@@ -117,7 +117,7 @@ const ItemCard = ({
                     <Progress
                       trailing="Upgrade"
                       leading={
-                        <button className="bg-[#bcedab] md:w-[10%] border border-[#d7dd87] py-[2px] text-xs  rounded-md">
+                        <button className="bg-[#bcedab] md:w-[10%] border border-[#d7dd87] py-[2px] text-xs rounded-md">
                           More
                         </button>
                       }
@@ -139,7 +139,7 @@ const ItemCard = ({
                       hideMax
                     />
                   </div>
-                  <button className="bg-[#f5d77b] hover:bg-[#e4c76f]  md:text-2xl font-medium flex items-center justify-center w-full py-2 my-5 rounded-md mb-10">
+                  <button className="bg-[#f5d77b] hover:bg-[#e4c76f] md:text-2xl font-medium flex items-center justify-center w-full py-2 my-5 rounded-md mb-10">
                     <ImageComponent
                       src="/assets/hero/o2.svg"
                       className="h-7 mr-3 rounded-full"

@@ -1,15 +1,35 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 
 import ImageComponent from "../shared/ImageComponent";
+import AreaFilterOption from "./AreaFilterOption";
 import FilterOptions from "./FilterOptions";
 import Slider from "./Slider";
 
-const filterAreas = ["Asia", "Africa", "Europe", "America", "Oceania"];
-const filterQualities = ["Common", "Uncommon", "Rare", "Epic", "Legendary"];
+const filterAreas = [
+  { title: "Asia", color: "#C0AADD" },
+  { title: "Africa", color: "#D0BB8D" },
+  { title: "Europe", color: "#E8AEBC" },
+  { title: "America", color: "#77BFB8" },
+  { title: "Oceania", color: "#B8B8BC" },
+];
+const filterQualities = [
+  { title: "Common", color: "#D3F1B2" },
+  { title: "Uncommon", color: "#93BAE6" },
+  { title: "Rare", color: "#7C92FF" },
+  { title: "Epic", color: "#A679FF" },
+  { title: "Legendary", color: "#DD61EC" },
+];
 const filterSeedMint = ["0", "1", "2"];
 
-const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
+const Filters = ({
+  age,
+  level,
+  setAge,
+  setLevel,
+  removeAllQueryParams,
+  mobile = false,
+}) => {
   const router = useRouter();
   const setQueryParam = (key, value) => {
     router.push({
@@ -19,15 +39,33 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
   };
 
   return (
-    <div className="w-72 pr-2 border-r border-[#CECECE] border-opacity-40">
-      <div className="border-b border-[#CECECE] border-opacity-40">
-        <div className="flex justify-between items-center py-4 px-2">
-          <h1 className="text-sm">Filters ({"0"})</h1>
+    <div
+      className={`pr-2 border-r border-[#CECECE] border-opacity-40 ${
+        mobile ? "w-full block" : "w-72 hidden"
+      } md:block`}
+    >
+      <div
+        className={`${
+          !mobile && "border-b"
+        } border-[#CECECE] border-opacity-40`}
+      >
+        <div
+          className={`flex justify-between items-center py-4 px-2 ${
+            mobile && "hidden"
+          }`}
+        >
+          <h1 className="text-sm">
+            Filters ({Object.keys(router.query).length})
+          </h1>
           <button className="text-sm" onClick={removeAllQueryParams}>
             Clear All
           </button>
         </div>
-        <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs pb-4 px-2">
+        <div
+          className={`grid grid-cols-3 gap-2 text-gray-400 text-xs pb-4 px-2 ${
+            mobile && "hidden"
+          }`}
+        >
           {Object.keys(router.query).map(
             (param, i) =>
               router.query[param] && (
@@ -45,11 +83,16 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
 
       <FilterOptions
         title="SORT"
+        open={mobile}
         options={
-          <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
+          <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs font-medium">
             <button
               onClick={() => setQueryParam("sort", "Price: Low To High")}
-              className="bg-white rounded-md py-1"
+              className={`${
+                router.query.sort === "Price: Low To High"
+                  ? "bg-[#bcedab]"
+                  : "bg-white"
+              } rounded-md py-2`}
             >
               Price{" "}
               <ImageComponent
@@ -59,7 +102,11 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
             </button>
             <button
               onClick={() => setQueryParam("sort", "Quality: Low To High")}
-              className="bg-white rounded-md py-1"
+              className={`${
+                router.query.sort === "Quality: Low To High"
+                  ? "bg-[#bcedab]"
+                  : "bg-white"
+              } rounded-md py-2`}
             >
               Quality{" "}
               <ImageComponent
@@ -69,7 +116,11 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
             </button>
             <button
               onClick={() => setQueryParam("sort", "Score: Low To High")}
-              className="bg-white rounded-md py-1"
+              className={`${
+                router.query.sort === "Score: Low To High"
+                  ? "bg-[#bcedab]"
+                  : "bg-white"
+              } rounded-md py-2`}
             >
               Score{" "}
               <ImageComponent
@@ -79,7 +130,11 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
             </button>
             <button
               onClick={() => setQueryParam("sort", "Price: High To Low")}
-              className="bg-white rounded-md py-1"
+              className={`${
+                router.query.sort === "Price: High To Low"
+                  ? "bg-[#E8AEBC] "
+                  : "bg-white"
+              } rounded-md py-2`}
             >
               Price{" "}
               <ImageComponent
@@ -89,7 +144,11 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
             </button>
             <button
               onClick={() => setQueryParam("sort", "Quality: High To Low")}
-              className="bg-white rounded-md py-1"
+              className={`${
+                router.query.sort === "Quality: High To Low"
+                  ? "bg-[#E8AEBC] "
+                  : "bg-white"
+              } rounded-md py-2`}
             >
               Quality{" "}
               <ImageComponent
@@ -99,7 +158,11 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
             </button>
             <button
               onClick={() => setQueryParam("sort", "Score: High To Low")}
-              className="bg-white rounded-md py-1"
+              className={`${
+                router.query.sort === "Score: High To Low"
+                  ? "bg-[#E8AEBC] "
+                  : "bg-white"
+              } rounded-md py-2`}
             >
               Score{" "}
               <ImageComponent
@@ -112,31 +175,35 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
       />
       <FilterOptions
         title="AREA"
+        open={mobile}
         options={
-          <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
+          <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs font-medium">
             {filterAreas.map((area, i) => (
-              <button
-                onClick={() => setQueryParam("area", area)}
-                key={i}
-                className="bg-white rounded-md py-1"
-              >
-                {area}
-              </button>
+              <AreaFilterOption key={i} {...area} />
             ))}
           </div>
         }
       />
       <FilterOptions
         title="RARITY"
+        open={mobile}
         options={
-          <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
-            {filterQualities.map((rarity, i) => (
+          <div className="grid grid-cols-3 gap-2 text-xs font-medium">
+            {filterQualities.map(({ title, color }, i) => (
               <button
-                onClick={() => setQueryParam("rarity", rarity)}
+                onClick={() => setQueryParam("rarity", title)}
                 key={i}
-                className="bg-white rounded-md py-1"
+                className="bg-white rounded-md py-2"
+                style={{
+                  border:
+                    router.query.rarity === title
+                      ? `1px solid ${color}`
+                      : "1px solid white",
+                  color:
+                    router.query.rarity === title ? color : "rgb(156 163 175)",
+                }}
               >
-                {rarity}
+                {title}
               </button>
             ))}
           </div>
@@ -144,13 +211,18 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
       />
       <FilterOptions
         title="SEEDS MINT"
+        open={mobile}
         options={
           <div className="grid grid-cols-3 gap-2 text-gray-400 text-xs">
             {filterSeedMint.map((seed, i) => (
               <button
                 onClick={() => setQueryParam("seed", seed)}
                 key={i}
-                className="bg-white rounded-md py-1"
+                className="rounded-md py-2"
+                style={{
+                  backgroundColor:
+                    router.query.seed === seed ? "#bcedab" : "white",
+                }}
               >
                 {seed}
               </button>
@@ -160,6 +232,7 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
       />
       <FilterOptions
         title="LEVEL"
+        open={mobile}
         options={
           <Slider
             min={1}
@@ -171,6 +244,7 @@ const Filters = ({ age, level, setAge, setLevel, removeAllQueryParams }) => {
       />
       <FilterOptions
         title="AGE"
+        open={mobile}
         options={
           <Slider
             min={1}

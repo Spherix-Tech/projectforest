@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useRouter } from "next/router";
 
 import ItemCard from "../../src/components/marketplace/ItemCard";
@@ -8,6 +8,8 @@ import Footer from "../../src/components/footer/Footer";
 import { getAllMarketData } from "../../src/services/data-files/MarketplaceData";
 import Filters from "../../src/components/marketplace/Filters";
 import Pagination from "../../src/components/marketplace/Pagination";
+import SearchBar from "../../src/components/marketplace/SearchBar";
+import MobileFilters from "../../src/components/marketplace/MobileFilters";
 
 const shop = getAllMarketData();
 
@@ -36,27 +38,35 @@ export default function MarketPlace() {
 
   let shopList = [];
 
-  shopList = items
-    .sort((a, b) => {
-      if (
-        !!!router.query.sort ||
-        router.query.sort === null ||
-        router.query.sort === ""
-      )
-        return;
-      if (router.query.sort === "Price: Low To High")
-        return parseFloat(a.price) - parseFloat(b.price);
-      if (router.query.sort === "Price: High To Low");
-      return parseFloat(b.price) - parseFloat(a.price);
-      if (router.query.sort === "Score: Low To High")
-        return parseFloat(a.score) - parseFloat(b.score);
-      if (router.query.sort === "Score: High To Low")
-        return parseFloat(b.score) - parseFloat(a.score);
-      if (router.query.sort === "Quality: Low To High")
-        return parseFloat(a.quality) - parseFloat(b.quality);
-      if (router.query.sort === "Quality: High To Low")
-        return parseFloat(b.quality) - parseFloat(a.quality);
-    })
+  const newItems = [...items];
+
+  shopList =
+    !!!router.query.sort ||
+    router.query.sort === null ||
+    router.query.sort === ""
+      ? newItems
+      : newItems.sort((a, b) => {
+          if (
+            !!!router.query.sort ||
+            router.query.sort === null ||
+            router.query.sort === ""
+          )
+            return;
+          if (router.query.sort === "Price: Low To High")
+            return parseFloat(a.price) - parseFloat(b.price);
+          if (router.query.sort === "Price: High To Low");
+          return parseFloat(b.price) - parseFloat(a.price);
+          if (router.query.sort === "Score: Low To High")
+            return parseFloat(a.score) - parseFloat(b.score);
+          if (router.query.sort === "Score: High To Low")
+            return parseFloat(b.score) - parseFloat(a.score);
+          if (router.query.sort === "Quality: Low To High")
+            return parseFloat(a.quality) - parseFloat(b.quality);
+          if (router.query.sort === "Quality: High To Low")
+            return parseFloat(b.quality) - parseFloat(a.quality);
+        });
+
+  shopList = shopList
     .filter((item) => {
       if (
         !!!router.query.area ||
@@ -174,7 +184,7 @@ gtag('config', 'G-XJKS1PTP6Y');
       <div className="full-page-bg-img min-h-screen text-black">
         <div className="flex w-full flex-col">
           <MarketplaceNav />
-          <main className="flex h-full border-t border-[#CECECE] border-opacity-40">
+          <main className="flex h-full md:border-t md:border-[#CECECE] md:border-opacity-40">
             <Filters
               age={age}
               level={level}
@@ -184,19 +194,26 @@ gtag('config', 'G-XJKS1PTP6Y');
             />
             <div className="flex-grow p-4 relative">
               <div className="flex gap-5 md:gap-0 justify-between items-center">
-                <h1 className="md:text-2xl text-lg -mt-2 font-semibold">
+                <h1 className="md:text-2xl text-2xl -mt-2 font-semibold">
                   Marketplace
                 </h1>
                 <select
                   value={router.query.sort ?? "Price: Low To High"}
-                  className="bg-white text-[10px] md:text-sm p-1  text-[#A2A2A2] border-r-[4px] border-white"
+                  className="bg-white text-[10px] md:text-sm p-1 hidden md:block text-[#A2A2A2] border-r-[4px] border-white"
                   onChange={(e) => setQueryParam("sort", e.target.value)}
                 >
                   <option value="Price: Low To High">Price: Low To High</option>
                   <option value="Price: High To Low">Price: High To Low</option>
                 </select>
               </div>
-              <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-4 gap-4">
+              <SearchBar />
+              <MobileFilters
+                age={age}
+                level={level}
+                setAge={setAge}
+                setLevel={setLevel}
+              />
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-4 gap-4">
                 {shopList}
               </div>
               <Pagination
