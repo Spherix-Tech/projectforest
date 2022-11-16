@@ -128,7 +128,7 @@ export default function Home() {
 
               {/* How It Works Section */}
               <ImageComponent
-                src={"/assets/trees-bg.png"}
+                src={"/assets/trees-bg.webp"}
                 className="how-section-trees -mb-2"
               />
             </div>

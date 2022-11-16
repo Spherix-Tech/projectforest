@@ -6,7 +6,7 @@ function EachPartner({ imageName }) {
     <ImageComponent
       src={"/assets/partners/" + imageName}
       className={
-        imageName == "future-trees.png"
+        imageName == "future-trees.webp"
           ? " w-[8.2rem]  md:w-[11rem]"
           : " w-[13rem]  md:w-[16rem]"
       }
