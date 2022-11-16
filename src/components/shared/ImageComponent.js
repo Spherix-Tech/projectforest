@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 function ImageComponent({
   src,
-  alt,
+  alt = "ProjectForest",
   className = "",
   onClick,
   loading = null,
@@ -47,43 +47,43 @@ function ImageComponent({
     <div className="relative">
       <img
         className="w-7 h-7 absolute top-2.5 right-1/3 sm:right-28 sm:top-0 xs:right-24 xs:top-0 opacity-0 "
-        src="/assets/hero/leaf.svg"
+        src="/assets/hero/leaf.webp"
         id="bubble2"
         alt="right-1"
         onClick={() => bubblesClickAnimation("#bubble2")}
       />
-    
+
       <img
         className="w-7 h-7 absolute top-1/4 right-3.5 sm:right-10 xs:right-11 opacity-0 "
-        src="/assets/hero/o2.svg"
+        src="/assets/hero/o2.webp"
         id="bubble3"
         alt="right-2"
         onClick={() => bubblesClickAnimation("#bubble3")}
       />
       <img
         className="w-7 h-7 absolute left-auto top-2/4 -right-6 opacity-0 "
-        src="/assets/hero/leaf.svg"
+        src="/assets/hero/leaf.webp"
         id="bubble6"
         alt="right-3"
         onClick={() => bubblesClickAnimation("#bubble6")}
       />
       <img
         className="w-7 h-7 absolute top-3 left-1/3 sm:left-28 xs:left-24 opacity-0 "
-        src="/assets/hero/o2.svg"
+        src="/assets/hero/o2.webp"
         id="bubble1"
         alt="left-1"
         onClick={() => bubblesClickAnimation("#bubble1")}
       />
       <img
         className="w-7 h-7 absolute left-10 top-1/3 sm:left-12 xs:left-10 opacity-0 "
-        src="/assets/hero/leaf.svg"
+        src="/assets/hero/leaf.webp"
         id="bubble5"
         alt="left-2"
         onClick={() => bubblesClickAnimation("#bubble5")}
       />
       <img
         className="w-7 h-7 absolute -left-8 top-2/4 opacity-0 "
-        src="/assets/hero/o2.svg"
+        src="/assets/hero/o2.webp"
         id="bubble4"
         alt="left-3"
         onClick={() => bubblesClickAnimation("#bubble4")}
