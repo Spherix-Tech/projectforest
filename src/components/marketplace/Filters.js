@@ -90,7 +90,7 @@ const Filters = ({
               onClick={() => setQueryParam("sort", "Price: Low To High")}
               className={`${
                 router.query.sort === "Price: Low To High"
-                  ? "bg-[#bcedab]"
+                  ? "bg-[#bcedab] text-[#3A3A3C]"
                   : "bg-white"
               } rounded-md py-2`}
             >
@@ -104,7 +104,7 @@ const Filters = ({
               onClick={() => setQueryParam("sort", "Quality: Low To High")}
               className={`${
                 router.query.sort === "Quality: Low To High"
-                  ? "bg-[#bcedab]"
+                  ? "bg-[#bcedab] text-[#3A3A3C]"
                   : "bg-white"
               } rounded-md py-2`}
             >
@@ -118,7 +118,7 @@ const Filters = ({
               onClick={() => setQueryParam("sort", "Score: Low To High")}
               className={`${
                 router.query.sort === "Score: Low To High"
-                  ? "bg-[#bcedab]"
+                  ? "bg-[#bcedab] text-[#3A3A3C]"
                   : "bg-white"
               } rounded-md py-2`}
             >
@@ -132,7 +132,7 @@ const Filters = ({
               onClick={() => setQueryParam("sort", "Price: High To Low")}
               className={`${
                 router.query.sort === "Price: High To Low"
-                  ? "bg-[#E8AEBC] "
+                  ? "bg-[#E8AEBC] text-[#3A3A3C] "
                   : "bg-white"
               } rounded-md py-2`}
             >
@@ -146,7 +146,7 @@ const Filters = ({
               onClick={() => setQueryParam("sort", "Quality: High To Low")}
               className={`${
                 router.query.sort === "Quality: High To Low"
-                  ? "bg-[#E8AEBC] "
+                  ? "bg-[#E8AEBC] text-[#3A3A3C] "
                   : "bg-white"
               } rounded-md py-2`}
             >
@@ -160,7 +160,7 @@ const Filters = ({
               onClick={() => setQueryParam("sort", "Score: High To Low")}
               className={`${
                 router.query.sort === "Score: High To Low"
-                  ? "bg-[#E8AEBC] "
+                  ? "bg-[#E8AEBC] text-[#3A3A3C] "
                   : "bg-white"
               } rounded-md py-2`}
             >
