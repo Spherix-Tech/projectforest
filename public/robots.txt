@@ -1,0 +1,12 @@
+
+User-Agent: *
+Disallow: /signup/
+Disallow: /login/
+
+
+User-Agent: *
+Allow: /
+
+
+Sitemap: https://projectforest.io/sitemap.xml
+
