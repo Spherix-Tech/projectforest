@@ -28,20 +28,22 @@ const MobileFilters = ({ age, level, setAge, setLevel }) => {
     <div className="my-3 md:hidden flex justify-between">
       <button
         onClick={() => setShowFilters((prev) => !prev)}
-        className="flex gap-2 items-center bg-[#f5d77b] rounded-md py-1 px-2"
+        className="flex gap-2 items-center bg-[#f5d77b] rounded-md py-2 px-2"
       >
         <ImageComponent src="/assets/marketplace/filter-icon.svg" />
         <p className="text-xs font-medium">Filters</p>
       </button>
-
-      <select
-        value={router.query.sort ?? "Price: Low To High"}
-        className="bg-white text-[10px] md:text-sm p-1 block text-[#A2A2A2] border-r-[4px] border-white"
-        onChange={(e) => setQueryParam("sort", e.target.value)}
-      >
-        <option value="Price: Low To High">Price: Low To High</option>
-        <option value="Price: High To Low">Price: High To Low</option>
-      </select>
+      <div className="flex flex-row bg-[#f5d77b] rounded-md px-2">
+        <ImageComponent src="/assets/marketplace/sort-mobile.svg" />
+        <select
+          value={router.query.sort ?? "Price: Low To High"}
+          className=" bg-[#f5d77b] appearance-none text-xs  font-medium  p-1 block  outline-none    "
+          onChange={(e) => setQueryParam("sort", e.target.value)}
+        >
+          <option value="Price: Low To High">Price: Low To High </option>
+          <option value="Price: High To Low">Price: High To Low </option>
+        </select>
+      </div>
       {showFilters && (
         <div className="absolute top-0 left-0 w-full h-full min-h-screen bg-[#f5d77b] rounded-t-2xl z-10000">
           <div className="flex justify-between items-center py-3 px-5">

@@ -199,7 +199,7 @@ gtag('config', 'G-XJKS1PTP6Y');
                 </h1>
                 <select
                   value={router.query.sort ?? "Price: Low To High"}
-                  className="bg-white text-[10px] md:text-sm p-1 hidden md:block text-[#A2A2A2] border-r-[4px] border-white"
+                  className="bg-white  text-[10px] md:text-sm p-1 hidden md:block text-[#A2A2A2] border-r-[4px] border-white"
                   onChange={(e) => setQueryParam("sort", e.target.value)}
                 >
                   <option value="Price: Low To High">Price: Low To High</option>

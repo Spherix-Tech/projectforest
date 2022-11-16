@@ -21,7 +21,7 @@ const ItemCard = ({
 }) => {
   const [showDetails, setShowDetails] = useState(show);
   return (
-    <div className="flex flex-col gap-[2px] mb-2 text-[#3A3A3C]">
+    <div className="flex flex-col gap-[2px] mb-2 text-[#3A3A3C] justify-between">
       <div className="flex items-center flex-col bg-[#f8fcfa] p-3 rounded-md">
         <h2 className="font-medium">{title}</h2>
         <ImageComponent
@@ -30,7 +30,7 @@ const ItemCard = ({
           onClick={() => setShowDetails((prev) => !prev)}
         />
         <p className="text-sm mb-3">ID: {id}</p>
-        <div className="grid grid-cols-3 gap-4 w-full text-center text-xs text-[#404040]">
+        <div className="grid grid-cols-3 gap-1 w-full text-center text-xs text-[#404040]">
           <p className="bg-[#dcdfdd] rounded-md py-1 px-2">Mint {mint}</p>
           <p className="bg-[#dcdfdd] rounded-md py-1 px-2">Age {age}</p>
           <p className="bg-[#dcdfdd] rounded-md py-1 px-2">Lv. {level}</p>
