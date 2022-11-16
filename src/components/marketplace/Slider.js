@@ -5,7 +5,7 @@ import ImageComponent from "../shared/ImageComponent";
 
 const Slider = ({ min, max, onChange, value }) => {
   return (
-    <div className="bg-white rounded-md p-2 mb-4 ">
+    <div className="bg-white rounded-md p-2 pb-7 mb-4 ">
       <div className="flex justify-between items-center">
         <h1 className="text-xs">{min}</h1>
         <h1 className="text-xs">{max}</h1>
