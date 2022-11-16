@@ -33,8 +33,11 @@ const MobileFilters = ({ age, level, setAge, setLevel }) => {
         <ImageComponent src="/assets/marketplace/filter-icon.svg" />
         <p className="text-xs font-medium">Filters</p>
       </button>
-      <div className="flex flex-row bg-[#f5d77b] rounded-md px-2">
-        <ImageComponent src="/assets/marketplace/sort-mobile.svg" />
+      <div className="flex items-center flex-row bg-[#f5d77b] rounded-md px-2">
+        <ImageComponent
+          src="/assets/marketplace/sort-mobile.svg"
+          className="h-4"
+        />
         <select
           value={router.query.sort ?? "Price: Low To High"}
           className=" bg-[#f5d77b] appearance-none text-xs  font-medium  p-1 block  outline-none    "
