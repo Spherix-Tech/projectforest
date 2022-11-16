@@ -48,7 +48,7 @@ const MobileFilters = ({ age, level, setAge, setLevel }) => {
         </select>
       </div>
       {showFilters && (
-        <div className="absolute top-0 left-0 w-full h-full min-h-screen bg-[#f5d77b] rounded-t-2xl z-10000">
+        <div className="absolute top-0 left-0 w-full h-full min-h-screen overflow-scroll bg-[#f5d77b] rounded-t-2xl z-10000">
           <div className="flex justify-between items-center py-3 px-5">
             <ImageComponent
               src="/assets/marketplace/arrow.svg"
