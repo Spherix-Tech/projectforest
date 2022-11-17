@@ -1,19 +1,19 @@
 const allPartners = [
   {
     name: "Trees for the Future",
-    defaultImageName: "future-trees.png",
+    defaultImageName: "future-trees.webp",
   },
   {
     name: "One Tree Planted",
-    defaultImageName: "one-tree.png",
+    defaultImageName: "one-tree.webp",
   },
   {
     name: "Binance Smart Chain",
-    defaultImageName: "binance-smart-chain.png",
+    defaultImageName: "binance-smart-chain.webp",
   },
   {
     name: "Binance NFT",
-    defaultImageName: "binance-nft.png",
+    defaultImageName: "binance-nft.webp",
   },
 ];
 

@@ -56,7 +56,7 @@ export default function MobileNFTSlider({ DataArr, hideTitle = false }) {
   return (
     <div id="gaming" className="w-full">
       <div className="flex section-title-spacing justify-between items-center">
-        <div>{!hideTitle && <h3 className="section-title">NFT</h3>}</div>
+        <div>{!hideTitle && <p className="section-title">NFT</p>}</div>
         <div className=" inline-flex gap-2">
           <div>
             {loaded && instanceRef.current && (
@@ -139,10 +139,10 @@ export default function MobileNFTSlider({ DataArr, hideTitle = false }) {
         </div>
 
         <div className="max-w-[230px] xs:max-w-[350px] w-[75%] xs:w-[80%] lg:max-w-4xl 3xl:max-w-[75rem] 3xl:w-full flex flex-col h-full text-textTitle">
-          <h2 className=" text-[1rem] lg:text-5xl font-semibold lg:pt-4 lg:pb-2 leading-5 pb-0 pt-0 sm:pt-2">
+          <p className=" text-[1rem] lg:text-5xl font-semibold lg:pt-4 lg:pb-2 leading-5 pb-0 pt-0 sm:pt-2">
             Purchase your first Tree
             <span className="text-[#19B7B7]"> NFT </span>
-          </h2>
+          </p>
 
           <p className="lg:text-[16px] text-[9px] xs:text-xs lg:w-[90%] md:w-full w-full leading-[1.1rem] py-1 sm:py-3 text-textDescription">
             Take the first step in building your NFT forest. Choose from a

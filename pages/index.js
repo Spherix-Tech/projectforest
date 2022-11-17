@@ -116,15 +116,6 @@ export default function Home() {
           property="twitter:description"
           content="Project Forest is a collection of sustainability-focused NFTs that let you make a positive impact on the environment through its grow to earn web3 app."
         />
-
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XJKS1PTP6Y"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){ dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-XJKS1PTP6Y');
-</script> */}
       </Head>
       <main>
         <div id="smooth-wrapper">
@@ -137,7 +128,7 @@ gtag('config', 'G-XJKS1PTP6Y');
 
               {/* How It Works Section */}
               <ImageComponent
-                src={"/assets/trees-bg.png"}
+                src={"/assets/trees-bg.webp"}
                 className="how-section-trees -mb-2"
               />
             </div>

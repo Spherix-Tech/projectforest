@@ -16,14 +16,14 @@ const Roadmap = () => {
       className=" text-textDescription py-[2rem] md:py-[3rem] bg-[#F2F2F2] panel"
       id="roadmap"
     >
-      <h3 className="section-title section-title-spacing px-[2rem] lg:px-[12rem]">
+      <p className="section-title section-title-spacing px-[2rem] lg:px-[12rem]">
         Roadmap
-      </h3>
+      </p>
 
       {/* Roadmap Large Screen */}
       <MediaQuery query="(min-width: 1024px)">
         <div className="w-full relative flex justify-center">
-          <ImageComponent src={"/assets/roadmap/roadmap.png"} />
+          <ImageComponent src={"/assets/roadmap/roadmap2.png"} />
         </div>
       </MediaQuery>
 
@@ -36,7 +36,7 @@ const Roadmap = () => {
                 <div
                   className={`${e.bgColor} flex flex-col items-center justify-center text-white py-2 min-w-[5.5rem] xs:min-w-[7.5rem] min-h-[70px]`}
                 >
-                  <h3 className="text-base font-semibold">{e.month}</h3>
+                  <p className="text-base font-semibold">{e.month}</p>
                   <p className="text-[13px] font-light">2022</p>
                 </div>
 

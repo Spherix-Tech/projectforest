@@ -17,9 +17,9 @@ const benefits = () => {
           alt="Project Forest"
           className="-mt-4 2xl:h-[400px] self-center"
         />
-        <h2 className=" text-xl md:text-4xl font-semibold text-labelTextColor">
+        <p className=" text-xl md:text-4xl font-semibold text-labelTextColor">
           Closed Beta Rewards
-        </h2>
+        </p>
         <p className="text-labelTextColor text-opacity-80 lg:text-lg text-base">
           Take the first steps toward a more sustainable future with Project
           Forest’s closed beta. Register and participate to get a first look at
@@ -55,9 +55,9 @@ const benefits = () => {
                 className="object-contain w-12 h-10"
               />
               <div className="flex flex-col items-center text-center lg:text-left lg:items-start w-[90%]">
-                <h2 className="text-lg text-labelTextColor font-semibold pb-1">
+                <p className="text-lg text-labelTextColor font-semibold pb-1">
                   {e.title}
-                </h2>
+                </p>
                 <p className="text-labelTextColor text-opacity-80 text-base">
                   {e.text}
                 </p>

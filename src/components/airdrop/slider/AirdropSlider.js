@@ -71,19 +71,19 @@ export default function AirdropSlider({ DataArr }) {
         <div className="flex-1 gap-4 flex flex-col justify-center items-center 2xl:justify-start 2xl:items-start">
           <div className="airdrop-title-gradient w-[100%] lg:w-[70%] inline-flex justify-between items-center">
             <div>
-              <h2 className="text-[#3A3A3C] font-semibold">Name: </h2>
+              <p className="text-[#3A3A3C] font-semibold">Name: </p>
             </div>
             <div className="text-[#666666] font-light">CEDAR TREE</div>
           </div>
           <div className="airdrop-title-gradient w-[100%] lg:w-[70%] inline-flex justify-between items-center">
             <div>
-              <h2 className="text-[#3A3A3C] font-semibold">Species: </h2>
+              <p className="text-[#3A3A3C] font-semibold">Species: </p>
             </div>
             <div className="text-[#666666] font-light">XXXXXXXXXX</div>
           </div>
           <div className="airdrop-title-gradient w-[100%] lg:w-[70%] inline-flex justify-between items-center">
             <div>
-              <h2 className="text-[#3A3A3C] font-semibold">Location: </h2>
+              <p className="text-[#3A3A3C] font-semibold">Location: </p>
             </div>
             <div className="text-[#666666] font-light">XXXXXXXXXX</div>
           </div>

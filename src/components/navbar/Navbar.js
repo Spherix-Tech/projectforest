@@ -42,12 +42,12 @@ const Navbar = () => {
             src={"/assets/logo.webp"}
             className="h-[66px] lg:h-[100px]"
           />
-          <h2 className="lg:text-[26px] text-[18px] lg:leading-[2rem] leading-6">
+          <p className="lg:text-[26px] text-[18px] lg:leading-[2rem] leading-6">
             PROJECT <br></br>
             <span className="lg:text-[37px] text-[25px] font-semibold">
               FOREST
             </span>
-          </h2>
+          </p>
         </div>
       </Link>
 
@@ -68,9 +68,9 @@ const Navbar = () => {
                     />
                   </div>
                   <div>
-                    <h5 className=" whitespace-nowrap uppercase">
+                    <p className=" whitespace-nowrap uppercase">
                       {element.name}
-                    </h5>
+                    </p>
                   </div>
                 </div>
               </a>

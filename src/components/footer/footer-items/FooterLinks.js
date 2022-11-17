@@ -5,37 +5,32 @@ import {
 } from "../../../utilities/constants";
 import Link from "next/link";
 
-
 const FooterLinks = () => {
   return (
     <div className=" w-full flex flex-row justify-end leading-10 text-[#969696]">
       <div className=" w-2/4 flex flex-col items-end">
         <a href="#home">
-          <h5>Home</h5>
+          <p>Home</p>
         </a>
         <a href="#nft">
-          <h5>NFT</h5>
+          <p>NFT</p>
         </a>
         <a href="#how-it-works">
-          <h5>How It Works?</h5>
+          <p>How It Works?</p>
         </a>
         <a href="#roadmap">
-          <h5>Roadmap</h5>
+          <p>Roadmap</p>
         </a>
         <Link href="/privacy-policy">
-        <a
-          target="_blank"
-          className="cursor-pointer"
-          rel="noreferrer"
-        >
-          <h5>Privacy Policy</h5>
-        </a>
+          <a target="_blank" className="cursor-pointer" rel="noreferrer">
+            <p>Privacy Policy</p>
+          </a>
         </Link>
       </div>
 
       <div className=" w-2/4 flex flex-col items-end">
         <a href="#token">
-          <h5>Token</h5>
+          <p>Token</p>
         </a>
         <a
           href={LITEPAPER_LINK}
@@ -43,11 +38,11 @@ const FooterLinks = () => {
           className="cursor-pointer"
           rel="noreferrer"
         >
-          <h5>Litepaper</h5>
+          <p>Litepaper</p>
         </a>
-        <h5 className="cursor-default">Marketplace</h5>
+        <p className="cursor-default">Marketplace</p>
         <Link href="/faq">
-        <h5>FAQs</h5>
+          <p>FAQs</p>
         </Link>
       </div>
     </div>

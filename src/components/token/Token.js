@@ -16,24 +16,26 @@ const Token = () => {
       className="w-full text-textTitle section-spacing py-12 panel"
       id="token"
     >
-      <h3 className="section-title w-full lg:w-[55%] 2xl:w-[55%]">
-        TOKENS  </h3>
+      <strong className="section-title w-full lg:w-[55%] 2xl:w-[55%]">
+        TOKENS{" "}
+      </strong>
       <div className="flex lg:flex-row flex-col-reverse gap-0 md:gap-[4rem] lg:justify-between items-center">
         <div className="flex flex-col w-full lg:w-[55%] 2xl:w-[55%] py-6">
-          <h3 className=" text-[#6FDE49] font-bold py-1 text-[20px]">
+          <h5 className=" text-[#6FDE49] font-bold py-1 text-[20px]">
             Primary Token: LEAF
-          </h3>
+          </h5>
           <p className="text-[#919191] leading-5 pb-4">
-            LEAF is the primary token of the Project Forest ecosystem and acts as the governance token for the project. Participants and
-            players of Project Forest will be able to earn LEAF tokens through
-            their Tree NFTs once they fulfill certain level conditions and
-            through other in-app events and scenarios. Players can spend their
-            LEAF tokens to mint new Tree NFTs and create a virtual forest.
+            LEAF is the primary token of the Project Forest ecosystem and acts
+            as the governance token for the project. Participants and players of
+            Project Forest will be able to earn LEAF tokens through their Tree
+            NFTs once they fulfill certain level conditions and through other
+            in-app events and scenarios. Players can spend their LEAF tokens to
+            mint new Tree NFTs and create a virtual forest.
           </p>
 
-          <h3 className="text-[#59D0FF] font-bold py-1 text-[20px]">
+          <h6 className="text-[#59D0FF] font-bold py-1 text-[20px]">
             Utility Token: O2
-          </h3>
+          </h6>
           <p className="text-[#919191] leading-5">
             O2 (Oxygen) is the secondary token of the Project Forest ecosystem
             and acts as the utility token for the project. Tree NFTs and bigger

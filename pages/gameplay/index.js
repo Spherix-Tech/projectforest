@@ -130,7 +130,6 @@ export default function Gameplay() {
                   </div>
 
                   <div className="my-[2rem] md:py-0">
-                    
                     <ImageComponent
                       src={"assets/gameplay.webp"}
                       alt="Gameplay"
@@ -158,15 +157,15 @@ export default function Gameplay() {
                 <div className="flex justify-between items-center flex-col md:flex-row mt-[2rem] md:mt-[5rem] 2xl:px-[6rem] gap-[2rem]">
                   <div className="flex-1 flex justify-start">
                     <GameplayImageCard
-                      src={"assets/gameplay/oxygen-img.svg"}
+                      src={"assets/gameplay/oxygen-img.webp"}
                       fullHeightImage={false}
                       containerClassName="w-[280px] h-[255px] md:w-[375px] md:h-[350px] xl:w-[400px] xl:h-[375px]"
                     />
                   </div>
                   <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
-                    <div className="text-[#59D0FF] font-bold py-2 text-[20px]">
+                    <h1 className="text-[#59D0FF] font-bold py-2 text-[20px]">
                       Utility Token: O2
-                    </div>
+                    </h1>
                     <div className="page-description text-center md:text-start my-[1rem]">
                       O2 (Oxygen) is the secondary token of the Project Forest
                       ecosystem and acts as the utility token for the project.
@@ -180,22 +179,22 @@ export default function Gameplay() {
 
                 <div className="flex justify-between items-center flex-col-reverse md:flex-row mt-[2rem] md:mt-[5rem] 2xl:px-[6rem] gap-[2rem]">
                   <div className="flex-1 flex flex-col justify-center md:justify-start items-center md:items-start">
-                    <div className="text-[#6FDE49] font-bold py-1 text-[20px]">
+                    <h2 className="text-[#6FDE49] font-bold py-1 text-[20px]">
                       Primary Token: LEAF
-                    </div>
+                    </h2>
                     <div className="page-description text-center md:text-start my-[1rem]">
                       LEAF is the primary token of the Project Forest ecosystem
-                      and acts as the governance token for the
-                      project. Participants and players of Project Forest will
-                      be able to earn LEAF through their Tree NFTs once they
-                      fulfill certain level conditions and through other in-app
-                      events and scenarios. Players can spend their LEAF tokens
-                      to mint new Tree NFTs and create a virtual forest.
+                      and acts as the governance token for the project.
+                      Participants and players of Project Forest will be able to
+                      earn LEAF through their Tree NFTs once they fulfill
+                      certain level conditions and through other in-app events
+                      and scenarios. Players can spend their LEAF tokens to mint
+                      new Tree NFTs and create a virtual forest.
                     </div>
                   </div>
                   <div className="flex-1 flex justify-end">
                     <GameplayImageCard
-                      src={"assets/gameplay/leaf-img.svg"}
+                      src={"assets/gameplay/leaf-img.webp"}
                       fullHeightImage={false}
                       containerClassName="w-[280px] h-[255px] md:w-[375px] md:h-[350px] xl:w-[400px] xl:h-[375px]"
                     />
