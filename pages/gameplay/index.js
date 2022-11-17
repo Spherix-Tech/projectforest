@@ -157,7 +157,7 @@ export default function Gameplay() {
                 <div className="flex justify-between items-center flex-col md:flex-row mt-[2rem] md:mt-[5rem] 2xl:px-[6rem] gap-[2rem]">
                   <div className="flex-1 flex justify-start">
                     <GameplayImageCard
-                      src={"assets/gameplay/oxygen-img.svg"}
+                      src={"assets/gameplay/oxygen-img.webp"}
                       fullHeightImage={false}
                       containerClassName="w-[280px] h-[255px] md:w-[375px] md:h-[350px] xl:w-[400px] xl:h-[375px]"
                     />
@@ -194,7 +194,7 @@ export default function Gameplay() {
                   </div>
                   <div className="flex-1 flex justify-end">
                     <GameplayImageCard
-                      src={"assets/gameplay/leaf-img.svg"}
+                      src={"assets/gameplay/leaf-img.webp"}
                       fullHeightImage={false}
                       containerClassName="w-[280px] h-[255px] md:w-[375px] md:h-[350px] xl:w-[400px] xl:h-[375px]"
                     />
