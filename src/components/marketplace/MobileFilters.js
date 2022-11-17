@@ -40,7 +40,7 @@ const MobileFilters = ({ age, level, setAge, setLevel }) => {
         />
         <select
           value={router.query.sort ?? "Price: Low To High"}
-          className=" bg-[#f5d77b] appearance-none text-xs  font-medium  p-1 block  outline-none    "
+          className=" bg-[#f5d77b] appearance-none text-xs font-medium p-1 block outline-none "
           onChange={(e) => setQueryParam("sort", e.target.value)}
         >
           <option value="Price: Low To High">Price: Low To High </option>
@@ -48,8 +48,8 @@ const MobileFilters = ({ age, level, setAge, setLevel }) => {
         </select>
       </div>
       {showFilters && (
-        <div className="absolute top-0 left-0 w-full h-full min-h-screen bg-[#f5d77b] rounded-t-2xl z-10000">
-          <div className="flex justify-between items-center py-3 px-5">
+        <div className="fixed top-0 mt-20 pb-20 left-0 w-full h-full overflow-auto bg-[#f5d77b] rounded-t-2xl z-10000">
+          <div className="flex justify-between items-center py-3 px-5 overflow-auto">
             <ImageComponent
               src="/assets/marketplace/arrow.svg"
               className="w-6 h-8 cursor-pointer"
