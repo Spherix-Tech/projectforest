@@ -23,7 +23,7 @@ const Roadmap = () => {
       {/* Roadmap Large Screen */}
       <MediaQuery query="(min-width: 1024px)">
         <div className="w-full relative flex justify-center">
-          <ImageComponent src={"/assets/roadmap/roadmap.png"} />
+          <ImageComponent src={"/assets/roadmap/roadmap2.png"} />
         </div>
       </MediaQuery>
 
